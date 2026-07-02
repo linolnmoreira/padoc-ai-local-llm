@@ -1,7 +1,0 @@
-
-flask
-flask-cors
-firebase-admin
-python-dotenv
-llama-cpp-python
-gunicorn==20.1.0
