@@ -1,0 +1,288 @@
+{
+  "metadata": {
+    "nome": "Dataset - Histórico de Ordens de Serviço e Diagnósticos",
+    "versao": "1.0",
+    "idioma": "pt-BR",
+    "categoria": "Historico_Oficina_OS"
+  },
+  "ordens_servico": [
+    {
+      "id": "OS001",
+      "veiculo": {"marca": "Volkswagen", "modelo": "Gol 1.0", "ano": 2018, "motor": "1.0 MPI Flex", "km_entrada": 87432},
+      "queixa_cliente": "Motor falhando em marcha lenta, consumo aumentou e luz do check engine acesa",
+      "codigos_lidos": ["P0171", "P0300", "P0303"],
+      "diagnostico_tecnico": "Entrada de ar falso (vacuum leak) na mangueira do coletor de admissão causando mistura pobre e falhas no cilindro 3. Velas gastas contribuindo para a falha.",
+      "procedimento_realizado": [
+        "Leitura de códigos com scanner",
+        "Análise de trim de combustível (STFT +18% / LTFT +22% - excessivamente alto)",
+        "Teste de fumaça no sistema de admissão - vazamento detectado na mangueira traseira do coletor",
+        "Substituição da mangueira de vácuo do coletor de admissão",
+        "Substituição do jogo de velas de ignição (NGK BPR6ES)",
+        "Limpeza do corpo de borboleta",
+        "Reset das adaptações da ECU"
+      ],
+      "pecas_substituidas": ["Mangueira de vácuo do coletor (R$ 45,00)", "Jogo de velas NGK BPR6ES (R$ 120,00)"],
+      "mao_de_obra_horas": 2.5,
+      "resultado": "Falhas eliminadas. STFT normalizado para -2%. Nenhum código após reset.",
+      "orientacoes_ao_cliente": "Próxima troca de óleo em 10.000km. Usar gasolina de boa procedência."
+    },
+    {
+      "id": "OS002",
+      "veiculo": {"marca": "Chevrolet", "modelo": "Onix 1.0 Turbo", "ano": 2021, "motor": "1.0 Turbo Flex", "km_entrada": 32180},
+      "queixa_cliente": "Perda de potência sob carga, especialmente em subidas. Sem luz acesa.",
+      "codigos_lidos": [],
+      "diagnostico_tecnico": "Pressão do turbo abaixo do esperado. Filtro de ar entupido reduzindo eficiência. Solenoide de bypass do turbo com resposta lenta.",
+      "procedimento_realizado": [
+        "Leitura de dados ao vivo: pressão do coletor máxima 0.8 bar (esperado 1.2 bar)",
+        "Substituição do filtro de ar",
+        "Teste da válvula bypass com pressão direta - válvula com resposta lenta",
+        "Substituição da válvula de bypass (wastegate solenoid)",
+        "Re-teste: pressão do coletor atingindo 1.18 bar - dentro da especificação"
+      ],
+      "pecas_substituidas": ["Filtro de ar (R$ 65,00)", "Solenoide de pressão do turbo (R$ 280,00)"],
+      "mao_de_obra_horas": 2.0,
+      "resultado": "Potência restaurada. Pressão do turbo dentro do esperado.",
+      "orientacoes_ao_cliente": "Verificar filtro de ar a cada 15.000km neste motor turbo."
+    },
+    {
+      "id": "OS003",
+      "veiculo": {"marca": "Fiat", "modelo": "Uno 1.4 Evo", "ano": 2015, "motor": "1.4 Fire Flex", "km_entrada": 124000},
+      "queixa_cliente": "Barulho metálico em marcha lenta, piora quando motor aquece",
+      "codigos_lidos": ["P0520"],
+      "diagnostico_tecnico": "Pressão de óleo abaixo do especificado. Motor com 124.000km apresentando desgaste nos mancais de biela. Bomba de óleo com folgas excessivas.",
+      "procedimento_realizado": [
+        "Instalação de manômetro de pressão de óleo",
+        "Pressão a quente em marcha lenta: 0.4 bar (mínimo: 1.0 bar)",
+        "Drenagem do óleo - partículas metálicas no óleo",
+        "Inspeção da bomba de óleo - folga radial acima do limite",
+        "Cotação de retífica vs substituição do motor"
+      ],
+      "decisao_cliente": "Substituição por motor remanufaturado",
+      "pecas_substituidas": ["Motor remanufaturado 1.4 Fire (R$ 3.800,00)", "Junta do cabeçote", "Filtro de óleo", "Óleo 5W30 sintético"],
+      "mao_de_obra_horas": 14.0,
+      "resultado": "Motor substituído. Pressão de óleo normalizada: 2.8 bar a quente em marcha lenta.",
+      "orientacoes_ao_cliente": "Fazer 3 trocas de óleo nos primeiros 15.000km (amaciamento). Usar apenas óleo 5W30 sintético."
+    },
+    {
+      "id": "OS004",
+      "veiculo": {"marca": "Toyota", "modelo": "Corolla 2.0", "ano": 2019, "motor": "2.0 Flex", "km_entrada": 58000},
+      "queixa_cliente": "Luz do ABS e tração acesas. Veículo parece instável em curvas molhadas.",
+      "codigos_lidos": ["C0035", "C0040", "U0121"],
+      "diagnostico_tecnico": "Sensor ABS da roda dianteira esquerda com resistência fora do padrão. Anel fônico do cubo com desgaste leve.",
+      "procedimento_realizado": [
+        "Leitura de dados: velocidade da roda DE ausente no módulo ABS",
+        "Inspeção do sensor ABS DE: resistência 4.2 kOhm (padrão: 1.0-1.5 kOhm) - FORA DE ESPECIFICAÇÃO",
+        "Inspeção visual do anel fônico: 2 dentes levemente deformados mas funcionais",
+        "Substituição do sensor ABS dianteiro esquerdo",
+        "Verificação do gap do sensor com calibre: 0.9mm (dentro do padrão 0.5-1.2mm)",
+        "Limpeza do anel fônico",
+        "Reset dos códigos e teste de estrada"
+      ],
+      "pecas_substituidas": ["Sensor ABS dianteiro esquerdo OEM Toyota (R$ 320,00)"],
+      "mao_de_obra_horas": 1.5,
+      "resultado": "Sistemas ABS e controle de tração operando normalmente. Nenhum código após test drive."
+    },
+    {
+      "id": "OS005",
+      "veiculo": {"marca": "Hyundai", "modelo": "HB20 1.6", "ano": 2017, "motor": "1.6 Flex", "km_entrada": 95000},
+      "queixa_cliente": "A/C não esfria. Compressor liga mas ar não fica frio.",
+      "codigos_lidos": [],
+      "diagnostico_tecnico": "Carga de gás insuficiente. Vazamento lento detectado na junta do evaporador.",
+      "procedimento_realizado": [
+        "Medição de pressão: lado baixo 0.4 bar / lado alto 6 bar (ambos baixos - indicativo de carga insuficiente)",
+        "Teste de vazamento com UV: traço de UV visível na conexão do evaporador",
+        "Evacuação do sistema",
+        "Substituição do anel o-ring da conexão do evaporador",
+        "Recarga com 480g de R134a (especificação: 500g)",
+        "Re-teste: temperatura de saída da grelha central 6°C (normal)"
+      ],
+      "pecas_substituidas": ["Anel o-ring da conexão do evaporador (R$ 15,00)", "Carga de R134a (R$ 180,00)"],
+      "mao_de_obra_horas": 2.0,
+      "resultado": "A/C normalizou. Temperatura de habitáculo atingindo 20°C com exterior a 32°C."
+    },
+    {
+      "id": "OS006",
+      "veiculo": {"marca": "Ford", "modelo": "Ka 1.5", "ano": 2020, "motor": "1.5 Dragon Flex", "km_entrada": 41000},
+      "queixa_cliente": "Motor tremendo muito ao ligar e nos primeiros minutos. Depois melhora.",
+      "codigos_lidos": ["P0301", "P0303"],
+      "diagnostico_tecnico": "Falhas nos cilindros 1 e 3. Motor Dragon 1.5 3 cilindros (renumerado como 1, 2, 3). Bobinas de ignição dos cilindros 1 e 3 com resistência secundária fora do padrão.",
+      "procedimento_realizado": [
+        "Leitura de trim de combustível: OK",
+        "Teste de corte de cilindros: confirma falha nos cilindros 1 e 3",
+        "Medição de resistência das bobinas: Cil 1: 18kOhm, Cil 3: 22kOhm (padrão: 10-14kOhm)",
+        "Troca de bobinas entre os cilindros para confirmar diagnóstico (falha migrou)",
+        "Substituição das 3 bobinas (troca preventiva do conjunto)",
+        "Substituição do jogo de velas (NGK iridium conforme especificação Ford)"
+      ],
+      "pecas_substituidas": ["3 bobinas de ignição individuais (R$ 560,00)", "Jogo de velas NGK ILKAR7L11 (R$ 210,00)"],
+      "mao_de_obra_horas": 2.0,
+      "resultado": "Motor sem falhas. Vibração eliminada."
+    },
+    {
+      "id": "OS007",
+      "veiculo": {"marca": "Renault", "modelo": "Duster 2.0", "ano": 2016, "motor": "2.0 Flex", "km_entrada": 112000},
+      "queixa_cliente": "Câmbio automático solavancos ao trocar de marcha, especialmente do 1º para 2º. Luz de câmbio acesa.",
+      "codigos_lidos": ["P0700", "P0744"],
+      "diagnostico_tecnico": "Solenoide do conversor de torque (TCC Solenoid) com falha. Fluido ATF degradado com 112.000km sem troca documentada.",
+      "procedimento_realizado": [
+        "Leitura de subcódigos da transmissão: P0744 (TCC Solenoid Circuit)",
+        "Coleta de amostra do fluido ATF: cor marrom escuro, cheiro de queimado - REPROVADO",
+        "Troca do fluido ATF com limpeza da transmissão",
+        "Substituição do solenoide TCC",
+        "Substituição do filtro interno da transmissão",
+        "Road test: trocas de marcha suavizadas mas ainda ligeiro solavanco do 1 para 2 - esperado após substituição, adaptar ECU"
+      ],
+      "pecas_substituidas": ["Solenoide TCC (R$ 480,00)", "Fluido ATF Dextron VI 8L (R$ 240,00)", "Filtro interno da transmissão (R$ 95,00)"],
+      "mao_de_obra_horas": 4.0,
+      "resultado": "Troca de marcha melhorada significativamente. ECU da transmissão em processo de reaprendizado.",
+      "orientacoes_ao_cliente": "Dirigir com suavidade por 1.000km para ECU do câmbio reaprender os padrões de troca. Trocar fluido a cada 40.000km."
+    },
+    {
+      "id": "OS008",
+      "veiculo": {"marca": "Honda", "modelo": "City 1.5", "ano": 2022, "motor": "1.5 SOHC i-VTEC", "km_entrada": 12000},
+      "queixa_cliente": "Barulho de chocalho ao dar partida a frio, some após alguns segundos",
+      "codigos_lidos": [],
+      "diagnostico_tecnico": "Barulho de tensionador hidráulico da corrente de distribuição. Característico do motor 1.5 Honda em partidas a frio quando o óleo ainda não preencheu o tensionador.",
+      "procedimento_realizado": [
+        "Verificação do nível e qualidade do óleo: OK",
+        "Inspeção do barulho: típico de tensionador hidráulico",
+        "Verificação de boletim técnico Honda: BSB confirmando o comportamento como normal até 60 segundos",
+        "Orientação ao cliente sobre o comportamento normal"
+      ],
+      "pecas_substituidas": [],
+      "mao_de_obra_horas": 0.5,
+      "resultado": "Sem defeito constatado. Comportamento normal do tensionador hidráulico.",
+      "orientacoes_ao_cliente": "Usar óleo 0W20 ou 5W20 conforme recomendação Honda. Nunca dar partida e acelerar imediatamente - aguardar 30 segundos em marcha lenta."
+    },
+    {
+      "id": "OS009",
+      "veiculo": {"marca": "Volkswagen", "modelo": "Polo 1.0 TSI", "ano": 2020, "motor": "1.0 TSI 200 Turbo", "km_entrada": 53000},
+      "queixa_cliente": "Consumo de gasolina muito alto (antes 13km/L, agora 9km/L). Nenhuma luz acesa.",
+      "codigos_lidos": ["P0174"],
+      "diagnostico_tecnico": "Mistura pobre banco 1. Sensor MAF lendo menos que o real após limpeza inadequada pelo proprietário com produto errado.",
+      "procedimento_realizado": [
+        "Análise STFT/LTFT: LTFT +19% (muito alto)",
+        "Teste do sensor MAF: leitura 2.1 g/s em marcha lenta (padrão 2.8 g/s para este motor)",
+        "Tentativa de limpeza com spray específico para MAF: sem melhora",
+        "Substituição do sensor MAF por original VW"
+      ],
+      "pecas_substituidas": ["Sensor MAF original VW (R$ 680,00)"],
+      "mao_de_obra_horas": 1.0,
+      "resultado": "LTFT normalizado para +2%. Consumo retornando a 12.5-13km/L após 2 tanques.",
+      "orientacoes_ao_cliente": "NUNCA limpar sensor MAF com álcool ou sprays não específicos. Usar apenas spray limpa-MAF em movimentos retos, sem tocar o fio."
+    },
+    {
+      "id": "OS010",
+      "veiculo": {"marca": "Jeep", "modelo": "Renegade 1.8 Flex", "ano": 2017, "motor": "1.8 E.torQ Flex", "km_entrada": 78000},
+      "queixa_cliente": "Carro perde o freio após descer serra. Pedal vai ao fundo.",
+      "codigos_lidos": [],
+      "diagnostico_tecnico": "Fluido de freio com ponto de ebulição abaixo do mínimo (vapor lock em frenagens severas). Caliper dianteiro esquerdo com pistão parcialmente travado, gerando calor excessivo.",
+      "procedimento_realizado": [
+        "Teste do fluido de freio: ponto de ebulição molhado 138°C (mínimo: 155°C) - REPROVADO",
+        "Inspeção das pinças: pistão esquerdo dianteiro com retração lenta - DEFICIENTE",
+        "Substituição do fluido DOT 4 (sangria completa)",
+        "Revisão da pinça dianteira esquerda - pistão oxidado",
+        "Substituição da pinça dianteira esquerda (recondicionamento não viável pelo estado)",
+        "Sangria final após substituição"
+      ],
+      "pecas_substituidas": ["Pinça de freio dianteira esquerda (R$ 420,00)", "Fluido DOT 4 (R$ 65,00)", "Pastilhas dianteiras (desgaste irregular detectado - R$ 180,00)"],
+      "mao_de_obra_horas": 3.5,
+      "resultado": "Sistema de freio restaurado. Ponto de ebulição após troca: 262°C (DOT 4 novo).",
+      "orientacoes_ao_cliente": "Em descidas longas, usar freio motor (reduzir marcha). Trocar fluido de freio a cada 2 anos ou 40.000km."
+    }
+  ],
+  "perguntas_frequentes_mecanica": [
+    {
+      "id": "FAQ001",
+      "pergunta": "Quanto tempo posso dirigir com a luz de temperatura acesa?",
+      "resposta": "ZERO. Quando a luz de temperatura acende ou o marcador entra na zona vermelha, você deve parar o veículo imediatamente em local seguro e desligar o motor. Continuar dirigindo com motor superaquecendo pode causar queima da junta do cabeçote (reparo de R$ 1.500 a R$ 4.000), empenamento do cabeçote ou até destruição do motor. Aguarde o motor esfriar (mínimo 30 minutos), verifique o nível do arrefecimento e chame assistência se necessário.",
+      "urgencia": "Crítica"
+    },
+    {
+      "id": "FAQ002",
+      "pergunta": "A luz do óleo acendeu rapidamente e apagou. Devo me preocupar?",
+      "resposta": "Sim. A luz de óleo piscando brevemente pode indicar: (1) Nível baixo de óleo - verificar vareta imediatamente, (2) Pressão de óleo baixa em marcha lenta - possível bomba de óleo com desgaste, (3) Sensor de óleo com defeito. Verifique o nível com a vareta com motor desligado. Se o nível estiver OK e a luz continuar aparecendo, vá a uma oficina. Não ignore este sintoma - um motor sem pressão de óleo pode ser destruído em minutos.",
+      "urgencia": "Alta"
+    },
+    {
+      "id": "FAQ003",
+      "pergunta": "Posso usar qualquer tipo de óleo no meu carro flex brasileiro?",
+      "resposta": "Não. Use sempre a especificação do fabricante (consulte o manual). Para a maioria dos veículos flex 1.0 a 1.6 modernos, o indicado é 5W30 ou 5W20 API SP sintético ou semissintético. Usar óleo muito viscoso (como 20W50 em motor moderno) pode causar dificuldade de partida a frio, desgaste nos VVT e consumo aumentado. Usar óleo mineral em motor especificado para sintético reduz a vida útil. Trocas a cada 10.000km ou 12 meses.",
+      "urgencia": "Educativo"
+    },
+    {
+      "id": "FAQ004",
+      "pergunta": "Quanto custa uma retífica de motor?",
+      "resposta": "O custo de uma retífica de motor no Brasil (2024) varia conforme o motor: Motores 1.0-1.4 (Gol, Uno, Ka): R$ 2.500 a R$ 5.000. Motores 1.6-2.0 (Corolla, Civic, Golf): R$ 4.000 a R$ 8.000. Motores diesel turbo (Hilux, Ranger): R$ 6.000 a R$ 14.000. IMPORTANTE: O custo final depende do que for encontrado na desmontagem. Um orçamento fechado só é possível após lavagem e medição de todas as peças. Sempre solicite orçamento com e sem revisão de cabeçote.",
+      "urgencia": "Informativo"
+    },
+    {
+      "id": "FAQ005",
+      "pergunta": "O que é o código P0420 e é grave?",
+      "resposta": "P0420 indica que o catalisador (catalizador/conversor catalítico) do Banco 1 está com eficiência abaixo do mínimo. Não é emergência, mas deve ser resolvido pois: (1) Aumenta a emissão de poluentes, (2) Pode causar reprovação no programa de inspeção veicular, (3) Indica que provavelmente há outra falha que destruiu o catalisador (injetores, ignição, sonda lambda). Diagnóstico correto é essencial antes de trocar o catalisador (peça cara: R$ 800 a R$ 3.000). Primeiro corrija a causa raiz.",
+      "urgencia": "Moderada"
+    },
+    {
+      "id": "FAQ006",
+      "pergunta": "Meu carro automático está solavancando ao trocar de marcha. O que pode ser?",
+      "resposta": "Solavancos no câmbio automático podem ter várias causas: (1) Fluido ATF degradado - mais comum e mais barato de resolver (troca R$ 200-400), (2) Solenoide com falha (R$ 300-800 a peça), (3) Módulo de transmissão (TCM) com falha, (4) Sensor de velocidade da turbina defeituoso, (5) Corpo de válvulas desgastado. IMPORTANTE: A maioria dos câmbios automáticos requer troca de fluido a cada 40.000-60.000km. Nunca negligencie esta manutenção. Leia os códigos com scanner antes de decidir o reparo.",
+      "urgencia": "Alta"
+    },
+    {
+      "id": "FAQ007",
+      "pergunta": "Qual a diferença entre correia e corrente de distribuição? Qual é melhor?",
+      "resposta": "Correia dentada: feita de borracha reforçada, silenciosa, mais barata, mas requer troca obrigatória (geralmente 60.000km / 4 anos). Se romper em motor interferente, destrói as válvulas. Corrente de distribuição: feita de metal, dura a vida útil do motor (com manutenção adequada), mas pode esticar e causa ruído característico. Requer troca de óleo em dia para lubrificação adequada. Nenhuma é necessariamente 'melhor' - cada fabricante projeta para seu motor. O importante é respeitar o intervalo de manutenção de cada sistema.",
+      "urgencia": "Educativo"
+    },
+    {
+      "id": "FAQ008",
+      "pergunta": "Por que meu motor consome mais gasolina que álcool em quilômetros por litro, mas o álcool sai mais barato?",
+      "resposta": "O etanol tem menor densidade energética que a gasolina: enquanto 1 litro de gasolina tem ~8.800 kcal, 1 litro de etanol tem ~6.200 kcal. Por isso, um motor flex usa ~30% mais álcool que gasolina em volume. A regra para decidir: SE o preço do álcool for MENOR que 70% do preço da gasolina, compensa usar álcool. Exemplo: gasolina R$ 6,00 → 6,00 × 0,70 = R$ 4,20. Se o álcool custar menos de R$ 4,20, compensa. Se custar mais, use gasolina.",
+      "urgencia": "Educativo"
+    },
+    {
+      "id": "FAQ009",
+      "pergunta": "Meu carro está consumindo óleo entre as trocas. Quanto de consumo é normal?",
+      "resposta": "Para motores modernos: até 500ml por 1.000km é considerado dentro do padrão por alguns fabricantes (embora alto). Acima de 500ml/1.000km é sinal de problema: (1) Anéis de pistão desgastados (fumaça azul, mais perceptível na aceleração), (2) Retentor de válvulas desgastado (fumaça azul na partida a frio), (3) Vazamento externo por retentores ou juntas. Motores antigos (>150.000km) consomem mais. Sempre verificar o nível de óleo a cada abastecimento para evitar danos por nível baixo.",
+      "urgencia": "Educativo"
+    },
+    {
+      "id": "FAQ010",
+      "pergunta": "O que verificar ao comprar um carro usado?",
+      "resposta": "Checklist básico: (1) Puxar histórico de multas e débitos (DETRAN), (2) Verificar se o número do chassi bate com o documento, (3) Inspecionar pintura com espessímetro (valores acima de 200 microns indicam reparo de lataria), (4) Testar todos os sistemas elétricos (vidros, travas, ar condicionado, som), (5) Verificar nível e qualidade do óleo e arrefecimento, (6) Ligar motor a frio e escutar barulhos, (7) Fazer test drive em diferentes velocidades, (8) Verificar vazamentos embaixo do veículo, (9) Ler códigos OBD2 com scanner, (10) Levar a uma oficina de confiança para revisão completa antes de fechar negócio.",
+      "urgencia": "Educativo"
+    }
+  ],
+  "glossario_tecnico": [
+    {"termo": "ECU/ECM", "definicao": "Electronic Control Unit/Module - Módulo de controle eletrônico do motor (cérebro do veículo)"},
+    {"termo": "TCM/TCU", "definicao": "Transmission Control Module/Unit - Módulo eletrônico que controla a transmissão automática"},
+    {"termo": "DTC", "definicao": "Diagnostic Trouble Code - Código de falha diagnóstico armazenado pela ECU"},
+    {"termo": "OBD2", "definicao": "On-Board Diagnostics II - Sistema de diagnóstico embarcado padrão para veículos a partir de 1996"},
+    {"termo": "CAN Bus", "definicao": "Controller Area Network - Barramento de comunicação entre os módulos eletrônicos do veículo"},
+    {"termo": "MAF", "definicao": "Mass Air Flow - Sensor de fluxo de massa de ar"},
+    {"termo": "MAP", "definicao": "Manifold Absolute Pressure - Sensor de pressão absoluta do coletor de admissão"},
+    {"termo": "TPS", "definicao": "Throttle Position Sensor - Sensor de posição da borboleta"},
+    {"termo": "IAC", "definicao": "Idle Air Control - Válvula de controle de ar em marcha lenta"},
+    {"termo": "STFT", "definicao": "Short Term Fuel Trim - Correção de combustível de curto prazo (resposta imediata da ECU)"},
+    {"termo": "LTFT", "definicao": "Long Term Fuel Trim - Correção de combustível de longo prazo (aprendizado acumulado da ECU)"},
+    {"termo": "Lambda/O2", "definicao": "Sonda de oxigênio que mede a composição dos gases do escapamento para controle de mistura"},
+    {"termo": "CKP", "definicao": "Crankshaft Position Sensor - Sensor de posição do virabrequim (rotação)"},
+    {"termo": "CMP", "definicao": "Camshaft Position Sensor - Sensor de posição do comando de válvulas (fase)"},
+    {"termo": "VVT/VTC", "definicao": "Variable Valve Timing - Sistema de variação de fase das válvulas para otimizar desempenho e emissões"},
+    {"termo": "EVAP", "definicao": "Evaporative Emission Control System - Sistema de controle de vapores do tanque de combustível"},
+    {"termo": "EGR", "definicao": "Exhaust Gas Recirculation - Válvula de recirculação de gases de escape para reduzir NOx"},
+    {"termo": "ATF", "definicao": "Automatic Transmission Fluid - Fluido para transmissão automática"},
+    {"termo": "DOT", "definicao": "Department of Transportation - Classificação do fluido de freio (DOT 3, DOT 4, DOT 5.1)"},
+    {"termo": "ABS", "definicao": "Anti-lock Braking System - Sistema antibloqueio de rodas"},
+    {"termo": "ESP/ESC/VSC", "definicao": "Electronic Stability Program/Control/Vehicle Stability Control - Controle eletrônico de estabilidade"},
+    {"termo": "TCC", "definicao": "Torque Converter Clutch - Embreagem do conversor de torque em transmissões automáticas"},
+    {"termo": "PCM", "definicao": "Powertrain Control Module - Módulo de controle do sistema de propulsão (ECU + TCU integrados)"},
+    {"termo": "IAT", "definicao": "Intake Air Temperature - Sensor de temperatura do ar de admissão"},
+    {"termo": "ECT", "definicao": "Engine Coolant Temperature - Sensor de temperatura do líquido de arrefecimento"},
+    {"termo": "Knock/Detonação", "definicao": "Combustão anormal onde o combustível se inflama antes da vela. Causa danos graves ao pistão e biela"},
+    {"termo": "Vacuum Leak", "definicao": "Entrada de ar não controlada no sistema de admissão por mangueira furada ou mal conectada"},
+    {"termo": "Backpressure", "definicao": "Contrapressão no sistema de escapamento. Quando alta, indica obstrução (catalisador entupido)"},
+    {"termo": "Leak-down test", "definicao": "Teste de vedação do cilindro que mede porcentagem de ar que vaza com pistão no PMS"},
+    {"termo": "Freeze Frame", "definicao": "Dados congelados pela ECU no momento exato em que um código de falha foi registrado"}
+  ]
+}

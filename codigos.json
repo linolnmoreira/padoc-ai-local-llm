@@ -1,0 +1,23 @@
+[
+  {
+    "codigo": "P0300",
+    "veiculo": "todos",
+    "descricao": "Falha aleatória de combustão",
+    "causas": ["vela", "bobina", "injetor"],
+    "solucao": "Testar sistema de ignição"
+  },
+  {
+    "codigo": "P0420",
+    "veiculo": "todos",
+    "descricao": "Baixa eficiência catalisador",
+    "causas": ["sensor lambda", "catalisador"],
+    "solucao": "Verificar integridade do catalisador e sensores de O2"
+  },
+  {
+    "codigo": "P0171",
+    "veiculo": "todos",
+    "descricao": "Mistura muito pobre no Banco 1",
+    "causas": ["vazamento de vácuo", "sensor MAF", "bomba de combustível"],
+    "solucao": "Limpar sensor MAF e verificar entradas de ar falso"
+  }
+]

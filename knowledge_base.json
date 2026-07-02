@@ -1,0 +1,39 @@
+{
+
+"P0300":{
+
+"problema":
+"Falha de combustão aleatória",
+
+"causas":[
+
+"vela ruim",
+"bobina defeituosa",
+"injetor sujo"
+
+],
+
+"solucao":
+"Verificar ignição e alimentação"
+
+},
+
+
+"P0420":{
+
+"problema":
+"Baixa eficiência do catalisador",
+
+"causas":[
+
+"catalisador danificado",
+"sensor lambda"
+
+],
+
+"solucao":
+"Testar sensores e sistema de escape"
+
+}
+
+}

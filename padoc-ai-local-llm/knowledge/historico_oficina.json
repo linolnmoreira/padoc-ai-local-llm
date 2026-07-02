@@ -1,0 +1,2269 @@
+[
+    {
+        "codigo_obd2": "P0010",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P0010.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Falha no Módulo de Controle de Trem de Força (PCM)",
+            "Falha do atuador de comando variável de válvulas",
+            "Problema de fiação"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P0011",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P0011.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Falha do solenóide de comando variável do eixo de comando",
+            "Nível de óleo do motor muito baixo",
+            "Motor não está com o tempo correto",
+            "Óleo do motor não atende às especificações do fabricante",
+            "Falha do atuador de comando variável de válvulas",
+            "Corrente de comando desgastada"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P0012",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P0012.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Falha do solenóide de comando variável do eixo de comando",
+            "Nível de óleo do motor muito baixo",
+            "Motor não está com o tempo correto",
+            "Óleo do motor não atende às especificações do fabricante",
+            "Falha do atuador de comando variável de válvulas",
+            "Corrente de comando desgastada"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P0013",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P0013.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Falha no Módulo de Controle de Trem de Força (PCM)",
+            "Falha do atuador de comando variável de válvulas",
+            "Problema de fiação"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P0014",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P0014.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Falha do solenóide de comando variável do eixo de comando",
+            "Nível de óleo do motor muito baixo",
+            "Motor não está com o tempo correto",
+            "Óleo do motor não atende às especificações do fabricante",
+            "Falha do atuador de comando variável de válvulas",
+            "Corrente de comando desgastada"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P0101",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P0101.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Grandes vazamentos de vácuo",
+            "Mangueira de admissão ou PCV rachada",
+            "Juntas do coletor de admissão defeituosas",
+            "Sensor de fluxo de massa de ar (MAF)",
+            "Problemas no circuito ou fiação do sensor MAF",
+            "Sensor de pressão barométrica defeituoso",
+            "Fio ou filamento do sensor MAF sujo ou contaminado",
+            "Software do PCM precisa ser atualizado"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P0102",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P0102.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Sensor MAF desconectado ou fiação danificada",
+            "Terminais elétricos soltos ou corroídos no circuito do sensor MAF",
+            "Sensor MAF defeituoso"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P0113",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P0113.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Sensor de temperatura do ar de admissão defeituoso",
+            "Filtro de ar sujo",
+            "Sensor de fluxo de ar defeituoso",
+            "Fiação ou conexões do sensor de temperatura do ar de admissão defeituosas ou corroídas"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P0128",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P0128.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Termostato do motor defeituoso",
+            "Sensor de temperatura do líquido de arrefecimento defeituoso",
+            "Sensor de temperatura do ar de admissão defeituoso",
+            "Sistema de arrefecimento defeituoso",
+            "Nível de líquido de arrefecimento baixo",
+            "Líquido de arrefecimento sujo causando leituras incorretas do sensor de temperatura",
+            "Ventoinha(s) de arrefecimento do motor defeituosa(s) ou sempre ligada(s)"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P0135",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P0135.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Sensor de oxigênio / sensor de mistura ar/combustível defeituoso",
+            "Circuito de aquecedor do sensor de oxigênio / sensor de mistura defeituoso",
+            "Vazamento no sistema de escape",
+            "Vazamento no sistema de admissão de ar",
+            "Baixa pressão de combustível",
+            "Sensor de temperatura do líquido de arrefecimento defeituoso",
+            "Problema de fiação ou circuito do sensor defeituoso",
+            "Software do PCM precisa ser atualizado",
+            "Defective PCM"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P0171",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P0171.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Software do módulo de controle precisa ser atualizado",
+            "Vacuum leaks (intake manifold gaskets",
+            "vacuum hoses",
+            "PCV hoses",
+            "etc.)",
+            "Sensor de fluxo de ar",
+            "Filtro de combustível entupido ou bomba fraca",
+            "Injetores de combustível entupidos ou sujos"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P0174",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P0174.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Software do PCM precisa ser atualizado",
+            "Vacuum leaks (Intake Manifold Gaskets",
+            "vacuum hoses",
+            "PCV hoses",
+            "etc.)",
+            "Faulty Mass Airflow (MAF) Sensor",
+            "Filtro de combustível entupido ou bomba fraca",
+            "Injetores de combustível entupidos ou sujos"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P0200",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P0200.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Injetor de combustível defeituoso",
+            "Faulty or corroded Fuel Injector",
+            "wiring",
+            "and or connections",
+            "Injetor de combustível entupido",
+            "Sujeira no injetor de combustível"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P0201",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P0201.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Injetor de combustível defeituoso",
+            "Faulty or corroded Fuel Injector",
+            "wiring",
+            "and or connections",
+            "Injetor de combustível entupido",
+            "Sujeira no injetor de combustível"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P0202",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P0202.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Mau funcionamento do injetor de combustível",
+            "Mau funcionamento do circuito driver do injetor do PCM",
+            "Fiação/conexões defeituosas no chicote do injetor",
+            "Circuitos de alimentação do injetor defeituosos"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P0203",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P0203.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Fuel injector failure",
+            "Falha no Módulo de Controle de Trem de Força (PCM)",
+            "Problema de fiação"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P0205",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P0205.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Fuel injector failure",
+            "Falha no Módulo de Controle de Trem de Força (PCM)",
+            "Problema de fiação"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P0300",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P0300.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Worn out spark plugs",
+            "ignition wires",
+            "coil(s)",
+            "distributor cap and rotor (when applicable)",
+            "Tempo de ignição incorreto",
+            "Vazamento(s) de vácuo",
+            "Pressão de combustível baixa ou fraca",
+            "Sistema EGR com funcionamento inadequado",
+            "Sensor de fluxo de ar defeituoso",
+            "Sensor de virabrequim e/ou comando defeituoso",
+            "Sensor de posição da borboleta defeituoso",
+            "Mechanical engine problems (i.e.—low compression",
+            "leaking head gasket(s)",
+            "or valve problems)"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P0301",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P0301.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Worn out spark plugs",
+            "ignition wires",
+            "coil(s)",
+            "distributor cap and rotor (when applicable)",
+            "Tempo de ignição incorreto",
+            "Vazamento(s) de vácuo",
+            "Pressão de combustível baixa ou fraca",
+            "Sistema EGR com funcionamento inadequado",
+            "Sensor de fluxo de ar defeituoso",
+            "Sensor de virabrequim e/ou comando defeituoso",
+            "Sensor de posição da borboleta defeituoso",
+            "Mechanical engine problems (i.e.—low compression",
+            "leaking head gasket(s)",
+            "or valve problems)"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P0302",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P0302.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Worn out spark plugs",
+            "ignition wires",
+            "coil(s)",
+            "distributor cap and rotor (when applicable)",
+            "Tempo de ignição incorreto",
+            "Vazamento(s) de vácuo",
+            "Pressão de combustível baixa ou fraca",
+            "Sistema EGR com funcionamento inadequado",
+            "Sensor de fluxo de ar defeituoso",
+            "Sensor de virabrequim e/ou comando defeituoso",
+            "Sensor de posição da borboleta defeituoso",
+            "Mechanical engine problems (i.e.—low compression",
+            "leaking head gasket(s)",
+            "or valve problems)"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P0303",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P0303.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Worn out spark plugs",
+            "ignition wires",
+            "coil(s)",
+            "distributor cap and rotor (when applicable)",
+            "Tempo de ignição incorreto",
+            "Vazamento(s) de vácuo",
+            "Pressão de combustível baixa ou fraca",
+            "Sistema EGR com funcionamento inadequado",
+            "Sensor de fluxo de ar defeituoso",
+            "Sensor de virabrequim e/ou comando defeituoso",
+            "Sensor de posição da borboleta defeituoso",
+            "Mechanical engine problems (i.e.—low compression",
+            "leaking head gasket(s)",
+            "or valve problems)"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P0304",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P0304.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Worn out spark plugs",
+            "ignition wires",
+            "coil(s)",
+            "distributor cap and rotor (when applicable)",
+            "Tempo de ignição incorreto",
+            "Vazamento(s) de vácuo",
+            "Pressão de combustível baixa ou fraca",
+            "Sistema EGR com funcionamento inadequado",
+            "Sensor de fluxo de ar defeituoso",
+            "Sensor de virabrequim e/ou comando defeituoso",
+            "Sensor de posição da borboleta defeituoso",
+            "Mechanical engine problems (i.e.—low compression",
+            "leaking head gasket(s)",
+            "or valve problems)"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P0401",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P0401.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Restrição nas passagens do EGR geralmente causada por acúmulo de carbono",
+            "Válvula EGR defeituosa",
+            "Falta de vácuo ou sinal elétrico adequado para a válvula EGR",
+            "Solenóide de alimentação de vácuo do EGR com defeito",
+            "Lack of proper EGR system feedback to the computer from the: Manifold Absolute Pressure Sensor (MAP)",
+            "Differential EGR Pressure Feedback Sensor (DPFE)",
+            "EGR Valve Position Sensor (EVP)",
+            "EGR Temperature Sensor"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P0420",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P0420.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Catalisador(es) ineficiente(s)",
+            "Sensor(es) de oxigênio dianteiro(s) ou traseiro(s) defeituoso(s)",
+            "Motor com falhas de ignição"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P0430",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P0430.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Catalisador defeituoso",
+            "Danos internos no motor resultando em alto consumo de óleo e/ou junta de cabeçote vazando que danificaram o catalisador"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P0440",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P0440.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Tampa de combustível ausente",
+            "Tampa de combustível defeituosa ou danificada",
+            "Bocal do tanque de combustível distorcido ou danificado",
+            "Mangueira do sistema evap rasgada ou perfurada",
+            "Vedação da unidade de medição de combustível defeituosa",
+            "Canister de carbono rachado ou danificado",
+            "Válvula de ventilação evap e/ou válvula de purga evap defeituosa",
+            "Tanque de combustível defeituoso ou danificado"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P0441",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P0441.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Tampa de combustível ausente",
+            "Válvula de purga presa aberta ou fechada",
+            "Tampa de combustível defeituosa ou danificada",
+            "Distorted damaged or cracked Fuel Tank Filler Neck",
+            "Mangueira do sistema evap rasgada ou perfurada",
+            "Vedação da unidade de medição de combustível defeituosa",
+            "Canister de carbono rachado ou danificado",
+            "Defective Evaporative Vent Valve",
+            "Tanque de combustível defeituoso ou danificado"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P0442",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P0442.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Tampa de combustível defeituosa ou danificada",
+            "Bocal do tanque de combustível distorcido ou danificado",
+            "Pequeno rasgo ou perfuração na mangueira do sistema EVAP e/ou canister",
+            "Sensor de pressão do tanque de combustível defeituoso",
+            "Bomba de detecção de vazamento defeituosa",
+            "Abraçadeiras ligeiramente soltas ou desgastadas ou anéis O endurecidos em qualquer ponto do sistema EVAP"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P0455",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P0455.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Tampa de combustível ausente",
+            "Tampa de combustível defeituosa ou danificada",
+            "Bocal do tanque de combustível distorcido ou danificado",
+            "Mangueira do sistema evap rasgada ou perfurada",
+            "Vedação da unidade de medição de combustível defeituosa",
+            "Canister de carbono rachado ou danificado",
+            "Válvula de ventilação evap e/ou válvula de purga evap defeituosa",
+            "Tanque de combustível defeituoso ou danificado",
+            "Sensor de pressão do tanque de combustível defeituoso"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P0500",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P0500.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Sensor de velocidade do veículo defeituoso",
+            "Velocímetro defeituoso",
+            "Fiação ou conector do sensor de velocidade do veículo",
+            "Problemas de comunicação no barramento CAN",
+            "Engrenagem de acionamento do sensor de velocidade do câmbio ou diferencial defeituosa"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P0501",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P0501.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Sensor de velocidade do veículo defeituoso",
+            "Velocímetro defeituoso",
+            "Fiação ou conector do sensor de velocidade do veículo",
+            "Problemas de comunicação no barramento CAN",
+            "Engrenagem de acionamento do sensor de velocidade do câmbio ou diferencial defeituosa"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P0505",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P0505.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Motor de controle de marcha lenta defeituoso",
+            "Vazamentos de vácuo no coletor de admissão",
+            "Acúmulo de carbono nas passagens de ar do corpo de borboleta"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P0506",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P0506.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Defective or sticking Idle Air Control Motor",
+            "Vazamentos de vácuo no coletor de admissão",
+            "Acúmulo de carbono nas passagens de ar do corpo de borboleta",
+            "Interruptor de pressão da direção hidráulica defeituoso"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P0507",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P0507.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Defective or sticking Idle Air Control Motor",
+            "Vazamentos de vácuo no coletor de admissão",
+            "Acúmulo de carbono nas passagens de ar do corpo de borboleta",
+            "Defective Coolant Temperature Sensor",
+            "Defective Charging System/Alternator",
+            "Interruptor de pressão da direção hidráulica defeituoso"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P0600",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P0600.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "PCM (Módulo de Controle do Trem de Força) defeituoso",
+            "Fiação/conexões do barramento de dados do PCM defeituosas",
+            "Circuitos de aterramento do barramento de dados do PCM defeituosos",
+            "Dispositivos de saída controlados pelo PCM ou outro módulo defeituosos",
+            "Comunicação CAN defeituosa"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P0601",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P0601.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Falta de tensão adequada no PCM",
+            "Módulo de memória do PCM defeituoso",
+            "Circuito(s) de aterramento do PCM defeituoso(s)",
+            "Dispositivos de saída controlados pelo PCM defeituosos"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P0602",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P0602.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Falha no Módulo de Controle de Trem de Força (PCM)",
+            "Problema de fiação"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P0603",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P0603.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Falta de tensão adequada na conexão Keep Alive Memory do PCM",
+            "Módulo de memória Keep Alive (KAM) do PCM defeituoso",
+            "Circuito(s) de aterramento do PCM defeituoso(s)",
+            "Dispositivos de saída controlados pelo PCM defeituosos"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P0605",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P0605.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Falta de tensão e/ou aterramento adequado no PCM",
+            "Módulo de memória ROM do PCM defeituoso",
+            "Circuito(s) de aterramento do PCM defeituoso(s)",
+            "Dispositivos de saída controlados pelo PCM defeituosos"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P0700",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P0700.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Solenóides de câmbio defeituosos",
+            "Sensor de temperatura do líquido de arrefecimento defeituoso",
+            "Corpo de válvula defeituoso",
+            "Fluido de transmissão sujo que restringe as passagens hidráulicas"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P0705",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P0705.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Sensor de faixa de transmissão (entrada PRNDL) defeituoso",
+            "Fiação ou conector do sensor de faixa de transmissão defeituoso",
+            "Corpo de válvula defeituoso",
+            "Ligação da válvula de mudança manual defeituosa",
+            "Fluido de transmissão sujo que restringe as passagens hidráulicas"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P0706",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P0706.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Sensor de faixa de transmissão (entrada PRNDL) defeituoso",
+            "Fiação ou conector do sensor de faixa de transmissão defeituoso",
+            "Corpo de válvula defeituoso",
+            "Ligação da válvula de mudança manual defeituosa",
+            "Fluido de transmissão sujo que restringe as passagens hidráulicas"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P0720",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P0720.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Sensor de velocidade de saída defeituoso",
+            "Solenóides de câmbio defeituosos",
+            "Sensor de temperatura do líquido de arrefecimento defeituoso",
+            "Corpo de válvula defeituoso",
+            "Fluido de transmissão sujo que restringe as passagens hidráulicas",
+            "Fiação ou conector do sensor de velocidade de saída defeituoso"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P0730",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P0730.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Solenóides de câmbio defeituosos",
+            "Sensor de temperatura do líquido de arrefecimento defeituoso",
+            "Corpo de válvula defeituoso",
+            "Fluido de transmissão sujo que restringe as passagens hidráulicas"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P0841",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P0841.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Falha do módulo de controle de transmissão (TCM)",
+            "Nível de fluido de transmissão baixo",
+            "Falha do sensor de pressão do fluido de transmissão",
+            "Problema de fiação"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P0842",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P0842.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Falha do módulo de controle de transmissão (TCM)",
+            "Nível de fluido de transmissão baixo",
+            "Falha do sensor de pressão do fluido de transmissão",
+            "Problema de fiação"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P0845",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P0845.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Falha do módulo de controle de transmissão (TCM)",
+            "Nível de fluido de transmissão baixo",
+            "Falha do sensor de pressão do fluido de transmissão",
+            "Problema de fiação"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P0846",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P0846.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Falha do módulo de controle de transmissão (TCM)",
+            "Nível de fluido de transmissão baixo",
+            "Falha do sensor de pressão do fluido de transmissão",
+            "Problema de fiação"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P0847",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P0847.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Falha do módulo de controle de transmissão (TCM)",
+            "Nível de fluido de transmissão baixo",
+            "Falha do sensor de pressão do fluido de transmissão",
+            "Problema de fiação"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P0901",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P0901.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Falha do cilindro mestre da embreagem",
+            "Falha do solenóide da embreagem",
+            "Falha do módulo de controle de transmissão (TCM)"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P0935",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P0935.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Falha do conjunto da unidade hidráulica",
+            "Falha do módulo de controle de transmissão (TCM)",
+            "Problema de fiação"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P0942",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P0942.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Falha do conjunto da unidade hidráulica",
+            "Falha do módulo de controle de transmissão (TCM)",
+            "Problema de fiação"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P0944",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P0944.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Filtro de transmissão entupido",
+            "Nível de fluido de transmissão baixo",
+            "Falha da bomba de óleo da transmissão",
+            "Problema de fiação"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P0961",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P0961.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Falha do solenóide de mudança da transmissão"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P0A08",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P0A08.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Falha do conjunto inversor/conversor",
+            "Falha no Módulo de Controle de Trem de Força (PCM)",
+            "Problema de fiação"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P0A0D",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P0A0D.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Falha do dispositivo de segurança de alta tensão",
+            "Falha do conjunto inversor/conversor",
+            "Falha do módulo de controle de gerenciamento de energia",
+            "Plugue de desconexão de serviço não está conectado corretamente",
+            "Problema de fiação"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P0A0F",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P0A0F.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Falha do conjunto do transcassete híbrido",
+            "Falha interna do motor",
+            "Falha do módulo de controle de gerenciamento de energia"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P0A7F",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P0A7F.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Conexões ruins na bateria de alta tensão",
+            "Problema na bateria de alta tensão",
+            "Problemas na ECU"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P0A80",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P0A80.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Falha do conjunto da bateria de alta tensão"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P0B22",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P0B22.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Falha do conjunto do contator da bateria",
+            "Falha do módulo de controle de energia da bateria (BECM)"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P0B24",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P0B24.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Falha do módulo de controle de energia da bateria (BECM)",
+            "Falha do conjunto da bateria de alta tensão",
+            "Problema de fiação"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P0B26",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P0B26.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Falha do módulo de controle de energia da bateria (BECM)",
+            "Falha do conjunto da bateria de alta tensão",
+            "Problema de fiação"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P0B28",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P0B28.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Falha do módulo de controle de energia da bateria (BECM)",
+            "Falha do conjunto da bateria de alta tensão",
+            "Problema de fiação"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P0B30",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P0B30.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Falha do módulo de controle de energia da bateria (BECM)",
+            "Falha do conjunto da bateria de alta tensão",
+            "Problema de fiação"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P0C00",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P0C00.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Drive motor generator power inverter control module failure"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P0C09",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P0C09.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Drive motor generator assembly failure",
+            "Drive motor generator power inverter control module failure"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P0C11",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P0C11.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Coolant system leak",
+            "Drive motor generator power inverter control module failure",
+            "Engine cooling fan failure",
+            "Water pump failure"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P0C14",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P0C14.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Coolant system leak",
+            "Drive motor generator power inverter control module failure",
+            "Engine cooling fan failure",
+            "Water pump failure"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P0C15",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P0C15.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Coolant system leak",
+            "Drive motor generator power inverter control module failure",
+            "Engine cooling fan failure",
+            "Water pump failure"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P2000",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P2000.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Diesel Particulate Filter (DPF) failure",
+            "Intake air leak",
+            "Mass Airflow (MAF) sensor is dirty/loss of calibration"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "PP2002",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código PP2002.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Diesel Particulate Filter (DPF) failure",
+            "Intake air leak",
+            "Mass Airflow (MAF) sensor is dirty/loss of calibration"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P2004",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P2004.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "A failed IMRC actuator",
+            "A problem with the intake manifold or linkage",
+            "Wiring issues"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P2006",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P2006.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Intake manifold runner control actuator failure",
+            "Falha no Módulo de Controle de Trem de Força (PCM)",
+            "Restricted vacuum lines"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P2101",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P2101.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Accelerator Pedal Position (APP) assembly failure",
+            "Falha no Módulo de Controle de Trem de Força (PCM)",
+            "Throttle control motor failure",
+            "Problema de fiação"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P2122",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P2122.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Accelerator Pedal Position (APP) assembly failure",
+            "Falha no Módulo de Controle de Trem de Força (PCM)",
+            "Throttle control motor failure",
+            "Problema de fiação"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P2135",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P2135.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Accelerator Pedal Position (APP) assembly failure",
+            "Falha no Módulo de Controle de Trem de Força (PCM)",
+            "Throttle Position Sensor (TPS) failure",
+            "Problema de fiação"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P2138",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P2138.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Accelerator Pedal Position (APP) assembly failure",
+            "Falha no Módulo de Controle de Trem de Força (PCM)",
+            "Throttle Position Sensor (TPS) failure",
+            "Problema de fiação"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P2181",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P2181.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Engine coolant heater failure",
+            "Engine coolant level is too low",
+            "Thermostat failure"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P2210",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P2210.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "NOx sensor failure",
+            "Falha no Módulo de Controle de Trem de Força (PCM)",
+            "Problema de fiação"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P2213",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P2213.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "NOx sensor failure",
+            "Falha no Módulo de Controle de Trem de Força (PCM)",
+            "Problema de fiação"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P2237",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P2237.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Exhaust leak",
+            "Oxygen sensor failure",
+            "Falha no Módulo de Controle de Trem de Força (PCM)",
+            "Problema de fiação"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P2238",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P2238.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Exhaust leak",
+            "Oxygen sensor failure",
+            "Falha no Módulo de Controle de Trem de Força (PCM)",
+            "Problema de fiação"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P2251",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P2251.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Exhaust leak",
+            "Oxygen sensor failure",
+            "Falha no Módulo de Controle de Trem de Força (PCM)",
+            "Problema de fiação"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P2302",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P2302.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Ignition coil failure",
+            "Falha no Módulo de Controle de Trem de Força (PCM)",
+            "Problema de fiação"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P2303",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P2303.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Ignition coil failure",
+            "Falha no Módulo de Controle de Trem de Força (PCM)",
+            "Problema de fiação"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P2305",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P2305.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Ignition coil failure",
+            "Falha no Módulo de Controle de Trem de Força (PCM)",
+            "Problema de fiação"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P2308",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P2308.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Ignition coil failure",
+            "Falha no Módulo de Controle de Trem de Força (PCM)",
+            "Problema de fiação"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P2310",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P2310.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Ignition coil failure",
+            "Falha no Módulo de Controle de Trem de Força (PCM)",
+            "Problema de fiação"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P2401",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P2401.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Evap leak detection pump failure",
+            "Falha no Módulo de Controle de Trem de Força (PCM)",
+            "Problema de fiação"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P2402",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P2402.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Evap leak detection pump failure",
+            "Falha no Módulo de Controle de Trem de Força (PCM)",
+            "Problema de fiação"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P2422",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P2422.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "EVAP vent valve failure",
+            "Falha no Módulo de Controle de Trem de Força (PCM)",
+            "Problema de fiação"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P2431",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P2431.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Air control solenoid failure",
+            "Falha no Módulo de Controle de Trem de Força (PCM)",
+            "Secondary Air System pressure sensor failure",
+            "Problema de fiação"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P2432",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P2432.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Air control solenoid failure",
+            "Falha no Módulo de Controle de Trem de Força (PCM)",
+            "Secondary Air System pressure sensor failure",
+            "Problema de fiação"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P2500",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P2500.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Alternator failure",
+            "Battery failure",
+            "Falha no Módulo de Controle de Trem de Força (PCM)",
+            "Problema de fiação"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P2501",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P2501.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Alternator failure",
+            "Battery failure",
+            "Falha no Módulo de Controle de Trem de Força (PCM)",
+            "Problema de fiação"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P2503",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P2503.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Alternator failure",
+            "Battery failure",
+            "Problema de fiação"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P2509",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P2509.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Falha no Módulo de Controle de Trem de Força (PCM)",
+            "Powertrain Control Module (PCM) power relay failure",
+            "Problema de fiação"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P250C",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P250C.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Falha do sensor de nível de óleo",
+            "Falha no Módulo de Controle de Trem de Força (PCM)",
+            "Problema de fiação"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P2601",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P2601.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Falha da bomba d'água do CHS",
+            "Relé da bomba d'água do CHS",
+            "Falha no Módulo de Controle de Trem de Força (PCM)",
+            "Problema de fiação"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P2607",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P2607.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Intake air heater",
+            "Falha no Módulo de Controle de Trem de Força (PCM)",
+            "Problema de fiação"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P2609",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P2609.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Intake air heater",
+            "Falha no Módulo de Controle de Trem de Força (PCM)",
+            "Problema de fiação"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P2610",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P2610.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Problema interno no PCM",
+            "Problema no circuito de alimentação ou aterramento do PCM"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P2614",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P2614.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Anel de tom quebrado",
+            "Falha do sensor de posição do eixo de comando (CMP)",
+            "Falha no Módulo de Controle de Trem de Força (PCM)",
+            "Problema de fiação"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P2706",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P2706.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Falha do módulo de controle de transmissão (TCM)",
+            "Nível de fluido de transmissão baixo",
+            "Falha do solenóide de mudança da transmissão",
+            "Problema de fiação"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P2711",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P2711.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Internal transmission failure",
+            "Falha do módulo de controle de transmissão (TCM)",
+            "Nível de fluido de transmissão baixo",
+            "Transmission solenoid failure",
+            "Problema de fiação"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P2714",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P2714.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Falha do módulo de controle de transmissão (TCM)",
+            "Falha do módulo de controle de transmissão (TCM)",
+            "Nível de fluido de transmissão baixo",
+            "Falha do solenóide de mudança da transmissão",
+            "Problema de fiação"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P2716",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P2716.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Falha do módulo de controle de transmissão (TCM)",
+            "Nível de fluido de transmissão baixo",
+            "Falha do solenóide de mudança da transmissão",
+            "Problema de fiação"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P2723",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P2723.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Falha do módulo de controle de transmissão (TCM)",
+            "Falha do módulo de controle de transmissão (TCM)",
+            "Nível de fluido de transmissão baixo",
+            "Falha do solenóide de mudança da transmissão",
+            "Problema de fiação"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P2803",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P2803.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Falha no Módulo de Controle de Trem de Força (PCM)",
+            "Falha do módulo de controle de transmissão (TCM)",
+            "Falha do sensor de faixa de transmissão",
+            "Problema de fiação"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P2806",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P2806.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Falha no Módulo de Controle de Trem de Força (PCM)",
+            "Falha do módulo de controle de transmissão (TCM)",
+            "Falha do sensor de faixa de transmissão",
+            "Sensor de faixa de transmissão fora de ajuste",
+            "Problema de fiação"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P2809",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P2809.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Falha do módulo de controle de transmissão (TCM)",
+            "Nível de fluido de transmissão baixo",
+            "Transmission pressure control solenoid failure",
+            "Problema de fiação"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P2810",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P2810.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Falha do módulo de controle de transmissão (TCM)",
+            "Nível de fluido de transmissão baixo",
+            "Transmission pressure control solenoid failure",
+            "Problema de fiação"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P2815",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P2815.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Falha do módulo de controle de transmissão (TCM)",
+            "Nível de fluido de transmissão baixo",
+            "Transmission pressure control solenoid failure",
+            "Problema de fiação"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P2A00",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P2A00.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Exhaust leak",
+            "Oxygen sensor failure",
+            "Falha no Módulo de Controle de Trem de Força (PCM)",
+            "Problema de fiação"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P2A01",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P2A01.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Exhaust leak",
+            "Oxygen sensor failure",
+            "Falha no Módulo de Controle de Trem de Força (PCM)",
+            "Problema de fiação"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P2A03",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P2A03.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Exhaust leak",
+            "Oxygen sensor failure",
+            "Falha no Módulo de Controle de Trem de Força (PCM)",
+            "Problema de fiação"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P2A04",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P2A04.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Exhaust leak",
+            "Oxygen sensor failure",
+            "Falha no Módulo de Controle de Trem de Força (PCM)",
+            "Problema de fiação"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P2BA8",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P2BA8.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Sensor NOx defeituoso",
+            "Chicote dos sensores NOx aberto ou em curto",
+            "Conexão elétrica ruim no circuito dos sensores NOx",
+            "Filtro de partículas diesel (DPF) defeituoso"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P3000",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P3000.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Nível de combustível muito baixo",
+            "Falha do conjunto da bateria de alta tensão",
+            "Bateria de alta tensão não está suficientemente carregada"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P3100",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P3100.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Falha do módulo de controle de trem de força de alta tensão"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P3400",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P3400.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Sistema de desativação de cilindros com defeito"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P3401",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código P3401.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Nível de óleo do motor muito baixo",
+            "Falha no Módulo de Controle de Trem de Força (PCM)",
+            "Variable valve timing solenoid failure",
+            "Problema de fiação"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "B0081",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código B0081.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Wiring issues",
+            "Control module problems",
+            "A problem with the airbag"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "C0040",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código C0040.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "A faulty wheel speed sensor",
+            "Problema no circuito do sensor de velocidade de roda",
+            "Problemas no reluctor",
+            "Problema no módulo ABS"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "U0001",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código U0001.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "A faulty wheel speed sensor",
+            "Problema no circuito do sensor de velocidade de roda",
+            "Problemas no reluctor",
+            "Problema no módulo ABS"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "U0073",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código U0073.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Módulo de controle com defeito",
+            "Problema no barramento CAN"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "U0100",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código U0100.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "PCM defeituoso",
+            "A problem with the control module circuit",
+            "Problema no barramento CAN"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "U0107",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código U0107.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Bateria descarregada",
+            "Módulo TAC defeituoso",
+            "Problema no circuito do módulo TAC",
+            "Problema no barramento CAN"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "U0121",
+        "componente": "Sistema OBD2 / Diagnóstico",
+        "defeito": "Falha identificada pelo código U0121.",
+        "sintomas": [
+            "Luz de injeção acesa",
+            "Verificar o código com scanner"
+        ],
+        "causas_provaveis": [
+            "Bateria descarregada",
+            "Módulo ABS defeituoso",
+            "A problem with ABS module circuit",
+            "Problema no barramento CAN"
+        ],
+        "solucao_manual": "1. Ler o código com scanner.\n2. Inspecionar as causas prováveis listadas.\n3. Realizar reparos ou substituições conforme diagnóstico.",
+        "historico_reparacao": "Histórico genérico de diagnóstico baseado no código OBD2."
+    },
+    {
+        "codigo_obd2": "P0300",
+        "componente": "Sistema de Ignição / Injeção",
+        "defeito": "Falha de ignição em cilindros múltiplos aleatórios (Random/Multiple Cylinder Misfire Detected).",
+        "sintomas": ["Motor falhando em marcha lenta", "Perda de potência", "Luz da injeção piscando"],
+        "causas_provaveis": ["Velas de ignição desgastadas", "Bobina de ignição defeituosa", "Combustível adulterado", "Bicos injetores entupidos"],
+        "solucao_manual": "1. Conectar o scanner e verificar histórico de falhas por cilindro (P0301 a P0304).\n2. Testar a resistência das bobinas e inspecionar o desgaste das velas.\n3. Verificar pressão da linha de combustível.\n4. Substituir os componentes defeituosos e limpar os bicos.",
+        "historico_reparacao": "Cliente relatou perda de força em subidas. Scanner acusou P0300. Na inspeção, a vela do cilindro 3 estava encharcada de combustível devido à falha na bobina. Substituído o jogo de velas e a bobina do cilindro 3. Problema resolvido."
+    },
+    {
+        "codigo_obd2": "P0171",
+        "componente": "Sistema de Combustível / Admissão",
+        "defeito": "Mistura muito pobre no Banco 1 (System Too Lean - Bank 1).",
+        "sintomas": ["Marcha lenta irregular", "Consumo elevado de combustível", "Dificuldade na partida a frio"],
+        "causas_provaveis": ["Entrada de ar falsa após o sensor MAF", "Sensor MAF sujo ou defeituoso", "Bomba de combustível com baixa pressão", "Filtro de combustível entupido"],
+        "solucao_manual": "1. Inspecionar visualmente mangueiras de vácuo à procura de rachaduras.\n2. Limpar o sensor MAF com limpa-contatos específico.\n3. Medir a pressão da bomba de combustível (deve estar conforme especificação do fabricante, ex: 3.5 a 4.2 bar).",
+        "historico_reparacao": "Luz de injeção acesa. Realizado teste de fumaça na admissão, detectada rachadura na mangueira do respiro do cárter (PCV). Substituída a mangueira e feita a limpeza preventiva do sensor MAF. Parâmetros de curto e longo prazo (Fuel Trims) normalizados."
+    },
+    {
+        "codigo_obd2": "P0420",
+        "componente": "Sistema de Exaustão / Emissões",
+        "defeito": "Eficiência do sistema de catalisador abaixo do limite no Banco 1 (Catalyst System Efficiency Below Threshold - Bank 1).",
+        "sintomas": ["Luz de injeção acesa", "Odor forte de enxofre no escapamento", "Leve perda de desempenho"],
+        "causas_provaveis": ["Catalisador desgastado ou danificado", "Sensor de oxigênio (Sonda Lambda) pós-catalisador travado", "Vazamento no escapamento antes do catalisador"],
+        "solucao_manual": "1. Verificar o gráfico de leitura da sonda lambda 2 (deve ser uma linha quase contínua e estável).\n2. Inspecionar o catalisador com câmera endoscópica para ver se a colmeia interna derreteu ou quebrou.\n3. Verificar trincas no coletor de escape.",
+        "historico_reparacao": "Veículo Volkswagen Golf com 120.000km. Luz CHECK ENGINE acesa com código P0420. Realizada leitura dos gráficos de tensão das sondas lambda: sonda 1 (pré-catalisador) oscilava normalmente entre 0.1 a 0.9V, mas sonda 2 (pós-catalisador) estava praticamente congelada em 0.45V. Diagnosticado catalisador internamente entupido/degradado. Substituído catalisador original e problema resolvido."
+    }
+]

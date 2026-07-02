@@ -1,0 +1,412 @@
+{
+  "metadata": {
+    "nome": "Dataset - Problemas Conhecidos por Marca e Modelo",
+    "versao": "1.0",
+    "idioma": "pt-BR",
+    "categoria": "Defeitos_Especificos_por_Modelo"
+  },
+  "problemas_conhecidos_por_modelo": [
+    {
+      "marca": "Volkswagen",
+      "modelo": "Gol/Voyage/Saveiro 1.0/1.6 G6",
+      "ano_range": "2012-2020",
+      "problemas_frequentes": [
+        {
+          "problema": "Calço do motor quebrando",
+          "sintoma": "Vibração intensa no acelerador e ao engrenar marcha",
+          "solucao": "Substituição do calço de coxim traseiro do motor (peça de R$ 80-150)",
+          "frequencia": "Muito comum acima de 80.000km"
+        },
+        {
+          "problema": "Ponteiras da barra estabilizadora dianteira",
+          "sintoma": "Batida seca ao sair de lombadas ou em curvas",
+          "solucao": "Substituição do par de ponteiras (R$ 40-80 o par)",
+          "frequencia": "Muito comum"
+        },
+        {
+          "problema": "Sensor MAF sujo",
+          "sintoma": "Consumo aumentado, falhas em aceleração",
+          "solucao": "Limpeza com spray específico ou substituição",
+          "frequencia": "Comum"
+        },
+        {
+          "problema": "Vazamento de óleo pelo retentor traseiro do virabrequim",
+          "sintoma": "Mancha de óleo no chão embaixo da caixa de câmbio",
+          "solucao": "Substituição do retentor traseiro",
+          "frequencia": "Comum acima de 100.000km"
+        }
+      ]
+    },
+    {
+      "marca": "Fiat",
+      "modelo": "Uno/Palio/Siena 1.0/1.4 Fire",
+      "ano_range": "2010-2020",
+      "problemas_frequentes": [
+        {
+          "problema": "Termostato travando aberto",
+          "sintoma": "Motor demora a esquentar, ar quente da cabine fraco, P0128",
+          "solucao": "Substituição do termostato (peça barata, R$ 40-80, mão de obra simples)",
+          "frequencia": "Muito comum"
+        },
+        {
+          "problema": "Bucha do tensor da correia dentada fraturada",
+          "sintoma": "Barulho de ronco e vibração na correia dentada",
+          "solucao": "Substituição completa do kit correia com bucha",
+          "frequencia": "Comum nos motores 1.4 Fire"
+        },
+        {
+          "problema": "Válvula de controle de marcha lenta (IAC)",
+          "sintoma": "Marcha lenta instável, motor apagando na sinaleira",
+          "solucao": "Limpeza ou substituição da válvula IAC",
+          "frequencia": "Muito comum"
+        },
+        {
+          "problema": "Vedação do visor do nível de óleo",
+          "sintoma": "Vazamento de óleo pequeno na lateral do motor",
+          "solucao": "Substituição da vedação do visor de nível",
+          "frequencia": "Comum"
+        }
+      ]
+    },
+    {
+      "marca": "Chevrolet",
+      "modelo": "Onix/Prisma 1.0/1.4 (1ª geração)",
+      "ano_range": "2012-2019",
+      "problemas_frequentes": [
+        {
+          "problema": "Mola do câmbio manual quebrando",
+          "sintoma": "Alavanca de câmbio sem resistência ou solta",
+          "solucao": "Substituição da mola interna da caixa de câmbio",
+          "frequencia": "Muito comum, reconhecido pela GM com recall"
+        },
+        {
+          "problema": "Bomba de combustível com falha precoce",
+          "sintoma": "Falhas em aceleração, motor engasgando, P0087",
+          "solucao": "Substituição da bomba de combustível (interna ao tanque)",
+          "frequencia": "Comum"
+        },
+        {
+          "problema": "Vidro dianteiro com trincas espontâneas",
+          "sintoma": "Trinca no vidro sem impacto visível",
+          "solucao": "Substituição do parabrisa",
+          "frequencia": "Relatado em lotes específicos"
+        },
+        {
+          "problema": "Pastilhas de freio com chiado precoce",
+          "sintoma": "Chiado metálico ao frear mesmo com pastilha nova",
+          "solucao": "Uso de pastilha de qualidade superior (Bosch, TRW, Fremax)",
+          "frequencia": "Comum com pastilhas genéricas"
+        }
+      ]
+    },
+    {
+      "marca": "Toyota",
+      "modelo": "Corolla 1.8/2.0 Flex",
+      "ano_range": "2014-2024",
+      "problemas_frequentes": [
+        {
+          "problema": "Sensor de estacionamento (PDC) com falha",
+          "sintoma": "Apito constante de ré mesmo sem obstáculo",
+          "solucao": "Limpeza ou substituição do sensor afetado",
+          "frequencia": "Comum após 5 anos"
+        },
+        {
+          "problema": "Consumo de óleo no 2ZR-FE (2009-2013)",
+          "sintoma": "Consumo acima de 500ml/1000km sem fumaça visível",
+          "solucao": "Recall Toyota para substituição dos anéis de pistão (TSB)",
+          "frequencia": "Muito comum nos motores mais antigos"
+        },
+        {
+          "problema": "Catalisador com código P0420",
+          "sintoma": "CHECK ENGINE, P0420 recorrente",
+          "solucao": "Verificar sonda lambda upstream antes de trocar o catalisador",
+          "frequencia": "Comum acima de 100.000km"
+        }
+      ]
+    },
+    {
+      "marca": "Honda",
+      "modelo": "Civic 1.5 Turbo",
+      "ano_range": "2017-2021",
+      "problemas_frequentes": [
+        {
+          "problema": "Contaminação do óleo com combustível (gasolina no óleo)",
+          "sintoma": "Nível do óleo sobe, cheiro de gasolina no óleo",
+          "solucao": "Recall Honda - substituição de componentes de vedação dos injetores",
+          "frequencia": "Reportado extensivamente, objeto de investigação de recall"
+        },
+        {
+          "problema": "Sistema de som com falha pós atualização",
+          "sintoma": "Multimídia travando ou não inicializando",
+          "solucao": "Atualização de firmware pelo dealer Honda",
+          "frequencia": "Moderada"
+        }
+      ]
+    },
+    {
+      "marca": "Hyundai/Kia",
+      "modelo": "HB20/Creta/Sportage 1.0 Turbo",
+      "ano_range": "2019-2024",
+      "problemas_frequentes": [
+        {
+          "problema": "Transmissão DCT com solavancos a frio",
+          "sintoma": "Solavanco ao sair do ponto com câmbio DCT, especialmente a frio",
+          "solucao": "Atualização de software do TCM (TSB disponível). Em casos persistentes, revisão da embreagem úmida",
+          "frequencia": "Muito comum e reconhecido pela Hyundai"
+        },
+        {
+          "problema": "Consumo de óleo no motor 1.0 turbo T-GDI",
+          "sintoma": "Nível de óleo caindo entre trocas",
+          "solucao": "Verificar anéis de pistão. Alguns lotes com recall no exterior",
+          "frequencia": "Moderada"
+        }
+      ]
+    },
+    {
+      "marca": "Ford",
+      "modelo": "EcoSport 2.0 Flex",
+      "ano_range": "2013-2017",
+      "problemas_frequentes": [
+        {
+          "problema": "Correia de acessórios quebrando prematuramente",
+          "sintoma": "Veículo para repentinamente, alternador para de carregar",
+          "solucao": "Troca preventiva da correia e tensor com intervalos menores",
+          "frequencia": "Comum"
+        },
+        {
+          "problema": "Caixa de câmbio PowerShift (DCT seco) com problemas",
+          "sintoma": "Solavanco, patinamento, estranho ao engatar marcha",
+          "solucao": "Objeto de recall e ação coletiva. Atualização de software e troca de embreagem",
+          "frequencia": "Muito comum - PowerShift foi objeto de ações judiciais"
+        }
+      ]
+    },
+    {
+      "marca": "Renault",
+      "modelo": "Kwid 1.0/SCe",
+      "ano_range": "2017-2024",
+      "problemas_frequentes": [
+        {
+          "problema": "Superaquecimento em trânsito lento",
+          "sintoma": "Temperatura subindo em trânsito parado, especialmente no calor",
+          "solucao": "Verificar funcionamento do ventilador elétrico. Alguns lotes com ajuste de programação do ECU",
+          "frequencia": "Moderada"
+        },
+        {
+          "problema": "Direção elétrica com solavanco ao fazer curva completa",
+          "sintoma": "Resistência ou pulso na direção ao girar volante até o limite",
+          "solucao": "Calibração da coluna de direção elétrica / atualização de software",
+          "frequencia": "Moderada"
+        }
+      ]
+    },
+    {
+      "marca": "Jeep",
+      "modelo": "Renegade/Compass 1.8 Flex / 2.0 Diesel",
+      "ano_range": "2015-2021",
+      "problemas_frequentes": [
+        {
+          "problema": "Corrosão no trocador de calor da transmissão (AT6)",
+          "sintoma": "Óleo do câmbio misturando com a água do radiador, mudando a cor do fluido para 'café com leite' e travando a transmissão",
+          "solucao": "Substituição preventiva do trocador de calor por um modelo em inox ou instalação de radiador externo",
+          "frequencia": "Muito comum nos modelos Flex até 2019"
+        },
+        {
+          "problema": "Barulho na suspensão traseira (buchas do braço oscilante)",
+          "sintoma": "Rangido ou estalo metálico ao passar por irregularidades ou lombadas",
+          "solucao": "Substituição das buchas dos braços tensores traseiros",
+          "frequencia": "Comum acima de 60.000km"
+        },
+        {
+          "problema": "Pane elétrica por infiltração nos módulos internos",
+          "sintoma": "Luzes do painel piscando, rádio travando, vidros elétricos parando de funcionar",
+          "solucao": "Limpeza dos drenos do para-brisa/teto solar e isolamento dos chicotes sob o painel",
+          "frequencia": "Moderada"
+        }
+      ]
+    },
+    {
+      "marca": "Nissan",
+      "modelo": "March/Versa 1.0 3cil / 1.6 16V",
+      "ano_range": "2012-2020",
+      "problemas_frequentes": [
+        {
+          "problema": "Trinca no reservatório de expansão do radiador",
+          "sintoma": "Baixando o nível de aditivo constantemente, marcas rosadas/verdes de vazamento no cofre do motor",
+          "solucao": "Substituição do reservatório de expansão (peça plástica de R$ 90-150)",
+          "frequencia": "Muito comum"
+        },
+        {
+          "problema": "Trepidação na saída do câmbio CVT",
+          "sintoma": "Carro treme/vibra ao arrancar em subidas ou saídas de semáforo",
+          "solucao": "Troca do fluido do câmbio CVT com flush e limpeza dos imãs do cárter",
+          "frequencia": "Comum acima de 80.000km se não houver troca do óleo"
+        },
+        {
+          "problema": "Ruído no rolamento do compressor do ar-condicionado",
+          "sintoma": "Barulho de chiado ou ronco metálico vindo do motor que some ao desligar o ar-condicionado",
+          "solucao": "Substituição do rolamento da polia do compressor",
+          "frequencia": "Comum"
+        }
+      ]
+    },
+    {
+      "marca": "Honda",
+      "modelo": "Fit/City 1.5 i-VTEC",
+      "ano_range": "2015-2021",
+      "problemas_frequentes": [
+        {
+          "problema": "Folga nas válvulas do motor (necessidade de regulagem)",
+          "sintoma": "Motor com barulho de 'máquina de costura' (clec-clec) a frio e perda de rendimento",
+          "solucao": "Regulagem mecânica da folga de válvulas (pastilhamento/ajuste de folga)",
+          "frequencia": "Recomendado a cada 40.000km pelo manual, muito negligenciado"
+        },
+        {
+          "problema": "Infiltração de água no porta-malas",
+          "sintoma": "Carpete do porta-malas úmido, estepe submerso em água após chuvas",
+          "solucao": "Vedação das trincas na calha do teto (próximo à tampa traseira) e das borrachas das lanternas",
+          "frequencia": "Muito comum na 3ª geração do Fit"
+        }
+      ]
+    },
+    {
+      "marca": "Peugeot",
+      "modelo": "208/2008 1.2 Puretech / 1.6 EC5",
+      "ano_range": "2015-2022",
+      "problemas_frequentes": [
+        {
+          "problema": "Degradação da correia banhada a óleo (Motor 1.2 Puretech 3cil)",
+          "sintoma": "Luz de pressão de óleo acende no painel, perda de potência, pedaços de borracha no cárter entupindo o pescador",
+          "solucao": "Substituição prematura da correia dentada e limpeza do pescador de óleo da bomba",
+          "frequencia": "Muito comum se usado óleo fora da especificação exata"
+        },
+        {
+          "problema": "Vazamento na carcaça da válvula termostática (Motor 1.6)",
+          "sintoma": "Surgimento de poças de aditivo abaixo do motor, temperatura oscilando",
+          "solucao": "Substituição da carcaça plástica original por uma de alumínio ou nova peça original",
+          "frequencia": "Comum acima de 70.000km"
+        }
+      ]
+    },
+    {
+      "marca": "Renault",
+      "modelo": "Sandero/Logan/Duster 1.6 16V SCe",
+      "ano_range": "2017-2023",
+      "problemas_frequentes": [
+        {
+          "problema": "Vazamento na junta da tampa de válvulas",
+          "sintoma": "Cheiro de óleo queimado invadindo a cabine, poças de óleo acumuladas nas velas de ignição",
+          "solucao": "Substituição da junta da tampa de válvulas e aplicação de silicone de alta temperatura",
+          "frequencia": "Comum após 60.000km"
+        },
+        {
+          "problema": "Coxim hidráulico do motor lado direito estourado",
+          "sintoma": "Vibração excessiva no volante e painel em marcha lenta",
+          "solucao": "Substituição do coxim hidráulico (R$ 350-600)",
+          "frequencia": "Muito comum"
+        }
+      ]
+    },
+    {
+      "marca": "Toyota",
+      "modelo": "Etios/Yaris 1.3/1.5 Dual VVT-i",
+      "ano_range": "2012-2023",
+      "problemas_frequentes": [
+        {
+          "problema": "Ruído e travamento na caixa de direção",
+          "sintoma": "Estalos ao esterçar o volante parado ou em manobras de baixa velocidade",
+          "solucao": "Substituição da bucha interna da caixa de direção ou troca do conjunto",
+          "frequencia": "Moderada em ruas muito esburacadas"
+        },
+        {
+          "problema": "Quebra do botão de travamento dos vidros elétricos",
+          "sintoma": "Botão do comando do motorista afunda ou quebra internamente, inutilizando os vidros dos passageiros",
+          "solucao": "Substituição da placa de comando do vidro elétrico da porta do motorista",
+          "frequencia": "Comum nos modelos Etios até 2016"
+        }
+      ]
+    }
+  ],
+  "intervalos_manutencao_por_fabricante": {
+    "descricao": "Intervalos oficiais recomendados pelos fabricantes para veículos brasileiros em condições normais de uso",
+    "dados": [
+      {
+        "fabricante": "Volkswagen",
+        "oleo_km": 10000,
+        "oleo_spec_gasolina": "5W30 VW 504.00/507.00",
+        "correia_distribuicao_km": 60000,
+        "arrefecimento_km": 40000
+      },
+      {
+        "fabricante": "Fiat",
+        "oleo_km": 10000,
+        "oleo_spec_gasolina": "5W30 API SN",
+        "correia_distribuicao_km": 60000,
+        "arrefecimento_km": 40000
+      },
+      {
+        "fabricante": "Chevrolet",
+        "oleo_km": 10000,
+        "oleo_spec_gasolina": "5W30 API SN/dexos1",
+        "correia_distribuicao_km": 60000,
+        "arrefecimento_km": 30000
+      },
+      {
+        "fabricante": "Toyota",
+        "oleo_km": 10000,
+        "oleo_spec_gasolina": "5W30 ou 0W20 Toyota Genuine",
+        "correia_distribuicao": "Corrente - sem troca programada (com manutenção de óleo)",
+        "arrefecimento_km": 40000
+      },
+      {
+        "fabricante": "Honda",
+        "oleo_km": 8000,
+        "oleo_spec_gasolina": "0W20 ou 5W20 Honda Genuine",
+        "correia_distribuicao": "Corrente - sem troca programada",
+        "arrefecimento_km": 40000
+      },
+      {
+        "fabricante": "Hyundai/Kia",
+        "oleo_km": 10000,
+        "oleo_spec_gasolina": "5W30 API SP",
+        "correia_distribuicao_km": "Depende do motor (verificar manual)",
+        "arrefecimento_km": 40000
+      },
+      {
+        "fabricante": "Ford",
+        "oleo_km": 10000,
+        "oleo_spec_gasolina": "5W20 ou 5W30 WSS-M2C948-B",
+        "correia_distribuicao_km": 60000,
+        "arrefecimento_km": 40000
+      },
+      {
+        "fabricante": "Jeep",
+        "oleo_km": 12000,
+        "oleo_spec_gasolina": "5W30 API SN / ACEA A5/B5",
+        "correia_distribuicao_km": "Corrente no Flex (sem troca) / 60000km no Diesel",
+        "arrefecimento_km": 50000
+      },
+      {
+        "fabricante": "Nissan",
+        "oleo_km": 10000,
+        "oleo_spec_gasolina": "5W30 API SN",
+        "correia_distribuicao_km": "Corrente - sem troca programada",
+        "arrefecimento_km": 80000
+      },
+      {
+        "fabricante": "Peugeot",
+        "oleo_km": 10000,
+        "oleo_spec_gasolina": "0W30 ACEA C2 (Puretech) / 5W40 (EC5)",
+        "correia_distribuicao_km": 60000,
+        "arrefecimento_km": 40000
+      },
+      {
+        "fabricante": "Renault",
+        "oleo_km": 10000,
+        "oleo_spec_gasolina": "5W40 ou 10W40 RN0700/RN0710",
+        "correia_distribuicao_km": "Corrente no motor SCe - sem troca programada",
+        "arrefecimento_km": 40000
+      }
+    ]
+  }
+}

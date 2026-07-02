@@ -1,0 +1,10 @@
+P0300
+Falha aleatória de combustão.
+Possíveis causas:
+vela desgastada
+bobina ruim
+injeção irregular
+Diagnóstico:
+verificar ignição
+testar pressão combustível
+avaliar sensores

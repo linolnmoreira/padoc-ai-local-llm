@@ -1,0 +1,19 @@
+
+Instalar motor local:
+
+pip install llama-cpp-python
+
+Baixar um modelo GGUF compatível:
+
+Exemplo:
+Mistral 7B Instruct GGUF
+ou
+Llama 3 GGUF
+
+Colocar o arquivo:
+
+brain/models/padoc-model.gguf
+
+
+A PADOC AI roda localmente.
+Não usa API.

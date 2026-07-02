@@ -1,0 +1,19 @@
+# Define o comportamento padrão para todos os arquivos.
+# Git tentará adivinhar se são texto e normalizará as quebras de linha.
+* text=auto
+
+# Define explicitamente os arquivos de texto para garantir a normalização.
+# As quebras de linha serão convertidas para o padrão do sistema operacional no checkout.
+*.py text
+*.md text
+*.json text
+*.txt text
+*.html text
+*.css text
+*.js text
+.gitignore text
+Procfile text
+
+# Define arquivos binários que NUNCA devem ser modificados.
+# Isso é crucial para modelos de IA, imagens, etc.
+*.gguf binary

@@ -1,0 +1,15 @@
+Toyota Corolla 2020
+Motor 2.0
+
+Falha P0300:
+Sintomas:
+- perda de potência
+- vibração
+
+Causas:
+- vela
+- bobina
+- combustível
+
+Procedimento:
+1 testar ignição; 2 medir pressão combustível; 3 verificar sensores.

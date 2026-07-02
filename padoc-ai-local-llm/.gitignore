@@ -1,0 +1,27 @@
+# Arquivos de ambiente
+.env
+*.env
+
+# Credenciais e chaves
+firebase-key.json
+
+# Arquivos de cache e compilados do Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ambientes virtuais
+venv/
+env/
+
+# Arquivos de sistema
+.DS_Store
+
+# Arquivos de dados gerados
+dados/diagnosticos.json
+memory/conhecimento.json
+memory/feedback.json
+
+# Arquivos gerados por scripts de documentação
+PROXIMOS_PASSOS.txt

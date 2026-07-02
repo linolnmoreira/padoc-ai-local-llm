@@ -1,0 +1,42 @@
+
+PADOC AI: PRÓXIMOS PASSOS
+========================
+
+Você tem tudo preparado! Agora siga:
+
+PASSO 1: Validar dados localmente
+  Terminal: python validar_datasets.py
+
+PASSO 2: Iniciar API
+  Terminal: python api.py
+  Testar: curl http://localhost:5000/api/saude
+
+PASSO 3: Testar site
+  Abrir: site_padoc.html no navegador
+
+PASSO 4: Setup Firebase
+  - Criar conta em console.firebase.google.com
+  - Criar base de dados
+  - Download credenciais
+  - Criar arquivo .env
+
+PASSO 5: Deploy no Heroku
+  - Criar conta
+  - Instalar Heroku CLI
+  - heroku login
+  - heroku create padoc-ai-api
+  - git push heroku main
+
+PASSO 6: Hospedar site
+  - GitHub Pages ou Vercel
+  - Editar URL da API no site_padoc.html
+
+PASSO 7: App mobile (opcional)
+  - React Native ou Flutter
+
+PASSO 8: Lançar!
+  - Testar tudo
+  - Divulgar links
+
+Documentação completa em: GUIA_PRODUCAO.py
+Comandos prontos em: GUIA_TESTES.py

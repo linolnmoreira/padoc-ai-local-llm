@@ -1,0 +1,11 @@
+path: vision/dataset
+
+train: images/train
+val: images/val
+
+names:
+  0: pneu_desgastado
+  1: vazamento_oleo
+  2: pastilha_freio
+  3: motor
+  4: correia

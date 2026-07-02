@@ -1,0 +1,9 @@
+Defeitos Comuns e Soluções
+
+Motor falhando: Pode ser velas, bobinas, injetores sujos, filtro de combustível entupido.
+Superaquecimento: Verificar nível de água, ventoinha, radiador, válvula termostática.
+Barulho na suspensão: Buchas gastas, amortecedores ruins, pivôs com folga.
+Freio chiando: Pastilhas gastas, disco empenado, sujeira.
+Perda de potência: Filtro de ar sujo, sensor MAF/MAP com defeito, catalisador entupido.
+
+A manutenção preventiva é crucial para evitar problemas maiores.

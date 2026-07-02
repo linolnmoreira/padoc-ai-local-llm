@@ -1,0 +1,462 @@
+{
+  "metadata": {
+    "nome": "Dataset de Treinamento - Defeitos Mecânicos e Elétricos",
+    "versao": "1.0",
+    "idioma": "pt-BR",
+    "categoria": "Defeitos_Mecanicos_Eletricos"
+  },
+  "defeitos_mecanicos": [
+    {
+      "id": "DM001",
+      "sistema": "Motor",
+      "componente": "Correia dentada / Corrente de distribuição",
+      "defeito": "Correia de distribuição rompida",
+      "sintomas": ["Motor não dá partida", "Barulho metálico antes de parar", "Possível batimento interno"],
+      "causas": ["Correia fora do prazo de troca", "Tensionador travado", "Guia da correia quebrada", "Contaminação por óleo"],
+      "diagnostico": ["Motor não gira livremente com chave de caixa", "Distribuição fora de fase", "Compressão zero em todos os cilindros"],
+      "solucao": "Substituição da correia ou corrente de distribuição com todos os tensionadores e guias. Verificar se há danos nas válvulas (motor interferente).",
+      "estimativa_horas": "4-8h",
+      "risco_motor": true,
+      "intervalo_troca_km": 60000,
+      "intervalo_troca_meses": 48
+    },
+    {
+      "id": "DM002",
+      "sistema": "Motor",
+      "componente": "Bomba de óleo",
+      "defeito": "Bomba de óleo com pressão insuficiente",
+      "sintomas": ["Luz de óleo acesa em baixa rotação", "Barulho de batidas metálicas (hidráulicos de válvula)", "Pressão abaixo de 1 bar em quente"],
+      "causas": ["Folgas internas da bomba desgastadas", "Filtro de óleo do cárter entupido", "Óleo muito viscoso ou muito diluído", "Motor com folgas excessivas"],
+      "diagnostico": ["Instalar manômetro de pressão de óleo", "Medir pressão a frio e a quente", "Inspecionar a bomba visualmente"],
+      "solucao": "Substituir bomba de óleo. Verificar mancais. Fazer análise de óleo para identificar desgaste metálico.",
+      "estimativa_horas": "3-6h",
+      "risco_motor": true
+    },
+    {
+      "id": "DM003",
+      "sistema": "Motor",
+      "componente": "Junta do cabeçote",
+      "defeito": "Junta do cabeçote queimada",
+      "sintomas": ["Óleo branco no escapamento", "Arrefecimento com bolhas", "Nível de arrefecimento caindo", "Óleo com aspecto de maionese", "Motor superaquecendo"],
+      "causas": ["Motor superaquecido", "Cabeçote empenado", "Junta de baixa qualidade", "Aperto incorreto dos parafusos do cabeçote"],
+      "diagnostico": ["Teste de combustão no arrefecimento (kit analisador)", "Verificar pressão no sistema de arrefecimento", "Inspeção visual do óleo e escape"],
+      "solucao": "Retificar ou substituir cabeçote. Substituir junta. Verificar planeza do bloco. Usar torquímetro para aperto correto.",
+      "estimativa_horas": "8-16h",
+      "risco_motor": true,
+      "observacao": "NUNCA abrir o sistema de arrefecimento com o motor quente. Risco de queimaduras graves."
+    },
+    {
+      "id": "DM004",
+      "sistema": "Motor",
+      "componente": "Anéis de segmento / Retentores",
+      "defeito": "Motor queimando óleo",
+      "sintomas": ["Fumaça azulada no escape", "Consumo de óleo acima de 500ml/1000km", "Velas com depósito oleoso", "Possível fumaça na partida a frio"],
+      "causas": ["Anéis de pistão desgastados", "Retentor de válvula desgastado", "Guia de válvula desgastado", "Motor com alto quilometragem"],
+      "diagnostico": ["Teste de compressão dos cilindros", "Teste de leak-down", "Inspecionar velas de ignição", "Verificar consumo de óleo"],
+      "solucao": "Retífica do motor (substituição de anéis, possível faceamento de cilindros). Troca dos retentores de válvula.",
+      "estimativa_horas": "20-40h",
+      "risco_motor": false
+    },
+    {
+      "id": "DM005",
+      "sistema": "Freios",
+      "componente": "Pastilhas e discos de freio",
+      "defeito": "Pastilhas de freio desgastadas",
+      "sintomas": ["Ruído metálico ao frear", "Pedal mais fundo que o normal", "Vibração ao frear", "Veículo puxando para um lado"],
+      "causas": ["Desgaste natural pelo uso", "Uso de pastilhas de má qualidade", "Pinça de freio travada", "Disco empenado"],
+      "diagnostico": ["Inspecionar espessura das pastilhas (mínimo 2mm)", "Verificar espessura dos discos", "Medir runout do disco com relógio comparador"],
+      "solucao": "Substituir pastilhas e discos em par (esquerdo+direito). Verificar e limpar pinças. Sangrar sistema se necessário.",
+      "estimativa_horas": "1-2h por eixo",
+      "intervalo_revisao_km": 20000
+    },
+    {
+      "id": "DM006",
+      "sistema": "Freios",
+      "componente": "Fluido de freio",
+      "defeito": "Fluido de freio contaminado ou degradado",
+      "sintomas": ["Pedal esponjoso", "Pedal afunda com pressão sustentada", "Freios com desempenho reduzido em frenagens longas"],
+      "causas": ["Fluido absorveu umidade (DOT é higroscópico)", "Fluido fora do prazo de troca", "Vazamento no sistema"],
+      "diagnostico": ["Testar ponto de ebulição do fluido (mín. 150°C a quente)", "Verificar cor do fluido (deve ser âmbar claro)", "Inspecionar por vazamentos"],
+      "solucao": "Trocar fluido de freio (sangria completa). Usar DOT 4 ou superior. Verificar por vazamentos.",
+      "estimativa_horas": "0.5-1h",
+      "intervalo_troca_meses": 24
+    },
+    {
+      "id": "DM007",
+      "sistema": "Suspensão",
+      "componente": "Amortecedores",
+      "defeito": "Amortecedores com desgaste",
+      "sintomas": ["Veículo quicando em lombadas", "Instabilidade em curvas", "Desgaste irregular dos pneus", "Oscilação após lombada"],
+      "causas": ["Desgaste natural (acima de 80.000km)", "Vazamento de óleo do amortecedor", "Uso em estradas ruins"],
+      "diagnostico": ["Teste de rebote (pressionar capô e soltar - deve parar em 1 bounce)", "Inspecionar visualmente por vazamento de óleo", "Verificar desgaste dos pneus"],
+      "solucao": "Substituir amortecedores em pares (esq+dir). Fazer alinhamento e balanceamento após substituição.",
+      "estimativa_horas": "1-2h por eixo",
+      "intervalo_troca_km": 80000
+    },
+    {
+      "id": "DM008",
+      "sistema": "Suspensão",
+      "componente": "Buchas e articulações",
+      "defeito": "Bucha de bandeja desgastada",
+      "sintomas": ["Barulho ao passar em buracos", "Batida seca na frente do veículo", "Instabilidade de direção", "Desgaste irregular dos pneus"],
+      "causas": ["Desgaste natural da borracha", "Ressecamento por calor/produto químico", "Impactos severos", "Alta quilometragem"],
+      "diagnostico": ["Inspecionar com veículo elevado e iluminação adequada", "Verificar folga na bucha (tolerância zero)", "Movimentar bandeja para detectar folgas"],
+      "solucao": "Substituir buchas (preferencialmente poliuretano para maior durabilidade). Fazer alinhamento após.",
+      "estimativa_horas": "2-4h",
+      "intervalo_troca_km": 60000
+    },
+    {
+      "id": "DM009",
+      "sistema": "Suspensão",
+      "componente": "Barra estabilizadora / Ponteira",
+      "defeito": "Ponteira da barra estabilizadora com folga",
+      "sintomas": ["Barulho seco em curvas", "Batida ao sair de lombadas", "Instabilidade lateral"],
+      "causas": ["Desgaste das articulações da ponteira", "Impacto em buraco", "Ponteira de baixa qualidade"],
+      "diagnostico": ["Movimentar lateralmente a ponteira com veículo elevado", "Ouvir estalo característico"],
+      "solucao": "Substituir ponteira da barra estabilizadora (par).",
+      "estimativa_horas": "0.5-1h por lado"
+    },
+    {
+      "id": "DM010",
+      "sistema": "Direção",
+      "componente": "Direção hidráulica / Elétrica",
+      "defeito": "Bomba de direção hidráulica com desgaste",
+      "sintomas": ["Volante pesado em baixas velocidades", "Ruído ao girar o volante", "Vazamento de fluido de direção", "Folga no volante"],
+      "causas": ["Desgaste da bomba", "Nível de fluido baixo", "Mangueiras com vazamento", "Cremalheira desgastada"],
+      "diagnostico": ["Verificar nível do fluido de direção", "Inspecionar mangueiras por vazamentos", "Ouvir ruído característico da bomba"],
+      "solucao": "Verificar e completar fluido. Substituir bomba se desgastada. Verificar cremalheira e mangueiras.",
+      "estimativa_horas": "2-4h"
+    },
+    {
+      "id": "DM011",
+      "sistema": "Transmissão",
+      "componente": "Embreagem",
+      "defeito": "Disco de embreagem desgastado",
+      "sintomas": ["Patinamento em aceleração", "Cheiro de queimado", "Pedal alto e duro", "Dificuldade de engrenar marchas"],
+      "causas": ["Desgaste natural pelo uso", "Técnica de condução incorreta (pé na embreagem)", "Reboque acima da capacidade"],
+      "diagnostico": ["Teste de carga no 4º marcha em subida (motor acima de 2000rpm - veículo perde velocidade se embreagem patina)", "Inspecionar ponto de embreagem"],
+      "solucao": "Substituir kit embreagem completo (disco, platô e rolamento de apoio).",
+      "estimativa_horas": "4-8h",
+      "intervalo_troca_km": 80000
+    },
+    {
+      "id": "DM012",
+      "sistema": "Transmissão",
+      "componente": "Fluido de câmbio automático (ATF)",
+      "defeito": "Fluido ATF degradado ou contaminado",
+      "sintomas": ["Troca de marcha brusca", "Solavanco ao engatar D ou R", "Temperatura alta da transmissão", "Escorregamento de marcha"],
+      "causas": ["Fluido fora do prazo", "Superaquecimento anterior", "Contaminação com água", "Filtro da transmissão entupido"],
+      "diagnostico": ["Verificar cor e cheiro do fluido (deve ser vermelho, sem cheiro de queimado)", "Medir temperatura da transmissão com scanner"],
+      "solucao": "Troca de fluido ATF com substituição do filtro. Em casos graves, lavar transmissão.",
+      "estimativa_horas": "1-2h",
+      "intervalo_troca_km": 60000
+    },
+    {
+      "id": "DM013",
+      "sistema": "Arrefecimento",
+      "componente": "Radiador",
+      "defeito": "Radiador entupido ou com vazamento",
+      "sintomas": ["Motor superaquecendo", "Nível de arrefecimento caindo", "Mancha embaixo do veículo (liquido verde/rosa/amarelo)"],
+      "causas": ["Depósitos de calcário", "Corrosão interna", "Impacto físico", "Aditivo incorreto ou misturado"],
+      "diagnostico": ["Verificar temperatura com scanner", "Inspecionar externamente por vazamentos", "Testar pressão do sistema"],
+      "solucao": "Lavar radiador com produto específico. Se houver vazamento, substituir. Nunca usar somente água.",
+      "estimativa_horas": "1-3h",
+      "intervalo_troca_aditivo_meses": 24
+    },
+    {
+      "id": "DM014",
+      "sistema": "Arrefecimento",
+      "componente": "Ventilador elétrico",
+      "defeito": "Ventilador do radiador não liga",
+      "sintomas": ["Motor superaquecendo em trânsito parado", "A/C sem potência em marcha lenta", "Temperatura subindo com veículo parado"],
+      "causas": ["Motor do ventilador queimado", "Fusível ou relay queimado", "Sensor de temperatura defeituoso", "Módulo de controle do ventilador"],
+      "diagnostico": ["Testar alimentação do ventilador com multímetro", "Verificar fusível e relay", "Acionar manualmente pelo relay para testar motor"],
+      "solucao": "Substituir motor do ventilador, fusível ou relay conforme diagnóstico.",
+      "estimativa_horas": "1-2h"
+    },
+    {
+      "id": "DM015",
+      "sistema": "Combustível",
+      "componente": "Injetores de combustível",
+      "defeito": "Injetores entupidos parcialmente",
+      "sintomas": ["Falhas em frio", "Consumo aumentado", "Motor falhando em marcha lenta", "Fumaça preta", "Perdas de potência"],
+      "causas": ["Combustível de baixa qualidade", "Falta de manutenção preventiva", "Uso de gasolina adulterada"],
+      "diagnostico": ["Teste de desequilíbrio de injetores pelo scanner", "Teste de queda de pressão de cada injetor", "Limpeza ultrassônica e medição de vazão"],
+      "solucao": "Limpeza ultrassônica dos injetores. Substituição se vazão estiver fora de especificação (>10% desvio).",
+      "estimativa_horas": "2-4h"
+    },
+    {
+      "id": "DM016",
+      "sistema": "Elétrica",
+      "componente": "Bateria",
+      "defeito": "Bateria sem carga ou com elemento defeituoso",
+      "sintomas": ["Partida lenta", "Veículo não parte em temperatura baixa", "Bateria recarregando constantemente", "Luzes fracas"],
+      "causas": ["Bateria com mais de 3 anos", "Descarga profunda repetida", "Sulfatação das placas", "Elemento interno com falha"],
+      "diagnostico": ["Testar com testador de bateria (Carga condutância)", "Medir tensão a frio (12,6V plena)", "Medir queda de tensão na partida (não deve cair abaixo de 9,5V)"],
+      "solucao": "Substituir bateria por uma com capacidade igual ou superior (Ah e CCA).",
+      "estimativa_horas": "0.25h",
+      "intervalo_troca_anos": 3
+    },
+    {
+      "id": "DM017",
+      "sistema": "Elétrica",
+      "componente": "Alternador",
+      "defeito": "Alternador com carga insuficiente",
+      "sintomas": ["Luz de bateria acesa", "Bateria descarregando", "Tensão abaixo de 13V com motor ligado", "Luzes fracas em marcha lenta"],
+      "causas": ["Diodos do alternador queimados", "Regulador de tensão com falha", "Escovas desgastadas", "Correia do alternador patinando"],
+      "diagnostico": ["Medir tensão com motor em 2000rpm (deve ser 13,5V a 14,8V)", "Verificar tensão de ripple (máximo 0,5V AC)", "Inspecionar correia e polia"],
+      "solucao": "Reconstituir alternador (escovas/regulador) ou substituir. Verificar correia e tensor.",
+      "estimativa_horas": "1-3h"
+    },
+    {
+      "id": "DM018",
+      "sistema": "Elétrica",
+      "componente": "Motor de arranque",
+      "defeito": "Motor de arranque com falha",
+      "sintomas": ["Click ao tentar dar partida", "Motor de arranque não gira", "Giro lento", "Ruído de engrenagem sem girar o motor"],
+      "causas": ["Escovas desgastadas", "Solenoide com defeito", "Bendix travado", "Bateria fraca (descartar antes)"],
+      "diagnostico": ["Medir tensão no motor de arranque durante partida", "Testar solenoide", "Verificar corrente de partida"],
+      "solucao": "Reconstituir ou substituir motor de arranque. Verificar bendix (pinhão de ataque).",
+      "estimativa_horas": "1-2h"
+    },
+    {
+      "id": "DM019",
+      "sistema": "Ar condicionado",
+      "componente": "Compressor de A/C",
+      "defeito": "Compressor de A/C com falha",
+      "sintomas": ["A/C soprando ar quente", "Ruído metálico ao ligar A/C", "Luz de A/C não acende", "Carga baixa no sistema"],
+      "causas": ["Embreagem do compressor queimada", "Compressor travado internamente", "Carga de gás baixa", "Fusível do A/C queimado"],
+      "diagnostico": ["Verificar pressão alta e baixa com manômetro (A/C gauge)", "Verificar embreagem magnética (12V)", "Verificar carga de gás refrigerante"],
+      "solucao": "Recarregar sistema com R134a ou R1234yf conforme especificação. Substituir compressor se trincado. Verificar embreagem.",
+      "estimativa_horas": "2-4h"
+    },
+    {
+      "id": "DM020",
+      "sistema": "Ar condicionado",
+      "componente": "Condensador / Evaporador",
+      "defeito": "Condensador com entupimento ou dano",
+      "sintomas": ["A/C fraco", "Temperatura alta no sistema", "Pressão alta anormal"],
+      "causas": ["Entupimento por sujeira", "Colmeia amassada por impacto", "Vazamento de gás"],
+      "diagnostico": ["Inspecionar condensador visualmente", "Medir pressão do lado de alta", "Verificar temperatura de saída do condensador"],
+      "solucao": "Lavar condensador com água. Substituir se danificado. Recarregar sistema após reparo.",
+      "estimativa_horas": "1-3h"
+    },
+    {
+      "id": "DM021",
+      "sistema": "Motor",
+      "componente": "Turbocompressor",
+      "defeito": "Turbo com vazamento de óleo",
+      "sintomas": ["Fumaça azul no escapamento", "Perda de potência", "Consumo alto de óleo", "Ruído de assobio no turbo"],
+      "causas": ["Mancais do turbo desgastados", "Retentores seladores danificados", "Troca de óleo negligenciada", "Temperatura excessiva por falta de óleo"],
+      "diagnostico": ["Inspecionar duto de entrada e saída do turbo por óleo", "Verificar folga axial do eixo do turbo", "Inspecionar carter do turbo"],
+      "solucao": "Reconstrução ou substituição do turbo. Obrigatório trocar óleo e filtro após instalação. Deixar motor em marcha lenta por 2-3 min antes de desligar.",
+      "estimativa_horas": "3-6h",
+      "observacao": "Nunca desligar motor turbinado imediatamente após uso intenso. Risco de queima dos mancais."
+    },
+    {
+      "id": "DM022",
+      "sistema": "Motor",
+      "componente": "Válvulas e assentos",
+      "defeito": "Válvulas queimadas",
+      "sintomas": ["Baixa compressão em cilindro específico", "Falhas de ignição em um cilindro", "Motor sem potência", "Fumaça branca/azul"],
+      "causas": ["Folga de válvula incorreta", "Superaquecimento", "Combustível de baixa qualidade", "Desgaste por alta quilometragem"],
+      "diagnostico": ["Teste de compressão (abaixo de 10 bar = suspeito)", "Teste de leak-down (>20% = problema)", "Desmontar cabeçote para inspeção visual"],
+      "solucao": "Retificar cabeçote. Substituir válvulas e assentos queimados. Ajustar folga de válvulas.",
+      "estimativa_horas": "8-16h"
+    },
+    {
+      "id": "DM023",
+      "sistema": "Combustível (Flex/Gasolina)",
+      "componente": "Sensor de temperatura do combustível / Sonda flex",
+      "defeito": "Falha na detecção do teor de etanol",
+      "sintomas": ["Partida difícil a frio com álcool puro", "Fumaça branca na partida", "Consumo aumentado", "Motor falhando em frio"],
+      "causas": ["Sensor de composição de combustível (flex sensor) defeituoso", "Fiação danificada", "ECU não calibrando injeção corretamente"],
+      "diagnostico": ["Ler parâmetros do scanner (teor de etanol)", "Verificar sensor com multímetro", "Checar adaptação de combustível na ECU"],
+      "solucao": "Substituir sensor flex. Pode ser necessário resetar adaptações da ECU.",
+      "estimativa_horas": "1h",
+      "aplicacao": "Veículos flex brasileiros"
+    },
+    {
+      "id": "DM024",
+      "sistema": "Emissões",
+      "componente": "Catalisador",
+      "defeito": "Catalisador destruído internamente",
+      "sintomas": ["Barulho de chocalho em aceleração", "Perda severa de potência", "Superaquecimento do escapamento", "Código P0420"],
+      "causas": ["Mistura rica por tempo prolongado", "Falhas de ignição enviando combustível ao catalisador", "Superaquecimento", "Batida física"],
+      "diagnostico": ["Inspecionar com lanterna/câmera endoscópica", "Medir backpressure do escapamento", "Verificar temperatura com pirômetro"],
+      "solucao": "Substituir catalisador. Antes de trocar, corrigir a causa raiz (injetores, ignição, sonda lambda).",
+      "estimativa_horas": "1-2h"
+    },
+    {
+      "id": "DM025",
+      "sistema": "Pneus",
+      "componente": "Alinhamento e balanceamento",
+      "defeito": "Desalinhamento das rodas",
+      "sintomas": ["Veículo puxando para um lado", "Desgaste irregular dos pneus", "Vibração no volante", "Volante torto ao andar reto"],
+      "causas": ["Impacto em buraco ou meio-fio", "Substituição de peças de suspensão sem alinhar", "Desgaste de buchas e articulações", "Acidente"],
+      "diagnostico": ["Inspecionar desgaste dos pneus", "Verificar geometria em bancada de alinhamento 3D"],
+      "solucao": "Corrigir geometria (cambagem, convergência, cáster). Balancear todas as rodas após.",
+      "estimativa_horas": "1-2h",
+      "intervalo_revisao_km": 10000
+    }
+  ],
+  "manutencao_preventiva": [
+    {
+      "id": "MP001",
+      "servico": "Troca de óleo e filtro",
+      "intervalo_km": 10000,
+      "intervalo_meses": 12,
+      "especificacao_oleo": {
+        "motor_flex_1_0": "5W30 API SN/SP sintético",
+        "motor_flex_1_4_1_6": "5W30 ou 10W30 API SN",
+        "motor_diesel_turbo": "5W40 ou 10W40 API CF/CJ-4",
+        "turbo_gasolina": "5W40 sintético"
+      },
+      "pecas": ["Filtro de óleo", "Dreno com anel de vedação"],
+      "procedimento": [
+        "Aquecer motor por 2 minutos",
+        "Drenar óleo velho completamente",
+        "Substituir filtro de óleo com óleo novo na gaxeta",
+        "Reapertar dreno (torque correto conforme manual)",
+        "Adicionar óleo novo na quantidade correta",
+        "Verificar nível com vareta",
+        "Ligar motor e checar por vazamentos"
+      ]
+    },
+    {
+      "id": "MP002",
+      "servico": "Troca de filtro de ar",
+      "intervalo_km": 20000,
+      "intervalo_meses": 12,
+      "pecas": ["Filtro de ar do motor"],
+      "procedimento": [
+        "Abrir caixa de filtro de ar",
+        "Remover filtro antigo",
+        "Limpar interior da caixa",
+        "Instalar filtro novo",
+        "Verificar vedação correta"
+      ],
+      "observacao": "Em regiões com muita poeira, trocar em intervalos menores (15.000km)"
+    },
+    {
+      "id": "MP003",
+      "servico": "Troca de velas de ignição",
+      "intervalo_km_convencional": 20000,
+      "intervalo_km_platina": 40000,
+      "intervalo_km_iridium": 60000,
+      "pecas": ["Jogo de velas de ignição (conforme especificação do fabricante)"],
+      "torque_aperto_Nm": "20-30 Nm (depende do motor)",
+      "gap_eletrodo_mm": "0.8-1.1 mm (verificar manual)",
+      "procedimento": [
+        "Aguardar motor esfriar",
+        "Remover cabos/conectores das bobinas",
+        "Retirar velas com chave de vela adequada",
+        "Inspecionar cada vela removida (diagnóstico visual)",
+        "Instalar velas novas com torque correto",
+        "Reinstalar bobinas/cabos"
+      ]
+    },
+    {
+      "id": "MP004",
+      "servico": "Troca de filtro de combustível",
+      "intervalo_km": 30000,
+      "intervalo_meses": 24,
+      "observacao_flex": "Veículos flex com filtro no tanque (interno): trocar junto com a bomba ou a cada 60.000km",
+      "procedimento": [
+        "Despressurizar sistema (retirar fusível da bomba e dar partida até motor apagar)",
+        "Localizar filtro (externo ou interno ao tanque)",
+        "Substituir filtro respeitando sentido do fluxo",
+        "Verificar conexões e clips",
+        "Pressurizar sistema antes de dar partida"
+      ]
+    },
+    {
+      "id": "MP005",
+      "servico": "Revisão de freios",
+      "intervalo_km": 20000,
+      "itens_inspecionados": [
+        "Espessura das pastilhas dianteiras e traseiras",
+        "Espessura dos discos (min. conforme manual)",
+        "Condição do fluido (cor, ponto de ebulição)",
+        "Vazamentos nas mangueiras e tubulações",
+        "Funcionamento das pinças",
+        "Freio de mão (regulagem e cabo)"
+      ],
+      "limites_pastilha_mm": 2,
+      "intervalo_fluido_meses": 24
+    },
+    {
+      "id": "MP006",
+      "servico": "Revisão de suspensão e direção",
+      "intervalo_km": 30000,
+      "itens_inspecionados": [
+        "Buchas de bandeja superior e inferior",
+        "Ponteiras da barra estabilizadora",
+        "Terminal de direção",
+        "Coifas do semi-eixo",
+        "Amortecedores (vazamento e eficiência)",
+        "Molas de suspensão",
+        "Rolamento de cubo"
+      ]
+    },
+    {
+      "id": "MP007",
+      "servico": "Troca de correia dentada (distribuição)",
+      "intervalo_km_padrao": 60000,
+      "intervalo_meses": 48,
+      "motores_corrente": ["Toyota 1NZ", "Honda D-series", "Ford EcoBoost", "GM ECOTEC"],
+      "pecas": ["Correia dentada", "Tensor da correia", "Tensor automático", "Tensor hidráulico", "Bomba d'água (recomendado)"],
+      "torque_parafusos_importante": true,
+      "observacao_critica": "Motor interferente: se a correia romper, os pistões colidem com as válvulas causando destruição do motor. Nunca negligenciar este serviço."
+    },
+    {
+      "id": "MP008",
+      "servico": "Troca de líquido de arrefecimento",
+      "intervalo_km": 40000,
+      "intervalo_meses": 24,
+      "tipos_aditivo": {
+        "IAT_verde": "Orgânico verde - trocar a cada 2 anos",
+        "OAT_laranja_vermelho": "Orgânico longa vida - trocar a cada 5 anos ou 150.000km",
+        "HOAT_amarelo": "Híbrido - trocar a cada 5 anos"
+      },
+      "procedimento": [
+        "Aguardar motor frio",
+        "Drenar arrefecimento pelo tampão inferior",
+        "Lavar sistema com água destilada",
+        "Preencher com mistura correta (50% aditivo + 50% água destilada)",
+        "Sangrar sistema de arrefecimento"
+      ],
+      "aviso": "NUNCA misturar diferentes tipos de aditivo. NUNCA usar apenas água."
+    },
+    {
+      "id": "MP009",
+      "servico": "Revisão de pneus",
+      "intervalo_km": 10000,
+      "itens": [
+        "Calibragem (frio, conforme etiqueta da porta)",
+        "Desgaste (mínimo 1.6mm de sulco - indicador TWI)",
+        "Danos (bolhas, cortes, objetos embutidos)",
+        "Rodízio de pneus (cruzado ou paralelo conforme fabricante)",
+        "Balanceamento",
+        "Alinhamento"
+      ],
+      "pressao_calibragem": "Verificar etiqueta na soleira da porta (varia por veículo e carga)"
+    },
+    {
+      "id": "MP010",
+      "servico": "Limpeza de bicos injetores",
+      "intervalo_km": 30000,
+      "metodos": [
+        "Aditivo no tanque (manutenção preventiva)",
+        "Limpeza em linha (flush - sem remover injetores)",
+        "Limpeza ultrassônica (remoção e bancada)"
+      ],
+      "sintomas_que_indicam_necessidade": [
+        "Consumo aumentado",
+        "Falhas em frio",
+        "Motor falhando",
+        "Fumaça preta"
+      ]
+    }
+  ]
+}

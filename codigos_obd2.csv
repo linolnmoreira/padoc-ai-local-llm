@@ -1,0 +1,4 @@
+codigo,descricao,causa,reparo
+P0300,falha combustão,bobina ou vela,testar ignição
+P0420,eficiência catalisador,catalisador,trocar componente
+P0171,mistura pobre,entrada de ar,verificar sensores
