@@ -120,8 +120,8 @@ pip install firebase-admin python-dotenv
 ### 5.1 Criar Conta
 - https://heroku.com → **Sign up**
 
-### 5.2 Instalar CLI
-- Download: https://devcenter.heroku.com/articles/heroku-cli
+### 5.2 Instalar CLIhttps://devcenter.heroku.com/articles/heroku-cli
+- Download: 
 - Verificar: `heroku --version`
 
 ### 5.3 Criar Arquivos

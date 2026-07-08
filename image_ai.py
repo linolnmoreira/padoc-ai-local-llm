@@ -1,33 +1,19 @@
 import cv2
 
+class ImageAI:
 
-class VisionAI:
+    def analisar(self, imagem):
 
+        img = cv2.imread(imagem)
 
-    def analisar_imagem(self,caminho):
+        if img is None:
+            return {"erro":"Imagem não encontrada"}
 
-
-        imagem=cv2.imread(caminho)
-
-
-        if imagem is None:
-
-            return "Imagem inválida"
-
-
-
-        altura,largura,_=imagem.shape
-
+        altura, largura = img.shape[:2]
 
         return {
-
-        "imagem":
-        "analisada",
-
-        "tamanho":
-        f"{largura}x{altura}",
-
-        "detecção":
-        "Modelo de visão pronto para treinamento"
-
+            "tipo":"Imagem",
+            "largura":largura,
+            "altura":altura,
+            "diagnostico":"Imagem carregada com sucesso."
         }

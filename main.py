@@ -1,43 +1,34 @@
-from core.agent import PadocAgent
-from core.llm_padoc import PadocLLM
-from business.budget import BudgetAI
-from business.parts_agent import PartsAgent
+from multimodal.orchestrator import PadocMultimodal
+import json
 
-print(
-"""
-=====================
- PADOC CORE AI ENGINE
-=====================
-"""
+ia = PadocMultimodal()
+
+resultado = ia.analisar(
+
+    imagem="motor.jpg",
+
+    video="motor.mp4",
+
+    audio="ruido.wav",
+
+    obd=["P0300","P0171"],
+
+    telemetria={
+
+        "RPM":850,
+
+        "MAP":32,
+
+        "TPS":4.5
+
+    },
+
+    pdf="manual.pdf",
+
+    esquema="esquema.pdf",
+
+    osciloscopio="sinal.csv"
+
 )
 
-agent = PadocAgent()
-llm = PadocLLM()
-orcamento = BudgetAI()
-pecas = PartsAgent()
-
-mensagem = input(
-"Motorista: "
-)
-
-acao = agent.executar(
-mensagem
-)
-
-print(
-"PADOC executando:",
-acao
-)
-
-if acao == "orcamento":
-    print(
-        orcamento.gerar("falha motor", ["vela"])
-    )
-elif acao == "pecas":
-    print(
-        pecas.escolher_melhor("vela")
-    )
-else:
-    print(
-        llm.responder("Base mecânica PADOC", mensagem)
-    )
+print(json.dumps(resultado, indent=4, ensure_ascii=False))

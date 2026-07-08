@@ -1,0 +1,29 @@
+[
+    {
+        "codigo_obd2": "P0300",
+        "componente": "Sistema de Ignição / Injeção",
+        "defeito": "Falha de ignição em cilindros múltiplos aleatórios (Random/Multiple Cylinder Misfire Detected).",
+        "sintomas": ["Motor falhando em marcha lenta", "Perda de potência", "Luz da injeção piscando"],
+        "causas_provaveis": ["Velas de ignição desgastadas", "Bobina de ignição defeituosa", "Combustível adulterado", "Bicos injetores entupidos"],
+        "solucao_manual": "1. Conectar o scanner e verificar histórico de falhas por cilindro (P0301 a P0304).\n2. Testar a resistência das bobinas e inspecionar o desgaste das velas.\n3. Verificar pressão da linha de combustível.\n4. Substituir os componentes defeituosos e limpar os bicos.",
+        "historico_reparacao": "Cliente relatou perda de força em subidas. Scanner acusou P0300. Na inspeção, a vela do cilindro 3 estava encharcada de combustível devido à falha na bobina. Substituído o jogo de velas e a bobina do cilindro 3. Problema resolvido."
+    },
+    {
+        "codigo_obd2": "P0171",
+        "componente": "Sistema de Combustível / Admissão",
+        "defeito": "Mistura muito pobre no Banco 1 (System Too Lean - Bank 1).",
+        "sintomas": ["Marcha lenta irregular", "Consumo elevado de combustível", "Dificuldade na partida a frio"],
+        "causas_provaveis": ["Entrada de ar falsa após o sensor MAF", "Sensor MAF sujo ou defeituoso", "Bomba de combustível com baixa pressão", "Filtro de combustível entupido"],
+        "solucao_manual": "1. Inspecionar visualmente mangueiras de vácuo à procura de rachaduras.\n2. Limpar o sensor MAF com limpa-contatos específico.\n3. Medir a pressão da bomba de combustível (deve estar conforme especificação do fabricante, ex: 3.5 a 4.2 bar).",
+        "historico_reparacao": "Luz de injeção acesa. Realizado teste de fumaça na admissão, detectada rachadura na mangueira do respiro do cárter (PCV). Substituída a mangueira e feita a limpeza preventiva do sensor MAF. Parâmetros de curto e longo prazo (Fuel Trims) normalizados."
+    },
+    {
+        "codigo_obd2": "P0420",
+        "componente": "Sistema de Exaustão / Emissões",
+        "defeito": "Eficiência do sistema de catalisador abaixo do limite no Banco 1 (Catalyst System Efficiency Below Threshold - Bank 1).",
+        "sintomas": ["Luz de injeção acesa", "Odor forte de enxofre no escapamento", "Leve perda de desempenho"],
+        "causas_provaveis": ["Catalisador desgastado ou danificado", "Sensor de oxigênio (Sonda Lambda) pós-catalisador travado", "Vazamento no escapamento antes do catalisador"],
+        "solucao_manual": "1. Verificar o gráfico de leitura da sonda lambda 2 (deve ser uma linha quase contínua e estável).\n2. Inspecionar o catalisador com câmera endoscópica para ver se a colmeia interna derreteu ou quebrou.\n3. Verificar trincas no coletor de escape.",
+    
+    }
+    

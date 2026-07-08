@@ -7,15 +7,20 @@ from datetime import datetime
 
 # Importar os módulos da PADOC AI
 from core.agent import PadocAgent
-from core.llm_padoc import PadocLLM
 from core.memory import VehicleMemory, carregar_historico_geral
-from brain.rag.search import OBDKnowledge
+from brain.rag.vector_search import SemanticKnowledgeBase # NOVO: Busca Semântica
 from vision.vision_ai import PadocVision
-from obd.elm327 import PadocOBD
 from business.budget import BudgetAI
 from business.scheduling import SchedulerAI
 from business.parts_agent import PartsAgent
-from memory.aprendizado import buscar_conhecimento, aprender # Importar o novo módulo
+from memory.aprendizado import buscar_conhecimento, aprender
+from brain.modelo_ia import PadocAI # Importa a classe principal com o LLM
+# NOVO: Importar os novos analisadores de dados
+from pdf_ai import PDFAI
+from telemetry_ai import TelemetryAI
+from video_ai import VideoAI
+from wiring_ai import WiringAI
+
 # from learning.vehicle_learning import FleetLearning # Não usado diretamente na API de interação
 
 app = Flask(__name__)
@@ -28,15 +33,20 @@ logger = logging.getLogger(__name__)
 # Estes componentes são inicializados uma vez quando a API é iniciada.
 # A inicialização do LLM e da Visão pode ser demorada e consumir muita RAM/VRAM.
 try:
-    padoc_agent = PadocAgent()
-    padoc_llm = PadocLLM() # Carrega o modelo Mistral-7B
+    padoc_ai_instance = PadocAI() # Carrega o LLM e os módulos de voz
+    padoc_agent = PadocAgent(llm_instance=padoc_ai_instance.llm) # NOVO: Agente com LLM
     padoc_memory = VehicleMemory()
-    padoc_obd_knowledge = OBDKnowledge()
+    padoc_semantic_db = SemanticKnowledgeBase() # NOVO: Banco de dados vetorial
     padoc_vision = PadocVision() # Carrega o modelo YOLOv8n
-    padoc_obd_scanner = PadocOBD()
     padoc_budget_ai = BudgetAI()
     padoc_scheduler_ai = SchedulerAI()
     padoc_parts_agent = PartsAgent()
+    # NOVO: Instanciar os novos analisadores
+    pdf_analyzer = PDFAI()
+    telemetry_analyzer = TelemetryAI()
+    video_analyzer = VideoAI()
+    wiring_analyzer = WiringAI()
+
 
     logger.info("✓ PADOC AI Core inicializado com sucesso.")
     ia_pronta = True
@@ -67,12 +77,18 @@ def diagnostico_geral():
 
     try:
         dados = request.get_json()
-        mensagem_motorista = dados.get("pergunta", "").strip() # CORREÇÃO: De "mensagem" para "pergunta"
-        placa_veiculo = dados.get("usuario_id", "").strip().upper() # CORREÇÃO: De "placa" para "usuario_id"
+        mensagem_motorista = dados.get("pergunta", "").strip()
+        placa_veiculo = dados.get("usuario_id", "").strip().upper()
         imagem_path = dados.get("imagem_path", "").strip() # Para análise de imagem
+        # NOVO: Receber caminhos para os novos tipos de arquivo
+        pdf_path = dados.get("pdf_path", "").strip()
+        video_path = dados.get("video_path", "").strip()
+        wiring_path = dados.get("wiring_path", "").strip()
+        telemetry_data = dados.get("telemetry_data", None) # Recebe dados de telemetria
+
         codigo_obd = dados.get("codigo_obd", "").strip().upper() # Para diagnóstico OBD direto
 
-        if not mensagem_motorista and not imagem_path and not codigo_obd:
+        if not any([mensagem_motorista, imagem_path, codigo_obd, pdf_path, video_path, wiring_path, telemetry_data]):
             return jsonify({"sucesso": False, "erro": "Mensagem, imagem ou código OBD são obrigatórios"}), 400
 
         # NOVO: Primeiro, buscar na base de aprendizado incremental
@@ -86,7 +102,27 @@ def diagnostico_geral():
                 "timestamp": datetime.now().isoformat()
             }), 200
 
-        logger.info(f"Nova requisição: Mensagem='{mensagem_motorista[:50]}...', Placa='{placa_veiculo}', Imagem='{imagem_path}', OBD='{codigo_obd}'")
+        # NOVO: Se houver múltiplos inputs, usar o diagnóstico multimodal
+        is_multimodal = sum([bool(imagem_path), bool(pdf_path), bool(video_path), bool(wiring_path), bool(telemetry_data)]) > 0
+
+        if is_multimodal:
+            logger.info(f"Requisição multimodal recebida para placa '{placa_veiculo}'.")
+            # Chama o orquestrador multimodal e passa os analisadores e caminhos
+            resposta_final = padoc_ai_instance.diagnostico_multimodal(
+                caminho_foto=imagem_path,
+                placa=placa_veiculo,
+                codigo_obd=codigo_obd,
+                # Passando os novos dados e analisadores
+                pdf_path=pdf_path,
+                video_path=video_path,
+                wiring_path=wiring_path,
+                telemetry_data=telemetry_data,
+                pdf_analyzer=pdf_analyzer,
+                video_analyzer=video_analyzer,
+                wiring_analyzer=wiring_analyzer,
+                telemetry_analyzer=telemetry_analyzer
+            )
+            return jsonify({"sucesso": True, "resposta": resposta_final, "timestamp": datetime.now().isoformat()}), 200
 
         # 1. Memória do Veículo
         historico_veiculo = "Nenhum histórico disponível."
@@ -105,20 +141,9 @@ def diagnostico_geral():
             defeito_imagem = padoc_vision.analisar(imagem_path)
             defeito_imagem = f"Análise de imagem: {defeito_imagem}"
 
-        # 3. Conhecimento OBD (se código fornecido ou inferido)
-        conhecimento_obd = "Nenhum código OBD fornecido ou detectado."
-        if codigo_obd:
-            conhecimento_obd = padoc_obd_knowledge.pesquisar(codigo_obd)
-            conhecimento_obd = f"Conhecimento OBD para {codigo_obd}: {conhecimento_obd}"
-
-        # 4. Leitura OBD em tempo real (se conectado)
-        dados_obd_tempo_real = "OBD scanner não conectado ou dados não solicitados."
-        # Para uma API, a conexão OBD geralmente seria iniciada por uma requisição específica
-        # ou o dispositivo OBD estaria conectado a um gateway que envia dados para a API.
-        # Aqui, simulamos que a API pode tentar conectar se for uma requisição de diagnóstico em tempo real.
-        # if padoc_obd_scanner.conectar():
-        #     dados_obd_tempo_real = padoc_obd_scanner.dados_motor()
-        #     dados_obd_tempo_real = f"Dados do motor via OBD: {dados_obd_tempo_real}"
+        # 3. NOVO: Busca Semântica na base de conhecimento
+        # A busca agora é feita com base no significado da pergunta do usuário.
+        conhecimento_semantico = padoc_semantic_db.search(mensagem_motorista)
 
         # 5. Carregar histórico recente de interações gerais para contexto de curto prazo
         historico_recente = carregar_historico_geral(linhas_max=5)
@@ -127,35 +152,36 @@ def diagnostico_geral():
         # Construir o contexto para o LLM
         contexto_llm = f"""
         Histórico do Veículo (Placa: {placa_veiculo}): {historico_veiculo}
-        Conhecimento Técnico OBD: {conhecimento_obd}
-        Contexto de Interações Recentes na Oficina: {contexto_recente}
         Análise de Imagem: {defeito_imagem}
-        Dados OBD em Tempo Real: {dados_obd_tempo_real}
+        ---
+        Base de Conhecimento Relevante (encontrada por busca semântica):
+        {conhecimento_semantico}
+        ---
+        Contexto de Interações Recentes na Oficina: {contexto_recente}
         """
 
-        # Usar o agente para determinar a intenção principal da mensagem do motorista
-        acao = padoc_agent.executar(mensagem_motorista)
+        # NOVO: Usar o agente para decidir a ferramenta a ser chamada
+        tool_call = padoc_agent.decide_tool(mensagem_motorista)
+        acao = tool_call.get("tool_name")
+        argumentos = tool_call.get("arguments", {})
         resposta_final = ""
 
-        if acao == "orcamento":
-            # Exemplo: se a mensagem for "Quanto custa trocar a vela?", o agente detecta "orcamento"
-            # Aqui você precisaria de mais lógica para extrair a peça do "mensagem_motorista"
-            # Por simplicidade, vamos simular um orçamento para "vela"
-            orcamento_gerado = padoc_budget_ai.gerar("troca de vela", ["vela"])
+        if acao == "gerar_orcamento":
+            orcamento_gerado = padoc_budget_ai.gerar(argumentos.get("servico", "Não especificado"), argumentos.get("pecas", []))
             resposta_final = f"PADOC AI (Orçamento): {json.dumps(orcamento_gerado, indent=2, ensure_ascii=False)}"
-        elif acao == "agenda":
-            # Exemplo: "Quero agendar uma revisão para amanhã"
-            # Precisaria de um parser de data e cliente do "mensagem_motorista"
-            agendamento = padoc_scheduler_ai.criar_agendamento("Cliente Teste", "Oficina PADOC", "2024-12-25")
+        
+        elif acao == "criar_agendamento":
+            agendamento = padoc_scheduler_ai.criar_agendamento("Cliente Teste", "Oficina PADOC", argumentos.get("data", "Não especificada"))
             resposta_final = f"PADOC AI (Agendamento): {json.dumps(agendamento, indent=2, ensure_ascii=False)}"
-        elif acao == "pecas":
-            # Exemplo: "Qual o melhor fornecedor para bobina?"
-            # Precisaria extrair a peça do "mensagem_motorista"
-            melhor_peca = padoc_parts_agent.escolher_melhor("vela")
+        
+        elif acao == "escolher_melhor_peca":
+            melhor_peca = padoc_parts_agent.escolher_melhor(argumentos.get("peca", "Não especificada"))
             resposta_final = f"PADOC AI (Peças): {json.dumps(melhor_peca, indent=2, ensure_ascii=False)}"
-        else: # acao == "diagnostico" ou intenção não reconhecida
+        
+        else: # acao == "diagnostico_geral"
             # O LLM responderá com base no contexto e na pergunta do motorista
-            resposta_final = padoc_llm.responder(contexto_llm, mensagem_motorista)
+            # Usamos o método 'responder' da instância principal que já tem o LLM carregado
+            resposta_final = padoc_ai_instance.llm(f"{contexto_llm}\n\nPergunta: {mensagem_motorista}\n\nResposta:", max_tokens=400)['choices'][0]['text'].strip()
 
         # Opcional: Salvar o diagnóstico no histórico do veículo
         if placa_veiculo and carro:
