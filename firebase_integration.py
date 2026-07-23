@@ -134,6 +134,29 @@ def obter_estatisticas_globais():
         return {}
 
 
+def salvar_aprendizado(pergunta, resposta):
+    """Salva uma nova interação na base de conhecimento do Firebase para aprendizado contínuo."""
+    try:
+        # Usamos um hash da pergunta como chave para evitar duplicatas e caracteres inválidos
+        import hashlib
+        chave_pergunta = hashlib.sha1(pergunta.encode('utf-8')).hexdigest()
+
+        ref = db.reference(f"conhecimento/{chave_pergunta}")
+        
+        novo_conhecimento = {
+            "pergunta": pergunta,
+            "resposta": resposta,
+            "criado": datetime.now().isoformat(),
+            "fonte": "PADOC AI LLM"
+        }
+        
+        ref.set(novo_conhecimento) # .set() para criar ou sobrescrever se a pergunta for idêntica
+        logger.info(f"✓ Novo conhecimento salvo no Firebase para a pergunta: '{pergunta[:30]}...'")
+        return True
+    except Exception as e:
+        logger.error(f"✗ Erro ao salvar aprendizado no Firebase: {e}")
+        return False
+
 # Arquivo .env (NUNCA comitar no Git!)
 ENV_TEMPLATE = """
 # .env - Variáveis de Ambiente PADOC AI
