@@ -106,6 +106,9 @@ class Reaprendizado:
 @dataclass
 class ResetServico:
     """Procedimento para reset de avisos de serviço/manutenção."""
+    servico: str
+    passos: List[str]
+
 class Procedimento:
     """Estrutura para procedimentos de reaprendizado, reset e codificação."""
     id: str
@@ -142,6 +145,10 @@ class Sincronismo:
     tipo_distribuicao: str
     ordem_ignicao: str
     procedimento: str
+    folga_admissao: str
+    folga_escape: str
+    correia: str
+    corrente: str
     observacoes: str
     torques: List[Torque]
     ferramentas: List[Ferramenta]
@@ -614,7 +621,9 @@ class SistemaEspecialistaAutomotivo:
         if os.path.exists(json_path):
             with open(json_path, 'r', encoding='utf-8') as f:
                 dados = json.load(f)
-                self.base_dados["historico_ordens_servico"] = dados.get("ordens_servico", [])
+                # O arquivo JSON contém uma chave "ordens_servico" que é a lista que queremos.
+                if isinstance(dados, dict) and "ordens_servico" in dados:
+                    self.base_dados["historico_ordens_servico"] = dados["ordens_servico"]
 
     def _inicializar_base_conhecimento(self):
         """
@@ -647,7 +656,7 @@ class SistemaEspecialistaAutomotivo:
             filtro_cabine_km=10000,
             capacidade_arrefecimento=5.8,
             tipo_aditivo="Dex-Cool",
-            capacidade_tanque=44
+            capacidade_tanque=44,
             # Inicializando novos campos com valores vazios/padrão
             pneus={},
             porta_obd="",
@@ -686,15 +695,15 @@ class SistemaEspecialistaAutomotivo:
             Rele("R5", "Partida")
         ]
         self.base_dados["modelos"]["ONIX_2023_10T"].sensores = [
-            Sensor("MAF", "MAF", "Fluxo de ar"),
-            Sensor("MAP", "MAP", "Pressão coletor"),
-            Sensor("TPS", "TPS", "Posição borboleta"),
-            Sensor("CKP", "CKP", "Virabrequim"),
-            Sensor("CMP", "CMP", "Comando"),
-            Sensor("ECT", "ECT", "Temperatura motor"),
-            Sensor("IAT", "IAT", "Temperatura admissão"),
-            Sensor("O2", "Lambda", "Mistura ar combustível"),
-            Sensor("Knock", "KS", "Detonação")
+            Sensor(id="S01", fabricante="N/A", modelo="N/A", motor="N/A", ano_inicio=0, ano_fim=0, sistema="Injeção", nome="Sensor MAF", sigla="MAF", funcao="Fluxo de ar", unidade="", tensao_min=None, tensao_max=None, resistencia_min=None, resistencia_max=None, frequencia_min=None, frequencia_max=None, descricao="", sintomas=[], codigos_obd=[]),
+            Sensor(id="S02", fabricante="N/A", modelo="N/A", motor="N/A", ano_inicio=0, ano_fim=0, sistema="Injeção", nome="Sensor MAP", sigla="MAP", funcao="Pressão coletor", unidade="", tensao_min=None, tensao_max=None, resistencia_min=None, resistencia_max=None, frequencia_min=None, frequencia_max=None, descricao="", sintomas=[], codigos_obd=[]),
+            Sensor(id="S03", fabricante="N/A", modelo="N/A", motor="N/A", ano_inicio=0, ano_fim=0, sistema="Injeção", nome="Sensor TPS", sigla="TPS", funcao="Posição borboleta", unidade="", tensao_min=None, tensao_max=None, resistencia_min=None, resistencia_max=None, frequencia_min=None, frequencia_max=None, descricao="", sintomas=[], codigos_obd=[]),
+            Sensor(id="S04", fabricante="N/A", modelo="N/A", motor="N/A", ano_inicio=0, ano_fim=0, sistema="Ignição", nome="Sensor CKP", sigla="CKP", funcao="Virabrequim", unidade="", tensao_min=None, tensao_max=None, resistencia_min=None, resistencia_max=None, frequencia_min=None, frequencia_max=None, descricao="", sintomas=[], codigos_obd=[]),
+            Sensor(id="S05", fabricante="N/A", modelo="N/A", motor="N/A", ano_inicio=0, ano_fim=0, sistema="Ignição", nome="Sensor CMP", sigla="CMP", funcao="Comando", unidade="", tensao_min=None, tensao_max=None, resistencia_min=None, resistencia_max=None, frequencia_min=None, frequencia_max=None, descricao="", sintomas=[], codigos_obd=[]),
+            Sensor(id="S06", fabricante="N/A", modelo="N/A", motor="N/A", ano_inicio=0, ano_fim=0, sistema="Arrefecimento", nome="Sensor ECT", sigla="ECT", funcao="Temperatura motor", unidade="", tensao_min=None, tensao_max=None, resistencia_min=None, resistencia_max=None, frequencia_min=None, frequencia_max=None, descricao="", sintomas=[], codigos_obd=[]),
+            Sensor(id="S07", fabricante="N/A", modelo="N/A", motor="N/A", ano_inicio=0, ano_fim=0, sistema="Injeção", nome="Sensor IAT", sigla="IAT", funcao="Temperatura admissão", unidade="", tensao_min=None, tensao_max=None, resistencia_min=None, resistencia_max=None, frequencia_min=None, frequencia_max=None, descricao="", sintomas=[], codigos_obd=[]),
+            Sensor(id="S08", fabricante="N/A", modelo="N/A", motor="N/A", ano_inicio=0, ano_fim=0, sistema="Emissões", nome="Sonda Lambda", sigla="O2", funcao="Mistura ar combustível", unidade="", tensao_min=None, tensao_max=None, resistencia_min=None, resistencia_max=None, frequencia_min=None, frequencia_max=None, descricao="", sintomas=[], codigos_obd=[]),
+            Sensor(id="S09", fabricante="N/A", modelo="N/A", motor="N/A", ano_inicio=0, ano_fim=0, sistema="Ignição", nome="Sensor de Detonação", sigla="KS", funcao="Detonação", unidade="", tensao_min=None, tensao_max=None, resistencia_min=None, resistencia_max=None, frequencia_min=None, frequencia_max=None, descricao="", sintomas=[], codigos_obd=[]),
             Sensor(id="GM_MAP_001", fabricante="Chevrolet", modelo="Onix", motor="1.0 Turbo", ano_inicio=2020, ano_fim=2026, sistema="Injeção", nome="Sensor MAP", sigla="MAP", unidade="Volts", tensao_min=0.5, tensao_max=4.8, resistencia_min=None, resistencia_max=None, frequencia_min=None, frequencia_max=None, descricao="Mede pressão absoluta do coletor.", sintomas=["Motor fraco", "Consumo elevado"], codigos_obd=["P0106", "P0107", "P0108"])
         ]
         self.base_dados["modelos"]["ONIX_2023_10T"].diagrama = """
@@ -740,7 +749,7 @@ F04 Ventoinha | F05 Injeção | F06 Airbag
                     "Ligar motor",
                     "Esperar ventoinha acionar"
                 ]
-            )
+            )]
         self.base_dados["modelos"]["ONIX_2023_10T"].procedimentos = [
             Procedimento(id="VW_001", fabricante="Volkswagen", modelo="Gol", motor="1.6 EA111", categoria="Reaprendizado", nome="Corpo de Borboleta", scanner_obrigatorio=False, passos=["Ligar ignição", "Aguardar 30 segundos", "Desligar ignição", "Aguardar 30 segundos", "Ligar motor", "Esperar estabilizar"], tempo_estimado=5, observacoes="Não acelerar durante o procedimento.")
         ]
@@ -749,13 +758,22 @@ F04 Ventoinha | F05 Injeção | F06 Airbag
             ResetServico("Inspeção", ["Segurar botão Trip", "Ligar ignição", "Aguardar", "Reset confirmado"])
         ]
         self.base_dados["modelos"]["ONIX_2023_10T"].sincronismo = Sincronismo(
+            fabricante="Chevrolet",
+            modelo="Onix",
             motor="1.0 Turbo",
+            ano=2023,
+            tipo_distribuicao="Correia",
             ordem_ignicao="1-3-4-2",
+            procedimento="Alinhar marcas de referência no PMS do cilindro 1.",
             folga_admissao="0.20 mm",
             folga_escape="0.30 mm",
             correia="Marcas alinhadas PMS",
             corrente="Elo dourado alinhado",
-            observacoes="Virabrequim no PMS cilindro 1"
+            observacoes="Virabrequim no PMS cilindro 1",
+            torques=[
+                Torque(componente="Polia Virabrequim", torque_nm=120, angulo="+45°")
+            ],
+            ferramentas=[]
         )
 
         # Estrutura antiga mantida para exemplos de defeitos comuns.
@@ -904,6 +922,109 @@ F04 Ventoinha | F05 Injeção | F06 Airbag
         return "Sintoma visual não reconhecido. Tente termos como: 'fumaça azulada', 'fumaça branca densa' ou 'oleo cafe com leite'."
 
 
+class AnalisadorDeTendencias:
+    """
+    NOVO MÓDULO PARA MANUTENÇÃO PREDITIVA DE FROTAS.
+    Analisa séries temporais de dados de telemetria para prever falhas.
+    """
+
+    def calcular_score_saude_veiculo(self, dados_telemetria_historicos: List[Dict]) -> Dict:
+        """
+        Calcula um "Score de Saúde" para o veículo com base na tendência dos sensores.
+
+        Args:
+            dados_telemetria_historicos: Uma lista de leituras de telemetria ao longo do tempo.
+                                         Ex: [{"timestamp": "...", "ltft": 0.5, "rpm": 800}, ...]
+
+        Returns:
+            Um dicionário com o score geral e scores por sistema.
+        """
+        if not dados_telemetria_historicos or len(dados_telemetria_historicos) < 10:
+            return {"erro": "Dados históricos insuficientes para análise de tendência (mínimo 10 registros)."}
+
+        scores = {
+            "motor": 100,
+            "combustivel": 100,
+            "emissoes": 100,
+            "geral": 100
+        }
+        alertas = []
+
+        # Exemplo de análise de tendência para o Long Term Fuel Trim (LTFT)
+        ltft_series = [d.get("ltft_b1", 0) for d in dados_telemetria_historicos]
+        if ltft_series:
+            # Se o LTFT está consistentemente subindo e se aproximando do limite (+10%)
+            media_recente = sum(ltft_series[-5:]) / 5
+            if media_recente > 8.0:
+                # Penaliza o score de combustível e motor
+                penalidade = (media_recente - 8.0) * 5 # Penalidade aumenta com a gravidade
+                scores["combustivel"] -= penalidade
+                scores["motor"] -= penalidade / 2 # Impacto secundário no motor
+                alertas.append({
+                    "alerta": "Preditivo - Risco de Falha no Sistema de Combustível",
+                    "detalhe": f"A correção de combustível de longo prazo (LTFT) está consistentemente alta ({media_recente:.2f}%), indicando uma possível entrada de ar falsa em desenvolvimento ou falha iminente de um sensor (MAF/O2).",
+                    "acao_recomendada": "Agendar inspeção do sistema de admissão (teste de fumaça) e sensores de O2/MAF."
+                })
+
+        # Exemplo de análise de temperatura do motor
+        ect_series = [d.get("ect", 90) for d in dados_telemetria_historicos]
+        if ect_series:
+            media_temperatura = sum(ect_series) / len(ect_series)
+            if media_temperatura > 105: # Se a média geral está acima do normal
+                scores["motor"] -= 20
+                alertas.append({
+                    "alerta": "Preditivo - Risco de Superaquecimento",
+                    "detalhe": f"A temperatura média de operação do motor está elevada ({media_temperatura:.1f}°C). Pode indicar problema no termostato, radiador ou ventoinha.",
+                    "acao_recomendada": "Verificar sistema de arrefecimento com urgência."
+                })
+
+        # Calcula o score geral como a média ponderada dos scores de sistema
+        scores["geral"] = round( (scores["motor"] * 0.5) + (scores["combustivel"] * 0.3) + (scores["emissoes"] * 0.2) )
+
+        # Garante que os scores não fiquem negativos
+        for k in scores:
+            scores[k] = max(0, round(scores[k]))
+
+        return {
+            "scores_saude": scores,
+            "alertas_preditivos": alertas
+        }
+
+    def gerar_relatorio_frota(self, scores_veiculos: Dict[str, Dict]) -> str:
+        """
+        Gera um resumo executivo para um gestor de frota.
+
+        Args:
+            scores_veiculos: Dicionário onde a chave é a placa e o valor é o resultado de `calcular_score_saude_veiculo`.
+                             Ex: {"ABC1234": {"scores_saude": {...}, "alertas_preditivos": [...]}}
+
+        Returns:
+            Um texto formatado com o status da frota.
+        """
+        relatorio = ["--- Relatório Executivo da Frota ---"]
+        veiculos_criticos = []
+
+        for placa, dados in scores_veiculos.items():
+            score_geral = dados.get("scores_saude", {}).get("geral", 100)
+            if score_geral < 70:
+                veiculos_criticos.append((placa, score_geral, dados.get("alertas_preditivos", [])))
+
+        if not veiculos_criticos:
+            relatorio.append("\n✅ Todos os veículos da frota estão operando em condições normais.")
+            return "\n".join(relatorio)
+
+        relatorio.append(f"\n⚠️ ATENÇÃO: {len(veiculos_criticos)} veículo(s) requerem manutenção preditiva:\n")
+        veiculos_criticos.sort(key=lambda x: x[1]) # Ordena pelo score mais baixo
+
+        for placa, score, alertas in veiculos_criticos:
+            relatorio.append(f"  - Veículo: {placa} | Score de Saúde: {score}/100")
+            for alerta in alertas:
+                relatorio.append(f"    - Alerta: {alerta['detalhe']}")
+                relatorio.append(f"    - Ação: {alerta['acao_recomendada']}")
+            relatorio.append("")
+
+        return "\n".join(relatorio)
+
 class PadocAI:
     """Classe principal para diagnóstico automotivo com LLM local e memória por sessão.
 
@@ -915,6 +1036,7 @@ class PadocAI:
     def __init__(self, model_path=None):
         self.sistema_especialista = SistemaEspecialistaAutomotivo()
         self.estimador_custo = EstimadorCustoReparo() # NOVO: Módulo de custos
+        self.analisador_tendencias = AnalisadorDeTendencias() # NOVO: Módulo Preditivo
         self.base = self.sistema_especialista.base_dados
 
         # Histórico agora é um dicionário: {usuario_id: [ {user, bot}, ... ]}
@@ -1123,6 +1245,15 @@ Com base em TODAS as evidências acima, gere um laudo técnico completo e unific
     def gerar_resumo_custo(self, chave_reparo, urgencia="normal"):
         return self.estimador_custo.gerar_resumo_para_prompt(chave_reparo, urgencia)
 
+    # --- NOVOS MÉTODOS PARA MANUTENÇÃO PREDITIVA ---
+    def analisar_saude_veiculo(self, dados_telemetria_historicos: List[Dict]):
+        """Wrapper para o novo analisador de tendências."""
+        return self.analisador_tendencias.calcular_score_saude_veiculo(dados_telemetria_historicos)
+
+    def gerar_relatorio_para_frota(self, scores_por_veiculo: Dict[str, Dict]):
+        """Wrapper para o novo gerador de relatórios de frota."""
+        return self.analisador_tendencias.gerar_relatorio_frota(scores_por_veiculo)
+
     # --- NOVOS MÉTODOS DE CONSULTA TÉCNICA ---
     def _get_especificacoes_veiculo(self, codigo_veiculo):
         """Busca um veículo pela sua chave na base de dados."""
@@ -1235,18 +1366,15 @@ Com base em TODAS as evidências acima, gere um laudo técnico completo e unific
             return [a.__dict__ for a in veiculo.atuadores]
         return {"erro": f"Veículo com código '{codigo_veiculo}' não encontrado ou sem dados de atuadores."}
 
-    def consultar_procedimentos_reaprendizado(self, codigo_veiculo):
-        """Retorna os procedimentos de reaprendizado para componentes."""
-    
     def consultar_procedimentos(self, codigo_veiculo, categoria=None):
-        """Retorna os procedimentos técnicos (reaprendizado, reset, etc)."""
+        """
+        Retorna os procedimentos técnicos (reaprendizado, reset, etc).
+        Pode filtrar por categoria, se especificado.
+        """
         veiculo = self._get_especificacoes_veiculo(codigo_veiculo)
-        if veiculo and hasattr(veiculo, 'procedimentos_reaprendizado'):
-            return [p.__dict__ for p in veiculo.procedimentos_reaprendizado]
-        return {"erro": f"Veículo com código '{codigo_veiculo}' não encontrado ou sem dados de reaprendizado."}
         if veiculo and hasattr(veiculo, 'procedimentos'):
             procedimentos = veiculo.procedimentos
-            if categoria:
+            if categoria and categoria.strip():
                 procedimentos = [p for p in procedimentos if p.categoria.lower() == categoria.lower()]
             return [p.__dict__ for p in procedimentos]
         return {"erro": f"Veículo com código '{codigo_veiculo}' não encontrado ou sem dados de procedimentos."}
