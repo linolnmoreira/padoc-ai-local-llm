@@ -202,6 +202,11 @@
             color: #333;
         }
 
+        #historicoDiv {
+            /* Initially hidden, shown with JS */
+            display: none;
+        }
+
         .historico-item {
             padding: 10px;
             margin-bottom: 10px;
@@ -226,6 +231,11 @@
             color: white;
             margin-top: 20px;
             opacity: 0.8;
+        }
+
+        .footer a {
+            color: inherit;
+            text-decoration: none;
         }
 
         @media (max-width: 600px) {
@@ -298,7 +308,7 @@
 
             <div class="resultado" id="resultado"></div>
 
-            <div class="historico" id="historicoDiv" style="display: none;">
+            <div class="historico" id="historicoDiv">
                 <h3>📋 Your History</h3>
                 <div id="historico-list"></div>
             </div>
@@ -306,17 +316,40 @@
 
         <div class="footer">
             <p>&copy; 2026 PADOC AI - All rights reserved</p>
-            <p><a href="#" style="color: inherit; text-decoration: none;">Privacy Policy</a> | 
-               <a href="#" style="color: inherit; text-decoration: none;">Terms of Use</a></p>
+            <p><a href="#">Privacy Policy</a> | 
+               <a href="#">Terms of Use</a></p>
         </div>
     </div>
+
+    <!-- SDKs do Firebase (Adicione antes do seu script principal) -->
+    <!-- Substitua pela versão mais recente que você encontrar na documentação do Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script> 
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-analytics-compat.js"></script>
+    <script>
+        // Sua configuração do Firebase para este aplicativo da web
+        // Copiado diretamente do seu console do Firebase
+        const firebaseConfig = {
+          apiKey: "AIzaSyBkUiqTlo_lunHMwiu54vUjSPLjS2FJqA8",
+          authDomain: "padoc-ai.firebaseapp.com",
+          projectId: "padoc-ai",
+          storageBucket: "padoc-ai.firebasestorage.app",
+          messagingSenderId: "1080051254358",
+          appId: "1:1080051254358:web:f5cf761089ed42be0ca7f7",
+          measurementId: "G-ZCLZZ9ZFQ2"
+        };
+
+        // Inicializar Firebase
+        firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
+        const analytics = firebase.analytics(); // Inicializa o Analytics
+    </script>
 
     <script>
         // Configure API URL for local testing
         // Use "http://localhost:5000/api/diagnostico" when the backend is running locally.
-        // const API_URL = "http://localhost:5000/api/diagnostico"; // URL for local testing
         // IMPORTANT: Replace the URL below with your production API URL (Heroku)!
-        const API_URL = "https://padoc-ai-api.herokuapp.com/api/diagnostico";
+        const API_URL = "http://localhost:5000/api/diagnostico";
         const HISTORICO_KEY = "padoc_historico";
 
         async function enviarPergunta() {

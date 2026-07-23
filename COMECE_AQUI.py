@@ -92,10 +92,10 @@ Abrir em navegador:
 
 
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-┃ PASSO 5️⃣ : DEPLOY NO HEROKU (20 min)                               ┃
+┃ PASSO 5️⃣ : DEPLOY NA NUVEM (20 min)                                ┃
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
-5.1 Criar conta Heroku:
+5.1 Criar conta Render ou Heroku:
     https://heroku.com → Sign up
 
 5.2 Instalar CLI:
@@ -114,12 +114,11 @@ Abrir em navegador:
     gunicorn==20.1.0
 
 5.4 Deploy:
-    heroku login
-    heroku create padoc-ai-api
-    git push heroku main
+    # No Render: Conecte o repositório GitHub e configure o serviço.
+    # No Heroku: heroku login, heroku create, git push heroku main
 
 ✓ Resultado:
-    API em produção: https://padoc-ai-api.herokuapp.com/api/saude
+    API em produção: https://padoc-ai-api.onrender.com/api/saude
 
 
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
@@ -146,7 +145,7 @@ OPÇÃO B: Vercel (Mais fácil, automático)
    const API_URL = "http://localhost:5000/api/diagnostico";
    
    Para:
-   const API_URL = "https://padoc-ai-api.herokuapp.com/api/diagnostico";
+   const API_URL = "https://padoc-ai-api.onrender.com/api/diagnostico";
 
 ✓ Resultado: Site publicado e conectado à API em produção
 
@@ -179,7 +178,7 @@ Checklist antes de lançar:
   ☐ python validar_datasets.py ← OK
   ☐ API local responde ← OK
   ☐ Site HTML funciona ← OK
-  ☐ Firebase salva dados ← OK
+  ☐ Firebase salva dados (após rodar a API local) ← OK
   ☐ Deploy Heroku bem-sucedido ← OK
   ☐ Site hospedado e acessível ← OK
   ☐ Site conecta à API em produção ← OK
@@ -199,7 +198,7 @@ Totalmente pronto!     SIM ✅
                       O QUE VOCÊ VAI TER
 ═══════════════════════════════════════════════════════════════════════
 
-✓ API REST profissional em: https://padoc-ai-api.herokuapp.com
+✓ API REST profissional em: https://padoc-ai-api.onrender.com
 ✓ Site responsivo em: https://seu-dominio.com ou Vercel
 ✓ App mobile iOS/Android (opcional)
 ✓ Banco de dados Firebase em tempo real
@@ -289,11 +288,11 @@ PASSO 4: Setup Firebase
   - Criar arquivo .env
 
 PASSO 5: Deploy no Heroku
-  - Criar conta
-  - Instalar Heroku CLI
-  - heroku login
-  - heroku create padoc-ai-api
-  - git push heroku main
+  - (Recomendado: Usar Render.com)
+  - Criar conta, conectar GitHub
+  - Criar "Web Service"
+  - Configurar Build/Start commands
+  - Adicionar variáveis de ambiente e Secret File
 
 PASSO 6: Hospedar site
   - GitHub Pages ou Vercel

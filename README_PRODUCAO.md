@@ -41,9 +41,16 @@ python validar_datasets.py
 
 ## 🌐 PASSO 2: CRIAR API REST (10 min)
 
-### Instalar Flask:
+
+### 2.1 Ativar Ambiente Virtual (se ainda não estiver ativo)
+No PowerShell, navegue até a pasta do projeto e execute:
 ```powershell
-pip install flask flask-cors
+.\.venv\Scripts\Activate.ps1
+```
+
+### 2.2 Instalar Flask (com o ambiente ativo)
+```powershell
+python -m pip install flask flask-cors
 ```
 
 ### Iniciar API (Terminal 1):
@@ -115,39 +122,106 @@ pip install firebase-admin python-dotenv
 
 ---
 
-## ☁️ PASSO 5: DEPLOY NO HEROKU (20 min)
+## ☁️ PASSO 5: DEPLOY DA API NA NUVEM (20 min)
 
-### 5.1 Criar Conta
-- https://heroku.com → **Sign up**
+### Opção A: Render (Recomendado)
 
-### 5.2 Instalar CLIhttps://devcenter.heroku.com/articles/heroku-cli
-- Download: 
-- Verificar: `heroku --version`
+1.  **Criar Conta no Render e GitHub**:
+    *   Crie uma conta em: https://render.com (pode usar sua conta do GitHub).
+    *   Certifique-se que seu projeto está em um repositório no GitHub.
 
-### 5.3 Criar Arquivos
+2.  **Criar um "Web Service"**:
+    *   No dashboard do Render, clique em **New +** → **Web Service**.
+    *   Conecte seu repositório do GitHub e selecione o repositório do projeto `padoc-ai`.
 
-**Procfile** (sem extensão):
-```
-web: gunicorn api:app
-```
+3.  **Configurar o Serviço**:
+    *   **Name**: `padoc-ai-api` (ou o nome que preferir).
+    *   **Region**: Escolha uma região próxima (ex: `Ohio (US East)`).
+    *   **Branch**: `main` (ou a branch principal do seu projeto).
+    *   **Build Command**: `pip install -r requirements.txt`
+    *   **Start Command**: `gunicorn api:app`
+    *   **Instance Type**: `Free`
 
-**runtime.txt**:
-```
-python-3.11.0
-```
+4.  **Adicionar Variáveis de Ambiente**:
+    *   Vá para a aba **Environment**.
+    *   Clique em **Add Environment Variable**.
+    *   Adicione a chave `FIREBASE_DATABASE_URL` com o valor da URL do seu Realtime Database.
 
-**requirements.txt** (adicionar):
-```
-gunicorn==20.1.0
-```
+5.  **Adicionar o Arquivo de Credenciais (Secret File)**:
+    *   Ainda em **Environment**, role para baixo até **Secret Files**.
+    *   Clique em **Add Secret File**.
+    *   **Filename**: `firebase-key.json`
+    *   **Contents**: Copie e cole todo o conteúdo do seu arquivo `firebase-key.json` local.
 
-### 5.4 Deploy
+6.  **Fazer o Deploy**:
+    *   Clique em **Create Web Service**.
+    *   O Render irá construir e iniciar sua aplicação. Você pode acompanhar os logs em tempo real.
+
+### ✓ Resultado:
+Sua API estará no ar em uma URL como: `https://padoc-ai-api.onrender.com`. Use essa URL no Passo 6.
+
+---
+
+### Opção C: DigitalOcean (Alternativa Profissional)
+
+1.  **Criar Conta e Projeto**:
+    *   Crie uma conta em: https://www.digitalocean.com.
+    *   No painel, vá para **Create** -> **Apps**.
+
+2.  **Conectar Repositório**:
+    *   Escolha o GitHub (ou outro provedor) e selecione o repositório do seu projeto `padoc-ai`.
+
+3.  **Configurar a Aplicação**:
+    *   O DigitalOcean irá detectar seu projeto Python e o `Procfile`.
+    *   **App Spec**: Verifique se o comando de execução (`run command`) está correto: `gunicorn api:app --bind 0.0.0.0:${PORT}`.
+    *   **Build Command**: O padrão `pip install -r requirements.txt` deve ser detectado automaticamente.
+
+4.  **Adicionar Variáveis de Ambiente**:
+    *   Na etapa de configuração, vá para **Environment Variables**.
+    *   Clique em **Edit** e depois em **Add Variable**.
+    *   Adicione a chave `FIREBASE_DATABASE_URL` com o valor da URL do seu Realtime Database.
+    *   Para as credenciais do Firebase, adicione outra variável:
+        *   **Key**: `FIREBASE_CREDENTIALS_JSON`
+        *   **Value**: Copie e cole **todo o conteúdo** do seu arquivo `firebase-key.json` aqui.
+        *   Marque a caixa **Encrypt** para proteger a credencial.
+
+5.  **Fazer o Deploy**:
+    *   Revise as configurações e clique em **Create Resources**.
+    *   O DigitalOcean irá construir e implantar sua aplicação.
+
+### ✓ Resultado:
+Sua API estará no ar em uma URL como: `https://padoc-ai-api-xxxxx.ondigitalocean.app`. Use essa URL para conectar seu site.
+
+---
+
+### Opção B: Heroku (Alternativa)
+
+#### 5.1 Criar Conta e Instalar CLI
+- **Conta**: https://heroku.com → **Sign up**
+- **CLI**: https://devcenter.heroku.com/articles/heroku-cli
+
+#### 5.2 Criar Arquivos
+
+**Procfile** (sem extensão): `web: gunicorn api:app`
+
+**runtime.txt**: `python-3.11.0`
+
+**requirements.txt** (adicionar): `gunicorn==20.1.0`
+
+#### 5.3 Deploy
 ```bash
 heroku login
 heroku create padoc-ai-api
 git add .
 git commit -m "Deploy PADOC AI"
 git push heroku main
+
+# Configurar variáveis de ambiente (IMPORTANTE)
+# O Heroku não tem um bom suporte para arquivos secretos, então o ideal é usar variáveis de ambiente.
+# Converta seu firebase-key.json para uma string de uma linha e adicione:
+# heroku config:set FIREBASE_CREDENTIALS_JSON='...'
+# heroku config:set FIREBASE_DATABASE_URL='...'
+# E ajuste o firebase_integration.py para ler a variável de ambiente.
 ```
 
 ### ✓ Resultado:
