@@ -3,55 +3,55 @@
     "batida_biela": {
       "nome": "Batida de Biela / Bronzina",
       "frequencia_hz": "100-450",
-      "caracteristica": "Batida grave, oca e metálica, aumenta sob carga",
-      "momento": "Aceleração, retomada e carga elevada",
-      "localizacao_provavel": "Parte inferior do bloco/cárter",
+      "caracteristica": "Batida grave, oca e metÃ¡lica, aumenta sob carga",
+      "momento": "AceleraÃ§Ã£o, retomada e carga elevada",
+      "localizacao_provavel": "Parte inferior do bloco/cÃ¡rter",
       "causas": [
         "Desgaste de bronzina",
         "Folga excessiva no colo do virabrequim",
-        "Baixa pressão de óleo",
-        "Falta de lubrificação",
-        "Óleo degradado",
+        "Baixa pressÃ£o de Ã³leo",
+        "Falta de lubrificaÃ§Ã£o",
+        "Ã“leo degradado",
         "Virabrequim danificado"
       ],
       "urgencia": "CRITICA",
       "risco": "Travamento ou quebra do motor",
       "testes": [
-        "Medir pressão de óleo",
-        "Inspecionar cárter",
+        "Medir pressÃ£o de Ã³leo",
+        "Inspecionar cÃ¡rter",
         "Verificar bronzinas",
         "Verificar colo do virabrequim",
-        "Verificar limalha no óleo"
+        "Verificar limalha no Ã³leo"
       ],
-      "acao": "Não recomendar circulação até diagnóstico."
+      "acao": "NÃ£o recomendar circulaÃ§Ã£o atÃ© diagnÃ³stico."
     },
 
     "batida_pistao": {
-      "nome": "Batida de Pistão / Piston Slap",
+      "nome": "Batida de PistÃ£o / Piston Slap",
       "frequencia_hz": "200-800",
-      "caracteristica": "Batida metálica oca, mais evidente com motor frio",
-      "momento": "Partida a frio e baixa rotação",
+      "caracteristica": "Batida metÃ¡lica oca, mais evidente com motor frio",
+      "momento": "Partida a frio e baixa rotaÃ§Ã£o",
       "localizacao_provavel": "Bloco/cilindros",
       "causas": [
-        "Folga excessiva pistão-cilindro",
-        "Desgaste de saia do pistão",
+        "Folga excessiva pistÃ£o-cilindro",
+        "Desgaste de saia do pistÃ£o",
         "Desgaste do cilindro"
       ],
       "urgencia": "ALTA",
       "testes": [
-        "Teste de compressão",
+        "Teste de compressÃ£o",
         "Leak-down",
-        "Medição de cilindros",
-        "Inspeção do pistão"
+        "MediÃ§Ã£o de cilindros",
+        "InspeÃ§Ã£o do pistÃ£o"
       ]
     },
 
     "pino_pistao": {
-      "nome": "Folga no Pino do Pistão",
+      "nome": "Folga no Pino do PistÃ£o",
       "frequencia_hz": "500-1500",
-      "caracteristica": "Clique metálico ritmado",
-      "momento": "Varia com rotação e carga",
-      "localizacao_provavel": "Região superior do bloco",
+      "caracteristica": "Clique metÃ¡lico ritmado",
+      "momento": "Varia com rotaÃ§Ã£o e carga",
+      "localizacao_provavel": "RegiÃ£o superior do bloco",
       "causas": [
         "Desgaste do pino",
         "Desgaste da bucha",
@@ -61,33 +61,33 @@
     },
 
     "tucho_hidraulico": {
-      "nome": "Tucho Hidráulico",
+      "nome": "Tucho HidrÃ¡ulico",
       "frequencia_hz": "1200-3000",
-      "caracteristica": "Tec-tec contínuo",
+      "caracteristica": "Tec-tec contÃ­nuo",
       "momento": "Mais evidente na partida ou marcha lenta",
       "causas": [
         "Tucho descarregado",
-        "Óleo incorreto",
+        "Ã“leo incorreto",
         "Borra",
-        "Baixa pressão de óleo",
+        "Baixa pressÃ£o de Ã³leo",
         "Desgaste do tucho"
       ],
       "urgencia": "MEDIA",
       "testes": [
-        "Medir pressão de óleo",
-        "Verificar nível",
+        "Medir pressÃ£o de Ã³leo",
+        "Verificar nÃ­vel",
         "Verificar viscosidade",
         "Inspecionar comando"
       ]
     },
 
     "comando_valvulas": {
-      "nome": "Ruído no Comando de Válvulas",
+      "nome": "RuÃ­do no Comando de VÃ¡lvulas",
       "frequencia_hz": "800-2500",
-      "caracteristica": "Batida metálica ritmada na parte superior do motor",
+      "caracteristica": "Batida metÃ¡lica ritmada na parte superior do motor",
       "causas": [
         "Desgaste dos ressaltos",
-        "Falta de lubrificação",
+        "Falta de lubrificaÃ§Ã£o",
         "Folga incorreta",
         "Desgaste de mancais"
       ],
@@ -95,23 +95,23 @@
     },
 
     "corrente_comando": {
-      "nome": "Corrente de Distribuição Frouxa",
+      "nome": "Corrente de DistribuiÃ§Ã£o Frouxa",
       "frequencia_hz": "500-2500",
-      "caracteristica": "Chocalho metálico principalmente na partida",
+      "caracteristica": "Chocalho metÃ¡lico principalmente na partida",
       "causas": [
         "Corrente alongada",
         "Tensor defeituoso",
         "Guias desgastadas",
-        "Baixa pressão de óleo"
+        "Baixa pressÃ£o de Ã³leo"
       ],
       "urgencia": "CRITICA",
-      "risco": "Salto de sincronismo e dano às válvulas"
+      "risco": "Salto de sincronismo e dano Ã s vÃ¡lvulas"
     },
 
     "correia_distribuicao": {
-      "nome": "Ruído na Correia de Distribuição",
+      "nome": "RuÃ­do na Correia de DistribuiÃ§Ã£o",
       "frequencia_hz": "500-4000",
-      "caracteristica": "Chiado, raspagem ou ruído irregular",
+      "caracteristica": "Chiado, raspagem ou ruÃ­do irregular",
       "causas": [
         "Tensionamento incorreto",
         "Tensor desgastado",
@@ -123,14 +123,14 @@
     },
 
     "chiado_correia_acessorios": {
-      "nome": "Chiado da Correia de Acessórios",
+      "nome": "Chiado da Correia de AcessÃ³rios",
       "frequencia_hz": "3500-7000",
       "caracteristica": "Chiado agudo",
       "causas": [
         "Correia desgastada",
         "Tensionador fraco",
         "Polia desalinhada",
-        "Contaminação por óleo"
+        "ContaminaÃ§Ã£o por Ã³leo"
       ],
       "urgencia": "MEDIA"
     },
@@ -143,9 +143,9 @@
     },
 
     "bomba_agua": {
-      "nome": "Rolamento da Bomba d'Água",
+      "nome": "Rolamento da Bomba d'Ãgua",
       "frequencia_hz": "500-3000",
-      "caracteristica": "Ronco/raspagem na região da bomba",
+      "caracteristica": "Ronco/raspagem na regiÃ£o da bomba",
       "causas": [
         "Rolamento desgastado",
         "Folga no eixo",
@@ -155,15 +155,15 @@
     },
 
     "detonacao": {
-      "nome": "Detonação / Grilado",
+      "nome": "DetonaÃ§Ã£o / Grilado",
       "frequencia_hz": "5000-8000",
-      "caracteristica": "Ruído metálico semelhante a pequenas esferas",
-      "momento": "Carga elevada, baixa rotação e aceleração",
+      "caracteristica": "RuÃ­do metÃ¡lico semelhante a pequenas esferas",
+      "momento": "Carga elevada, baixa rotaÃ§Ã£o e aceleraÃ§Ã£o",
       "causas": [
-        "Combustível inadequado",
+        "CombustÃ­vel inadequado",
         "Baixa octanagem",
-        "Avanço excessivo",
-        "Carbonização",
+        "AvanÃ§o excessivo",
+        "CarbonizaÃ§Ã£o",
         "Temperatura elevada",
         "Vela inadequada"
       ],
@@ -171,49 +171,47 @@
     },
 
     "pre_ignicao": {
-      "nome": "Pré-Ignição",
-      "frequencia_hz": "Variável",
-      "caracteristica": "Combustão anormal antes da centelha",
+      "nome": "PrÃ©-IgniÃ§Ã£o",
+      "frequencia_hz": "VariÃ¡vel",
+      "caracteristica": "CombustÃ£o anormal antes da centelha",
       "causas": [
         "Ponto quente",
-        "Carbonização",
+        "CarbonizaÃ§Ã£o",
         "Vela superaquecida",
         "Mistura inadequada",
         "Temperatura elevada"
       ],
       "urgencia": "CRITICA"
-    }
-    
-    "superaquecimento": {
+    },"superaquecimento": {
       "indicadores": [
         "Temperatura elevada",
         "Ventoinha acionando frequentemente",
-        "Perda de líquido",
-        "Pressão excessiva no reservatório"
+        "Perda de lÃ­quido",
+        "PressÃ£o excessiva no reservatÃ³rio"
       ],
       "causas": [
-        "Válvula termostática travada",
-        "Radiador obstruído",
-        "Bomba d'água defeituosa",
+        "VÃ¡lvula termostÃ¡tica travada",
+        "Radiador obstruÃ­do",
+        "Bomba d'Ã¡gua defeituosa",
         "Ventoinha defeituosa",
         "Sensor ECT defeituoso",
-        "Junta do cabeçote"
+        "Junta do cabeÃ§ote"
       ],
       "urgencia": "CRITICA"
     },
 
     "vazamento_liquido": {
       "indicadores": [
-        "Manchas no chão",
-        "Reservatório baixando",
+        "Manchas no chÃ£o",
+        "ReservatÃ³rio baixando",
         "Odor de aditivo",
-        "Fumaça/vapor"
+        "FumaÃ§a/vapor"
       ],
       "causas": [
         "Mangueira",
         "Radiador",
-        "Bomba d'água",
-        "Reservatório",
+        "Bomba d'Ã¡gua",
+        "ReservatÃ³rio",
         "Tampa",
         "Junta"
       ],
@@ -224,7 +222,7 @@
       "sintomas": [
         "Motor demora para aquecer",
         "Temperatura excessiva",
-        "Oscilação de temperatura"
+        "OscilaÃ§Ã£o de temperatura"
       ],
       "urgencia": "ALTA"
     }
