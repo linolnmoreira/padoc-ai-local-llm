@@ -11,7 +11,7 @@ Mudanças em relação à versão original:
 """
 
 import os
-import json
+import json, dataclasses
 from dataclasses import dataclass
 from datetime import datetime, timedelta
 from typing import Dict, List, Optional
@@ -109,6 +109,7 @@ class ResetServico:
     servico: str
     passos: List[str]
 
+@dataclass
 class Procedimento:
     """Estrutura para procedimentos de reaprendizado, reset e codificação."""
     id: str
@@ -121,6 +122,7 @@ class Procedimento:
     passos: List[str]
     tempo_estimado: int
     observacoes: str
+@dataclass
 
 @dataclass
 class Torque:
@@ -153,6 +155,78 @@ class Sincronismo:
     torques: List[Torque]
     ferramentas: List[Ferramenta]
 
+
+@dataclass
+class ECU:
+    """Estrutura genérica para um Módulo de Controle Eletrônico."""
+    id: str
+    fabricante: str
+    modelo: str
+    sistema: str
+    funcao: str
+    localizacao: str
+    diagnostico_comum: List[str] = field(default_factory=list)
+    codigos_falha_comuns: List[str] = field(default_factory=list)
+
+@dataclass
+class BCM(ECU):
+    """Body Control Module."""
+    funcoes_controladas: List[str] = field(default_factory=list)
+
+@dataclass
+class BMS(ECU):
+    """Battery Management System."""
+    tipo_bateria: str
+    capacidade_kwh: Optional[float]
+    tensao_nominal: Optional[float]
+    monitora_celulas: bool
+
+@dataclass
+class AirbagModule(ECU):
+    """Módulo de Airbag (SRS)."""
+    sensores_colisao: int
+    airbags_instalados: int
+
+@dataclass
+class ElectricSteeringModule(ECU):
+    """Módulo de Direção Elétrica."""
+    tipo_assistencia: str # EPS, EHPS
+
+@dataclass
+class HVACModule(ECU):
+    """Módulo de Climatização (Heating, Ventilation, and Air Conditioning)."""
+    sensores_temperatura_interna: int
+    atuadores_dutos: int
+    funcoes: List[str] = field(default_factory=list)
+
+@dataclass
+class ADASModule(ECU):
+    """Advanced Driver-Assistance Systems Module."""
+    funcoes_adas: List[str] = field(default_factory=list)
+    sensores_integrados: List[str] = field(default_factory=list) # Câmeras, radar, lidar
+
+@dataclass
+class InfotainmentModule(ECU):
+    """Módulo de Multimídia/Infotainment."""
+    funcoes_multimidia: List[str] = field(default_factory=list)
+    conectividade: List[str] = field(default_factory=list)
+
+@dataclass
+class TelematicsModule(ECU):
+    """Módulo de Telemática (GPS, comunicação remota)."""
+    funcoes_telematica: List[str] = field(default_factory=list)
+    conectividade: List[str] = field(default_factory=list)
+
+@dataclass
+class SensorReading:
+    """Estrutura para uma leitura de sensor em tempo real."""
+    nome: str
+    valor: float
+    unidade: str
+    timestamp: datetime = field(default_factory=datetime.now)
+    limite_min: Optional[float] = None
+    limite_max: Optional[float] = None
+    status: Optional[str] = None # "Normal", "Alerta", "Crítico"
 
 @dataclass
 class EspecificacoesVeiculo:
@@ -192,7 +266,21 @@ class EspecificacoesVeiculo:
     procedimentos_reaprendizado: List[Reaprendizado]
     procedimentos_reset: List[ResetServico]
     procedimentos: List[Procedimento]
-    sincronismo: Sincronismo
+    sincronismo: Optional[Sincronismo]
+
+    # NOVOS CAMPOS PARA ECUs e Sensores Avançados
+    ecus_motor: List[ECU] = field(default_factory=list) # ECU do motor (PCM/ECM)
+    tcu_modules: List[ECU] = field(default_factory=list) # TCU/câmbio
+    abs_esp_modules: List[ECU] = field(default_factory=list) # ABS/ESP
+    bcm_modules: List[BCM] = field(default_factory=list)
+    bms_modules: List[BMS] = field(default_factory=list)
+    airbag_modules: List[AirbagModule] = field(default_factory=list)
+    electric_steering_modules: List[ElectricSteeringModule] = field(default_factory=list)
+    hvac_modules: List[HVACModule] = field(default_factory=list)
+    adas_modules: List[ADASModule] = field(default_factory=list)
+    infotainment_modules: List[InfotainmentModule] = field(default_factory=list)
+    telematics_modules: List[TelematicsModule] = field(default_factory=list)
+    ultimas_leituras_sensores: Dict[str, SensorReading] = field(default_factory=dict)
 
 """Módulo de Análise de Imagem - PADOC AI
 
@@ -208,12 +296,7 @@ Por que CLIP e não um YOLO treinado do zero:
   migre para YOLO fine-tuned depois que tiver seu próprio banco de imagens
 
 Instalação necessária:
-    pip install transformers torch pillow
 """
-
-import torch
-from PIL import Image
-from transformers import CLIPProcessor, CLIPModel
 
 
 class AnalisadorImagemAutomotivo:
@@ -242,6 +325,10 @@ class AnalisadorImagemAutomotivo:
                 (patch32) é mais leve e rápido; existe também patch16, mais
                 pesado e um pouco mais preciso, se sua hospedagem aguentar.
         """
+        from transformers import CLIPProcessor, CLIPModel
+
+        self.torch = __import__("torch")
+
         self.model = CLIPModel.from_pretrained(modelo_clip)
         self.processor = CLIPProcessor.from_pretrained(modelo_clip)
         self.model.eval()  # modo de inferência, não treino
@@ -261,6 +348,8 @@ class AnalisadorImagemAutomotivo:
             ordenada da maior para a menor confiança.
         """
         try:
+            from PIL import Image
+
             imagem = Image.open(caminho_imagem).convert("RGB")
         except Exception as e:
             return {"erro": f"Não foi possível abrir a imagem: {e}"}
@@ -272,7 +361,7 @@ class AnalisadorImagemAutomotivo:
             padding=True
         )
 
-        with torch.no_grad():
+        with self.torch.no_grad():
             outputs = self.model(**inputs)
             # logits_per_image: similaridade da imagem com cada descrição de texto
             logits_por_imagem = outputs.logits_per_image
@@ -591,6 +680,43 @@ class EstimadorCustoReparo:
         return "\n".join(linhas)
 
 
+class BaseConhecimento:
+    """
+    NOVA CLASSE: Centraliza o carregamento e o acesso a toda a base de
+    conhecimento a partir de arquivos JSON, separando dados da lógica.
+    """
+    def __init__(self):
+        self.dados = self._carregar_todos_dados()
+
+    def _carregar_todos_dados(self):
+        """Carrega todos os arquivos JSON do diretório de conhecimento."""
+        base_dados = {}
+        knowledge_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "knowledge")
+        
+        if not os.path.isdir(knowledge_path):
+            print(f"Aviso: Diretório de conhecimento não encontrado em {knowledge_path}")
+            return base_dados
+
+        for filename in os.listdir(knowledge_path):
+            if filename.endswith(".json"):
+                file_path = os.path.join(knowledge_path, filename)
+                try:
+                    with open(file_path, 'r', encoding='utf-8') as f:
+                        # Usa o nome do arquivo (sem extensão) como chave
+                        chave = os.path.splitext(filename)[0]
+                        base_dados[chave] = json.load(f)
+                except (json.JSONDecodeError, IOError) as e:
+                    print(f"Aviso: Falha ao carregar ou decodificar {filename}: {e}")
+        return base_dados
+
+    def get_dados_veiculo(self, codigo_veiculo):
+        """Busca especificações de um veículo na base de conhecimento."""
+        # Assumindo que os dados dos veículos estão em 'dados_tecnicos_veiculos.json'
+        # e foram carregados sob a chave 'dados_tecnicos_veiculos'
+        dados_modelos = self.dados.get("dados_tecnicos_veiculos", {}).get("modelos", {})
+        return dados_modelos.get(codigo_veiculo)
+
+
 class SistemaEspecialistaAutomotivo:
     def __init__(self):
         self.base_dados = {
@@ -600,6 +726,8 @@ class SistemaEspecialistaAutomotivo:
             "historico_ordens_servico": [],
             "codigos_obd2": {} # NOVO: Base de códigos OBD-II
         }
+        # A inicialização agora pode ser simplificada para usar a nova classe
+        # ou carregar de arquivos específicos, como já faz com o histórico.
         self._inicializar_base_conhecimento()
         self._carregar_historico_servico()
 
@@ -669,8 +797,8 @@ class SistemaEspecialistaAutomotivo:
             atuadores=[],
             procedimentos_reaprendizado=[],
             procedimentos_reset=[],
-            procedimentos=[],
-            sincronismo=None
+            procedimentos=[], # Corrigido abaixo
+            sincronismo=None,
         )
         # Adicionando os novos campos da estrutura unificada
         self.base_dados["modelos"]["ONIX_2023_10T"].pneus = {
@@ -726,7 +854,7 @@ F04 Ventoinha | F05 Injeção | F06 Airbag
             Atuador(id='ACT001', fabricante='Chevrolet', modelo='Onix', motor='1.0 Turbo', ano_inicio=2020, ano_fim=2024, sistema='Combustível', nome='Bomba elétrica de combustível', tipo='Relé', alimentacao='12V', controle='ECU', localizacao='Dentro do tanque de combustível', resistencia_min=None, resistencia_max=None, tensao_min=11.5, tensao_max=14.5, pwm_min=None, pwm_max=None, frequencia_min=None, frequencia_max=None, descricao='Pressuriza a linha de combustível para os injetores.', sintomas=['Motor não liga', 'Perda de potência', 'Falhas em aceleração'], codigos_obd=['P0230', 'P0231']),
             Atuador(id='ACT003', fabricante='Chevrolet', modelo='Onix', motor='1.0 Turbo', ano_inicio=2020, ano_fim=2024, sistema='Injeção', nome='Injetor Cilindro 1', tipo='PWM', alimentacao='12V', controle='ECU', localizacao='Coletor de admissão, cilindro 1', resistencia_min=11.0, resistencia_max=16.0, tensao_min=None, tensao_max=None, pwm_min=None, pwm_max=None, frequencia_min=None, frequencia_max=None, descricao='Pulveriza combustível no cilindro 1.', sintomas=['Falha de ignição (misfire)', 'Marcha lenta irregular', 'Perda de potência'], codigos_obd=['P0201', 'P0301']),
             Atuador(id='ACT020', fabricante='Chevrolet', modelo='Onix', motor='1.0 Turbo', ano_inicio=2020, ano_fim=2024, sistema='Ignição', nome='Bobina Cilindro 1', tipo='Digital', alimentacao='12V', controle='ECU', localizacao='Sobre a vela do cilindro 1', resistencia_min=0.4, resistencia_max=0.8, tensao_min=None, tensao_max=None, pwm_min=None, pwm_max=None, frequencia_min=None, frequencia_max=None, descricao='Gera alta tensão para a vela de ignição do cilindro 1.', sintomas=['Falha de ignição (misfire)', 'Motor tremendo', 'Perda de potência'], codigos_obd=['P0351', 'P0301']),
-            Atuador(id='ACT040', fabricante='Chevrolet', modelo='Onix', motor='1.0 Turbo', ano_inicio=2020, ano_fim=2024, sistema='Admissão', nome='Corpo de borboleta eletrônico', tipo='Motor DC', alimentacao='5V/12V', controle='ECU', localizacao='Entre o filtro de ar e o coletor de admissão', resistencia_min=None, resistencia_max=None, tensao_min=None, tensao_max=None, pwm_min=None, pwm_max=None, descricao='Controla a quantidade de ar que entra no motor.', sintomas=['Aceleração irregular', 'Marcha lenta oscilante', 'Luz da injeção (EPC) acesa'], codigos_obd=['P2135', 'P2101']),
+            Atuador(id='ACT040', fabricante='Chevrolet', modelo='Onix', motor='1.0 Turbo', ano_inicio=2020, ano_fim=2024, sistema='Admissão', nome='Corpo de borboleta eletrônico', tipo='Motor DC', alimentacao='5V/12V', controle='ECU', localizacao='Entre o filtro de ar e o coletor de admissão', resistencia_min=None, resistencia_max=None, tensao_min=None, tensao_max=None, pwm_min=None, pwm_max=None, frequencia_min=None, frequencia_max=None, descricao='Controla a quantidade de ar que entra no motor.', sintomas=['Aceleração irregular', 'Marcha lenta oscilante', 'Luz da injeção (EPC) acesa'], codigos_obd=['P2135', 'P2101']),
             Atuador(id='ACT101', fabricante='Chevrolet', modelo='Onix', motor='1.0 Turbo', ano_inicio=2020, ano_fim=2024, sistema='Arrefecimento', nome='Eletroventilador velocidade alta', tipo='Relé', alimentacao='12V', controle='ECU', localizacao='Atrás do radiador', resistencia_min=None, resistencia_max=None, tensao_min=11.5, tensao_max=14.5, pwm_min=None, pwm_max=None, frequencia_min=None, frequencia_max=None, descricao='Força a passagem de ar pelo radiador para arrefecer o motor.', sintomas=['Superaquecimento em trânsito', 'Ar condicionado desarma'], codigos_obd=['P0481']),
             Atuador(id='ACT121', fabricante='Chevrolet', modelo='Onix', motor='1.0 Turbo', ano_inicio=2020, ano_fim=2024, sistema='EVAP', nome='Válvula Canister', tipo='PWM', alimentacao='12V', controle='ECU', localizacao='Próximo ao coletor de admissão', resistencia_min=20.0, resistencia_max=30.0, tensao_min=None, tensao_max=None, pwm_min=None, pwm_max=None, frequencia_min=None, frequencia_max=None, descricao='Controla o fluxo de vapores de combustível do canister para o motor.', sintomas=['Cheiro de combustível', 'Marcha lenta irregular após abastecer', 'Luz da injeção acesa'], codigos_obd=['P0443', 'P0441'])
         ]
@@ -751,7 +879,7 @@ F04 Ventoinha | F05 Injeção | F06 Airbag
                 ]
             )]
         self.base_dados["modelos"]["ONIX_2023_10T"].procedimentos = [
-            Procedimento(id="VW_001", fabricante="Volkswagen", modelo="Gol", motor="1.6 EA111", categoria="Reaprendizado", nome="Corpo de Borboleta", scanner_obrigatorio=False, passos=["Ligar ignição", "Aguardar 30 segundos", "Desligar ignição", "Aguardar 30 segundos", "Ligar motor", "Esperar estabilizar"], tempo_estimado=5, observacoes="Não acelerar durante o procedimento.")
+            Procedimento(id="CHEV_001", fabricante="Chevrolet", modelo="Onix", motor="1.0 Turbo", categoria="Reaprendizado", nome="Corpo de Borboleta", scanner_obrigatorio=False, passos=["Ligar ignição", "Aguardar 30 segundos", "Desligar ignição", "Aguardar 30 segundos", "Ligar motor", "Esperar estabilizar"], tempo_estimado=5, observacoes="Não acelerar durante o procedimento."),
         ]
         self.base_dados["modelos"]["ONIX_2023_10T"].procedimentos_reset = [
             ResetServico("Troca de Óleo", ["Ligar ignição", "Acessar menu", "Selecionar Manutenção", "Reset", "Confirmar"]),
@@ -774,6 +902,49 @@ F04 Ventoinha | F05 Injeção | F06 Airbag
                 Torque(componente="Polia Virabrequim", torque_nm=120, angulo="+45°")
             ],
             ferramentas=[]
+        )
+        # NOVOS CAMPOS: ECUs e Sensores Avançados
+        self.base_dados["modelos"]["ONIX_2023_10T"].ecus_motor = [
+            ECU(id="ECM001", fabricante="GM", modelo="E80", sistema="Motor", funcao="Controle do motor", localizacao="Compartimento do motor", diagnostico_comum=["Falha de ignição", "Problemas de injeção"], codigos_falha_comuns=["P0300", "P0171"])
+        ]
+        self.base_dados["modelos"]["ONIX_2023_10T"].tcu_modules = [
+            ECU(id="TCM001", fabricante="GM", modelo="6T30", sistema="Transmissão", funcao="Controle da transmissão automática", localizacao="Próximo à transmissão", diagnostico_comum=["Trocas bruscas", "Patinação"], codigos_falha_comuns=["P0700", "P0740"])
+        ]
+        self.base_dados["modelos"]["ONIX_2023_10T"].abs_esp_modules = [
+            ECU(id="ABS001", fabricante="Bosch", modelo="9.0", sistema="Freios", funcao="Controle ABS e ESP", localizacao="Compartimento do motor", diagnostico_comum=["Luz ABS acesa", "Pedal duro"], codigos_falha_comuns=["C0035", "C0040"])
+        ]
+        self.base_dados["modelos"]["ONIX_2023_10T"].bcm_modules = [
+            BCM(id="BCM001", fabricante="GM", modelo="B80", sistema="Carroceria", funcao="Controle de funções da carroceria", localizacao="Atrás do painel", funcoes_controladas=["Vidros elétricos", "Travas", "Iluminação interna"])
+        ]
+        self.base_dados["modelos"]["ONIX_2023_10T"].bms_modules = [
+            BMS(id="BMS001", fabricante="GM", modelo="Gen2", sistema="Bateria", funcao="Gerenciamento de bateria", localizacao="Próximo à bateria", tipo_bateria="AGM", capacidade_kwh=None, tensao_nominal=12.0, monitora_celulas=False)
+        ]
+        self.base_dados["modelos"]["ONIX_2023_10T"].airbag_modules = [
+            AirbagModule(id="SRS001", fabricante="Autoliv", modelo="ACU", sistema="Segurança", funcao="Controle de airbags", localizacao="Console central", sensores_colisao=4, airbags_instalados=6, diagnostico_comum=["Luz airbag acesa"], codigos_falha_comuns=["B0001"])
+        ]
+        self.base_dados["modelos"]["ONIX_2023_10T"].electric_steering_modules = [
+            ElectricSteeringModule(id="EPS001", fabricante="ZF", modelo="EPS", sistema="Direção", funcao="Assistência elétrica da direção", localizacao="Coluna de direção", tipo_assistencia="EPS")
+        ]
+        self.base_dados["modelos"]["ONIX_2023_10T"].hvac_modules = [
+            HVACModule(id="HVAC001", fabricante="Denso", modelo="Auto", sistema="Climatização", funcao="Controle de temperatura e ventilação", localizacao="Painel", sensores_temperatura_interna=2, atuadores_dutos=5, funcoes=["Ar condicionado", "Aquecimento", "Desembaçamento"])
+        ]
+        self.base_dados["modelos"]["ONIX_2023_10T"].adas_modules = [
+            ADASModule(id="ADAS001", fabricante="Bosch", modelo="ADAS_Gen1", sistema="ADAS", funcao="Assistência ao motorista", localizacao="Atrás do retrovisor", funcoes_adas=["Alerta de colisão", "Assistente de faixa"], sensores_integrados=["Câmera frontal", "Radar frontal"])
+        ]
+        self.base_dados["modelos"]["ONIX_2023_10T"].infotainment_modules = [
+            InfotainmentModule(id="INFOT001", fabricante="LG", modelo="MyLink", sistema="Multimídia", funcao="Entretenimento e navegação", localizacao="Painel", funcoes_multimidia=["Rádio", "Bluetooth", "GPS"], conectividade=["USB", "Bluetooth", "Apple CarPlay", "Android Auto"])
+        ]
+        self.base_dados["modelos"]["ONIX_2023_10T"].telematics_modules = [
+            TelematicsModule(id="TEL001", fabricante="OnStar", modelo="Gen3", sistema="Telemática", funcao="Serviços conectados", localizacao="Teto", funcoes_telematica=["Localização", "Chamada de emergência"], conectividade=["4G", "GPS"])
+        ]
+        self.base_dados["modelos"]["ONIX_2023_10T"].ultimas_leituras_sensores = {
+            "temperatura_cabine": SensorReading(nome="Temperatura Cabine", valor=22.5, unidade="°C", limite_min=18.0, limite_max=28.0),
+            "tensao_bateria_aux": SensorReading(nome="Tensão Bateria Auxiliar", valor=12.8, unidade="V", limite_min=12.0, limite_max=14.5),
+            "corrente_bateria_aux": SensorReading(nome="Corrente Bateria Auxiliar", valor=5.2, unidade="A", limite_min=0.5, limite_max=10.0),
+            "distancia_ultrassom_frente": SensorReading(nome="Distância Ultrassom Frente", valor=1.5, unidade="m", limite_min=0.1, limite_max=3.0),
+            "aceleracao_x": SensorReading(nome="Aceleração Eixo X", valor=0.1, unidade="G", limite_min=-1.0, limite_max=1.0),
+            "radar_distancia_min": SensorReading(nome="Radar Distância Mínima", valor=10.0, unidade="m", limite_min=0.5, limite_max=100.0),
+            "camera_deteccao_faixa": SensorReading(nome="Câmera Detecção Faixa", valor=1.0, unidade="bool", status="Normal"), # 1.0 for OK, 0.0 for issue
         )
 
         # Estrutura antiga mantida para exemplos de defeitos comuns.
@@ -1025,8 +1196,21 @@ class AnalisadorDeTendencias:
 
         return "\n".join(relatorio)
 
+def _serializavel(obj):
+    """Função auxiliar para serializar objetos não-padrão para JSON."""
+    if dataclasses.is_dataclass(obj):
+        return dataclasses.asdict(obj)
+    if isinstance(obj, dict):
+        return {k: _serializavel(v) for k, v in obj.items()}
+    if isinstance(obj, list):
+        return [_serializavel(i) for i in obj]
+    if isinstance(obj, (datetime, timedelta)):
+        return obj.isoformat()
+    return obj
+
 class PadocAI:
     """Classe principal para diagnóstico automotivo com LLM local e memória por sessão.
+    (Refatorada para simplificar consultas e centralizar acesso aos dados)
 
     IMPORTANTE: crie apenas UMA instância desta classe por processo do servidor
     (padrão singleton). Recriar a cada requisição recarrega o modelo GGUF do
@@ -1035,8 +1219,38 @@ class PadocAI:
 
     def __init__(self, model_path=None):
         self.sistema_especialista = SistemaEspecialistaAutomotivo()
+        self.base_conhecimento = BaseConhecimento() # NOVA INSTÂNCIA
         self.estimador_custo = EstimadorCustoReparo() # NOVO: Módulo de custos
-        self.analisador_tendencias = AnalisadorDeTendencias() # NOVO: Módulo Preditivo
+        self.analisador_tendencias = AnalisadorDeTendencias() # NOVO: Módulo Preditivo        
+        self.historico_veiculo = HistoricoVeiculo() # Melhoria: Instância única        
+        # NEW: Initialize TelemetryAI
+        # NOVO: Inicializa o analisador de desempenho
+        try:
+            from brain.performance_analyzer import get_performance_analyzer_instance
+            self.performance_analyzer = get_performance_analyzer_instance()
+        except ImportError:
+            print("Aviso: Módulo PerformanceAnalyzer não encontrado. A consulta de desempenho não funcionará.")
+            self.performance_analyzer = None
+        try:
+            from telemetry_ai import TelemetryAI
+            self.telemetry_analyzer = TelemetryAI()
+        except ImportError:
+            print("Aviso: Módulo TelemetryAI não encontrado. A análise de telemetria avançada pode não funcionar.")
+            self.telemetry_analyzer = None
+        # NOVO: Inicializa o motor preditivo
+        try:
+            from predictive_vehicle_ai import PadocPredictiveAI
+            self.predictive_analyzer = PadocPredictiveAI()
+        except ImportError:
+            print("Aviso: Módulo PadocPredictiveAI não encontrado. A análise preditiva não funcionará.")
+            self.predictive_analyzer = None
+        # NOVO: Inicializa o motor de estado do veículo
+        try:
+            from vehicle_state_engine import PadocVehicleBrain
+            self.state_brain = PadocVehicleBrain()
+        except ImportError:
+            print("Aviso: Módulo PadocVehicleBrain não encontrado. A análise de estado não funcionará.")
+            self.state_brain = None
         self.base = self.sistema_especialista.base_dados
 
         # Histórico agora é um dicionário: {usuario_id: [ {user, bot}, ... ]}
@@ -1075,7 +1289,7 @@ class PadocAI:
             "defeitos_comuns_modelos": self.base.get("modelos"),
             "codigos_obd2_comuns": self.base.get("codigos_obd2")
         }
-        json_base = json.dumps(secao_base, indent=2, ensure_ascii=False)[:3000]
+        json_base = json.dumps(_serializavel(secao_base), indent=2, ensure_ascii=False)[:3000]
 
         historico = self._get_historico(usuario_id)
         # Monta a memória da conversa para o LLM não se perder
@@ -1157,9 +1371,11 @@ Com base na sua base técnica e nesses dados analise e relate o defeito estrutur
         except Exception as e:
             return f"Erro ao processar telemetria: {e}"
 
-    def diagnostico_multimodal(self, caminho_foto=None, placa=None, codigo_obd=None, chave_reparo=None, 
-                               pdf_path=None, video_path=None, wiring_path=None, telemetry_data=None,
-                               pdf_analyzer=None, video_analyzer=None, wiring_analyzer=None, telemetry_analyzer=None, **kwargs):
+    def diagnostico_multimodal(self, caminho_foto=None, placa=None, codigo_obd=None, chave_reparo=None,
+                               pdf_path=None, video_path=None, wiring_path=None,
+                               telemetry_data: Optional[Dict[str, float]] = None, # All raw sensor data here
+                               pdf_analyzer=None, video_analyzer=None, wiring_analyzer=None,
+                               **kwargs):
         """Orquestra a análise de múltiplas fontes de dados (imagem, áudio, pdf, etc).
 
         Numa API, os "arquivos" (imagem, áudio, pdf) chegam como uploads do app
@@ -1168,7 +1384,7 @@ Com base na sua base técnica e nesses dados analise e relate o defeito estrutur
         """
         # Gerar resumos contextuais usando os módulos existentes e os novos
         resumo_imagem = get_analisador_instance().gerar_resumo_para_prompt(caminho_foto)
-        resumo_historico = HistoricoVeiculo().gerar_resumo_para_prompt(placa, codigo_obd)
+        resumo_historico = self.historico_veiculo.gerar_resumo_para_prompt(placa, codigo_obd) # Usa a instância única
         resumo_custo = self.estimador_custo.gerar_resumo_para_prompt(chave_reparo)
 
         # NOVO: Gerar resumos dos novos analisadores
@@ -1245,6 +1461,22 @@ Com base em TODAS as evidências acima, gere um laudo técnico completo e unific
     def gerar_resumo_custo(self, chave_reparo, urgencia="normal"):
         return self.estimador_custo.gerar_resumo_para_prompt(chave_reparo, urgencia)
 
+    # NOVO: Wrapper para o Performance Analyzer
+    def consultar_desempenho_veiculo(self, nome_veiculo: str):
+        """
+        Wrapper para o novo analisador de desempenho.
+        Retorna um dicionário com os dados ou uma mensagem de erro.
+        """
+        if not self.performance_analyzer:
+            return {"erro": "O módulo de análise de desempenho não está disponível."}
+        
+        resultado = self.performance_analyzer.consultar_desempenho(nome_veiculo)
+
+        if resultado:
+            return resultado
+        
+        return {"erro": f"Nenhum dado de desempenho encontrado para um veículo com o nome '{nome_veiculo}'."}
+
     # --- NOVOS MÉTODOS PARA MANUTENÇÃO PREDITIVA ---
     def analisar_saude_veiculo(self, dados_telemetria_historicos: List[Dict]):
         """Wrapper para o novo analisador de tendências."""
@@ -1255,144 +1487,66 @@ Com base em TODAS as evidências acima, gere um laudo técnico completo e unific
         return self.analisador_tendencias.gerar_relatorio_frota(scores_por_veiculo)
 
     # --- NOVOS MÉTODOS DE CONSULTA TÉCNICA ---
-    def _get_especificacoes_veiculo(self, codigo_veiculo):
-        """Busca um veículo pela sua chave na base de dados."""
-        veiculo = self.sistema_especialista.base_dados["modelos"].get(codigo_veiculo)
-        if isinstance(veiculo, EspecificacoesVeiculo):
-            return veiculo
-        return None
-
-    def consultar_torques(self, codigo_veiculo):
-        """Retorna um dicionário com os torques de aperto para um veículo."""
-        veiculo = self._get_especificacoes_veiculo(codigo_veiculo)
-        if veiculo:
-            return veiculo.torque_componentes
-        return {"erro": f"Veículo com código '{codigo_veiculo}' não encontrado ou sem dados de torque."}
-
-    def consultar_oleo(self, codigo_veiculo):
-        """Retorna as especificações de óleo para um veículo."""
-        veiculo = self._get_especificacoes_veiculo(codigo_veiculo)
-        if veiculo:
-            return {
-                "Tipo": veiculo.oleo_motor,
-                "Capacidade (L)": veiculo.capacidade_oleo,
-                "Intervalo de Troca (km)": veiculo.intervalo_oleo_km,
-                "Intervalo de Troca (meses)": veiculo.intervalo_oleo_meses
-            }
-        return {"erro": f"Veículo com código '{codigo_veiculo}' não encontrado ou sem dados de óleo."}
-
-    def consultar_filtros(self, codigo_veiculo):
-        """Retorna os intervalos de troca de filtros para um veículo."""
-        veiculo = self._get_especificacoes_veiculo(codigo_veiculo)
-        if veiculo:
-            return {
-                "Filtro de Óleo (km)": veiculo.filtro_oleo_km,
-                "Filtro de Ar (km)": veiculo.filtro_ar_km,
-                "Filtro de Combustível (km)": veiculo.filtro_combustivel_km,
-                "Filtro de Cabine (km)": veiculo.filtro_cabine_km
-            }
-        return {"erro": f"Veículo com código '{codigo_veiculo}' não encontrado ou sem dados de filtros."}
-
-    def consultar_arrefecimento(self, codigo_veiculo):
-        """Retorna as especificações do sistema de arrefecimento."""
-        veiculo = self._get_especificacoes_veiculo(codigo_veiculo)
-        if veiculo:
-            return {
-                "Capacidade (L)": veiculo.capacidade_arrefecimento,
-                "Tipo de Aditivo": veiculo.tipo_aditivo
-            }
-        return {"erro": f"Veículo com código '{codigo_veiculo}' não encontrado ou sem dados de arrefecimento."}
-
-    def consultar_tanque(self, codigo_veiculo):
-        """Retorna a capacidade do tanque de combustível."""
-        veiculo = self._get_especificacoes_veiculo(codigo_veiculo)
-        if veiculo:
-            return {"Capacidade (L)": veiculo.capacidade_tanque}
-        return {"erro": f"Veículo com código '{codigo_veiculo}' não encontrado ou sem dados do tanque."}
-    
-    def consultar_pressao_pneus(self, codigo_veiculo):
-        """Retorna a pressão recomendada para os pneus."""
-        veiculo = self._get_especificacoes_veiculo(codigo_veiculo)
-        if veiculo and hasattr(veiculo, 'pneus'):
-            return veiculo.pneus
-        return {"erro": f"Veículo com código '{codigo_veiculo}' não encontrado ou sem dados de pneus."}
-
-    def consultar_porta_obd(self, codigo_veiculo):
-        """Retorna a localização da porta OBD."""
-        veiculo = self._get_especificacoes_veiculo(codigo_veiculo)
-        if veiculo and hasattr(veiculo, 'porta_obd'):
-            return {"localizacao": veiculo.porta_obd}
-        return {"erro": f"Veículo com código '{codigo_veiculo}' não encontrado ou sem dados da porta OBD."}
-
-    def consultar_fusiveis(self, codigo_veiculo):
-        """Retorna a lista de fusíveis e suas funções."""
-        veiculo = self._get_especificacoes_veiculo(codigo_veiculo)
-        if veiculo and hasattr(veiculo, 'fusiveis'):
-            return [f.__dict__ for f in veiculo.fusiveis]
-        return {"erro": f"Veículo com código '{codigo_veiculo}' não encontrado ou sem dados de fusíveis."}
-
-    def consultar_reles(self, codigo_veiculo):
-        """Retorna a lista de relés e suas funções."""
-        veiculo = self._get_especificacoes_veiculo(codigo_veiculo)
-        if veiculo and hasattr(veiculo, 'reles'):
-            return [r.__dict__ for r in veiculo.reles]
-        return {"erro": f"Veículo com código '{codigo_veiculo}' não encontrado ou sem dados de relés."}
-
-    def consultar_sensores(self, codigo_veiculo):
-        """Retorna a lista de sensores do motor."""
-        veiculo = self._get_especificacoes_veiculo(codigo_veiculo)
-        if veiculo and hasattr(veiculo, 'sensores'):
-            return [s.__dict__ for s in veiculo.sensores]
-        return {"erro": f"Veículo com código '{codigo_veiculo}' não encontrado ou sem dados de sensores."}
-
-    def consultar_diagrama_eletrico(self, codigo_veiculo):
-        """Retorna o diagrama elétrico simplificado."""
-        veiculo = self._get_especificacoes_veiculo(codigo_veiculo)
-        if veiculo and hasattr(veiculo, 'diagrama'):
-            return {"diagrama": veiculo.diagrama, "esquema_fusiveis": veiculo.esquema_fusiveis}
-        return {"erro": f"Veículo com código '{codigo_veiculo}' não encontrado ou sem dados de diagrama."}
-
-    def consultar_valores_sensores(self, codigo_veiculo):
-        """Retorna os valores nominais de referência para os sensores do veículo."""
-        veiculo = self._get_especificacoes_veiculo(codigo_veiculo)
-        if veiculo and hasattr(veiculo, 'valores_sensores'):
-            return [s.__dict__ for s in veiculo.valores_sensores]
-        return {"erro": f"Veículo com código '{codigo_veiculo}' não encontrado ou sem dados de valores de sensores."}
-
-    def consultar_atuadores(self, codigo_veiculo):
-        """Retorna a lista de atuadores do motor."""
-        veiculo = self._get_especificacoes_veiculo(codigo_veiculo)
-        if veiculo and hasattr(veiculo, 'atuadores'):
-            return [a.__dict__ for a in veiculo.atuadores]
-        return {"erro": f"Veículo com código '{codigo_veiculo}' não encontrado ou sem dados de atuadores."}
-
-    def consultar_procedimentos(self, codigo_veiculo, categoria=None):
+    def consultar_especificacao(self, codigo_veiculo: str, especificacao: str):
         """
-        Retorna os procedimentos técnicos (reaprendizado, reset, etc).
-        Pode filtrar por categoria, se especificado.
+        NOVO MÉTODO GENÉRICO: Consulta qualquer especificação técnica de um veículo.
+        Substitui os múltiplos métodos 'consultar_*' por um único ponto de acesso.
+
+        Exemplos de 'especificacao': 'torque_componentes', 'oleo_motor', 'procedimentos', 'sincronismo'.
         """
-        veiculo = self._get_especificacoes_veiculo(codigo_veiculo)
-        if veiculo and hasattr(veiculo, 'procedimentos'):
-            procedimentos = veiculo.procedimentos
-            if categoria and categoria.strip():
-                procedimentos = [p for p in procedimentos if p.categoria.lower() == categoria.lower()]
-            return [p.__dict__ for p in procedimentos]
-        return {"erro": f"Veículo com código '{codigo_veiculo}' não encontrado ou sem dados de procedimentos."}
+        veiculo = self.base_conhecimento.get_dados_veiculo(codigo_veiculo)
 
-    def consultar_procedimentos_reset(self, codigo_veiculo):
-        """Retorna os procedimentos de reset de serviço."""
-        veiculo = self._get_especificacoes_veiculo(codigo_veiculo)
-        if veiculo and hasattr(veiculo, 'procedimentos_reset'):
-            return [r.__dict__ for r in veiculo.procedimentos_reset]
-        return {"erro": f"Veículo com código '{codigo_veiculo}' não encontrado ou sem dados de reset."}
+        if not veiculo:
+            return {"erro": f"Veículo com código '{codigo_veiculo}' não encontrado."}
 
-    def consultar_sincronismo(self, codigo_veiculo):
-        """Retorna as informações de sincronismo do motor."""
-        veiculo = self._get_especificacoes_veiculo(codigo_veiculo)
-        if veiculo and hasattr(veiculo, 'sincronismo'):
-            return veiculo.sincronismo.__dict__
-        return {"erro": f"Veículo com código '{codigo_veiculo}' não encontrado ou sem dados de sincronismo."}
+        # O JSON carregado é um dicionário. Podemos buscar o atributo diretamente.
+        valor = veiculo.get(especificacao)
 
+        if valor is not None:
+            return {especificacao: valor}
+        
+        return {"erro": f"Especificação '{especificacao}' não encontrada para o veículo '{codigo_veiculo}'."}
+
+    def analisar_evento_veicular(self, tipo_evento, dados_evento):
+        """
+        NOVO MÉTODO: Analisa eventos de hardware como alertas de colisão, geofence, etc.
+
+        Args:
+            tipo_evento (str): 'colisao', 'geofence_entrada', 'geofence_saida', 'reboque'.
+            dados_evento (dict): Dados contextuais do evento.
+                                 Ex: {'latitude': -23.5, 'longitude': -46.6, 'aceleracao_g': 5.2}
+        """
+        if tipo_evento == "colisao":
+            aceleracao = dados_evento.get("aceleracao_g", 0)
+            if aceleracao > 8.0:
+                nivel = "Grave"
+            elif aceleracao > 4.0:
+                nivel = "Moderada"
+            else:
+                nivel = "Leve"
+            
+            return {
+                "alerta": f"Detectada colisão {nivel}",
+                "detalhes": f"Pico de desaceleração de {aceleracao} G.",
+                "acao_recomendada": "Contatar o motorista imediatamente. Enviar serviços de emergência se necessário.",
+                "localizacao": f"https://www.google.com/maps?q={dados_evento.get('latitude')},{dados_evento.get('longitude')}"
+            }
+
+        if tipo_evento == "geofence_entrada":
+            return {
+                "alerta": "Veículo entrou em área restrita",
+                "detalhes": f"Veículo entrou na geocerca '{dados_evento.get('nome_geocerca', 'N/A')}'.",
+                "acao_recomendada": "Verificar se a entrada na área é autorizada."
+            }
+
+        if tipo_evento == "reboque":
+            return {
+                "alerta": "Alerta de Reboque/Movimentação Indevida",
+                "detalhes": "Veículo foi movido com a ignição desligada.",
+                "acao_recomendada": "Contatar o proprietário para verificar possível furto ou reboque."
+            }
+
+        return {"erro": f"Tipo de evento '{tipo_evento}' não reconhecido."}
 
 # ------------------ PADRÃO SINGLETON PARA A API ------------------
 # Importe _padoc_instance de outros arquivos (ex: api.py) em vez de criar

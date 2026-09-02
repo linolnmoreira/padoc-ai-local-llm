@@ -1,0 +1,85 @@
+{
+  "versao": "2.0",
+  "padroes_aprendidos": {
+    "hb20 luz acesa falha sonda": {
+      "problema_original": "HB20 luz acesa falha sonda",
+      "solucoes": [
+        {
+          "texto": "Substituição do conector oxidado da sonda lambda pré",
+          "confirmacoes": 5,
+          "eficacia": 1.0,
+          "autor": "oficina_parceira",
+          "data_registro": "2026-08-25T08:03:44.349292"
+        }
+      ],
+      "veiculos_afetados": [
+        "Hyundai HB20"
+      ],
+      "vezes_observado": 5,
+      "score_confianca": 1.0
+    },
+    "fumaca branca": {
+      "problema_original": "fumaça branca",
+      "solucoes": [
+        {
+          "texto": "troca junta do cabeçote oleo misturando com agua",
+          "confirmacoes": 1,
+          "eficacia": 1.0,
+          "autor": "oficina_parceira",
+          "data_registro": "2026-09-02T14:41:53.243384"
+        }
+      ],
+      "veiculos_afetados": [
+        "gol 1.6 g6"
+      ],
+      "vezes_observado": 1,
+      "score_confianca": 0.6
+    }
+  },
+  "total_diagnosticos_processados": 6,
+  "feedback_positivo": 6,
+  "historico_recente": [
+    {
+      "timestamp": "2026-09-02T14:41:53.243425",
+      "veiculo": "gol 1.6 g6",
+      "problema": "fumaça branca",
+      "solucao": "troca junta do cabeçote oleo misturando com agua",
+      "eficacia": 1.0
+    },
+    {
+      "timestamp": "2026-08-25T08:34:49.124718",
+      "veiculo": "Hyundai HB20",
+      "problema": "HB20 luz acesa falha sonda",
+      "solucao": "Substituição do conector oxidado da sonda lambda pré",
+      "eficacia": 1.0
+    },
+    {
+      "timestamp": "2026-08-25T08:28:18.270947",
+      "veiculo": "Hyundai HB20",
+      "problema": "HB20 luz acesa falha sonda",
+      "solucao": "Substituição do conector oxidado da sonda lambda pré",
+      "eficacia": 1.0
+    },
+    {
+      "timestamp": "2026-08-25T08:19:25.167064",
+      "veiculo": "Hyundai HB20",
+      "problema": "HB20 luz acesa falha sonda",
+      "solucao": "Substituição do conector oxidado da sonda lambda pré",
+      "eficacia": 1.0
+    },
+    {
+      "timestamp": "2026-08-25T08:04:11.150710",
+      "veiculo": "Hyundai HB20",
+      "problema": "HB20 luz acesa falha sonda",
+      "solucao": "Substituição do conector oxidado da sonda lambda pré",
+      "eficacia": 1.0
+    },
+    {
+      "timestamp": "2026-08-25T08:03:44.349301",
+      "veiculo": "Hyundai HB20",
+      "problema": "HB20 luz acesa falha sonda",
+      "solucao": "Substituição do conector oxidado da sonda lambda pré",
+      "eficacia": 1.0
+    }
+  ]
+}

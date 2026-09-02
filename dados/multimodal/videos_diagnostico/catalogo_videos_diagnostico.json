@@ -1,0 +1,20 @@
+{
+  "fumaca_azul": {
+    "cor": "Azulada / Acinzentada persistente",
+    "cheiro": "Óleo lubrificante queimado",
+    "causa": "Queima de óleo nos cilindros (anéis de pistão gastos, guias ou retentores de válvula, ou eixo do turbo vazando).",
+    "gravidade": "ALTA"
+  },
+  "fumaca_branca_densa": {
+    "cor": "Branca espessa que não dissipa rápido",
+    "cheiro": "Aditivo doce / vapor de água",
+    "causa": "Água/líquido de arrefecimento entrando nas câmaras por junta rompida ou trinca no bloco/cabeçote.",
+    "gravidade": "CRITICA"
+  },
+  "fumaca_preta": {
+    "cor": "Preta fuliginosa",
+    "cheiro": "Gasolina/Diesel cru forte",
+    "causa": "Mistura ar-combustível muito rica (bico gotejando, sensor MAF travado alto, filtro de ar totalmente entupido).",
+    "gravidade": "MEDIA"
+  }
+}

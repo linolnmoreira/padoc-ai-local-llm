@@ -187,24 +187,33 @@
   </div>
 
   <script>
-    // TODO: Mova esta configuração para um arquivo .env ou para as configurações do seu provedor de hospedagem
-        // Sua configuração do Firebase para este aplicativo da web
-        // Copiado diretamente do seu console do Firebase
-        const firebaseConfig = {
-          apiKey: "AIzaSyBkUiqTlo_lunHMwiu54vUjSPLjS2FJqA8",
-          authDomain: "padoc-ai.firebaseapp.com",
-          projectId: "padoc-ai",
-          storageBucket: "padoc-ai.firebasestorage.app",
-          messagingSenderId: "1080051254358",
-          appId: "1:1080051254358:web:f5cf761089ed42be0ca7f7",
-          measurementId: "G-ZCLZZ9ZFQ2"
-        };
-
-    document.addEventListener('DOMContentLoaded', () => {
+    async function initializeApp() {
       const chatContainer = document.getElementById('chat-container');
       const userInput = document.getElementById('user-input');
       const sendBtn = document.getElementById('send-btn');
       const modelSelect = document.getElementById('ai-model');
+
+      let firebaseConfig;
+      try {
+        // Busca a configuração do Firebase do backend para segurança
+        const response = await fetch('/api/firebase-config');
+        if (!response.ok) {
+          throw new Error('Falha ao buscar a configuração do Firebase.');
+        }
+        firebaseConfig = await response.json();
+
+        if (!firebaseConfig.apiKey) {
+            throw new Error('Chave de API do Firebase não encontrada na configuração.');
+        }
+
+      } catch (error) {
+        console.error("Erro crítico na inicialização:", error);
+        const errorDiv = document.createElement('div');
+        errorDiv.textContent = 'Erro ao carregar a configuração da aplicação. Por favor, recarregue a página.';
+        errorDiv.style.color = 'red';
+        document.body.prepend(errorDiv);
+        return;
+      }
 
       // Inicializar Firebase
       firebase.initializeApp(firebaseConfig);
@@ -213,10 +222,8 @@
 
       // IMPORTANTE: A URL da API deve ser a do seu serviço em produção (Render, Heroku, etc.)
       // Para desenvolvimento local, use o endereço do seu servidor Flask.
-      const API_URL_PRODUCAO = "https://padoc-ai-api.onrender.com/api/diagnostico";
-      const API_URL_LOCAL = "http://localhost:5000/api/diagnostico";
-      // Altere para API_URL_PRODUCAO quando for fazer o deploy do site.
-      const API_URL = API_URL_LOCAL;
+      // A URL da API será relativa ao domínio atual, funcionando tanto em local quanto em produção.
+      const API_URL = "/api/diagnostico";
 
       // Função para renderizar uma mensagem na tela
       function addMessage(text, sender, modelName = '') {
@@ -304,7 +311,9 @@
 
       // Ajusta a altura inicial
       autoGrow(userInput);
-      });
+    }
+
+    document.addEventListener('DOMContentLoaded', initializeApp);
   </script>
 </body>
 </html>

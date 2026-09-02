@@ -4,10 +4,10 @@ Agente Autônomo
 """
 
 
-from brain.motor_diagnostico import diagnosticar
-from brain.obd2_learning import consultar_codigo
-from brain.recomendador_pecas import recomendar
-from brain.orcamento_ai import gerar_orcamento
+from motor_diagnostico import diagnosticar # Corrigido: Caminho de importação
+from obd2_learning import consultar_codigo # Corrigido: Caminho de importação
+from recomendador_pecas import recomendar # Corrigido: Caminho de importação
+from orcamento_ai import gerar_orcamento # Corrigido: Caminho de importação
 
 
 

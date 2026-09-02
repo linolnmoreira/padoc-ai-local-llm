@@ -1,11 +1,12 @@
-from multimodal.image_ai import ImageAI
-from multimodal.video_ai import VideoAI
-from multimodal.audio_ai import AudioAI
-from multimodal.obd_ai import OBDAI
-from multimodal.telemetry_ai import TelemetryAI
-from multimodal.pdf_ai import PDFAI
-from multimodal.wiring_ai import WiringAI
-from multimodal.oscilloscope_ai import OscilloscopeAI
+from image_ai import ImageAI # Corrigido: Caminho de importação
+from video_ai import VideoAI # Corrigido: Caminho de importação
+from audio_ai import AudioAI # Corrigido: Caminho de importação
+from obd_ai import OBDAI # Corrigido: Caminho de importação
+from telemetry_ai import TelemetryAI # Corrigido: Caminho de importação
+from pdf_ai import PDFAI # Corrigido: Caminho de importação
+from wiring_ai import WiringAI # Corrigido: Caminho de importação
+from oscilloscope_ai import OscilloscopeAI # Corrigido: Caminho de importação
+from symptom_classifier import classify_symptom
 
 class PadocMultimodal:
 
@@ -75,4 +76,9 @@ class PadocMultimodal:
         if osciloscopio:
             resultado["osciloscopio"]=self.scope.analisar(osciloscopio)
 
-        return resultado
+        # Integrate symptom classification if audio or OBD data is available
+        if "audio" in resultado or "obd" in resultado:
+            audio_features = resultado.get("audio", {})
+            obd_data = resultado.get("obd", {})
+            classification_result = classify_symptom(audio_features, obd_data)
+            resultado["diagnostico"] = classification_result

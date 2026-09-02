@@ -1,5 +1,5 @@
-from brain.llm.model import PadocLLM
-from brain.rag.search import OBDKnowledge
+from model import PadocLLM # Corrigido: Caminho de importação
+from search import OBDKnowledge # Corrigido: Caminho de importação
 
 class PadocCore:
     def __init__(self):

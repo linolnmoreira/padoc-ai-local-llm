@@ -1,5 +1,5 @@
 import obd
-from obd import OBDStatus
+from obd import OBDStatus # Adicionado: Importação explícita de OBDStatus
 
 
 class LeitorTelemetriaOBD:
@@ -51,13 +51,21 @@ class LeitorTelemetriaOBD:
         comandos = {
             "RPM": obd.commands.RPM,
             "Temperatura_Arrefecimento": obd.commands.COOLANT_TEMP,
+            "Temperatura_Oleo": obd.commands.OIL_TEMP,
             "Posicao_Borboleta_TBI": obd.commands.THROTTLE_POS,
-            "Tensao_Bateria": obd.commands.ELM_VOLTAGE # Corrigido para um comando válido
+            "Tensao_Bateria": obd.commands.ELM_VOLTAGE,
+            "Carga_Motor": obd.commands.ENGINE_LOAD,
+            "Pressao_Combustivel": obd.commands.FUEL_PRESSURE,
+            "Marcha_Atual": obd.commands.GEAR, # Adicionado
+            "Torque_Motor": obd.commands.TORQUE, # Adicionado
+            "Pressao_Turbo": obd.commands.BOOST_PRESSURE, # Adicionado
+            "Status_DPF": obd.commands.DPF_STATUS, # Adicionado
+            "Temperatura_DPF": obd.commands.DPF_TEMP, # Adicionado
         }
 
         for nome, comando in comandos.items():
             resp = self.conexao.query(comando)
             if not resp.is_null():
                 dados_vivos[nome] = str(resp.value)
-                
+
         return dados_vivos

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PADOC AI - DiagnÃ³stico Automotivo Especialista & Telemetria Preditiva</title>
+    <title>PADOC AI - Diagn�stico Automotivo Especialista & Telemetria Preditiva</title>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -342,38 +342,38 @@
 <div class="container">
     <header>
         <div class="brand">
-            <div class="brand-logo">âš™ï¸</div>
+            <div class="brand-logo">??</div>
             <div class="brand-text">
                 <h1>PADOC AI</h1>
-                <p>CÃ©rebro Automotivo & Telemetria Preditiva</p>
+                <p>C�rebro Automotivo & Telemetria Preditiva</p>
             </div>
         </div>
         <div class="status-badge" id="apiStatus">
             <div class="status-dot"></div>
-            <span>CÃ©rebro Conectado (v2.5)</span>
+            <span>C�rebro Conectado (v2.5)</span>
         </div>
     </header>
 
     <div class="tabs">
-        <button class="tab-btn active" onclick="switchTab('diagnostico')">ðŸ” DiagnÃ³stico Especialista</button>
-        <button class="tab-btn" onclick="switchTab('telemetria')">ðŸ“Š Telemetria Preditiva (7/30/90d)</button>
-        <button class="tab-btn" onclick="switchTab('aprendizado')">ðŸ§  Auto-Aprendizado da IA</button>
+        <button class="tab-btn active" onclick="switchTab('diagnostico')">?? Diagn�stico Especialista</button>
+        <button class="tab-btn" onclick="switchTab('telemetria')">?? Telemetria Preditiva (7/30/90d)</button>
+        <button class="tab-btn" onclick="switchTab('aprendizado')">?? Auto-Aprendizado da IA</button>
     </div>
 
     <!-- TAB 1: DIAGNOSTICO -->
     <div id="tab-diagnostico" class="tab-panel active">
         <div class="card">
-            <h3 style="margin-bottom: 12px;">Descreva os Sintomas ou CÃ³digo DTC do VeÃ­culo</h3>
+            <h3 style="margin-bottom: 12px;">Descreva os Sintomas ou C�digo DTC do Ve�culo</h3>
             <div class="quick-chips">
-                <div class="chip" onclick="setPrompt('Carro falhando em aceleraÃ§Ã£o e cÃ³digo P0300 gravado na injeÃ§Ã£o')">âš¡ CÃ³digo P0300 (Falha de IgniÃ§Ã£o)</div>
-                <div class="chip" onclick="setPrompt('Luz da injeÃ§Ã£o acesa e cÃ³digo P0171 mistura pobre')">â›½ CÃ³digo P0171 (Mistura Pobre)</div>
-                <div class="chip" onclick="setPrompt('Temperatura do motor subindo rÃ¡pido e reservatÃ³rio de Ã¡gua fervendo')">ðŸŒ¡ï¸ Superaquecimento do Motor</div>
-                <div class="chip" onclick="setPrompt('Cheiro forte de fumaÃ§a e freio nÃ£o estÃ¡ respondendo')">ðŸš¨ EmergÃªncia (Freio/FumaÃ§a)</div>
+                <div class="chip" onclick="setPrompt('Carro falhando em acelera��o e c�digo P0300 gravado na inje��o')">? C�digo P0300 (Falha de Igni��o)</div>
+                <div class="chip" onclick="setPrompt('Luz da inje��o acesa e c�digo P0171 mistura pobre')">? C�digo P0171 (Mistura Pobre)</div>
+                <div class="chip" onclick="setPrompt('Temperatura do motor subindo r�pido e reservat�rio de �gua fervendo')">??? Superaquecimento do Motor</div>
+                <div class="chip" onclick="setPrompt('Cheiro forte de fuma�a e freio n�o est� respondendo')">?? Emerg�ncia (Freio/Fuma�a)</div>
             </div>
 
-            <textarea id="perguntaInput" placeholder="Ex: Meu Corolla 2018 estÃ¡ falhando ao acelerar e acusou cÃ³digo P0300 com luz de injeÃ§Ã£o piscando..."></textarea>
+            <textarea id="perguntaInput" placeholder="Ex: Meu Corolla 2018 est� falhando ao acelerar e acusou c�digo P0300 com luz de inje��o piscando..."></textarea>
             <button class="btn-primary" id="btnDiagnosticar" onclick="enviarDiagnostico()">
-                <span>âš¡ Diagnosticar com InteligÃªncia PADOC</span>
+                <span>? Diagnosticar com Intelig�ncia PADOC</span>
             </button>
 
             <div class="response-box" id="respostaBox">
@@ -385,14 +385,14 @@
     <!-- TAB 2: TELEMETRIA PREDITIVA -->
     <div id="tab-telemetria" class="tab-panel">
         <div class="card">
-            <h3 style="margin-bottom: 16px;">Simulador de Telemetria e DegradaÃ§Ã£o de Componentes</h3>
+            <h3 style="margin-bottom: 16px;">Simulador de Telemetria e Degrada��o de Componentes</h3>
             <div class="grid-2">
                 <div class="control-group">
-                    <label>RotaÃ§Ã£o do Motor (RPM): <span id="valRpm">850 RPM</span></label>
+                    <label>Rota��o do Motor (RPM): <span id="valRpm">850 RPM</span></label>
                     <input type="range" id="sliderRpm" min="600" max="6500" value="850" oninput="updateTel()">
                 </div>
                 <div class="control-group">
-                    <label>Temperatura Arrefecimento: <span id="valTemp">90 Â°C</span></label>
+                    <label>Temperatura Arrefecimento: <span id="valTemp">90 �C</span></label>
                     <input type="range" id="sliderTemp" min="40" max="130" value="90" oninput="updateTel()">
                 </div>
                 <div class="control-group">
@@ -400,18 +400,18 @@
                     <input type="range" id="sliderVolt" min="9.0" max="15.0" step="0.1" value="13.8" oninput="updateTel()">
                 </div>
                 <div class="control-group">
-                    <label>Trim de CombustÃ­vel (LTFT): <span id="valLtft">+2.0 %</span></label>
+                    <label>Trim de Combust�vel (LTFT): <span id="valLtft">+2.0 %</span></label>
                     <input type="range" id="sliderLtft" min="-25" max="25" value="2" oninput="updateTel()">
                 </div>
             </div>
 
             <button class="btn-primary" onclick="calcularTelemetria()">
-                <span>ðŸ“Š Calcular SaÃºde e Prever Falhas</span>
+                <span>?? Calcular Sa�de e Prever Falhas</span>
             </button>
 
             <div class="health-grid" id="healthResults" style="display: none;">
                 <div class="health-card">
-                    <h4>SaÃºde Global</h4>
+                    <h4>Sa�de Global</h4>
                     <div class="health-score" id="scoreGlobal">100%</div>
                     <p style="font-size: 0.8rem; color: var(--text-muted);">Status Geral</p>
                 </div>
@@ -426,7 +426,7 @@
                     <p style="font-size: 0.8rem;" id="riscoCooling">Risco 30d: 0%</p>
                 </div>
                 <div class="health-card">
-                    <h4>InjeÃ§Ã£o / Mistura</h4>
+                    <h4>Inje��o / Mistura</h4>
                     <div class="health-score" id="scoreFuel">100%</div>
                     <p style="font-size: 0.8rem;" id="riscoFuel">Risco 30d: 0%</p>
                 </div>
@@ -437,17 +437,17 @@
     <!-- TAB 3: AUTO-APRENDIZADO -->
     <div id="tab-aprendizado" class="tab-panel">
         <div class="card">
-            <h3 style="margin-bottom: 12px;">Ensinar Nova SoluÃ§Ã£o Ã  PADOC AI (Feedback de Oficina)</h3>
+            <h3 style="margin-bottom: 12px;">Ensinar Nova Solu��o � PADOC AI (Feedback de Oficina)</h3>
             <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 16px;">
-                Quando uma oficina confirma e resolve um defeito real, este conhecimento Ã© incorporado Ã  memÃ³ria da PADOC AI para refinar diagnÃ³sticos futuros.
+                Quando uma oficina confirma e resolve um defeito real, este conhecimento � incorporado � mem�ria da PADOC AI para refinar diagn�sticos futuros.
             </p>
 
-            <input type="text" class="input-text" id="learnVeiculo" placeholder="Modelo do VeÃ­culo (Ex: Toyota Corolla 2018)">
-            <input type="text" class="input-text" id="learnProblema" placeholder="Problema/Sintoma Observado (Ex: Barulho de estalo na coluna de direÃ§Ã£o)">
-            <input type="text" class="input-text" id="learnSolucao" placeholder="SoluÃ§Ã£o Comprovada (Ex: SubstituiÃ§Ã£o da bucha de acoplamento da coluna elÃ©trica)">
+            <input type="text" class="input-text" id="learnVeiculo" placeholder="Modelo do Ve�culo (Ex: Toyota Corolla 2018)">
+            <input type="text" class="input-text" id="learnProblema" placeholder="Problema/Sintoma Observado (Ex: Barulho de estalo na coluna de dire��o)">
+            <input type="text" class="input-text" id="learnSolucao" placeholder="Solu��o Comprovada (Ex: Substitui��o da bucha de acoplamento da coluna el�trica)">
 
             <button class="btn-primary" style="background: linear-gradient(135deg, var(--accent-orange), #ff416c);" onclick="enviarAprendizado()">
-                <span>ðŸ§  Gravar Aprendizado na MemÃ³ria da IA</span>
+                <span>?? Gravar Aprendizado na Mem�ria da IA</span>
             </button>
             <div id="learnFeedback" style="margin-top: 14px; font-size: 0.9rem; display: none;"></div>
         </div>
@@ -455,7 +455,7 @@
 </div>
 
 <script>
-    const API_URL = window.location.protocol === "file:" ? "http://localhost:5000" : window.location.origin;
+    const API_URL = window.location.origin;
 
     function switchTab(tabId) {
         document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
@@ -470,14 +470,14 @@
 
     async function enviarDiagnostico() {
         const pergunta = document.getElementById('perguntaInput').value.trim();
-        if (!pergunta) return alert("Por favor, digite os sintomas ou cÃ³digo.");
+        if (!pergunta) return alert("Por favor, digite os sintomas ou c�digo.");
 
         const btn = document.getElementById('btnDiagnosticar');
         const box = document.getElementById('respostaBox');
         const txt = document.getElementById('respostaTexto');
 
         btn.disabled = true;
-        btn.innerHTML = "<span>â³ Processando RaciocÃ­nio MecÃ¢nico...</span>";
+        btn.innerHTML = "<span>? Processando Racioc�nio Mec�nico...</span>";
         box.classList.remove('active');
 
         try {
@@ -494,13 +494,13 @@
             box.classList.add('active');
         } finally {
             btn.disabled = false;
-            btn.innerHTML = "<span>âš¡ Diagnosticar com InteligÃªncia PADOC</span>";
+            btn.innerHTML = "<span>? Diagnosticar com Intelig�ncia PADOC</span>";
         }
     }
 
     function updateTel() {
         document.getElementById('valRpm').innerText = document.getElementById('sliderRpm').value + " RPM";
-        document.getElementById('valTemp').innerText = document.getElementById('sliderTemp').value + " Â°C";
+        document.getElementById('valTemp').innerText = document.getElementById('sliderTemp').value + " �C";
         document.getElementById('valVolt').innerText = document.getElementById('sliderVolt').value + " V";
         document.getElementById('valLtft').innerText = (document.getElementById('sliderLtft').value > 0 ? "+" : "") + document.getElementById('sliderLtft').value + " %";
     }
@@ -543,7 +543,7 @@
         const problema = document.getElementById('learnProblema').value.trim();
         const solucao = document.getElementById('learnSolucao').value.trim();
 
-        if (!problema || !solucao) return alert("Preencha o problema e a soluÃ§Ã£o.");
+        if (!problema || !solucao) return alert("Preencha o problema e a solu��o.");
 
         const fb = document.getElementById('learnFeedback');
         try {
@@ -555,17 +555,18 @@
             const data = await res.json();
             fb.style.display = "block";
             fb.style.color = "var(--accent-green)";
-            fb.innerText = "âœ… " + data.mensagem + " Total de padrÃµes aprendidos: " + data.total_aprendidos;
+            fb.innerText = "? " + data.mensagem + " Total de padr�es aprendidos: " + data.total_aprendidos;
             document.getElementById('learnProblema').value = "";
             document.getElementById('learnSolucao').value = "";
         } catch (e) {
             fb.style.display = "block";
             fb.style.color = "var(--accent-red)";
-            fb.innerText = "âŒ Erro ao registrar aprendizado: " + e.message;
+            fb.innerText = "? Erro ao registrar aprendizado: " + e.message;
         }
     }
 </script>
 </body>
 </html>
+
 
 

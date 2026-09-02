@@ -1,31 +1,54 @@
-"""Integração com Firebase para PADOC AI"""
+try:
+    import firebase_admin
+    from firebase_admin import credentials, db
+    FIREBASE_AVAILABLE = True
+except ImportError:
+    firebase_admin = None
+    credentials = None
+    db = None
+    FIREBASE_AVAILABLE = False
 
-import firebase_admin
-from firebase_admin import credentials, db
 import os
-from dotenv import load_dotenv
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    pass
+
 from datetime import datetime
+import json
+import hashlib
 import logging
 
-load_dotenv()
 logger = logging.getLogger(__name__)
 
 # Inicializar Firebase
 def inicializar_firebase():
     """Inicializar conexão com Firebase"""
+    if not FIREBASE_AVAILABLE:
+        logger.info("ℹ️ Firebase SDK não instalado. Operando em modo de persistência local.")
+        return False
     try:
-        firebase_cred_path = os.getenv("FIREBASE_CREDENTIALS_PATH", "firebase-key.json")
-        
-        if not os.path.exists(firebase_cred_path):
-            logger.warning(f"Arquivo Firebase não encontrado: {firebase_cred_path}")
-            return False
-        
-        cred = credentials.Certificate(firebase_cred_path)
+        # Tenta carregar a partir de uma variável de ambiente (ideal para produção)
+        firebase_creds_json = os.getenv("FIREBASE_CREDENTIALS_JSON")
+        if firebase_creds_json:
+            cred_dict = json.loads(firebase_creds_json)
+            cred = credentials.Certificate(cred_dict)
+            logger.info("✓ Firebase inicializado via variável de ambiente.")
+        else:
+            # Fallback para arquivo local (bom para desenvolvimento)
+            firebase_cred_path = os.getenv("FIREBASE_CREDENTIALS_PATH", "firebase-key.json")
+            if not os.path.exists(firebase_cred_path):
+                logger.warning(f"Arquivo Firebase não encontrado: {firebase_cred_path}")
+                return False
+            cred = credentials.Certificate(firebase_cred_path)
+            logger.info("✓ Firebase inicializado via arquivo local.")
+
         firebase_admin.initialize_app(cred, {
             "databaseURL": os.getenv("FIREBASE_DATABASE_URL", "")
         })
-        
-        logger.info("✓ Firebase inicializado com sucesso")
+
+        logger.info("✓ Conexão com Firebase estabelecida.")
         return True
     except Exception as e:
         logger.error(f"✗ Erro ao inicializar Firebase: {e}")
@@ -155,6 +178,37 @@ def salvar_aprendizado(pergunta, resposta):
         return True
     except Exception as e:
         logger.error(f"✗ Erro ao salvar aprendizado no Firebase: {e}")
+        return False
+
+
+def salvar_evento(placa_veiculo, tipo_evento, dados_evento):
+    """
+    NOVA FUNÇÃO: Salva um evento de hardware (colisão, geofence, etc.) no Firebase.
+
+    Args:
+        placa_veiculo (str): Placa do veículo associado ao evento.
+        tipo_evento (str): Tipo do evento (ex: 'colisao', 'geofence_entrada').
+        dados_evento (dict): Dicionário com os detalhes do evento analisado pela IA.
+
+    Returns:
+        bool: True se o evento foi salvo com sucesso, False caso contrário.
+    """
+    try:
+        # Cria uma referência para um novo nó 'eventos_veiculares' no banco
+        ref = db.reference("eventos_veiculares")
+        
+        novo_evento = {
+            "placa": placa_veiculo,
+            "tipo_evento": tipo_evento,
+            "dados_evento": dados_evento,
+            "timestamp": datetime.now().isoformat()
+        }
+        
+        ref.push(novo_evento)
+        logger.info(f"✓ Evento '{tipo_evento}' salvo para o veículo {placa_veiculo}")
+        return True
+    except Exception as e:
+        logger.error(f"✗ Erro ao salvar evento no Firebase: {e}")
         return False
 
 # Arquivo .env (NUNCA comitar no Git!)

@@ -1,0 +1,66 @@
+{
+  "toyota": [
+    {
+      "modelo": "Corolla",
+      "motor": "1.8 / 2.0 Dual VVT-i",
+      "defeito_comum": "Ruído na coluna de direção elétrica",
+      "solucao": "Substituição do acoplador elástico da coluna",
+      "dtc": "C1511"
+    },
+    {
+      "modelo": "Hilux",
+      "motor": "2.8 D-4D",
+      "defeito_comum": "Regeneração frequente do DPF / Luz de injeção",
+      "solucao": "Limpeza do 5º bico injetor de combustível do escapamento",
+      "dtc": "P2463"
+    }
+  ],
+  "volkswagen": [
+    {
+      "modelo": "Gol / Fox / Voyage",
+      "motor": "1.0 / 1.6 EA111",
+      "defeito_comum": "Luz de óleo piscando em marcha lenta",
+      "solucao": "Verificar folga axial dos mancais do comando de válvulas e pressão da bomba",
+      "dtc": "P0011"
+    },
+    {
+      "modelo": "Virtus / Polo / T-Cross",
+      "motor": "1.0 TSI EA211",
+      "defeito_comum": "Falha de aceleração com luz EPC acesa",
+      "solucao": "Verificar atuador eletrônico da wastegate da turbina e descarbonização das válvulas de admissão",
+      "dtc": "P0299"
+    }
+  ],
+  "chevrolet": [
+    {
+      "modelo": "Onix / Prisma",
+      "motor": "1.0 / 1.4 SPE/4",
+      "defeito_comum": "Dificuldade na partida a frio no etanol",
+      "solucao": "Atualização do software da ECU para calibração de A/F e teste da válvula de purga do canister",
+      "dtc": "P0171"
+    },
+    {
+      "modelo": "Onix Plus / Tracker",
+      "motor": "1.0 Turbo",
+      "defeito_comum": "Perda de pressão de óleo",
+      "solucao": "Verificar desgaste precoce da correia dentada banhada a óleo e desobstruir pescador da bomba",
+      "dtc": "P0524"
+    }
+  ],
+  "fiat": [
+    {
+      "modelo": "Uno / Palio / Mobi",
+      "motor": "1.0 / 1.4 Fire",
+      "defeito_comum": "Oscilação de marcha lenta e corte em desaceleração",
+      "solucao": "Limpeza do corpo de borboleta (TBI), sensor TPS e teste de aterramento da central",
+      "dtc": "P0505"
+    },
+    {
+      "modelo": "Toro / Renegade",
+      "motor": "1.8 E.torQ",
+      "defeito_comum": "Trocador de calor de óleo do câmbio automático",
+      "solucao": "Substituição preventiva do trocador de calor e limpeza do sistema de arrefecimento com aditivo orgânico",
+      "dtc": "P0700"
+    }
+  ]
+}

@@ -1,5 +1,5 @@
-"PADOC AI - Agente de Intenção (v2)
- 
+"""PADOC AI - Agente de Intenção (v2)
+
 Este módulo determina a(s) intenção(ões) do usuário com base na mensagem,
 com suporte a:
 - normalização de acentos/pontuação
@@ -210,10 +210,9 @@ class PadocAgent:
             # tenta capturar até 3 palavras após "peça de/do/da/para o/a" ou similar,
             # parando em vírgula/conectivos para não engolir a frase inteira
             match_peca = re.search(
-                r"(?:pe[cç]a(?: d[eoa]| para [oa])?|de|do|da)\s+([a-zà-ú0-9]+(?:\s+[a-zà-ú0-9]+){0,3})",
+                r"(?:peca(?: d[eoa]| para [oa])?|de|do|da)\s+([a-zà-ú0-9]+(?:\s+[a-zà-ú0-9]+){0,3})",
                 normalizar(mensagem_original), re.IGNORECASE,
             )
-
             if match_peca:
                 entidades["peca_mencionada"] = match_peca.group(1).strip()
  
@@ -227,17 +226,17 @@ class PadocAgent:
 #
 # if resultado.requer_confirmacao:
 #     # não adivinha: pergunta de volta em vez de arriscar a intenção errada
-#     resposta = f"Você quer falar sobre {resultado.candidatos[0].intencao} ou {resultado.candidatos[1].intencao}?"
-# elif resultado.principal == "urgencia":
-#     resposta = tratar_urgencia(mensagem)              # fluxo prioritário, sem fila
-# elif resultado.principal == "orcamento":
-#     resposta = padoc_ai.gerar_resumo_custo(...)
-# elif resultado.principal == "agenda":
-#     agent.registrar_pergunta_pendente(usuario_id, "agenda")
-#     resposta = confirmar_agendamento(resultado.entidades)
-# elif resultado.principal == "pecas":
-#     resposta = consultar_pecas(resultado.entidades.get("peca_mencionada"))
-# elif resultado.principal == "saudacao":
-#     resposta = "Olá! Me conta o que está acontecendo com o veículo."
-# else:  # diagnostico
-#     resposta = padoc_ai.diagnosticar(usuario_id, mensagem)
+    # resposta = f"Você quer falar sobre {resultado.candidatos[0].intencao} ou {resultado.candidatos[1].intencao}?"
+    # if resultado.principal == "urgencia":
+    #     resposta = tratar_urgencia(mensagem)              # fluxo prioritário, sem fila
+    # elif resultado.principal == "orcamento":
+    #     resposta = padoc_ai.gerar_resumo_custo(...)
+    # elif resultado.principal == "agenda":
+    #     agent.registrar_pergunta_pendente(usuario_id, "agenda")
+    #     resposta = confirmar_agendamento(resultado.entidades)
+    # elif resultado.principal == "pecas":
+    #     resposta = consultar_pecas(resultado.entidades.get("peca_mencionada"))
+    # elif resultado.principal == "saudacao":
+    #     resposta = "Olá! Me conta o que está acontecendo com o veículo."
+    # else:  # diagnostico
+    #     resposta = padoc_ai.diagnosticar(usuario_id, mensagem)

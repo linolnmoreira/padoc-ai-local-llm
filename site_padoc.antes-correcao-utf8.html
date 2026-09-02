@@ -455,7 +455,7 @@
 </div>
 
 <script>
-    const API_URL = window.location.protocol === "file:" ? "http://localhost:5000" : window.location.origin;
+    const API_URL = window.location.origin;
 
     function switchTab(tabId) {
         document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
@@ -567,5 +567,4 @@
 </script>
 </body>
 </html>
-
 
