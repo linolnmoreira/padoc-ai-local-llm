@@ -1,0 +1,15 @@
+name: padoc-ai-api
+region: nyc
+services:
+  - name: padoc-ai-api
+    github:
+      branch: main
+      deploy_on_push: true
+      repo: linolnmoreira/padoc-ai-local-llm
+    build_command: pip install -r requirements.txt
+    run_command: gunicorn api:app --bind 0.0.0.0:${PORT:-8080}
+    http_port: 8080
+    instance_count: 1
+    instance_size_slug: basic-xxs
+    health_check:
+      http_path: /api/saude

@@ -6,7 +6,7 @@
       "solucoes": [
         {
           "texto": "Substituição do conector oxidado da sonda lambda pré",
-          "confirmacoes": 5,
+          "confirmacoes": 7,
           "eficacia": 1.0,
           "autor": "oficina_parceira",
           "data_registro": "2026-08-25T08:03:44.349292"
@@ -15,7 +15,7 @@
       "veiculos_afetados": [
         "Hyundai HB20"
       ],
-      "vezes_observado": 5,
+      "vezes_observado": 7,
       "score_confianca": 1.0
     },
     "fumaca branca": {
@@ -36,9 +36,23 @@
       "score_confianca": 0.6
     }
   },
-  "total_diagnosticos_processados": 6,
-  "feedback_positivo": 6,
+  "total_diagnosticos_processados": 8,
+  "feedback_positivo": 8,
   "historico_recente": [
+    {
+      "timestamp": "2026-09-04T09:45:19.587195",
+      "veiculo": "Hyundai HB20",
+      "problema": "HB20 luz acesa falha sonda",
+      "solucao": "Substituição do conector oxidado da sonda lambda pré",
+      "eficacia": 1.0
+    },
+    {
+      "timestamp": "2026-09-04T09:44:53.593509",
+      "veiculo": "Hyundai HB20",
+      "problema": "HB20 luz acesa falha sonda",
+      "solucao": "Substituição do conector oxidado da sonda lambda pré",
+      "eficacia": 1.0
+    },
     {
       "timestamp": "2026-09-02T14:41:53.243425",
       "veiculo": "gol 1.6 g6",

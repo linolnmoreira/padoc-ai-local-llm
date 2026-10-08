@@ -12,9 +12,9 @@ class DiagnosisResult:
 
 
 class SymptomClassifier:
-    """Rule‑based automotive symptom classifier.
+    """Rule-based automotive symptom classifier.
 
-    The classifier uses a static mapping of engine‑noise categories and a simple
+    The classifier uses a static mapping of engine-noise categories and a simple
     heuristic to produce a structured diagnosis. It is deliberately lightweight
     so it can be executed locally without any ML dependencies.
     """
@@ -33,9 +33,9 @@ class SymptomClassifier:
             "Polia",
             "Virabrequim",
             "Pistão",
-            "Pré‑detonação/detonação",
+            "Pré-detonação/detonação",
         ],
-        "CARACTERISTICAS_DO_RUIDO": [],
+        "CARACTERÍSTICAS_DO_RUÍDO": [],
     }
 
     # Simple heuristic weights for confidence (placeholder values)
@@ -74,7 +74,7 @@ class SymptomClassifier:
     ) -> DiagnosisResult:
         """Classify a symptom based on supplied data.
 
-        For the prototype we always return the high‑level classification
+        For the prototype we always return the high-level classification
         "RUÍDO MECÂNICO DO MOTOR" and a list of possible causes derived from the
         static ``CATEGORY_MAP``. Confidence is calculated with the simple
         heuristic ``_aggregate_score``.
@@ -112,7 +112,7 @@ def classify_symptom(
 ) -> Dict[str, Any]:
     """Convenient functional wrapper used by the orchestrator.
 
-    Returns a JSON‑serialisable dictionary that matches the output format
+    Returns a JSON-serialisable dictionary that matches the output format
     requested by the user (structured JSON).
     """
     classifier = SymptomClassifier()

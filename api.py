@@ -39,6 +39,7 @@ except Exception as e:
     logger.warning(f"⚠️ Firebase não inicializado: {e}")
 
 
+@app.route('/', methods=['GET'])
 @app.route('/api/saude', methods=['GET'])
 def health_check():
     """Verifica o status da API, Cérebro IA, Engine Preditivo e Banco."""
