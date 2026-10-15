@@ -1,10 +1,13 @@
 ﻿<!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PADOC AI - DiagnÃ³stico Automotivo Especialista & Telemetria Preditiva</title>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap"
+        rel="stylesheet">
     <style>
         :root {
             --bg-primary: #0a0e17;
@@ -110,8 +113,15 @@
         }
 
         @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.4; }
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.4;
+            }
         }
 
         /* TABS */
@@ -162,8 +172,15 @@
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(6px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(6px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .card {
@@ -337,235 +354,248 @@
         }
     </style>
 </head>
+
 <body>
 
-<div class="container">
-    <header>
-        <div class="brand">
-            <div class="brand-logo">âš™ï¸</div>
-            <div class="brand-text">
-                <h1>PADOC AI</h1>
-                <p>CÃ©rebro Automotivo & Telemetria Preditiva</p>
+    <div class="container">
+        <header>
+            <div class="brand">
+                <div class="brand-logo">âš™ï¸</div>
+                <div class="brand-text">
+                    <h1>PADOC AI</h1>
+                    <p>Cerebro Automotivo & Telemetria Preditiva</p>
+                </div>
+            </div>
+            <div class="status-badge" id="apiStatus">
+                <div class="status-dot"></div>
+                <span>Cerebro Conectado (v2.5)</span>
+            </div>
+        </header>
+
+        <div class="tabs">
+            <button class="tab-btn active" onclick="switchTab('diagnostico')">ðŸ” DiagnÃ³stico Especialista</button>
+            <button class="tab-btn" onclick="switchTab('telemetria')">ðŸ“Š Telemetria Preditiva (7/30/90d)</button>
+            <button class="tab-btn" onclick="switchTab('aprendizado')">ðŸ§  Auto-Aprendizado da IA</button>
+        </div>
+
+        <!-- TAB 1: DIAGNOSTICO -->
+        <div id="tab-diagnostico" class="tab-panel active">
+            <div class="card">
+                <h3 style="margin-bottom: 12px;">Descreva os Sintomas ou CÃ³digo DTC do VeÃ­culo</h3>
+                <div class="quick-chips">
+                    <div class="chip"
+                        onclick="setPrompt('Carro falhando em aceleraÃ§Ã£o e cÃ³digo P0300 gravado na injeÃ§Ã£o')">âš¡
+                        CÃ³digo P0300 (Falha de IgniÃ§Ã£o)</div>
+                    <div class="chip" onclick="setPrompt('Luz da injeÃ§Ã£o acesa e cÃ³digo P0171 mistura pobre')">â›½
+                        CÃ³digo P0171 (Mistura Pobre)</div>
+                    <div class="chip"
+                        onclick="setPrompt('Temperatura do motor subindo rÃ¡pido e reservatÃ³rio de Ã¡gua fervendo')">
+                        ðŸŒ¡ï¸ Superaquecimento do Motor</div>
+                    <div class="chip" onclick="setPrompt('Cheiro forte de fumaÃ§a e freio nÃ£o estÃ¡ respondendo')">ðŸš¨
+                        EmergÃªncia (Freio/FumaÃ§a)</div>
+                </div>
+
+                <textarea id="perguntaInput"
+                    placeholder="Ex: Meu Corolla 2018 estÃ¡ falhando ao acelerar e acusou cÃ³digo P0300 com luz de injeÃ§Ã£o piscando..."></textarea>
+                <button class="btn-primary" id="btnDiagnosticar" onclick="enviarDiagnostico()">
+                    <span>âš¡ Diagnosticar com InteligÃªncia PADOC</span>
+                </button>
+
+                <div class="response-box" id="respostaBox">
+                    <pre id="respostaTexto"></pre>
+                </div>
             </div>
         </div>
-        <div class="status-badge" id="apiStatus">
-            <div class="status-dot"></div>
-            <span>CÃ©rebro Conectado (v2.5)</span>
-        </div>
-    </header>
 
-    <div class="tabs">
-        <button class="tab-btn active" onclick="switchTab('diagnostico')">ðŸ” DiagnÃ³stico Especialista</button>
-        <button class="tab-btn" onclick="switchTab('telemetria')">ðŸ“Š Telemetria Preditiva (7/30/90d)</button>
-        <button class="tab-btn" onclick="switchTab('aprendizado')">ðŸ§  Auto-Aprendizado da IA</button>
+        <!-- TAB 2: TELEMETRIA PREDITIVA -->
+        <div id="tab-telemetria" class="tab-panel">
+            <div class="card">
+                <h3 style="margin-bottom: 16px;">Simulador de Telemetria e DegradaÃ§Ã£o de Componentes</h3>
+                <div class="grid-2">
+                    <div class="control-group">
+                        <label>RotaÃ§Ã£o do Motor (RPM): <span id="valRpm">850 RPM</span></label>
+                        <input type="range" id="sliderRpm" min="600" max="6500" value="850" oninput="updateTel()">
+                    </div>
+                    <div class="control-group">
+                        <label>Temperatura Arrefecimento: <span id="valTemp">90 Â°C</span></label>
+                        <input type="range" id="sliderTemp" min="40" max="130" value="90" oninput="updateTel()">
+                    </div>
+                    <div class="control-group">
+                        <label>Voltagem da Bateria: <span id="valVolt">13.8 V</span></label>
+                        <input type="range" id="sliderVolt" min="9.0" max="15.0" step="0.1" value="13.8"
+                            oninput="updateTel()">
+                    </div>
+                    <div class="control-group">
+                        <label>Trim de CombustÃ­vel (LTFT): <span id="valLtft">+2.0 %</span></label>
+                        <input type="range" id="sliderLtft" min="-25" max="25" value="2" oninput="updateTel()">
+                    </div>
+                </div>
+
+                <button class="btn-primary" onclick="calcularTelemetria()">
+                    <span>ðŸ“Š Calcular SaÃºde e Prever Falhas</span>
+                </button>
+
+                <div class="health-grid" id="healthResults" style="display: none;">
+                    <div class="health-card">
+                        <h4>SaÃºde Global</h4>
+                        <div class="health-score" id="scoreGlobal">100%</div>
+                        <p style="font-size: 0.8rem; color: var(--text-muted);">Status Geral</p>
+                    </div>
+                    <div class="health-card">
+                        <h4>Bateria</h4>
+                        <div class="health-score" id="scoreBateria">100%</div>
+                        <p style="font-size: 0.8rem;" id="riscoBateria">Risco 30d: 0%</p>
+                    </div>
+                    <div class="health-card">
+                        <h4>Arrefecimento</h4>
+                        <div class="health-score" id="scoreCooling">100%</div>
+                        <p style="font-size: 0.8rem;" id="riscoCooling">Risco 30d: 0%</p>
+                    </div>
+                    <div class="health-card">
+                        <h4>InjeÃ§Ã£o / Mistura</h4>
+                        <div class="health-score" id="scoreFuel">100%</div>
+                        <p style="font-size: 0.8rem;" id="riscoFuel">Risco 30d: 0%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB 3: AUTO-APRENDIZADO -->
+        <div id="tab-aprendizado" class="tab-panel">
+            <div class="card">
+                <h3 style="margin-bottom: 12px;">Ensinar Nova SoluÃ§Ã£o Ã  PADOC AI (Feedback de Oficina)</h3>
+                <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 16px;">
+                    Quando uma oficina confirma e resolve um defeito real, este conhecimento Ã© incorporado Ã  memÃ³ria
+                    da PADOC AI para refinar diagnÃ³sticos futuros.
+                </p>
+
+                <input type="text" class="input-text" id="learnVeiculo"
+                    placeholder="Modelo do VeÃ­culo (Ex: Toyota Corolla 2018)">
+                <input type="text" class="input-text" id="learnProblema"
+                    placeholder="Problema/Sintoma Observado (Ex: Barulho de estalo na coluna de direÃ§Ã£o)">
+                <input type="text" class="input-text" id="learnSolucao"
+                    placeholder="SoluÃ§Ã£o Comprovada (Ex: SubstituiÃ§Ã£o da bucha de acoplamento da coluna elÃ©trica)">
+
+                <button class="btn-primary" style="background: linear-gradient(135deg, var(--accent-orange), #ff416c);"
+                    onclick="enviarAprendizado()">
+                    <span>ðŸ§  Gravar Aprendizado na MemÃ³ria da IA</span>
+                </button>
+                <div id="learnFeedback" style="margin-top: 14px; font-size: 0.9rem; display: none;"></div>
+            </div>
+        </div>
     </div>
 
-    <!-- TAB 1: DIAGNOSTICO -->
-    <div id="tab-diagnostico" class="tab-panel active">
-        <div class="card">
-            <h3 style="margin-bottom: 12px;">Descreva os Sintomas ou CÃ³digo DTC do VeÃ­culo</h3>
-            <div class="quick-chips">
-                <div class="chip" onclick="setPrompt('Carro falhando em aceleraÃ§Ã£o e cÃ³digo P0300 gravado na injeÃ§Ã£o')">âš¡ CÃ³digo P0300 (Falha de IgniÃ§Ã£o)</div>
-                <div class="chip" onclick="setPrompt('Luz da injeÃ§Ã£o acesa e cÃ³digo P0171 mistura pobre')">â›½ CÃ³digo P0171 (Mistura Pobre)</div>
-                <div class="chip" onclick="setPrompt('Temperatura do motor subindo rÃ¡pido e reservatÃ³rio de Ã¡gua fervendo')">ðŸŒ¡ï¸ Superaquecimento do Motor</div>
-                <div class="chip" onclick="setPrompt('Cheiro forte de fumaÃ§a e freio nÃ£o estÃ¡ respondendo')">ðŸš¨ EmergÃªncia (Freio/FumaÃ§a)</div>
-            </div>
+    <script>
+        const API_URL = window.location.protocol === "file:" ? "http://localhost:5000" : window.location.origin;
 
-            <textarea id="perguntaInput" placeholder="Ex: Meu Corolla 2018 estÃ¡ falhando ao acelerar e acusou cÃ³digo P0300 com luz de injeÃ§Ã£o piscando..."></textarea>
-            <button class="btn-primary" id="btnDiagnosticar" onclick="enviarDiagnostico()">
-                <span>âš¡ Diagnosticar com InteligÃªncia PADOC</span>
-            </button>
-
-            <div class="response-box" id="respostaBox">
-                <pre id="respostaTexto"></pre>
-            </div>
-        </div>
-    </div>
-
-    <!-- TAB 2: TELEMETRIA PREDITIVA -->
-    <div id="tab-telemetria" class="tab-panel">
-        <div class="card">
-            <h3 style="margin-bottom: 16px;">Simulador de Telemetria e DegradaÃ§Ã£o de Componentes</h3>
-            <div class="grid-2">
-                <div class="control-group">
-                    <label>RotaÃ§Ã£o do Motor (RPM): <span id="valRpm">850 RPM</span></label>
-                    <input type="range" id="sliderRpm" min="600" max="6500" value="850" oninput="updateTel()">
-                </div>
-                <div class="control-group">
-                    <label>Temperatura Arrefecimento: <span id="valTemp">90 Â°C</span></label>
-                    <input type="range" id="sliderTemp" min="40" max="130" value="90" oninput="updateTel()">
-                </div>
-                <div class="control-group">
-                    <label>Voltagem da Bateria: <span id="valVolt">13.8 V</span></label>
-                    <input type="range" id="sliderVolt" min="9.0" max="15.0" step="0.1" value="13.8" oninput="updateTel()">
-                </div>
-                <div class="control-group">
-                    <label>Trim de CombustÃ­vel (LTFT): <span id="valLtft">+2.0 %</span></label>
-                    <input type="range" id="sliderLtft" min="-25" max="25" value="2" oninput="updateTel()">
-                </div>
-            </div>
-
-            <button class="btn-primary" onclick="calcularTelemetria()">
-                <span>ðŸ“Š Calcular SaÃºde e Prever Falhas</span>
-            </button>
-
-            <div class="health-grid" id="healthResults" style="display: none;">
-                <div class="health-card">
-                    <h4>SaÃºde Global</h4>
-                    <div class="health-score" id="scoreGlobal">100%</div>
-                    <p style="font-size: 0.8rem; color: var(--text-muted);">Status Geral</p>
-                </div>
-                <div class="health-card">
-                    <h4>Bateria</h4>
-                    <div class="health-score" id="scoreBateria">100%</div>
-                    <p style="font-size: 0.8rem;" id="riscoBateria">Risco 30d: 0%</p>
-                </div>
-                <div class="health-card">
-                    <h4>Arrefecimento</h4>
-                    <div class="health-score" id="scoreCooling">100%</div>
-                    <p style="font-size: 0.8rem;" id="riscoCooling">Risco 30d: 0%</p>
-                </div>
-                <div class="health-card">
-                    <h4>InjeÃ§Ã£o / Mistura</h4>
-                    <div class="health-score" id="scoreFuel">100%</div>
-                    <p style="font-size: 0.8rem;" id="riscoFuel">Risco 30d: 0%</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- TAB 3: AUTO-APRENDIZADO -->
-    <div id="tab-aprendizado" class="tab-panel">
-        <div class="card">
-            <h3 style="margin-bottom: 12px;">Ensinar Nova SoluÃ§Ã£o Ã  PADOC AI (Feedback de Oficina)</h3>
-            <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 16px;">
-                Quando uma oficina confirma e resolve um defeito real, este conhecimento Ã© incorporado Ã  memÃ³ria da PADOC AI para refinar diagnÃ³sticos futuros.
-            </p>
-
-            <input type="text" class="input-text" id="learnVeiculo" placeholder="Modelo do VeÃ­culo (Ex: Toyota Corolla 2018)">
-            <input type="text" class="input-text" id="learnProblema" placeholder="Problema/Sintoma Observado (Ex: Barulho de estalo na coluna de direÃ§Ã£o)">
-            <input type="text" class="input-text" id="learnSolucao" placeholder="SoluÃ§Ã£o Comprovada (Ex: SubstituiÃ§Ã£o da bucha de acoplamento da coluna elÃ©trica)">
-
-            <button class="btn-primary" style="background: linear-gradient(135deg, var(--accent-orange), #ff416c);" onclick="enviarAprendizado()">
-                <span>ðŸ§  Gravar Aprendizado na MemÃ³ria da IA</span>
-            </button>
-            <div id="learnFeedback" style="margin-top: 14px; font-size: 0.9rem; display: none;"></div>
-        </div>
-    </div>
-</div>
-
-<script>
-    const API_URL = window.location.protocol === "file:" ? "http://localhost:5000" : window.location.origin;
-
-    function switchTab(tabId) {
-        document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
-        document.querySelectorAll('.tab-panel').forEach(panel => panel.classList.remove('active'));
-        event.target.classList.add('active');
-        document.getElementById('tab-' + tabId).classList.add('active');
-    }
-
-    function setPrompt(text) {
-        document.getElementById('perguntaInput').value = text;
-    }
-
-    async function enviarDiagnostico() {
-        const pergunta = document.getElementById('perguntaInput').value.trim();
-        if (!pergunta) return alert("Por favor, digite os sintomas ou cÃ³digo.");
-
-        const btn = document.getElementById('btnDiagnosticar');
-        const box = document.getElementById('respostaBox');
-        const txt = document.getElementById('respostaTexto');
-
-        btn.disabled = true;
-        btn.innerHTML = "<span>â³ Processando RaciocÃ­nio MecÃ¢nico...</span>";
-        box.classList.remove('active');
-
-        try {
-            const res = await fetch(`${API_URL}/api/diagnostico`, {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ pergunta: pergunta, usuario_id: "web_dashboard" })
-            });
-            const data = await res.json();
-            txt.textContent = data.resposta || JSON.stringify(data, null, 2);
-            box.classList.add('active');
-        } catch (e) {
-            txt.textContent = "Erro ao conectar com a API PADOC AI: " + e.message;
-            box.classList.add('active');
-        } finally {
-            btn.disabled = false;
-            btn.innerHTML = "<span>âš¡ Diagnosticar com InteligÃªncia PADOC</span>";
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.tab-panel').forEach(panel => panel.classList.remove('active'));
+            event.target.classList.add('active');
+            document.getElementById('tab-' + tabId).classList.add('active');
         }
-    }
 
-    function updateTel() {
-        document.getElementById('valRpm').innerText = document.getElementById('sliderRpm').value + " RPM";
-        document.getElementById('valTemp').innerText = document.getElementById('sliderTemp').value + " Â°C";
-        document.getElementById('valVolt').innerText = document.getElementById('sliderVolt').value + " V";
-        document.getElementById('valLtft').innerText = (document.getElementById('sliderLtft').value > 0 ? "+" : "") + document.getElementById('sliderLtft').value + " %";
-    }
-
-    async function calcularTelemetria() {
-        const rpm = parseFloat(document.getElementById('sliderRpm').value);
-        const temp = parseFloat(document.getElementById('sliderTemp').value);
-        const volt = parseFloat(document.getElementById('sliderVolt').value);
-        const ltft = parseFloat(document.getElementById('sliderLtft').value);
-
-        try {
-            const res = await fetch(`${API_URL}/api/evento`, {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({
-                    placa: "DEMO-VEHICLE",
-                    telemetria: { rpm, coolant_temp: temp, battery_voltage: volt, fuel_trim_long: ltft }
-                })
-            });
-            const data = await res.json();
-            const pred = data.analise_preditiva;
-
-            document.getElementById('healthResults').style.display = "grid";
-            document.getElementById('scoreGlobal').innerText = Math.round(pred.global_health) + "%";
-            document.getElementById('scoreBateria').innerText = Math.round(pred.components.BATTERY.health_score) + "%";
-            document.getElementById('riscoBateria').innerText = `Risco 30d: ${Math.round(pred.components.BATTERY.failure_probability_30d)}%`;
-
-            document.getElementById('scoreCooling').innerText = Math.round(pred.components.COOLING.health_score) + "%";
-            document.getElementById('riscoCooling').innerText = `Risco 30d: ${Math.round(pred.components.COOLING.failure_probability_30d)}%`;
-
-            document.getElementById('scoreFuel').innerText = Math.round(pred.components.FUEL_SYSTEM.health_score) + "%";
-            document.getElementById('riscoFuel').innerText = `Risco 30d: ${Math.round(pred.components.FUEL_SYSTEM.failure_probability_30d)}%`;
-        } catch (e) {
-            alert("Falha ao comunicar com motor de telemetria: " + e.message);
+        function setPrompt(text) {
+            document.getElementById('perguntaInput').value = text;
         }
-    }
 
-    async function enviarAprendizado() {
-        const veiculo = document.getElementById('learnVeiculo').value.trim();
-        const problema = document.getElementById('learnProblema').value.trim();
-        const solucao = document.getElementById('learnSolucao').value.trim();
+        async function enviarDiagnostico() {
+            const pergunta = document.getElementById('perguntaInput').value.trim();
+            if (!pergunta) return alert("Por favor, digite os sintomas ou cÃ³digo.");
 
-        if (!problema || !solucao) return alert("Preencha o problema e a soluÃ§Ã£o.");
+            const btn = document.getElementById('btnDiagnosticar');
+            const box = document.getElementById('respostaBox');
+            const txt = document.getElementById('respostaTexto');
 
-        const fb = document.getElementById('learnFeedback');
-        try {
-            const res = await fetch(`${API_URL}/api/aprender`, {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ veiculo, problema, solucao })
-            });
-            const data = await res.json();
-            fb.style.display = "block";
-            fb.style.color = "var(--accent-green)";
-            fb.innerText = "âœ… " + data.mensagem + " Total de padrÃµes aprendidos: " + data.total_aprendidos;
-            document.getElementById('learnProblema').value = "";
-            document.getElementById('learnSolucao').value = "";
-        } catch (e) {
-            fb.style.display = "block";
-            fb.style.color = "var(--accent-red)";
-            fb.innerText = "âŒ Erro ao registrar aprendizado: " + e.message;
+            btn.disabled = true;
+            btn.innerHTML = "<span>â³ Processando RaciocÃ­nio MecÃ¢nico...</span>";
+            box.classList.remove('active');
+
+            try {
+                const res = await fetch(`${API_URL}/api/diagnostico`, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ pergunta: pergunta, usuario_id: "web_dashboard" })
+                });
+                const data = await res.json();
+                txt.textContent = data.resposta || JSON.stringify(data, null, 2);
+                box.classList.add('active');
+            } catch (e) {
+                txt.textContent = "Erro ao conectar com a API PADOC AI: " + e.message;
+                box.classList.add('active');
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = "<span>âš¡ Diagnosticar com InteligÃªncia PADOC</span>";
+            }
         }
-    }
-</script>
+
+        function updateTel() {
+            document.getElementById('valRpm').innerText = document.getElementById('sliderRpm').value + " RPM";
+            document.getElementById('valTemp').innerText = document.getElementById('sliderTemp').value + " Â°C";
+            document.getElementById('valVolt').innerText = document.getElementById('sliderVolt').value + " V";
+            document.getElementById('valLtft').innerText = (document.getElementById('sliderLtft').value > 0 ? "+" : "") + document.getElementById('sliderLtft').value + " %";
+        }
+
+        async function calcularTelemetria() {
+            const rpm = parseFloat(document.getElementById('sliderRpm').value);
+            const temp = parseFloat(document.getElementById('sliderTemp').value);
+            const volt = parseFloat(document.getElementById('sliderVolt').value);
+            const ltft = parseFloat(document.getElementById('sliderLtft').value);
+
+            try {
+                const res = await fetch(`${API_URL}/api/evento`, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({
+                        placa: "DEMO-VEHICLE",
+                        telemetria: { rpm, coolant_temp: temp, battery_voltage: volt, fuel_trim_long: ltft }
+                    })
+                });
+                const data = await res.json();
+                const pred = data.analise_preditiva;
+
+                document.getElementById('healthResults').style.display = "grid";
+                document.getElementById('scoreGlobal').innerText = Math.round(pred.global_health) + "%";
+                document.getElementById('scoreBateria').innerText = Math.round(pred.components.BATTERY.health_score) + "%";
+                document.getElementById('riscoBateria').innerText = `Risco 30d: ${Math.round(pred.components.BATTERY.failure_probability_30d)}%`;
+
+                document.getElementById('scoreCooling').innerText = Math.round(pred.components.COOLING.health_score) + "%";
+                document.getElementById('riscoCooling').innerText = `Risco 30d: ${Math.round(pred.components.COOLING.failure_probability_30d)}%`;
+
+                document.getElementById('scoreFuel').innerText = Math.round(pred.components.FUEL_SYSTEM.health_score) + "%";
+                document.getElementById('riscoFuel').innerText = `Risco 30d: ${Math.round(pred.components.FUEL_SYSTEM.failure_probability_30d)}%`;
+            } catch (e) {
+                alert("Falha ao comunicar com motor de telemetria: " + e.message);
+            }
+        }
+
+        async function enviarAprendizado() {
+            const veiculo = document.getElementById('learnVeiculo').value.trim();
+            const problema = document.getElementById('learnProblema').value.trim();
+            const solucao = document.getElementById('learnSolucao').value.trim();
+
+            if (!problema || !solucao) return alert("Preencha o problema e a soluÃ§Ã£o.");
+
+            const fb = document.getElementById('learnFeedback');
+            try {
+                const res = await fetch(`${API_URL}/api/aprender`, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ veiculo, problema, solucao })
+                });
+                const data = await res.json();
+                fb.style.display = "block";
+                fb.style.color = "var(--accent-green)";
+                fb.innerText = "âœ… " + data.mensagem + " Total de padrÃµes aprendidos: " + data.total_aprendidos;
+                document.getElementById('learnProblema').value = "";
+                document.getElementById('learnSolucao').value = "";
+            } catch (e) {
+                fb.style.display = "block";
+                fb.style.color = "var(--accent-red)";
+                fb.innerText = "âŒ Erro ao registrar aprendizado: " + e.message;
+            }
+        }
+    </script>
 </body>
+
 </html>
-
-
