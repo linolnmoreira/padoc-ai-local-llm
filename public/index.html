@@ -1,319 +1,441 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Padoc AI - Chat</title>
-
-  <!-- Firebase Web SDK (Compat version) -->
-  <!-- Usando uma versão mais recente e consistente -->
-  <script defer src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
-  <script defer src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
-  <script defer src="https://www.gstatic.com/firebasejs/9.6.1/firebase-analytics-compat.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Padoc AI - Diagnóstico Automotivo Inteligente</title>
+  <meta name="description" content="Padoc AI é um assistente de diagnóstico automotivo com inteligência artificial. Descreva os sintomas do seu veículo e receba uma análise especializada.">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+    :root {
+      --bg-primary: #080c14;
+      --bg-secondary: #0f172a;
+      --bg-card: rgba(15, 23, 42, 0.9);
+      --bg-input: rgba(8, 12, 20, 0.8);
+      --border-glass: rgba(255, 255, 255, 0.07);
+      --border-active: rgba(56, 189, 248, 0.5);
+      --accent-cyan: #38bdf8;
+      --accent-blue: #4facfe;
+      --accent-glow: rgba(56, 189, 248, 0.2);
+      --text-main: #f1f5f9;
+      --text-muted: #64748b;
+      --text-secondary: #94a3b8;
+      --user-bubble: #1d4ed8;
+      --bot-bubble: #1e293b;
+      --success: #22c55e;
+      --error: #ef4444;
     }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { height: 100%; }
 
     body {
-      background-color: #0f172a;
-      color: #f8fafc;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      height: 100vh;
+      font-family: 'Outfit', sans-serif;
+      background: var(--bg-primary);
+      background-image:
+        radial-gradient(ellipse at 20% 0%, rgba(56, 189, 248, 0.06) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 100%, rgba(79, 172, 254, 0.04) 0%, transparent 50%);
+      color: var(--text-main);
       display: flex;
       flex-direction: column;
+      height: 100vh;
+      overflow: hidden;
     }
 
-    /* Header Topo */
+    /* HEADER */
     header {
-      background-color: #1e293b;
-      padding: 1rem 1.5rem;
+      flex-shrink: 0;
+      background: rgba(15, 23, 42, 0.95);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border-glass);
+      padding: 0.85rem 1.5rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-bottom: 1px solid #334155;
+      gap: 1rem;
     }
 
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
+    .brand { display: flex; align-items: center; gap: 0.75rem; }
+
+    .brand-logo {
+      width: 38px; height: 38px;
+      background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.2rem;
+      box-shadow: 0 0 18px var(--accent-glow);
+      flex-shrink: 0;
     }
 
-    .brand h1 {
-      font-size: 1.25rem;
-      font-weight: 700;
-      color: #38bdf8;
+    .brand-info h1 {
+      font-size: 1.15rem; font-weight: 800; letter-spacing: -0.3px;
+      background: linear-gradient(90deg, #fff 60%, #94a3b8);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
     }
+
+    .brand-info p {
+      font-size: 0.72rem; color: var(--accent-cyan);
+      font-weight: 600; text-transform: uppercase; letter-spacing: 0.8px;
+    }
+
+    .header-right { display: flex; align-items: center; gap: 0.75rem; }
 
     .model-selector {
-      background-color: #0f172a;
-      color: #f8fafc;
-      border: 1px solid #475569;
-      padding: 0.5rem 1rem;
-      border-radius: 8px;
-      outline: none;
-      font-size: 0.9rem;
-      cursor: pointer;
+      background: var(--bg-input); color: var(--text-main);
+      border: 1px solid var(--border-glass);
+      padding: 0.45rem 0.85rem; border-radius: 8px;
+      outline: none; font-size: 0.85rem; font-family: inherit; cursor: pointer;
+      transition: border-color 0.2s;
+    }
+    .model-selector:hover, .model-selector:focus { border-color: var(--border-active); }
+
+    .status-pill {
+      display: flex; align-items: center; gap: 6px;
+      padding: 5px 12px;
+      background: rgba(34, 197, 94, 0.08);
+      border: 1px solid rgba(34, 197, 94, 0.25);
+      border-radius: 20px; font-size: 0.78rem; color: var(--success); font-weight: 600; white-space: nowrap;
     }
 
-    /* Container de mensagens */
+    .status-dot {
+      width: 7px; height: 7px; background: var(--success); border-radius: 50%;
+      box-shadow: 0 0 8px var(--success); animation: blink 2.5s infinite;
+    }
+
+    @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
+
+    /* CHAT */
     main#chat-container {
-      flex: 1;
-      overflow-y: auto;
-      padding: 1.5rem;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      max-width: 900px;
-      width: 100%;
-      margin: 0 auto;
+      flex: 1; overflow-y: auto; padding: 1.5rem;
+      display: flex; flex-direction: column; gap: 1rem;
+      max-width: 860px; width: 100%; margin: 0 auto;
+      scrollbar-width: thin; scrollbar-color: #1e293b transparent;
+    }
+    main#chat-container::-webkit-scrollbar { width: 5px; }
+    main#chat-container::-webkit-scrollbar-track { background: transparent; }
+    main#chat-container::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 10px; }
+
+    .welcome-banner {
+      background: linear-gradient(135deg, rgba(56,189,248,0.08), rgba(79,172,254,0.05));
+      border: 1px solid rgba(56,189,248,0.15);
+      border-radius: 16px; padding: 1.25rem 1.5rem; margin-bottom: 0.5rem;
+    }
+    .welcome-banner h2 { font-size: 1rem; font-weight: 700; color: var(--accent-cyan); margin-bottom: 0.35rem; }
+    .welcome-banner p { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5; }
+
+    .quick-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 1rem; }
+
+    .chip {
+      padding: 5px 12px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border-glass);
+      border-radius: 20px; font-size: 0.78rem; cursor: pointer;
+      color: var(--text-secondary); transition: all 0.2s ease; white-space: nowrap;
+    }
+    .chip:hover {
+      background: rgba(56,189,248,0.12); border-color: var(--border-active);
+      color: var(--accent-cyan); transform: translateY(-1px);
     }
 
-    .message {
-      display: flex;
-      flex-direction: column;
-      max-width: 80%;
-      padding: 0.85rem 1.15rem;
-      border-radius: 12px;
-      line-height: 1.5;
-      font-size: 0.95rem;
+    .message { display: flex; flex-direction: column; max-width: 78%; animation: slideIn 0.25s ease; }
+    @keyframes slideIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+    .message.user { align-self: flex-end; }
+    .message.bot  { align-self: flex-start; }
+
+    .sender-tag {
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.5px;
+      text-transform: uppercase; margin-bottom: 4px; padding: 0 4px;
+    }
+    .message.user .sender-tag { color: #93c5fd; text-align: right; }
+    .message.bot  .sender-tag { color: var(--accent-cyan); }
+
+    .bubble {
+      padding: 0.8rem 1.1rem; border-radius: 14px;
+      line-height: 1.6; font-size: 0.92rem; word-break: break-word;
+    }
+    .message.user .bubble {
+      background: var(--user-bubble); color: #fff;
+      border-bottom-right-radius: 4px; box-shadow: 0 4px 15px rgba(29,78,216,0.3);
+    }
+    .message.bot .bubble {
+      background: var(--bot-bubble); color: var(--text-main);
+      border: 1px solid var(--border-glass); border-bottom-left-radius: 4px;
     }
 
-    .message.user {
-      align-self: flex-end;
-      background-color: #2563eb;
-      color: #ffffff;
-      border-bottom-right-radius: 2px;
+    .typing-indicator {
+      display: flex; align-items: center; gap: 5px;
+      padding: 0.8rem 1.1rem;
+      background: var(--bot-bubble); border: 1px solid var(--border-glass);
+      border-radius: 14px; border-bottom-left-radius: 4px; width: fit-content;
     }
-
-    .message.bot {
-      align-self: flex-start;
-      background-color: #1e293b;
-      color: #e2e8f0;
-      border: 1px solid #334155;
-      border-bottom-left-radius: 2px;
+    .typing-dot {
+      width: 7px; height: 7px; background: var(--text-muted);
+      border-radius: 50%; animation: typingBounce 1.2s infinite;
     }
+    .typing-dot:nth-child(2) { animation-delay: 0.2s; }
+    .typing-dot:nth-child(3) { animation-delay: 0.4s; }
+    @keyframes typingBounce { 0%,60%,100% { transform: translateY(0); } 30% { transform: translateY(-6px); } }
 
-    .message .sender-tag {
-      font-size: 0.75rem;
-      color: #94a3b8;
-      margin-bottom: 0.25rem;
-      font-weight: 600;
-    }
-
-    /* Área do Prompt / Input */
+    /* INPUT */
     .input-area {
-      background-color: #0f172a;
-      padding: 1rem 1.5rem 1.5rem;
-      border-top: 1px solid #1e293b;
+      flex-shrink: 0;
+      background: rgba(8,12,20,0.95); backdrop-filter: blur(20px);
+      border-top: 1px solid var(--border-glass);
+      padding: 1rem 1.5rem 1.25rem;
     }
-
     .input-wrapper {
-      max-width: 900px;
-      margin: 0 auto;
-      display: flex;
-      gap: 0.75rem;
-      background-color: #1e293b;
-      padding: 0.5rem;
-      border-radius: 12px;
-      border: 1px solid #334155;
+      max-width: 860px; margin: 0 auto;
+      display: flex; gap: 0.6rem;
+      background: var(--bot-bubble); padding: 0.5rem 0.5rem 0.5rem 1rem;
+      border-radius: 14px; border: 1px solid var(--border-glass);
+      transition: border-color 0.2s, box-shadow 0.2s;
     }
+    .input-wrapper:focus-within { border-color: var(--border-active); box-shadow: 0 0 20px var(--accent-glow); }
 
     textarea#user-input {
-      flex: 1;
-      background: transparent;
-      border: none;
-      outline: none;
-      color: #f8fafc;
-      font-size: 0.95rem;
-      padding: 0.5rem;
-      resize: none;
-      height: 42px; /* Altura inicial */
-      font-family: inherit;
-      transition: height 0.2s;
+      flex: 1; background: transparent; border: none; outline: none;
+      color: var(--text-main); font-size: 0.92rem; font-family: inherit;
+      padding: 0.4rem 0; resize: none; min-height: 36px; max-height: 140px;
+      overflow-y: auto; line-height: 1.5;
     }
+    textarea#user-input::placeholder { color: var(--text-muted); }
 
     button#send-btn {
-      background-color: #38bdf8;
-      color: #0f172a;
-      border: none;
-      padding: 0.5rem 1.25rem;
-      border-radius: 8px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: opacity 0.2s;
+      background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
+      color: #060d1a; border: none; padding: 0.45rem 1.1rem;
+      border-radius: 10px; font-weight: 700; font-size: 0.88rem;
+      font-family: inherit; cursor: pointer; transition: all 0.2s ease;
+      display: flex; align-items: center; gap: 5px;
+      align-self: flex-end; margin-bottom: 2px; white-space: nowrap;
+    }
+    button#send-btn:hover:not(:disabled) { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(56,189,248,0.35); }
+    button#send-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+    .input-footer {
+      max-width: 860px; margin: 0.5rem auto 0;
+      font-size: 0.72rem; color: var(--text-muted); text-align: center;
     }
 
-    button#send-btn:hover {
-      opacity: 0.9;
-    }
-
-    /* Responsividade */
     @media (max-width: 600px) {
-      .message {
-        max-width: 90%;
-      }
+      .message { max-width: 90%; }
+      .status-pill { display: none; }
+      .brand-info p { display: none; }
     }
   </style>
 </head>
 <body>
+
   <header>
     <div class="brand">
-      <h1>Padoc AI</h1>
+      <div class="brand-logo">&#9881;&#65039;</div>
+      <div class="brand-info">
+        <h1>PADOC AI</h1>
+        <p>Diagnostico Automotivo</p>
+      </div>
     </div>
-    <!-- Seletor de IA / Modelo -->
-    <select id="ai-model" class="model-selector" aria-label="Seletor de modelo de IA">
-      <option value="padoc-v1">Padoc AI (Padrão)</option>
-      <option value="openai-gpt4">OpenAI GPT-4</option>
-      <option value="claude-3">Anthropic Claude 3</option>
-      <option value="gemini-pro">Google Gemini Pro</option>
-    </select>
+    <div class="header-right">
+      <select id="ai-model" class="model-selector" aria-label="Seletor de modelo de IA">
+        <option value="padoc-v1">PADOC AI (Padrao)</option>
+        <option value="openai-gpt4">OpenAI GPT-4</option>
+        <option value="claude-3">Anthropic Claude 3</option>
+        <option value="gemini-pro">Google Gemini Pro</option>
+      </select>
+      <div class="status-pill">
+        <div class="status-dot"></div>
+        <span>Online</span>
+      </div>
+    </div>
   </header>
+
   <main id="chat-container">
-    <div class="message bot">
-      <span class="sender-tag">Padoc AI</span>
-      Olá! Eu sou a Padoc. Como posso te ajudar hoje?
+    <div class="welcome-banner">
+      <h2>Bem-vindo a PADOC AI</h2>
+      <p>Descreva os sintomas do seu veiculo, informe um codigo DTC (P0300, P0171...) ou faca uma pergunta automotiva. Nossa IA especializada ira analisar e fornecer um diagnostico detalhado.</p>
+      <div class="quick-chips">
+        <div class="chip" onclick="setPrompt('Carro falhando na aceleracao com codigo P0300')">Falha P0300</div>
+        <div class="chip" onclick="setPrompt('Luz da injecao acesa com codigo P0171 mistura pobre')">P0171 Mistura Pobre</div>
+        <div class="chip" onclick="setPrompt('Motor superaquecendo rapido e perda de refrigerante')">Superaquecimento</div>
+        <div class="chip" onclick="setPrompt('Freio com barulho e pedal mole ao frear')">Problema de Freio</div>
+        <div class="chip" onclick="setPrompt('Bateria fraca e alternador nao carregando')">Bateria / Alternador</div>
+      </div>
+    </div>
+
+    <div class="message bot" id="initial-bot-msg">
+      <span class="sender-tag">PADOC AI</span>
+      <div class="bubble">Ola! Eu sou a PADOC AI, sua assistente de diagnostico automotivo. Como posso te ajudar hoje?</div>
     </div>
   </main>
+
   <div class="input-area">
     <div class="input-wrapper">
-      <textarea id="user-input" placeholder="Digite sua mensagem..." rows="1"></textarea>
+      <textarea id="user-input" placeholder="Descreva os sintomas do veiculo ou informe um codigo DTC..." rows="1"></textarea>
       <button id="send-btn">Enviar</button>
     </div>
+    <p class="input-footer">PADOC AI pode cometer erros. Sempre consulte um mecanico profissional para diagnosticos criticos.</p>
   </div>
 
-  <script>
-    async function initializeApp() {
-      const chatContainer = document.getElementById('chat-container');
-      const userInput = document.getElementById('user-input');
-      const sendBtn = document.getElementById('send-btn');
-      const modelSelect = document.getElementById('ai-model');
+  <!-- Firebase Web SDK v13 (Modular ESM CDN) -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/13.0.0/firebase-app.js";
+    import { getAnalytics, logEvent } from "https://www.gstatic.com/firebasejs/13.0.0/firebase-analytics.js";
 
-      let firebaseConfig;
-      try {
-        // Busca a configuração do Firebase do backend para segurança
-        const response = await fetch('/api/firebase-config');
-        if (!response.ok) {
-          throw new Error('Falha ao buscar a configuração do Firebase.');
-        }
-        firebaseConfig = await response.json();
+    // ── Firebase Configuration ──
+    const firebaseConfig = {
+      apiKey: "AIzaSyBkUiqTlo_lunHMwiu54vUjSPLjS2FJqA8",
+      authDomain: "padoc-ai.firebaseapp.com",
+      databaseURL: "https://padoc-ai-default-rtdb.firebaseio.com",
+      projectId: "padoc-ai",
+      storageBucket: "padoc-ai.firebasestorage.app",
+      messagingSenderId: "1080051254358",
+      appId: "1:1080051254358:web:f5cf761089ed42be0ca7f7",
+      measurementId: "G-ZCLZZ9ZFQ2"
+    };
 
-        if (!firebaseConfig.apiKey) {
-            throw new Error('Chave de API do Firebase não encontrada na configuração.');
-        }
+    // ── Initialize Firebase ──
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
 
-      } catch (error) {
-        console.error("Erro crítico na inicialização:", error);
-        const errorDiv = document.createElement('div');
-        errorDiv.textContent = 'Erro ao carregar a configuração da aplicação. Por favor, recarregue a página.';
-        errorDiv.style.color = 'red';
-        document.body.prepend(errorDiv);
-        return;
-      }
+    // ── API URL: Railway backend (produção) ou localhost (dev local) ──
+    const API_BASE = window.location.hostname === "localhost" || window.location.protocol === "file:"
+      ? "http://localhost:5000"
+      : "https://padoc-ai-site-production.up.railway.app";
 
-      // Inicializar Firebase
-      firebase.initializeApp(firebaseConfig);
-      const auth = firebase.auth();
-      const analytics = firebase.analytics();
+    // ── DOM refs ──
+    const chatContainer = document.getElementById('chat-container');
+    const userInput     = document.getElementById('user-input');
+    const sendBtn       = document.getElementById('send-btn');
+    const modelSelect   = document.getElementById('ai-model');
 
-      // IMPORTANTE: A URL da API deve ser a do seu serviço em produção (Render, Heroku, etc.)
-      // Para desenvolvimento local, use o endereço do seu servidor Flask.
-      // A URL da API será relativa ao domínio atual, funcionando tanto em local quanto em produção.
-      const API_URL = "/api/diagnostico";
-
-      // Função para renderizar uma mensagem na tela
-      function addMessage(text, sender, modelName = '') {
-        const msgDiv = document.createElement('div');
-        msgDiv.classList.add('message', sender);
-
-        const tag = document.createElement('span');
-        tag.classList.add('sender-tag');
-        tag.textContent = sender === 'user' ? 'Você' : (modelName || 'Padoc AI');
-
-        const content = document.createElement('div');
-        content.textContent = text;
-
-        msgDiv.appendChild(tag);
-        msgDiv.appendChild(content);
-        chatContainer.appendChild(msgDiv);
-
-        // Rola automaticamente para o fim do chat
-        chatContainer.scrollTop = chatContainer.scrollHeight;
-      }
-
-      // Processa o envio da mensagem
-      async function handleSend() {
-        const text = userInput.value.trim();
-        if (!text) return;
-
-        const selectedModel = modelSelect.options[modelSelect.selectedIndex].text;
-        const usuario_id = auth.currentUser ? auth.currentUser.uid : 'anonimo-' + Date.now();
-
-        // 1. Adiciona a mensagem do usuário à interface
-        addMessage(text, 'user');
-        userInput.value = '';
-        autoGrow(userInput); // Redimensiona o textarea
-
-        // 2. Adiciona uma mensagem de "pensando..."
-        addMessage('Analisando sua pergunta...', 'bot', selectedModel);
-
-        // 3. Chama a API do backend
-        try {
-          const response = await fetch(API_URL, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ pergunta: text, usuario_id: usuario_id, model: modelSelect.value })
-          });
-
-          if (!response.ok) {
-              const errorData = await response.json();
-              throw new Error(errorData.erro || `HTTP error! status: ${response.status}`);
-          }
-
-          const data = await response.json();
-
-          // Remove a mensagem "Analisando..."
-          const messages = chatContainer.querySelectorAll('.message.bot');
-          messages[messages.length - 1].remove();
-
-          // Adiciona a resposta final da IA
-          addMessage(data.resposta, 'bot', selectedModel);
-
-        } catch (error) {
-          console.error("Erro ao chamar a API:", error);
-          // Remove a mensagem "Analisando..."
-          const messages = chatContainer.querySelectorAll('.message.bot');
-          messages[messages.length - 1].remove();
-          // Adiciona uma mensagem de erro
-          addMessage(`Ocorreu um erro ao conectar à IA: ${error.message}`, 'bot');
-        }
-      }
-
-      // Função para auto-ajustar a altura do textarea
-      function autoGrow(element) {
-        element.style.height = "5px";
-        element.style.height = (element.scrollHeight) + "px";
-      }
-
-      // Eventos de clique e enter
-      sendBtn.addEventListener('click', handleSend);
-      userInput.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' && !e.shiftKey) {
-          e.preventDefault();
-          handleSend();
-        }
-      });
-      userInput.addEventListener('input', () => autoGrow(userInput));
-
-      // Ajusta a altura inicial
-      autoGrow(userInput);
+    // ── Helpers ──
+    function autoGrow(el) {
+      el.style.height = "5px";
+      el.style.height = Math.min(el.scrollHeight, 140) + "px";
     }
 
-    document.addEventListener('DOMContentLoaded', initializeApp);
+    function scrollToBottom() {
+      chatContainer.scrollTop = chatContainer.scrollHeight;
+    }
+
+    function addMessage(text, sender, modelName) {
+      const wrap = document.createElement('div');
+      wrap.classList.add('message', sender);
+
+      const tag = document.createElement('span');
+      tag.classList.add('sender-tag');
+      tag.textContent = sender === 'user' ? 'Voce' : (modelName || 'PADOC AI');
+
+      const bubble = document.createElement('div');
+      bubble.classList.add('bubble');
+      bubble.textContent = text;
+
+      wrap.appendChild(tag);
+      wrap.appendChild(bubble);
+      chatContainer.appendChild(wrap);
+      scrollToBottom();
+      return wrap;
+    }
+
+    function addTypingIndicator() {
+      const wrap = document.createElement('div');
+      wrap.classList.add('message', 'bot');
+      wrap.id = 'typing-msg';
+
+      const tag = document.createElement('span');
+      tag.classList.add('sender-tag');
+      tag.textContent = 'PADOC AI';
+
+      const indicator = document.createElement('div');
+      indicator.classList.add('typing-indicator');
+      for (let i = 0; i < 3; i++) {
+        const dot = document.createElement('div');
+        dot.classList.add('typing-dot');
+        indicator.appendChild(dot);
+      }
+
+      wrap.appendChild(tag);
+      wrap.appendChild(indicator);
+      chatContainer.appendChild(wrap);
+      scrollToBottom();
+    }
+
+    function removeTypingIndicator() {
+      const el = document.getElementById('typing-msg');
+      if (el) el.remove();
+    }
+
+    // ── Expose setPrompt for quick chips (onclick attributes) ──
+    window.setPrompt = function(text) {
+      userInput.value = text;
+      userInput.focus();
+      autoGrow(userInput);
+    };
+
+    // ── Send message ──
+    async function handleSend() {
+      const text = userInput.value.trim();
+      if (!text || sendBtn.disabled) return;
+
+      const selectedModelText = modelSelect.options[modelSelect.selectedIndex].text;
+      const usuario_id = 'web-' + Date.now();
+
+      addMessage(text, 'user');
+      userInput.value = '';
+      autoGrow(userInput);
+
+      sendBtn.disabled = true;
+      addTypingIndicator();
+
+      logEvent(analytics, 'diagnostico_enviado', {
+        model: modelSelect.value,
+        prompt_length: text.length
+      });
+
+      try {
+        const response = await fetch(API_BASE + '/api/diagnostico', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ pergunta: text, usuario_id: usuario_id, model: modelSelect.value })
+        });
+
+        removeTypingIndicator();
+
+        if (!response.ok) {
+          const errData = await response.json().catch(() => ({}));
+          throw new Error(errData.erro || 'Erro HTTP ' + response.status);
+        }
+
+        const data = await response.json();
+        addMessage(data.resposta || JSON.stringify(data, null, 2), 'bot', selectedModelText);
+
+        logEvent(analytics, 'diagnostico_recebido', { success: true });
+
+      } catch (err) {
+        removeTypingIndicator();
+        addMessage('Erro ao conectar a API PADOC: ' + err.message, 'bot');
+        console.error('[PADOC] API error:', err);
+        logEvent(analytics, 'diagnostico_recebido', { success: false });
+      } finally {
+        sendBtn.disabled = false;
+        userInput.focus();
+      }
+    }
+
+    // ── Events ──
+    sendBtn.addEventListener('click', handleSend);
+
+    userInput.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' && !e.shiftKey) {
+        e.preventDefault();
+        handleSend();
+      }
+    });
+
+    userInput.addEventListener('input', function() { autoGrow(userInput); });
+
+    autoGrow(userInput);
   </script>
+
 </body>
 </html>

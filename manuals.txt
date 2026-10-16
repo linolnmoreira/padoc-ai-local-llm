@@ -1,0 +1,14 @@
+Toyota Manual:
+- Troca de óleo
+- Revisão de freios
+- Diagnóstico de falhas P0300 e P0420
+
+Honda Manual:
+- Troca de filtro de ar
+- Verificação de correia dentada
+- Diagnóstico de falhas P0300 e P0420
+
+Ford Manual:
+- Troca de bateria
+- Checagem de sistema de combustível
+- Diagnóstico de falhas P0300 e P0420

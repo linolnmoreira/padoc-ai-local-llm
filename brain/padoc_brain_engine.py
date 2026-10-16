@@ -8,17 +8,47 @@ Este módulo é o núcleo inteligente da PADOC AI. Ele unifica:
 4. Telemetria Preditiva (saúde de componentes e probabilidade de falhas em 7/30/90 dias)
 5. Auto-Aprendizado Contínuo (ContinuousLearner): armazena e retroalimenta novos
    diagnósticos validados por mecânicos e oficinas.
+6. Firebase Realtime Database: armazenamento e pesquisa distribuída de padrões
+   aprendidos, cache de respostas e histórico global de diagnósticos.
 """
 
 import os
 import json
 import re
+import hashlib
 import unicodedata
 import logging
 from datetime import datetime
 from typing import Dict, List, Any, Optional
 
 logger = logging.getLogger("padoc_brain")
+
+# ── Firebase Realtime Database (opcional — fallback local se indisponível) ──
+try:
+    import firebase_admin
+    from firebase_admin import db as firebase_db
+    _FIREBASE_SDK = True
+except ImportError:
+    firebase_db = None
+    _FIREBASE_SDK = False
+
+
+def _get_firebase_db():
+    """Retorna o módulo db do Firebase Admin se inicializado, senão None."""
+    if not _FIREBASE_SDK:
+        return None
+    try:
+        # Tenta obter app já inicializado
+        firebase_admin.get_app()
+    except Exception:
+        # Inicializa usando credenciais padrão do ambiente (ex.: GOOGLE_APPLICATION_CREDENTIALS)
+        try:
+            firebase_admin.initialize_app()
+            logger.info("✅ Firebase Admin SDK inicializado com credenciais padrão.")
+        except Exception as init_err:
+            logger.warning(f"⚠️ Falha ao iniciar Firebase Admin SDK: {init_err}")
+            return None
+    return firebase_db
 
 # Caminhos base
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -44,13 +74,33 @@ class ContinuousLearner:
     Mecanismo de auto-aprendizado autônomo da PADOC AI.
     Permite que a IA absorva novos casos de oficinas, confirme diagnósticos,
     e incremente a confiança em soluções verificadas.
+
+    Armazenamento em dois níveis:
+    - Primário: Firebase Realtime Database (compartilhado entre instâncias)
+    - Fallback: arquivo JSON local (quando Firebase indisponível)
     """
+
+    # Nós no Firebase Realtime Database
+    FB_PADROES_PATH = "cerebro/padroes_aprendidos"
+    FB_MEMORIA_PATH = "cerebro/memoria"
 
     def __init__(self, storage_path: str = LEARNING_FILE):
         self.storage_path = storage_path
         self.memoria: Dict[str, Any] = self._carregar()
 
+    # ── Persistência local (fallback) ──────────────────────────────────────
+
     def _carregar(self) -> Dict[str, Any]:
+        """Carrega memória: tenta Firebase primeiro, fallback para arquivo local."""
+        # Tenta carregar do Firebase
+        dados_fb = self._carregar_firebase()
+        if dados_fb:
+            logger.info("🔥 Memória PADOC carregada do Firebase Realtime Database.")
+            # Sincroniza arquivo local com o Firebase
+            self._salvar_local(dados_fb)
+            return dados_fb
+
+        # Fallback: arquivo local
         if not os.path.exists(self.storage_path):
             dados_iniciais = {
                 "versao": "2.0",
@@ -59,35 +109,125 @@ class ContinuousLearner:
                 "feedback_positivo": 0,
                 "historico_recente": []
             }
-            self._salvar(dados_iniciais)
+            self._salvar_local(dados_iniciais)
             return dados_iniciais
-
         try:
             with open(self.storage_path, "r", encoding="utf-8") as f:
                 return json.load(f)
         except Exception as e:
             logger.error(f"Erro ao carregar base de auto-aprendizado: {e}")
-            return {"padroes_aprendidos": {}, "total_diagnosticos_processados": 0, "feedback_positivo": 0}
+            return {"padroes_aprendidos": {}, "total_diagnosticos_processados": 0,
+                    "feedback_positivo": 0, "historico_recente": []}
 
-    def _salvar(self, dados: Optional[Dict[str, Any]] = None):
+    def _salvar_local(self, dados: Optional[Dict[str, Any]] = None):
+        """Persiste memória no arquivo JSON local."""
         if dados is None:
             dados = self.memoria
         try:
             with open(self.storage_path, "w", encoding="utf-8") as f:
                 json.dump(dados, f, indent=2, ensure_ascii=False)
         except Exception as e:
-            logger.error(f"Erro ao salvar base de auto-aprendizado: {e}")
+            logger.error(f"Erro ao salvar base local de auto-aprendizado: {e}")
 
-    def registrar_aprendizado(self, problema: str, solucao: str, veiculo: str = "Geral", eficacia: float = 1.0, autor: str = "oficina"):
+    # Alias para compatibilidade com código legado
+    def _salvar(self, dados: Optional[Dict[str, Any]] = None):
+        self._salvar_local(dados)
+        self._salvar_firebase(dados or self.memoria)
+
+    # ── Firebase: leitura ──────────────────────────────────────────────────
+
+    def _carregar_firebase(self) -> Optional[Dict[str, Any]]:
+        """Busca memória completa do Firebase Realtime Database."""
+        db = _get_firebase_db()
+        if not db:
+            return None
+        try:
+            ref = db.reference(self.FB_MEMORIA_PATH)
+            dados = ref.get()
+            if dados and isinstance(dados, dict):
+                # Firebase não suporta listas nativas; converte historico_recente
+                if "historico_recente" in dados and isinstance(dados["historico_recente"], dict):
+                    dados["historico_recente"] = list(dados["historico_recente"].values())
+                if "padroes_aprendidos" not in dados:
+                    dados["padroes_aprendidos"] = {}
+                # Busca padrões separados (nó próprio para melhor indexação)
+                padroes_ref = db.reference(self.FB_PADROES_PATH)
+                padroes = padroes_ref.get()
+                if padroes and isinstance(padroes, dict):
+                    dados["padroes_aprendidos"] = padroes
+                return dados
+        except Exception as e:
+            logger.warning(f"⚠️ Falha ao carregar do Firebase: {e}")
+        return None
+
+    def _carregar_padroes_firebase(self) -> Dict[str, Any]:
+        """Busca apenas os padrões aprendidos do Firebase (mais leve)."""
+        db = _get_firebase_db()
+        if not db:
+            return {}
+        try:
+            ref = db.reference(self.FB_PADROES_PATH)
+            padroes = ref.get()
+            return padroes if isinstance(padroes, dict) else {}
+        except Exception as e:
+            logger.warning(f"⚠️ Falha ao buscar padrões do Firebase: {e}")
+            return {}
+
+    # ── Firebase: escrita ──────────────────────────────────────────────────
+
+    def _salvar_firebase(self, dados: Dict[str, Any]):
+        """Persiste memória e padrões no Firebase Realtime Database."""
+        db = _get_firebase_db()
+        if not db:
+            return
+        try:
+            # Salva padrões no nó dedicado (para indexação e busca eficiente)
+            padroes = dados.get("padroes_aprendidos", {})
+            if padroes:
+                db.reference(self.FB_PADROES_PATH).set(padroes)
+
+            # Salva metadados de memória (sem padroes_aprendidos para evitar duplicata)
+            meta = {k: v for k, v in dados.items() if k != "padroes_aprendidos"}
+            # Firebase não suporta listas como chave raiz; converte historico_recente
+            if "historico_recente" in meta and isinstance(meta["historico_recente"], list):
+                meta["historico_recente"] = {
+                    str(i): item for i, item in enumerate(meta["historico_recente"][:100])
+                }
+            db.reference(self.FB_MEMORIA_PATH).update(meta)
+            logger.debug("🔥 Memória PADOC sincronizada com Firebase.")
+        except Exception as e:
+            logger.warning(f"⚠️ Falha ao salvar no Firebase: {e}")
+
+    def _salvar_padrao_firebase(self, chave: str, entrada: Dict[str, Any]):
+        """Atualiza um único padrão no Firebase (mais eficiente que re-salvar tudo)."""
+        db = _get_firebase_db()
+        if not db:
+            return
+        try:
+            # Chave Firebase não pode ter caracteres especiais
+            chave_safe = hashlib.sha1(chave.encode()).hexdigest()[:16]
+            db.reference(f"{self.FB_PADROES_PATH}/{chave_safe}").set({
+                **entrada,
+                "_chave_original": chave
+            })
+            logger.debug(f"🔥 Padrão '{chave[:30]}' salvo no Firebase.")
+        except Exception as e:
+            logger.warning(f"⚠️ Falha ao salvar padrão no Firebase: {e}")
+
+    # ── Lógica de aprendizado ───────────────────────────────────────────────
+
+    def registrar_aprendizado(self, problema: str, solucao: str, veiculo: str = "Geral",
+                              eficacia: float = 1.0, autor: str = "oficina"):
         """
         Registra um caso resolvido com sucesso para auto-retroalimentação.
+        Persiste localmente E no Firebase Realtime Database.
         """
         chave_problema = normalizar_texto(problema)
         if not chave_problema:
             return
 
         padroes = self.memoria.setdefault("padroes_aprendidos", {})
-        
+
         if chave_problema not in padroes:
             padroes[chave_problema] = {
                 "problema_original": problema,
@@ -103,7 +243,10 @@ class ContinuousLearner:
             entrada["veiculos_afetados"].append(veiculo)
 
         # Atualiza ou insere a solução
-        solucao_existente = next((s for s in entrada["solucoes"] if normalizar_texto(s["texto"]) == normalizar_texto(solucao)), None)
+        solucao_existente = next(
+            (s for s in entrada["solucoes"]
+             if normalizar_texto(s["texto"]) == normalizar_texto(solucao)), None
+        )
         if solucao_existente:
             solucao_existente["confirmacoes"] += 1
             solucao_existente["eficacia"] = (solucao_existente["eficacia"] + eficacia) / 2
@@ -123,7 +266,7 @@ class ContinuousLearner:
         if eficacia >= 0.8:
             self.memoria["feedback_positivo"] = self.memoria.get("feedback_positivo", 0) + 1
 
-        # Histórico recente limitado aos últimos 100 eventos
+        # Histórico recente (últimos 100)
         historico = self.memoria.setdefault("historico_recente", [])
         historico.insert(0, {
             "timestamp": datetime.now().isoformat(),
@@ -134,20 +277,49 @@ class ContinuousLearner:
         })
         self.memoria["historico_recente"] = historico[:100]
 
-        self._salvar()
-        logger.info(f"✅ PADOC AI aprendeu novo padrão: '{problema}' -> '{solucao}' (Confiança: {entrada['score_confianca']:.2f})")
+        # Persiste local e Firebase
+        self._salvar_local()
+        self._salvar_padrao_firebase(chave_problema, entrada)
+
+        # Atualiza contadores no Firebase
+        db = _get_firebase_db()
+        if db:
+            try:
+                db.reference(self.FB_MEMORIA_PATH).update({
+                    "total_diagnosticos_processados": self.memoria["total_diagnosticos_processados"],
+                    "feedback_positivo": self.memoria["feedback_positivo"],
+                    "versao": self.memoria.get("versao", "2.0")
+                })
+            except Exception:
+                pass
+
+        logger.info(
+            f"✅ PADOC AI aprendeu: '{problema}' -> '{solucao}' "
+            f"(Confiança: {entrada['score_confianca']:.2f}) [Firebase+Local]"
+        )
 
     def consultar_aprendizado(self, texto_sintoma: str) -> List[Dict[str, Any]]:
-        """Busca se a IA já aprendeu a resolver este problema específico."""
+        """
+        Busca padrões aprendidos. Consulta Firebase (conhecimento global)
+        e merge com padrões locais.
+        """
         texto_norm = normalizar_texto(texto_sintoma)
         resultados = []
-        padroes = self.memoria.get("padroes_aprendidos", {})
+
+        # Merge: padrões locais + Firebase (Firebase tem precedência se mais recente)
+        padroes_locais = self.memoria.get("padroes_aprendidos", {})
+        padroes_fb = self._carregar_padroes_firebase()
+        padroes = {**padroes_locais, **padroes_fb}  # Firebase sobrepõe local
 
         for chave, info in padroes.items():
-            if chave in texto_norm or any(palavra in texto_norm for palavra in chave.split() if len(palavra) > 3):
-                resultados.append(info)
+            chave_busca = chave.replace("_", " ")
+            if chave_busca in texto_norm or any(
+                palavra in texto_norm for palavra in chave_busca.split() if len(palavra) > 3
+            ):
+                if isinstance(info, dict) and "solucoes" in info:
+                    resultados.append(info)
 
-        return sorted(resultados, key=lambda x: x["score_confianca"], reverse=True)
+        return sorted(resultados, key=lambda x: x.get("score_confianca", 0), reverse=True)
 
 
 class PadocBrainEngine:
@@ -287,15 +459,93 @@ class PadocBrainEngine:
         # Padrão: Diagnóstico Automotivo Especialista
         return {"intencao": "diagnostico", "confianca": 0.95, "alerta_seguranca": False}
 
+    # ── Cache de respostas no Firebase ────────────────────────────────────
+
+    FB_CACHE_PATH = "cerebro/cache_respostas"
+    FB_HISTORICO_PATH = "cerebro/historico_diagnosticos"
+
+    def _hash_pergunta(self, pergunta: str) -> str:
+        """Gera chave de cache baseada na pergunta normalizada."""
+        return hashlib.sha1(normalizar_texto(pergunta).encode()).hexdigest()[:20]
+
+    def _buscar_cache_firebase(self, pergunta: str) -> Optional[Dict[str, Any]]:
+        """Busca resposta em cache no Firebase para evitar reprocessamento."""
+        db = _get_firebase_db()
+        if not db:
+            return None
+        try:
+            chave = self._hash_pergunta(pergunta)
+            ref = db.reference(f"{self.FB_CACHE_PATH}/{chave}")
+            cached = ref.get()
+            if cached and isinstance(cached, dict):
+                logger.info(f"🔥 Cache hit Firebase para: '{pergunta[:50]}'")
+                cached["_fonte"] = "cache_firebase"
+                cached["_cache_hit"] = True
+                return cached
+        except Exception as e:
+            logger.warning(f"⚠️ Falha ao buscar cache Firebase: {e}")
+        return None
+
+    def _salvar_cache_firebase(self, pergunta: str, resultado: Dict[str, Any]):
+        """Salva resposta no cache Firebase para futuras consultas idênticas."""
+        db = _get_firebase_db()
+        if not db:
+            return
+        try:
+            chave = self._hash_pergunta(pergunta)
+            # Salva sem campos voláteis
+            cache_entry = {
+                k: v for k, v in resultado.items()
+                if k not in ("timestamp", "usuario_id", "_cache_hit", "_fonte")
+            }
+            cache_entry["pergunta_original"] = pergunta[:200]
+            cache_entry["cached_at"] = datetime.now().isoformat()
+            cache_entry["cache_hits"] = (resultado.get("cache_hits", 0) or 0) + 1
+            db.reference(f"{self.FB_CACHE_PATH}/{chave}").set(cache_entry)
+            logger.debug(f"🔥 Resposta cacheada no Firebase: chave={chave}")
+        except Exception as e:
+            logger.warning(f"⚠️ Falha ao salvar cache Firebase: {e}")
+
+    def _salvar_historico_firebase(self, usuario_id: str, pergunta: str, resultado: Dict[str, Any]):
+        """Registra histórico de diagnósticos no Firebase para análise e auditoria."""
+        db = _get_firebase_db()
+        if not db:
+            return
+        try:
+            ref = db.reference(self.FB_HISTORICO_PATH)
+            ref.push({
+                "usuario_id": usuario_id,
+                "pergunta": pergunta[:300],
+                "intencao": resultado.get("intencao", "desconhecida"),
+                "dtcs_detectados": resultado.get("dtcs_detectados", []),
+                "aprendizado_aplicado": resultado.get("aprendizado_aplicado", False),
+                "cache_hit": resultado.get("_cache_hit", False),
+                "timestamp": datetime.now().isoformat()
+            })
+        except Exception as e:
+            logger.warning(f"⚠️ Falha ao salvar histórico Firebase: {e}")
+
+    # ── Diagnóstico principal ──────────────────────────────────────────────
+
     def processar_diagnostico(self, pergunta: str, usuario_id: str = "anonimo", contexto_veiculo: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
         """
         Processamento completo do diagnóstico:
+        0. Busca em cache Firebase (resposta idêntica já processada)
         1. Classificação de intenção e urgência
         2. Extração de códigos DTC (ex: P0300)
-        3. Consulta ao motor de Auto-Aprendizado
+        3. Consulta ao motor de Auto-Aprendizado (local + Firebase)
         4. Consulta ao Sistema Especialista e RAG
         5. Formulação de resposta técnica estruturada
+        6. Salva resultado no cache e histórico Firebase
         """
+        # 0. Verifica cache Firebase para perguntas idênticas (exceto urgências)
+        cached = self._buscar_cache_firebase(pergunta)
+        if cached and cached.get("intencao") != "urgencia":
+            cached["usuario_id"] = usuario_id
+            cached["timestamp"] = datetime.now().isoformat()
+            self._salvar_historico_firebase(usuario_id, pergunta, cached)
+            return cached
+
         classificacao = self.analisar_intencao_e_urgencia(pergunta)
         intencao = classificacao["intencao"]
 
@@ -363,7 +613,7 @@ class PadocBrainEngine:
             contexto_veiculo=contexto_veiculo
         )
 
-        return {
+        resultado = {
             "sucesso": True,
             "intencao": intencao,
             "confianca": classificacao["confianca"],
@@ -376,6 +626,12 @@ class PadocBrainEngine:
             "usuario_id": usuario_id,
             "timestamp": datetime.now().isoformat()
         }
+
+        # 6. Persiste no Firebase: cache (para reutilização) e histórico (para auditoria)
+        self._salvar_cache_firebase(pergunta, resultado)
+        self._salvar_historico_firebase(usuario_id, pergunta, resultado)
+
+        return resultado
 
     def _construir_resposta_tecnica(self, pergunta: str, intencao: str, codigos_encontrados: List[str],
                                     detalhes_dtc: List[Dict[str, Any]], aprendizado_destaque: Optional[Dict[str, Any]],

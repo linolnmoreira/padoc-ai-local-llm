@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "803372348218",
+    "project_id": "apppadoc-2cc2d",
+    "storage_bucket": "apppadoc-2cc2d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:803372348218:android:b06c27d8159b741eee9603",
+        "android_client_info": {
+          "package_name": "com.apppadoc.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "803372348218-0oed9dcmbmb326e73bamqast7tm9mnd7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.apppadoc.app",
+            "certificate_hash": "e2b976e930a4e1adfb2eb9674a90f65878437458"
+          }
+        },
+        {
+          "client_id": "803372348218-3g8ta3d3d5uvruqeutsqtn2fj7emtiok.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.apppadoc.app",
+            "certificate_hash": "1deb158693b0041d3eb621b2cf9743640dfe2d30"
+          }
+        },
+        {
+          "client_id": "803372348218-fonopb07prn472qqo16eleouo5ogk0dd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.apppadoc.app",
+            "certificate_hash": "a5b6d108b23ca381f8b06900471d90c7af26343f"
+          }
+        },
+        {
+          "client_id": "803372348218-rdmvo5a8mq9dktlgaum5qk0qn3e6cgd4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7J7G_fg45xQ3cO2WrAJcA3lxlD4Q7GX8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "803372348218-rdmvo5a8mq9dktlgaum5qk0qn3e6cgd4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

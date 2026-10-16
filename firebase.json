@@ -12,5 +12,10 @@
         "destination": "/index.html"
       }
     ]
-  }
+  },
+  "database": {
+    "rules": "database.rules.json"
+  },
+  "databaseURL": "https://padoc-ai-default-rtdb.firebaseio.com"
 }
+
