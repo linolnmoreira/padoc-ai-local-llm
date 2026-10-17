@@ -97,7 +97,7 @@ class SemanticKnowledgeBase:
         self.carregar_e_indexar_todos_manuais()
 
     def carregar_e_indexar_todos_manuais(self):
-        """Indexa todos os manuais .txt e datasets da PADOC."""
+        """Indexa todos os manuais .txt, datasets JSON e dados multimodais da PADOC."""
         docs = []
 
         # 1. Manuais .txt na raiz
@@ -117,19 +117,82 @@ class SemanticKnowledgeBase:
         knowledge_dir = os.path.join(BASE_DIR, "knowledge")
         if os.path.exists(knowledge_dir):
             for file_name in os.listdir(knowledge_dir):
-                if file_name.endswith(".json"):
+                if file_name.endswith(".json") and not file_name.startswith("_"):
                     caminho = os.path.join(knowledge_dir, file_name)
                     try:
                         with open(caminho, "r", encoding="utf-8") as f:
                             data = json.load(f)
                             if isinstance(data, list):
-                                for item in data[:50]:
+                                for item in data[:100]:
                                     docs.append({"fonte": file_name, "texto": json.dumps(item, ensure_ascii=False)})
                             elif isinstance(data, dict):
-                                for chave, item in list(data.items())[:50]:
+                                for chave, item in list(data.items())[:100]:
                                     docs.append({"fonte": file_name, "texto": f"{chave}: {json.dumps(item, ensure_ascii=False)}"})
                     except Exception:
                         pass
+
+        # 3. Dados multimodais (áudios, fotos, vídeos) — indexa metadados e catálogos
+        multimodal_dir = os.path.join(BASE_DIR, "dados", "multimodal")
+        if os.path.exists(multimodal_dir):
+            # 3a. Catálogos JSON de vídeos/diagnósticos
+            for root, dirs, files in os.walk(multimodal_dir):
+                for file_name in files:
+                    if file_name.endswith(".json"):
+                        caminho = os.path.join(root, file_name)
+                        try:
+                            with open(caminho, "r", encoding="utf-8") as f:
+                                data = json.load(f)
+                                if isinstance(data, dict):
+                                    for chave, item in data.items():
+                                        docs.append({
+                                            "fonte": f"multimodal/{file_name}",
+                                            "texto": f"[VÍDEO/DIAGNÓSTICO VISUAL] {chave}: {json.dumps(item, ensure_ascii=False)}"
+                                        })
+                                elif isinstance(data, list):
+                                    for item in data[:50]:
+                                        docs.append({
+                                            "fonte": f"multimodal/{file_name}",
+                                            "texto": f"[DIAGNÓSTICO MULTIMODAL] {json.dumps(item, ensure_ascii=False)}"
+                                        })
+                        except Exception:
+                            pass
+
+            # 3b. Inventário de amostras de áudio disponíveis
+            audio_dir = os.path.join(multimodal_dir, "audios_ruidos")
+            if os.path.exists(audio_dir):
+                audios_disponiveis = [f for f in os.listdir(audio_dir) if f.endswith((".wav", ".mp3"))]
+                if audios_disponiveis:
+                    descricoes_audio = {
+                        "batida_biela": "Batida de biela/bronzina - som grave e compassado vindo do cárter, indica desgaste da bronzina de biela",
+                        "tucho_teclando": "Tucho hidráulico batendo tec-tec - ruído seco que pode sumir após aquecer, indica tucho descarregado",
+                        "chiado_correia": "Chiado de correia de acessórios - grito agudo ao ligar motor ou acionar AC, indica correia frouxa ou ressecada",
+                        "motor_normal": "Motor normal em funcionamento - referência de áudio para motor saudável sem ruídos anormais"
+                    }
+                    for audio_file in audios_disponiveis:
+                        nome_base = audio_file.replace("amostra_", "").replace(".wav", "")
+                        descricao = descricoes_audio.get(nome_base, f"Amostra de áudio automotivo: {nome_base}")
+                        docs.append({
+                            "fonte": f"multimodal/audios/{audio_file}",
+                            "texto": f"[ÁUDIO DIAGNÓSTICO] {descricao}. Arquivo de referência: {audio_file}"
+                        })
+
+            # 3c. Inventário de fotos disponíveis
+            fotos_dir = os.path.join(multimodal_dir, "fotos_defeitos")
+            if os.path.exists(fotos_dir):
+                fotos_disponiveis = [f for f in os.listdir(fotos_dir) if f.endswith((".jpg", ".png", ".jpeg"))]
+                if fotos_disponiveis:
+                    descricoes_foto = {
+                        "foto_motor_combustao_real": "Foto real de motor a combustão interna automotivo detalhado para referência de diagnóstico visual",
+                        "foto_disco_freio_ventilado": "Foto real de conjunto de freio a disco ventilado e suspensão para inspeção visual de desgaste",
+                        "foto_bloco_motor_mecanica": "Foto do compartimento do motor e cabeçote em inspeção mecânica para diagnóstico visual"
+                    }
+                    for foto_file in fotos_disponiveis:
+                        nome_base = foto_file.rsplit(".", 1)[0]
+                        descricao = descricoes_foto.get(nome_base, f"Foto de inspeção automotiva: {nome_base}")
+                        docs.append({
+                            "fonte": f"multimodal/fotos/{foto_file}",
+                            "texto": f"[FOTO DIAGNÓSTICO VISUAL] {descricao}. Arquivo: {foto_file}"
+                        })
 
         # Indexa no motor ativo
         self.fallback.indexar(docs)

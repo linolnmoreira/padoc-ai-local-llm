@@ -1,0 +1,7555 @@
+{
+  "Toyota": [
+    {
+      "modelo": "Scion xA",
+      "modelo_id": 2206,
+      "marca": "Toyota"
+    },
+    {
+      "modelo": "Scion tC",
+      "modelo_id": 2207,
+      "marca": "Toyota"
+    },
+    {
+      "modelo": "Corolla",
+      "modelo_id": 2208,
+      "marca": "Toyota"
+    },
+    {
+      "modelo": "Prius",
+      "modelo_id": 2209,
+      "marca": "Toyota"
+    },
+    {
+      "modelo": "Scion xB",
+      "modelo_id": 2210,
+      "marca": "Toyota"
+    },
+    {
+      "modelo": "Land Cruiser",
+      "modelo_id": 2211,
+      "marca": "Toyota"
+    },
+    {
+      "modelo": "Highlander",
+      "modelo_id": 2213,
+      "marca": "Toyota"
+    },
+    {
+      "modelo": "4Runner",
+      "modelo_id": 2216,
+      "marca": "Toyota"
+    },
+    {
+      "modelo": "RAV4",
+      "modelo_id": 2217,
+      "marca": "Toyota"
+    },
+    {
+      "modelo": "Tacoma",
+      "modelo_id": 2223,
+      "marca": "Toyota"
+    },
+    {
+      "modelo": "Scion FR-S",
+      "modelo_id": 2315,
+      "marca": "Toyota"
+    },
+    {
+      "modelo": "FJ Cruiser",
+      "modelo_id": 2463,
+      "marca": "Toyota"
+    },
+    {
+      "modelo": "Yaris",
+      "modelo_id": 2464,
+      "marca": "Toyota"
+    },
+    {
+      "modelo": "Avalon",
+      "modelo_id": 2465,
+      "marca": "Toyota"
+    },
+    {
+      "modelo": "Corolla Matrix",
+      "modelo_id": 2466,
+      "marca": "Toyota"
+    },
+    {
+      "modelo": "Tundra",
+      "modelo_id": 2467,
+      "marca": "Toyota"
+    },
+    {
+      "modelo": "Sienna",
+      "modelo_id": 2468,
+      "marca": "Toyota"
+    },
+    {
+      "modelo": "Camry",
+      "modelo_id": 2469,
+      "marca": "Toyota"
+    },
+    {
+      "modelo": "Camry Solara",
+      "modelo_id": 2803,
+      "marca": "Toyota"
+    },
+    {
+      "modelo": "Sequoia",
+      "modelo_id": 2827,
+      "marca": "Toyota"
+    },
+    {
+      "modelo": "Scion xD",
+      "modelo_id": 2933,
+      "marca": "Toyota"
+    },
+    {
+      "modelo": "Venza",
+      "modelo_id": 3005,
+      "marca": "Toyota"
+    },
+    {
+      "modelo": "FCHV-adv",
+      "modelo_id": 3155,
+      "marca": "Toyota"
+    },
+    {
+      "modelo": "Tercel",
+      "modelo_id": 3644,
+      "marca": "Toyota"
+    },
+    {
+      "modelo": "Celica",
+      "modelo_id": 3645,
+      "marca": "Toyota"
+    },
+    {
+      "modelo": "Supra",
+      "modelo_id": 3647,
+      "marca": "Toyota"
+    },
+    {
+      "modelo": "MR2",
+      "modelo_id": 3648,
+      "marca": "Toyota"
+    },
+    {
+      "modelo": "Paseo",
+      "modelo_id": 3649,
+      "marca": "Toyota"
+    },
+    {
+      "modelo": "Echo",
+      "modelo_id": 3650,
+      "marca": "Toyota"
+    },
+    {
+      "modelo": "Cressida",
+      "modelo_id": 3655,
+      "marca": "Toyota"
+    },
+    {
+      "modelo": "Cargo Van",
+      "modelo_id": 3660,
+      "marca": "Toyota"
+    },
+    {
+      "modelo": "Previa",
+      "modelo_id": 9373,
+      "marca": "Toyota"
+    },
+    {
+      "modelo": "T100",
+      "modelo_id": 9374,
+      "marca": "Toyota"
+    },
+    {
+      "modelo": "Mirai",
+      "modelo_id": 10198,
+      "marca": "Toyota"
+    },
+    {
+      "modelo": "Scion iQ",
+      "modelo_id": 10241,
+      "marca": "Toyota"
+    },
+    {
+      "modelo": "Scion iM",
+      "modelo_id": 11501,
+      "marca": "Toyota"
+    },
+    {
+      "modelo": "86",
+      "modelo_id": 13602,
+      "marca": "Toyota"
+    },
+    {
+      "modelo": "Scion iA",
+      "modelo_id": 13603,
+      "marca": "Toyota"
+    },
+    {
+      "modelo": "Prius V",
+      "modelo_id": 13822,
+      "marca": "Toyota"
+    },
+    {
+      "modelo": "Prius C",
+      "modelo_id": 13823,
+      "marca": "Toyota"
+    },
+    {
+      "modelo": "Pick-Up",
+      "modelo_id": 14263,
+      "marca": "Toyota"
+    },
+    {
+      "modelo": "Van",
+      "modelo_id": 14264,
+      "marca": "Toyota"
+    },
+    {
+      "modelo": "Starlet",
+      "modelo_id": 14510,
+      "marca": "Toyota"
+    },
+    {
+      "modelo": "Corona",
+      "modelo_id": 14551,
+      "marca": "Toyota"
+    },
+    {
+      "modelo": "Corolla iM",
+      "modelo_id": 15800,
+      "marca": "Toyota"
+    },
+    {
+      "modelo": "C-HR",
+      "modelo_id": 17213,
+      "marca": "Toyota"
+    },
+    {
+      "modelo": "Prius Prime (PHEV)",
+      "modelo_id": 21950,
+      "marca": "Toyota"
+    },
+    {
+      "modelo": "Yaris iA",
+      "modelo_id": 24949,
+      "marca": "Toyota"
+    },
+    {
+      "modelo": "RAV4 Prime (PHEV)",
+      "modelo_id": 28070,
+      "marca": "Toyota"
+    },
+    {
+      "modelo": "Corolla Cross",
+      "modelo_id": 29274,
+      "marca": "Toyota"
+    },
+    {
+      "modelo": "GR86",
+      "modelo_id": 29364,
+      "marca": "Toyota"
+    },
+    {
+      "modelo": "bZ4X",
+      "modelo_id": 30041,
+      "marca": "Toyota"
+    },
+    {
+      "modelo": "Crown",
+      "modelo_id": 31077,
+      "marca": "Toyota"
+    },
+    {
+      "modelo": "GR Corolla",
+      "modelo_id": 31079,
+      "marca": "Toyota"
+    },
+    {
+      "modelo": "Grand Highlander",
+      "modelo_id": 32304,
+      "marca": "Toyota"
+    },
+    {
+      "modelo": "Crown Signia",
+      "modelo_id": 34866,
+      "marca": "Toyota"
+    },
+    {
+      "modelo": "bZ",
+      "modelo_id": 37150,
+      "marca": "Toyota"
+    },
+    {
+      "modelo": "bZ Woodland",
+      "modelo_id": 37355,
+      "marca": "Toyota"
+    }
+  ],
+  "Honda": [
+    {
+      "modelo": "Accord",
+      "modelo_id": 1861,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "Civic",
+      "modelo_id": 1863,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "Pilot",
+      "modelo_id": 1864,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "CR-V",
+      "modelo_id": 1865,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "Ridgeline",
+      "modelo_id": 1866,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "Element",
+      "modelo_id": 1868,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "Odyssey",
+      "modelo_id": 1869,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "Insight",
+      "modelo_id": 1870,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "FCX Clarity",
+      "modelo_id": 1875,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "Fit",
+      "modelo_id": 2127,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "CR-Z",
+      "modelo_id": 2128,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "S2000",
+      "modelo_id": 3153,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "PCX150",
+      "modelo_id": 3234,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "CB1100",
+      "modelo_id": 3235,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "CTX1300",
+      "modelo_id": 3246,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "CTX700",
+      "modelo_id": 3247,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "Gold Wing",
+      "modelo_id": 3249,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "NC700X",
+      "modelo_id": 3251,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "Metropolitan",
+      "modelo_id": 3252,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "NPS50 (Ruckus)",
+      "modelo_id": 3253,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "ST1300PA",
+      "modelo_id": 3255,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "ST1300",
+      "modelo_id": 3264,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "Silverwing",
+      "modelo_id": 3411,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "VFR1200F (Interceptor 1200)",
+      "modelo_id": 3422,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "NT700V",
+      "modelo_id": 3438,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "PCX125",
+      "modelo_id": 3439,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "SH150i",
+      "modelo_id": 3445,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "Elite 80",
+      "modelo_id": 3474,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "Helix",
+      "modelo_id": 3475,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "VT600 (Shadow VLX)",
+      "modelo_id": 3484,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "ST1300P",
+      "modelo_id": 3507,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "599",
+      "modelo_id": 3515,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "CBR1100X",
+      "modelo_id": 3521,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "CBR954RR",
+      "modelo_id": 3522,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "ST1100P",
+      "modelo_id": 3527,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "ST1100",
+      "modelo_id": 3530,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "Elite 50",
+      "modelo_id": 3567,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "CBR900RR",
+      "modelo_id": 3597,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "Pacific Coast",
+      "modelo_id": 3618,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "VFR750F",
+      "modelo_id": 3654,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "XR250L",
+      "modelo_id": 3666,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "VT1100 (Shadow 1100)",
+      "modelo_id": 3669,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "Shadow",
+      "modelo_id": 3670,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "Trail 70",
+      "modelo_id": 3672,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "RC 45",
+      "modelo_id": 3674,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "Hawk GT",
+      "modelo_id": 3684,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "CB-1",
+      "modelo_id": 3695,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "Elite 250",
+      "modelo_id": 3696,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "Tourist Trophy",
+      "modelo_id": 3697,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "NS50F",
+      "modelo_id": 3698,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "NX250",
+      "modelo_id": 3699,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "NX125",
+      "modelo_id": 3700,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "SA50",
+      "modelo_id": 3701,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "SB50P",
+      "modelo_id": 3702,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "RC30",
+      "modelo_id": 3703,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "XL600V",
+      "modelo_id": 3705,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "Transalp",
+      "modelo_id": 3777,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "NX650",
+      "modelo_id": 3778,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "Prelude",
+      "modelo_id": 5107,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "Passport",
+      "modelo_id": 5959,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "Crosstour",
+      "modelo_id": 9173,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "HR-V",
+      "modelo_id": 9212,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "del Sol",
+      "modelo_id": 9577,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "CB500",
+      "modelo_id": 10253,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "CRF50",
+      "modelo_id": 10618,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "XR400R",
+      "modelo_id": 10619,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "TRX700XX",
+      "modelo_id": 10620,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "TRX450ER",
+      "modelo_id": 10622,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "FourTrax",
+      "modelo_id": 10791,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "TRX400X",
+      "modelo_id": 10792,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "Sportrax",
+      "modelo_id": 10956,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "TRX450R",
+      "modelo_id": 10957,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "CRF70F",
+      "modelo_id": 10958,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "CRF100F",
+      "modelo_id": 10959,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "CR250R",
+      "modelo_id": 10960,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "SA50P",
+      "modelo_id": 11387,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "CR125R",
+      "modelo_id": 11408,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "XR250R",
+      "modelo_id": 11409,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "Big Red",
+      "modelo_id": 11435,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "EV Plus",
+      "modelo_id": 11517,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "TRX90X",
+      "modelo_id": 11588,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "XR600R",
+      "modelo_id": 11589,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "TRX200D",
+      "modelo_id": 11590,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "TRX200DN",
+      "modelo_id": 11591,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "TRX250",
+      "modelo_id": 11592,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "TRX300",
+      "modelo_id": 11593,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "TRX300EX",
+      "modelo_id": 11594,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "TRX300EXN",
+      "modelo_id": 11595,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "TRX300FW",
+      "modelo_id": 11596,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "TRX300FWN",
+      "modelo_id": 11597,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "TRX300N",
+      "modelo_id": 11598,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "TRX400FW",
+      "modelo_id": 11599,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "TRX400FWN",
+      "modelo_id": 11600,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "TRX450S",
+      "modelo_id": 11601,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "TRX450ES",
+      "modelo_id": 11602,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "TRX400EX",
+      "modelo_id": 11603,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "NC700JD (NM4)",
+      "modelo_id": 11658,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "VT1300 (Stateline)",
+      "modelo_id": 11670,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "XR650R",
+      "modelo_id": 11674,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "FourTrax Rancher",
+      "modelo_id": 11689,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "TRX420",
+      "modelo_id": 11718,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "FourTrax Foreman",
+      "modelo_id": 11728,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "TRX680 (Rincon)",
+      "modelo_id": 11755,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "FourTrax Rincon",
+      "modelo_id": 11756,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "NSS300 (Forza)",
+      "modelo_id": 11762,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "Cota 4RT 260",
+      "modelo_id": 11796,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "NC750X",
+      "modelo_id": 11819,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "TRX250X",
+      "modelo_id": 11835,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "TRX450R/TRX450ER",
+      "modelo_id": 11836,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "FourTrax Recon",
+      "modelo_id": 11837,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "NC750S",
+      "modelo_id": 11876,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "ST1300A",
+      "modelo_id": 11903,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "VT1300 (Sabre)",
+      "modelo_id": 11967,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "CBR1000F",
+      "modelo_id": 11975,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "ST1300A/ST1300",
+      "modelo_id": 11989,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "CRF80F",
+      "modelo_id": 11993,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "NC700S",
+      "modelo_id": 12021,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "CBF1000",
+      "modelo_id": 12023,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "VT750 (Shadow Aero 750)",
+      "modelo_id": 12058,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "CBF600",
+      "modelo_id": 12070,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "VT1300 (Fury)",
+      "modelo_id": 12123,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "VT750 (Shadow Phantom 750)",
+      "modelo_id": 12132,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "VT750 (Shadow Ace 750)",
+      "modelo_id": 12137,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "VT750 (Shadow Tourer)",
+      "modelo_id": 12139,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "Silver Wing",
+      "modelo_id": 12146,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "Elite 110",
+      "modelo_id": 12148,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "SH150D/SH150i",
+      "modelo_id": 12150,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "Interstate",
+      "modelo_id": 12160,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "DN-01",
+      "modelo_id": 12162,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "Varadero",
+      "modelo_id": 12191,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "TRX300X",
+      "modelo_id": 12195,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "TRX450ERB",
+      "modelo_id": 12197,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "TRX500",
+      "modelo_id": 12203,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "VT1100 (Shadow Spirit 1100)",
+      "modelo_id": 12224,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "Valkyrie Rune",
+      "modelo_id": 12228,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "CB599",
+      "modelo_id": 12288,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "CB900",
+      "modelo_id": 12318,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "919",
+      "modelo_id": 12319,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "RC51",
+      "modelo_id": 12323,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "XL200R",
+      "modelo_id": 12324,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "CR85R",
+      "modelo_id": 12327,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "XR200R",
+      "modelo_id": 12350,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "NSR50MIN",
+      "modelo_id": 12353,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "TRX700EX",
+      "modelo_id": 12357,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "TRX350FE",
+      "modelo_id": 12359,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "TRX350FM",
+      "modelo_id": 12360,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "TRX350TE",
+      "modelo_id": 12361,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "TRX350TM",
+      "modelo_id": 12362,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "TRX400FA",
+      "modelo_id": 12363,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "TRX450FM",
+      "modelo_id": 12367,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "TRX650FA (Rincon)",
+      "modelo_id": 12372,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "TRX650FG (Rincon)",
+      "modelo_id": 12373,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "NSS250 (Reflex)",
+      "modelo_id": 12375,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "Big Ruckus",
+      "modelo_id": 12376,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "VT600 (Shadow VLX Deluxe)",
+      "modelo_id": 12382,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "TRX250 (SportTrax 250)",
+      "modelo_id": 12408,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "TRX300EX (SportTrax 300)",
+      "modelo_id": 12409,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "TRX400EX (SportTrax 400)",
+      "modelo_id": 12410,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "TRX450ERB (SportTrax 450)",
+      "modelo_id": 12411,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "TRX450ER (SportTrax 450)",
+      "modelo_id": 12412,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "Sport Tourer",
+      "modelo_id": 12470,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "CB900 (Hornet)",
+      "modelo_id": 12472,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "RVT1000R (RC51)",
+      "modelo_id": 12474,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "RC213V",
+      "modelo_id": 12523,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "TRX90 (SportTrax 90)",
+      "modelo_id": 12527,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "TRX250 (Recon)",
+      "modelo_id": 12528,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "VFR1200X (Crosstourer)",
+      "modelo_id": 12539,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "TRX400FGA",
+      "modelo_id": 12552,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "Nighthawk 750",
+      "modelo_id": 12554,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "CBR929RR",
+      "modelo_id": 12565,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "Valkyrie",
+      "modelo_id": 12570,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "XR70R",
+      "modelo_id": 12571,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "XR50R",
+      "modelo_id": 12572,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "CR80R",
+      "modelo_id": 12573,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "XR80R",
+      "modelo_id": 12575,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "XR100R",
+      "modelo_id": 12576,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "ST1100A",
+      "modelo_id": 12583,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "VT1100 (Shadow Aero)",
+      "modelo_id": 12584,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "Valkyrie Tourer",
+      "modelo_id": 12587,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "Valkyrie Interstate",
+      "modelo_id": 12588,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "VT1100 (Shadow Ace Tourer)",
+      "modelo_id": 12647,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "CR500R",
+      "modelo_id": 12651,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "VF750 (Magna V45)",
+      "modelo_id": 12654,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "Gold Wing Aspencade",
+      "modelo_id": 12658,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "VT1100 (Shadow Ace)",
+      "modelo_id": 12662,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "Z50R",
+      "modelo_id": 12663,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "PC800 (PACIFIC COAST)",
+      "modelo_id": 12664,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "XR200",
+      "modelo_id": 12671,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "Gold Wing Interstate",
+      "modelo_id": 12709,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "EZ90",
+      "modelo_id": 12710,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "RC45",
+      "modelo_id": 12722,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "TRX400FG",
+      "modelo_id": 12839,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "Clarity",
+      "modelo_id": 14249,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "SE50PI",
+      "modelo_id": 14790,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "Elite 150",
+      "modelo_id": 14791,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "SE50H",
+      "modelo_id": 14792,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "SE50PH",
+      "modelo_id": 14793,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "NQ50 (Spree)",
+      "modelo_id": 14794,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "Rebel 450",
+      "modelo_id": 14795,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "VT700 (Shadow 700)",
+      "modelo_id": 14796,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "XL250R",
+      "modelo_id": 14799,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "XL600R",
+      "modelo_id": 14800,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "TLR200",
+      "modelo_id": 14801,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "NB50 (Aero 50)",
+      "modelo_id": 14804,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "VF1000R",
+      "modelo_id": 14805,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "VF500 (Interceptor 500)",
+      "modelo_id": 14806,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "CB450",
+      "modelo_id": 14807,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "TG50 (Gyro S)",
+      "modelo_id": 14808,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "Nighthawk S",
+      "modelo_id": 14809,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "VF1100 (Magna V65)",
+      "modelo_id": 14810,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "VT500 (Shadow 500)",
+      "modelo_id": 14811,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "XL80",
+      "modelo_id": 14822,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "XL100S",
+      "modelo_id": 14823,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "VF1100 (Sabre V65)",
+      "modelo_id": 14825,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "VF1000F (Interceptor 1000)",
+      "modelo_id": 14826,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "XL350R",
+      "modelo_id": 14827,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "NH80 (Aero 80)",
+      "modelo_id": 14828,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "CB125",
+      "modelo_id": 14865,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "VF700 (Magna V42)",
+      "modelo_id": 14866,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "NN50 (Gyro)",
+      "modelo_id": 14867,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "XL125",
+      "modelo_id": 15210,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "A1",
+      "modelo_id": 19706,
+      "marca": "Sundiro  Honda Motorcycle Co. Ltd"
+    },
+    {
+      "modelo": "CBF300",
+      "modelo_id": 24766,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "Z125 (Monkey)",
+      "modelo_id": 25273,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "VT800 (Shadow 800)",
+      "modelo_id": 26826,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "Elite 125",
+      "modelo_id": 26829,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "Twinstar",
+      "modelo_id": 26830,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "CM250C",
+      "modelo_id": 26831,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "CX500",
+      "modelo_id": 26833,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "CM450",
+      "modelo_id": 26835,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "VF500 (Magna V30)",
+      "modelo_id": 26836,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "XL500S",
+      "modelo_id": 26837,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "XR500R",
+      "modelo_id": 26839,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "Nighthawk 650",
+      "modelo_id": 26841,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "VF750 (Sabre V45)",
+      "modelo_id": 26842,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "CB550",
+      "modelo_id": 26847,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "CX650",
+      "modelo_id": 26850,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "Accord Crosstour",
+      "modelo_id": 27165,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "ADV150",
+      "modelo_id": 27408,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "Fireblade",
+      "modelo_id": 27409,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "CBX",
+      "modelo_id": 27546,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "FourTrax Foreman Rubicon",
+      "modelo_id": 27839,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "Cota 300RR",
+      "modelo_id": 27889,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "WW150/PCX150",
+      "modelo_id": 27896,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "SXS1000M (Pioneer 1000)",
+      "modelo_id": 27897,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "SXS700M (Pioneer 700)",
+      "modelo_id": 27898,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "SXS500M (Pioneer 500)",
+      "modelo_id": 27899,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "TRX420 (Rancher)",
+      "modelo_id": 27902,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "TRX500 (Rubicon)",
+      "modelo_id": 27909,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "CB1000F",
+      "modelo_id": 27928,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "Trail125",
+      "modelo_id": 27942,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "CRF300L",
+      "modelo_id": 28626,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "Monkey",
+      "modelo_id": 28850,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "Civic Si",
+      "modelo_id": 29417,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "Navi",
+      "modelo_id": 29509,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "PCX",
+      "modelo_id": 29619,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "Ruckus",
+      "modelo_id": 29648,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "TRX520",
+      "modelo_id": 30372,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "SXS520M (Pioneer 520)",
+      "modelo_id": 30374,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "ATC350X",
+      "modelo_id": 30382,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "ATC250",
+      "modelo_id": 30468,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "CM400",
+      "modelo_id": 30813,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "VF700 (Sabre V42)",
+      "modelo_id": 30815,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "VF700 (Interceptor 700)",
+      "modelo_id": 30816,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "Civic Type R",
+      "modelo_id": 31535,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "XR150L",
+      "modelo_id": 31564,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "NU50 (Urban Express)",
+      "modelo_id": 31581,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "NC50 (Express)",
+      "modelo_id": 31582,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "XR350R",
+      "modelo_id": 32049,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "SCL500",
+      "modelo_id": 32079,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "ADV160",
+      "modelo_id": 32124,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "Prologue",
+      "modelo_id": 33174,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "CRF230L",
+      "modelo_id": 33257,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "CRF230M",
+      "modelo_id": 33258,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "CRF230F",
+      "modelo_id": 33259,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "CRF125F",
+      "modelo_id": 33279,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "CRF150F",
+      "modelo_id": 33281,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "CRF150R",
+      "modelo_id": 33282,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "CRF250L",
+      "modelo_id": 33285,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "CRF250R",
+      "modelo_id": 33286,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "CRF250X",
+      "modelo_id": 33287,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "CRF50F",
+      "modelo_id": 33288,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "CRF110F",
+      "modelo_id": 33289,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "CRF450R",
+      "modelo_id": 33290,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "CRF450X",
+      "modelo_id": 33291,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "CRF250RX",
+      "modelo_id": 33292,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "CRF250F",
+      "modelo_id": 33293,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "CRF450RX",
+      "modelo_id": 33294,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "CRF450RL",
+      "modelo_id": 33310,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "CRF450L",
+      "modelo_id": 33319,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "XR650L",
+      "modelo_id": 33499,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "CBR125R",
+      "modelo_id": 33502,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "CBR600RR",
+      "modelo_id": 33503,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "CBR500R",
+      "modelo_id": 33505,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "CB500F",
+      "modelo_id": 33508,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "CB500X",
+      "modelo_id": 33510,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "CBR650F",
+      "modelo_id": 33511,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "CBR1000RR",
+      "modelo_id": 33515,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "CB1000R",
+      "modelo_id": 33518,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "CBR250R",
+      "modelo_id": 33522,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "CBR300R",
+      "modelo_id": 33524,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "CB300F",
+      "modelo_id": 33526,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "CB650F",
+      "modelo_id": 33532,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "CBF300N",
+      "modelo_id": 33534,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "CB300R",
+      "modelo_id": 33535,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "CBR650R",
+      "modelo_id": 33536,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "CB650R",
+      "modelo_id": 33537,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "XR650LL",
+      "modelo_id": 33585,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "CTX700N",
+      "modelo_id": 33591,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "ST1100L",
+      "modelo_id": 33632,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "ST1100AL",
+      "modelo_id": 33633,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "NX500",
+      "modelo_id": 34007,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "Cota 4RT 301RR",
+      "modelo_id": 34886,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "DAX 125",
+      "modelo_id": 35111,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "Africa Twin",
+      "modelo_id": 35229,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "Fury",
+      "modelo_id": 35230,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "NT1100",
+      "modelo_id": 35732,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "TRX700 (Rubicon 700)",
+      "modelo_id": 36360,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "Shadow Phantom",
+      "modelo_id": 36467,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "Giorno",
+      "modelo_id": 36706,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "Foreman",
+      "modelo_id": 36707,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "Rubicon",
+      "modelo_id": 36708,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "Foreman Rubicon",
+      "modelo_id": 36711,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "Rancher",
+      "modelo_id": 36712,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "Recon",
+      "modelo_id": 36713,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "Rincon",
+      "modelo_id": 36714,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "Rebel 1100",
+      "modelo_id": 36952,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "Rebel 300",
+      "modelo_id": 36953,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "Rebel 500",
+      "modelo_id": 36954,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "Shadow Aero",
+      "modelo_id": 37125,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "Gold Wing Tour",
+      "modelo_id": 37126,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "Grom",
+      "modelo_id": 37127,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "Super Cub C125",
+      "modelo_id": 37131,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "Africa Twin Adventure Sports",
+      "modelo_id": 37132,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "SXS1000S (Talon 1000)",
+      "modelo_id": 37133,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "CBR600F",
+      "modelo_id": 37149,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "Jazz",
+      "modelo_id": 37205,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "CG150",
+      "modelo_id": 37210,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "CB500 Hornet",
+      "modelo_id": 37270,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "CB50R",
+      "modelo_id": 37303,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "VTR250 (Interceptor 250)",
+      "modelo_id": 37544,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "VTR1000F (Super Hawk)",
+      "modelo_id": 37545,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "VTX1300",
+      "modelo_id": 37546,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "VTX1800",
+      "modelo_id": 37547,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "VT1100 (Shadow Sabre)",
+      "modelo_id": 37554,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "VF750 (Interceptor 750)",
+      "modelo_id": 37555,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "VFR800 (Interceptor 800)",
+      "modelo_id": 37556,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "VT1300 (Interstate)",
+      "modelo_id": 37557,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "Cota 4RT 260R",
+      "modelo_id": 37639,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "Cota 310RR",
+      "modelo_id": 37640,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "CRF300F",
+      "modelo_id": 37641,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "FourTrax Rubicon",
+      "modelo_id": 37642,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "VT750 (Shadow Spirit 750)",
+      "modelo_id": 37875,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "VT750 (Shadow RS 750)",
+      "modelo_id": 37876,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "VT500 (Ascot)",
+      "modelo_id": 37878,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "Metropolitan II",
+      "modelo_id": 37879,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "Nighthawk 250",
+      "modelo_id": 37880,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "NC750JD (NM4)",
+      "modelo_id": 37881,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "SXS5M2 (Pioneer 520)",
+      "modelo_id": 37893,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "CB1000 Hornet",
+      "modelo_id": 37996,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "CB750 Hornet E-Clutch",
+      "modelo_id": 38058,
+      "marca": "Honda"
+    },
+    {
+      "modelo": "Rebel 250",
+      "modelo_id": 38060,
+      "marca": "Honda"
+    }
+  ],
+  "Volkswagen": [
+    {
+      "modelo": "Routan",
+      "modelo_id": 1951,
+      "marca": "Volkswagen"
+    },
+    {
+      "modelo": "Golf",
+      "modelo_id": 3133,
+      "marca": "Volkswagen"
+    },
+    {
+      "modelo": "Passat",
+      "modelo_id": 3134,
+      "marca": "Volkswagen"
+    },
+    {
+      "modelo": "Phaeton",
+      "modelo_id": 3135,
+      "marca": "Volkswagen"
+    },
+    {
+      "modelo": "Touareg",
+      "modelo_id": 3136,
+      "marca": "Volkswagen"
+    },
+    {
+      "modelo": "Jetta",
+      "modelo_id": 3137,
+      "marca": "Volkswagen"
+    },
+    {
+      "modelo": "GTI",
+      "modelo_id": 3140,
+      "marca": "Volkswagen"
+    },
+    {
+      "modelo": "R32",
+      "modelo_id": 3141,
+      "marca": "Volkswagen"
+    },
+    {
+      "modelo": "Jetta Wagon",
+      "modelo_id": 3142,
+      "marca": "Volkswagen"
+    },
+    {
+      "modelo": "Rabbit",
+      "modelo_id": 4084,
+      "marca": "Volkswagen"
+    },
+    {
+      "modelo": "Eos",
+      "modelo_id": 4167,
+      "marca": "Volkswagen"
+    },
+    {
+      "modelo": "Golf SportWagen",
+      "modelo_id": 5059,
+      "marca": "Volkswagen"
+    },
+    {
+      "modelo": "Golf III",
+      "modelo_id": 8051,
+      "marca": "Volkswagen"
+    },
+    {
+      "modelo": "Corrado",
+      "modelo_id": 8053,
+      "marca": "Volkswagen"
+    },
+    {
+      "modelo": "EuroVan",
+      "modelo_id": 8055,
+      "marca": "Volkswagen"
+    },
+    {
+      "modelo": "e-Golf",
+      "modelo_id": 8118,
+      "marca": "Volkswagen"
+    },
+    {
+      "modelo": "Beetle",
+      "modelo_id": 8119,
+      "marca": "Volkswagen"
+    },
+    {
+      "modelo": "CC",
+      "modelo_id": 8121,
+      "marca": "Volkswagen"
+    },
+    {
+      "modelo": "Tiguan",
+      "modelo_id": 8151,
+      "marca": "Volkswagen"
+    },
+    {
+      "modelo": "Jetta SportWagen",
+      "modelo_id": 8364,
+      "marca": "Volkswagen"
+    },
+    {
+      "modelo": "Cabrio",
+      "modelo_id": 8460,
+      "marca": "Volkswagen"
+    },
+    {
+      "modelo": "Golf GTI",
+      "modelo_id": 13670,
+      "marca": "Volkswagen"
+    },
+    {
+      "modelo": "Golf R",
+      "modelo_id": 13844,
+      "marca": "Volkswagen"
+    },
+    {
+      "modelo": "CABRIOLET",
+      "modelo_id": 14216,
+      "marca": "Volkswagen"
+    },
+    {
+      "modelo": "FOX",
+      "modelo_id": 14217,
+      "marca": "Volkswagen"
+    },
+    {
+      "modelo": "Quantum",
+      "modelo_id": 14261,
+      "marca": "Volkswagen"
+    },
+    {
+      "modelo": "Scirocco",
+      "modelo_id": 14262,
+      "marca": "Volkswagen"
+    },
+    {
+      "modelo": "Vanagon",
+      "modelo_id": 14266,
+      "marca": "Volkswagen"
+    },
+    {
+      "modelo": "Dasher",
+      "modelo_id": 14568,
+      "marca": "Volkswagen"
+    },
+    {
+      "modelo": "KOMBI",
+      "modelo_id": 14569,
+      "marca": "Volkswagen"
+    },
+    {
+      "modelo": "Atlas",
+      "modelo_id": 17618,
+      "marca": "Volkswagen"
+    },
+    {
+      "modelo": "Golf Alltrack",
+      "modelo_id": 24230,
+      "marca": "Volkswagen"
+    },
+    {
+      "modelo": "Tiguan Limited",
+      "modelo_id": 24247,
+      "marca": "Volkswagen"
+    },
+    {
+      "modelo": "Arteon",
+      "modelo_id": 25871,
+      "marca": "Volkswagen"
+    },
+    {
+      "modelo": "GLI",
+      "modelo_id": 26088,
+      "marca": "Volkswagen"
+    },
+    {
+      "modelo": "Atlas Cross Sport",
+      "modelo_id": 27124,
+      "marca": "Volkswagen"
+    },
+    {
+      "modelo": "ID.4",
+      "modelo_id": 28219,
+      "marca": "Volkswagen"
+    },
+    {
+      "modelo": "Taos",
+      "modelo_id": 28652,
+      "marca": "Volkswagen"
+    },
+    {
+      "modelo": "Jetta GLI",
+      "modelo_id": 29681,
+      "marca": "Volkswagen"
+    },
+    {
+      "modelo": "ID. Buzz",
+      "modelo_id": 35143,
+      "marca": "Volkswagen"
+    }
+  ],
+  "Chevrolet": [
+    {
+      "modelo": "Aveo",
+      "modelo_id": 1828,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "Camaro",
+      "modelo_id": 1829,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "Caprice Police Vehicle",
+      "modelo_id": 1830,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "Corvette",
+      "modelo_id": 1831,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "Cruze",
+      "modelo_id": 1832,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "Impala",
+      "modelo_id": 1833,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "Malibu",
+      "modelo_id": 1834,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "Sonic",
+      "modelo_id": 1835,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "Spark",
+      "modelo_id": 1836,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "SS",
+      "modelo_id": 1837,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "Volt",
+      "modelo_id": 1838,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "Captiva Sport",
+      "modelo_id": 1846,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "Equinox",
+      "modelo_id": 1847,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "Express",
+      "modelo_id": 1848,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "Orlando",
+      "modelo_id": 1849,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "Silverado",
+      "modelo_id": 1850,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "Suburban",
+      "modelo_id": 1851,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "Tahoe",
+      "modelo_id": 1852,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "Traverse",
+      "modelo_id": 1853,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "Tracker",
+      "modelo_id": 1854,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "City Express",
+      "modelo_id": 1921,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "Geo Prizm",
+      "modelo_id": 3531,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "Avalanche",
+      "modelo_id": 3876,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "Matiz",
+      "modelo_id": 4047,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "Colorado",
+      "modelo_id": 4086,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "Cobalt",
+      "modelo_id": 4234,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "Optra",
+      "modelo_id": 4251,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "Kalos",
+      "modelo_id": 4255,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "Trailblazer",
+      "modelo_id": 4548,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "HHR",
+      "modelo_id": 4586,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "Uplander",
+      "modelo_id": 4588,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "W4",
+      "modelo_id": 4687,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "W5",
+      "modelo_id": 4688,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "Monte Carlo",
+      "modelo_id": 4773,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "SSR",
+      "modelo_id": 4889,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "Epica",
+      "modelo_id": 4992,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "Cavalier",
+      "modelo_id": 8834,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "U100",
+      "modelo_id": 8835,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "3 ton",
+      "modelo_id": 8881,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "Astro Van",
+      "modelo_id": 8882,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "Venture",
+      "modelo_id": 8883,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "B7",
+      "modelo_id": 9016,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "Lumina",
+      "modelo_id": 9064,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "Alero",
+      "modelo_id": 9088,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "Caprice",
+      "modelo_id": 9115,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "Corsica",
+      "modelo_id": 9116,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "Beretta",
+      "modelo_id": 9117,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "Hearse/Limo",
+      "modelo_id": 9139,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "Metro",
+      "modelo_id": 10043,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "GMT-400",
+      "modelo_id": 10978,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "Military Truck",
+      "modelo_id": 10979,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "Forward Control",
+      "modelo_id": 10983,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "Trax",
+      "modelo_id": 10988,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "S-10 Pickup",
+      "modelo_id": 11483,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "C/K Pickup",
+      "modelo_id": 11489,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "P - Series",
+      "modelo_id": 11491,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "Lumina APV",
+      "modelo_id": 11497,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "Blazer",
+      "modelo_id": 11502,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "Impala Limited",
+      "modelo_id": 13634,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "Bolt EV",
+      "modelo_id": 13672,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "3500HD",
+      "modelo_id": 13737,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "5500HD",
+      "modelo_id": 13738,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "3500/4500",
+      "modelo_id": 13739,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "4500HD",
+      "modelo_id": 13740,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "4500XD",
+      "modelo_id": 13741,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "5500XD",
+      "modelo_id": 13742,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "T-Series",
+      "modelo_id": 14032,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "C4",
+      "modelo_id": 14033,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "C5",
+      "modelo_id": 14034,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "C6",
+      "modelo_id": 14035,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "C7",
+      "modelo_id": 14036,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "C8",
+      "modelo_id": 14037,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "W7",
+      "modelo_id": 14040,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "Hearse/Limo Commercial Chassis",
+      "modelo_id": 14166,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "W3",
+      "modelo_id": 14206,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "W6",
+      "modelo_id": 14450,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "D7",
+      "modelo_id": 14451,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "P6S",
+      "modelo_id": 14452,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "S-10 Blazer",
+      "modelo_id": 14457,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "P Truck Forward",
+      "modelo_id": 14458,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "Celebrity",
+      "modelo_id": 14460,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "Geo Spectrum",
+      "modelo_id": 14461,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "G-Series",
+      "modelo_id": 14462,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "Cutaway Chassis",
+      "modelo_id": 14464,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "Motorhome Chassis",
+      "modelo_id": 14465,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "Chevette",
+      "modelo_id": 14475,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "Hi-Cube",
+      "modelo_id": 14501,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "Cutaway Van",
+      "modelo_id": 14502,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "S7",
+      "modelo_id": 14506,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "Geo Sprint",
+      "modelo_id": 14513,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "Nova",
+      "modelo_id": 14515,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "S6",
+      "modelo_id": 14544,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "R Conventional",
+      "modelo_id": 14545,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "V Conventional",
+      "modelo_id": 14546,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "Citation",
+      "modelo_id": 14547,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "Bus Chassis",
+      "modelo_id": 14616,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "Heavy Conventional",
+      "modelo_id": 14617,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "Aluminum Tilt",
+      "modelo_id": 14619,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "El Camino",
+      "modelo_id": 14637,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "LUV",
+      "modelo_id": 15634,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "Malibu Classic",
+      "modelo_id": 17528,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "3500",
+      "modelo_id": 22511,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "4500",
+      "modelo_id": 22512,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "Bolt Incomplete",
+      "modelo_id": 24257,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "FTR",
+      "modelo_id": 24759,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "6500XD",
+      "modelo_id": 24868,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "Silverado HD",
+      "modelo_id": 24906,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "Silverado LD",
+      "modelo_id": 25279,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "7500XD",
+      "modelo_id": 25609,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "W3500/W4500",
+      "modelo_id": 27018,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "W5500/W5500 HD",
+      "modelo_id": 27019,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "Onix",
+      "modelo_id": 27445,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "Silverado LTD",
+      "modelo_id": 29076,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "Bolt EUV",
+      "modelo_id": 30005,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "3500HG",
+      "modelo_id": 31672,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "4500HG",
+      "modelo_id": 31673,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "5500HG",
+      "modelo_id": 31674,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "5500XG",
+      "modelo_id": 31675,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "Traverse Limited",
+      "modelo_id": 33684,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "Cruze Limited",
+      "modelo_id": 34069,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "Malibu Limited",
+      "modelo_id": 34272,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "BrightDrop",
+      "modelo_id": 34740,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "Suburban HD",
+      "modelo_id": 35053,
+      "marca": "Chevrolet"
+    },
+    {
+      "modelo": "Bolt",
+      "modelo_id": 36838,
+      "marca": "Chevrolet"
+    }
+  ],
+  "Fiat": [
+    {
+      "modelo": "500L",
+      "modelo_id": 2037,
+      "marca": "Fiat"
+    },
+    {
+      "modelo": "500",
+      "modelo_id": 2055,
+      "marca": "Fiat"
+    },
+    {
+      "modelo": "Freemont",
+      "modelo_id": 3490,
+      "marca": "Fiat"
+    },
+    {
+      "modelo": "500X",
+      "modelo_id": 10396,
+      "marca": "Fiat"
+    },
+    {
+      "modelo": "124 Spider",
+      "modelo_id": 11448,
+      "marca": "Fiat"
+    },
+    {
+      "modelo": "Spider 2000",
+      "modelo_id": 14603,
+      "marca": "Fiat"
+    },
+    {
+      "modelo": "X 1/9",
+      "modelo_id": 14604,
+      "marca": "Fiat"
+    },
+    {
+      "modelo": "Brava",
+      "modelo_id": 14605,
+      "marca": "Fiat"
+    },
+    {
+      "modelo": "Strada",
+      "modelo_id": 14606,
+      "marca": "Fiat"
+    },
+    {
+      "modelo": "Ducato",
+      "modelo_id": 25128,
+      "marca": "Fiat"
+    },
+    {
+      "modelo": "500e",
+      "modelo_id": 33815,
+      "marca": "Fiat"
+    }
+  ],
+  "Hyundai": [
+    {
+      "modelo": "Equus",
+      "modelo_id": 2056,
+      "marca": "Hyundai"
+    },
+    {
+      "modelo": "Santa Fe",
+      "modelo_id": 2057,
+      "marca": "Hyundai"
+    },
+    {
+      "modelo": "Tucson",
+      "modelo_id": 2058,
+      "marca": "Hyundai"
+    },
+    {
+      "modelo": "Veloster",
+      "modelo_id": 2298,
+      "marca": "Hyundai"
+    },
+    {
+      "modelo": "Genesis Coupe",
+      "modelo_id": 2458,
+      "marca": "Hyundai"
+    },
+    {
+      "modelo": "Sonata",
+      "modelo_id": 2459,
+      "marca": "Hyundai"
+    },
+    {
+      "modelo": "Elantra",
+      "modelo_id": 2735,
+      "marca": "Hyundai"
+    },
+    {
+      "modelo": "Entourage",
+      "modelo_id": 2736,
+      "marca": "Hyundai"
+    },
+    {
+      "modelo": "Azera",
+      "modelo_id": 2771,
+      "marca": "Hyundai"
+    },
+    {
+      "modelo": "Veracruz",
+      "modelo_id": 2772,
+      "marca": "Hyundai"
+    },
+    {
+      "modelo": "Accent",
+      "modelo_id": 2773,
+      "marca": "Hyundai"
+    },
+    {
+      "modelo": "Genesis",
+      "modelo_id": 2774,
+      "marca": "Hyundai"
+    },
+    {
+      "modelo": "Tiburon",
+      "modelo_id": 5847,
+      "marca": "Hyundai"
+    },
+    {
+      "modelo": "Elantra Touring",
+      "modelo_id": 5871,
+      "marca": "Hyundai"
+    },
+    {
+      "modelo": "XG350",
+      "modelo_id": 5872,
+      "marca": "Hyundai"
+    },
+    {
+      "modelo": "Excel",
+      "modelo_id": 9242,
+      "marca": "Hyundai"
+    },
+    {
+      "modelo": "Scoupe",
+      "modelo_id": 9252,
+      "marca": "Hyundai"
+    },
+    {
+      "modelo": "XG300",
+      "modelo_id": 9319,
+      "marca": "Hyundai"
+    },
+    {
+      "modelo": "Elantra GT",
+      "modelo_id": 11447,
+      "marca": "Hyundai"
+    },
+    {
+      "modelo": "Hyundai Translead Trailers",
+      "modelo_id": 11496,
+      "marca": "Hyundai Translead Trailers"
+    },
+    {
+      "modelo": "Hyundai Steel Industries, Inc.",
+      "modelo_id": 12435,
+      "marca": "Hyundai Steel Industries, Inc."
+    },
+    {
+      "modelo": "Pony",
+      "modelo_id": 14192,
+      "marca": "Hyundai"
+    },
+    {
+      "modelo": "Stellar",
+      "modelo_id": 14193,
+      "marca": "Hyundai"
+    },
+    {
+      "modelo": "Santa Fe Sport",
+      "modelo_id": 16694,
+      "marca": "Hyundai"
+    },
+    {
+      "modelo": "Ioniq",
+      "modelo_id": 21961,
+      "marca": "Hyundai"
+    },
+    {
+      "modelo": "Kona",
+      "modelo_id": 22249,
+      "marca": "Hyundai"
+    },
+    {
+      "modelo": "Santa Fe XL",
+      "modelo_id": 24770,
+      "marca": "Hyundai"
+    },
+    {
+      "modelo": "Nexo",
+      "modelo_id": 25183,
+      "marca": "Hyundai"
+    },
+    {
+      "modelo": "Palisade",
+      "modelo_id": 25847,
+      "marca": "Hyundai"
+    },
+    {
+      "modelo": "Venue",
+      "modelo_id": 26441,
+      "marca": "Hyundai"
+    },
+    {
+      "modelo": "Veloster N",
+      "modelo_id": 28077,
+      "marca": "Hyundai"
+    },
+    {
+      "modelo": "Santa Cruz",
+      "modelo_id": 28816,
+      "marca": "Hyundai"
+    },
+    {
+      "modelo": "Ioniq 5",
+      "modelo_id": 28983,
+      "marca": "Hyundai"
+    },
+    {
+      "modelo": "Elantra N",
+      "modelo_id": 29258,
+      "marca": "Hyundai"
+    },
+    {
+      "modelo": "Xcient",
+      "modelo_id": 30756,
+      "marca": "Hyundai"
+    },
+    {
+      "modelo": "Ioniq 6",
+      "modelo_id": 31360,
+      "marca": "Hyundai"
+    },
+    {
+      "modelo": "Kona N",
+      "modelo_id": 32348,
+      "marca": "Hyundai"
+    },
+    {
+      "modelo": "Ioniq 5 N",
+      "modelo_id": 33664,
+      "marca": "Hyundai"
+    },
+    {
+      "modelo": "Ioniq 9",
+      "modelo_id": 35749,
+      "marca": "Hyundai"
+    },
+    {
+      "modelo": "Ioniq 6 N",
+      "modelo_id": 36896,
+      "marca": "Hyundai"
+    }
+  ],
+  "Kia": [
+    {
+      "modelo": "Rio",
+      "modelo_id": 2299,
+      "marca": "Kia"
+    },
+    {
+      "modelo": "Soul",
+      "modelo_id": 2460,
+      "marca": "Kia"
+    },
+    {
+      "modelo": "Borrego",
+      "modelo_id": 2461,
+      "marca": "Kia"
+    },
+    {
+      "modelo": "Forte",
+      "modelo_id": 2462,
+      "marca": "Kia"
+    },
+    {
+      "modelo": "Rondo",
+      "modelo_id": 2738,
+      "marca": "Kia"
+    },
+    {
+      "modelo": "Optima",
+      "modelo_id": 2739,
+      "marca": "Kia"
+    },
+    {
+      "modelo": "Sedona",
+      "modelo_id": 2740,
+      "marca": "Kia"
+    },
+    {
+      "modelo": "Sorento",
+      "modelo_id": 2769,
+      "marca": "Kia"
+    },
+    {
+      "modelo": "Sportage",
+      "modelo_id": 2770,
+      "marca": "Kia"
+    },
+    {
+      "modelo": "Cadenza",
+      "modelo_id": 3071,
+      "marca": "Kia"
+    },
+    {
+      "modelo": "K900",
+      "modelo_id": 3184,
+      "marca": "Kia"
+    },
+    {
+      "modelo": "Sephia",
+      "modelo_id": 5498,
+      "marca": "Kia"
+    },
+    {
+      "modelo": "Spectra",
+      "modelo_id": 5499,
+      "marca": "Kia"
+    },
+    {
+      "modelo": "Amanti",
+      "modelo_id": 5500,
+      "marca": "Kia"
+    },
+    {
+      "modelo": "Forte Koup",
+      "modelo_id": 12815,
+      "marca": "Kia"
+    },
+    {
+      "modelo": "Miami",
+      "modelo_id": 15271,
+      "marca": "MGS Grand Sport (Mardikian)"
+    },
+    {
+      "modelo": "Niro",
+      "modelo_id": 15705,
+      "marca": "Kia"
+    },
+    {
+      "modelo": "Stinger",
+      "modelo_id": 21370,
+      "marca": "Kia"
+    },
+    {
+      "modelo": "Telluride",
+      "modelo_id": 25756,
+      "marca": "Kia"
+    },
+    {
+      "modelo": "Seltos",
+      "modelo_id": 26900,
+      "marca": "Kia"
+    },
+    {
+      "modelo": "K5",
+      "modelo_id": 27527,
+      "marca": "Kia"
+    },
+    {
+      "modelo": "Carnival",
+      "modelo_id": 28294,
+      "marca": "Kia"
+    },
+    {
+      "modelo": "EV6",
+      "modelo_id": 29462,
+      "marca": "Kia"
+    },
+    {
+      "modelo": "EV9",
+      "modelo_id": 32587,
+      "marca": "Kia"
+    },
+    {
+      "modelo": "Tekiar",
+      "modelo_id": 33008,
+      "marca": "TEKIAR"
+    },
+    {
+      "modelo": "K4",
+      "modelo_id": 34783,
+      "marca": "Kia"
+    },
+    {
+      "modelo": "EV3",
+      "modelo_id": 38038,
+      "marca": "Kia"
+    }
+  ],
+  "Nissan": [
+    {
+      "modelo": "GT-R",
+      "modelo_id": 1890,
+      "marca": "Nissan"
+    },
+    {
+      "modelo": "Versa",
+      "modelo_id": 1894,
+      "marca": "Nissan"
+    },
+    {
+      "modelo": "Versa Note",
+      "modelo_id": 1898,
+      "marca": "Nissan"
+    },
+    {
+      "modelo": "Altima",
+      "modelo_id": 1904,
+      "marca": "Nissan"
+    },
+    {
+      "modelo": "Leaf",
+      "modelo_id": 1905,
+      "marca": "Nissan"
+    },
+    {
+      "modelo": "370Z",
+      "modelo_id": 1906,
+      "marca": "Nissan"
+    },
+    {
+      "modelo": "Sentra",
+      "modelo_id": 1907,
+      "marca": "Nissan"
+    },
+    {
+      "modelo": "Pathfinder",
+      "modelo_id": 1911,
+      "marca": "Nissan"
+    },
+    {
+      "modelo": "Juke",
+      "modelo_id": 1912,
+      "marca": "Nissan"
+    },
+    {
+      "modelo": "Rogue",
+      "modelo_id": 1913,
+      "marca": "Nissan"
+    },
+    {
+      "modelo": "Murano",
+      "modelo_id": 1914,
+      "marca": "Nissan"
+    },
+    {
+      "modelo": "Armada",
+      "modelo_id": 1915,
+      "marca": "Nissan"
+    },
+    {
+      "modelo": "Xterra",
+      "modelo_id": 1916,
+      "marca": "Nissan"
+    },
+    {
+      "modelo": "Quest",
+      "modelo_id": 1917,
+      "marca": "Nissan"
+    },
+    {
+      "modelo": "NV200",
+      "modelo_id": 1918,
+      "marca": "Nissan"
+    },
+    {
+      "modelo": "Frontier",
+      "modelo_id": 1919,
+      "marca": "Nissan"
+    },
+    {
+      "modelo": "Titan",
+      "modelo_id": 1920,
+      "marca": "Nissan"
+    },
+    {
+      "modelo": "NV",
+      "modelo_id": 1922,
+      "marca": "Nissan"
+    },
+    {
+      "modelo": "Maxima",
+      "modelo_id": 2302,
+      "marca": "Nissan"
+    },
+    {
+      "modelo": "350Z",
+      "modelo_id": 2303,
+      "marca": "Nissan"
+    },
+    {
+      "modelo": "X-Trail",
+      "modelo_id": 2323,
+      "marca": "Nissan"
+    },
+    {
+      "modelo": "Cube",
+      "modelo_id": 2341,
+      "marca": "Nissan"
+    },
+    {
+      "modelo": "240SX",
+      "modelo_id": 5565,
+      "marca": "Nissan"
+    },
+    {
+      "modelo": "300ZX",
+      "modelo_id": 5566,
+      "marca": "Nissan"
+    },
+    {
+      "modelo": "Pickup",
+      "modelo_id": 5748,
+      "marca": "Nissan"
+    },
+    {
+      "modelo": "Altra-EV",
+      "modelo_id": 5756,
+      "marca": "Nissan"
+    },
+    {
+      "modelo": "NX",
+      "modelo_id": 11506,
+      "marca": "Nissan"
+    },
+    {
+      "modelo": "Stanza",
+      "modelo_id": 11508,
+      "marca": "Nissan"
+    },
+    {
+      "modelo": "Axxess",
+      "modelo_id": 11509,
+      "marca": "Nissan"
+    },
+    {
+      "modelo": "PULSAR",
+      "modelo_id": 13524,
+      "marca": "Nissan"
+    },
+    {
+      "modelo": "Van",
+      "modelo_id": 14272,
+      "marca": "Nissan"
+    },
+    {
+      "modelo": "Stanza Wagon",
+      "modelo_id": 14329,
+      "marca": "Nissan"
+    },
+    {
+      "modelo": "200SX",
+      "modelo_id": 14385,
+      "marca": "Nissan"
+    },
+    {
+      "modelo": "Rogue Sport",
+      "modelo_id": 17214,
+      "marca": "Nissan"
+    },
+    {
+      "modelo": "Sentra Classic",
+      "modelo_id": 17615,
+      "marca": "Nissan"
+    },
+    {
+      "modelo": "Altra",
+      "modelo_id": 17616,
+      "marca": "Nissan"
+    },
+    {
+      "modelo": "Micra",
+      "modelo_id": 17817,
+      "marca": "Nissan"
+    },
+    {
+      "modelo": "Rogue Select",
+      "modelo_id": 18137,
+      "marca": "Nissan"
+    },
+    {
+      "modelo": "Kicks",
+      "modelo_id": 22791,
+      "marca": "Nissan"
+    },
+    {
+      "modelo": "Nissan Z",
+      "modelo_id": 30039,
+      "marca": "Nissan"
+    },
+    {
+      "modelo": "Ariya Hatchback",
+      "modelo_id": 30884,
+      "marca": "Nissan"
+    },
+    {
+      "modelo": "Kicks Play",
+      "modelo_id": 35324,
+      "marca": "Nissan"
+    },
+    {
+      "modelo": "Kicks MPV",
+      "modelo_id": 35389,
+      "marca": "Nissan"
+    },
+    {
+      "modelo": "Ariya MPV",
+      "modelo_id": 36667,
+      "marca": "Nissan"
+    }
+  ],
+  "Renault": [
+    {
+      "modelo": "LeCar",
+      "modelo_id": 36427,
+      "marca": "Renault"
+    },
+    {
+      "modelo": "18i",
+      "modelo_id": 36428,
+      "marca": "Renault"
+    },
+    {
+      "modelo": "Fuego",
+      "modelo_id": 36429,
+      "marca": "Renault"
+    },
+    {
+      "modelo": "Alliance",
+      "modelo_id": 36430,
+      "marca": "Renault"
+    },
+    {
+      "modelo": "Encore",
+      "modelo_id": 36434,
+      "marca": "Renault"
+    }
+  ],
+  "Ford": [
+    {
+      "modelo": "Crown Victoria",
+      "modelo_id": 1778,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "Focus",
+      "modelo_id": 1779,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "Fusion",
+      "modelo_id": 1780,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "Mustang",
+      "modelo_id": 1781,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "Taurus",
+      "modelo_id": 1782,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "E-150",
+      "modelo_id": 1796,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "Edge",
+      "modelo_id": 1797,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "Escape",
+      "modelo_id": 1798,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "Expedition",
+      "modelo_id": 1799,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "Explorer",
+      "modelo_id": 1800,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "F-150",
+      "modelo_id": 1801,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "Flex",
+      "modelo_id": 1802,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "Ranger",
+      "modelo_id": 1803,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "Explorer Sport Trac",
+      "modelo_id": 1804,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "F-250",
+      "modelo_id": 1805,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "F-350",
+      "modelo_id": 1806,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "F-450",
+      "modelo_id": 1807,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "F-550",
+      "modelo_id": 1808,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "F-650",
+      "modelo_id": 1809,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "F-750",
+      "modelo_id": 1810,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "Transit Connect",
+      "modelo_id": 1811,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "E-250",
+      "modelo_id": 1817,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "E-350",
+      "modelo_id": 1818,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "E-450",
+      "modelo_id": 1819,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "Expedition MAX",
+      "modelo_id": 1820,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "Thunderbird",
+      "modelo_id": 2345,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "GT",
+      "modelo_id": 2346,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "Five Hundred",
+      "modelo_id": 2347,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "Excursion",
+      "modelo_id": 2370,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "Freestyle",
+      "modelo_id": 2379,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "Freestar",
+      "modelo_id": 2384,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "Motorhome Chassis",
+      "modelo_id": 2737,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "Taurus X",
+      "modelo_id": 3160,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "Fiesta",
+      "modelo_id": 3267,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "Commercial Chassis",
+      "modelo_id": 3410,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "C-Max",
+      "modelo_id": 3462,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "Transit",
+      "modelo_id": 3608,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "Affordable Aluminum",
+      "modelo_id": 4563,
+      "marca": "Affordable Aluminum"
+    },
+    {
+      "modelo": "Eagle Ford Tanks & Trailers LLC",
+      "modelo_id": 4645,
+      "marca": "Eagle Ford Tanks & Trailers LLC"
+    },
+    {
+      "modelo": "Escort",
+      "modelo_id": 5181,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "ZX2",
+      "modelo_id": 5182,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "Windstar",
+      "modelo_id": 5264,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "E-550",
+      "modelo_id": 5342,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "B-750",
+      "modelo_id": 5346,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "F-800",
+      "modelo_id": 5361,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "Explorer Sport",
+      "modelo_id": 5868,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "Milford Welding & Manufacturing Inc.",
+      "modelo_id": 6243,
+      "marca": "Milford Welding & Manufacturing"
+    },
+    {
+      "modelo": "Aspire",
+      "modelo_id": 6703,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "Probe",
+      "modelo_id": 6730,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "Contour",
+      "modelo_id": 6731,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "Bronco",
+      "modelo_id": 6825,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "Aerostar",
+      "modelo_id": 6857,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "F-150 Heritage",
+      "modelo_id": 7331,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "Waterford Tank and Fabrication, LTD",
+      "modelo_id": 7985,
+      "marca": "Waterford Tank and Fabrication"
+    },
+    {
+      "modelo": "Milford Pipe & Supply",
+      "modelo_id": 9047,
+      "marca": "Milford Pipe & Supply"
+    },
+    {
+      "modelo": "L8501",
+      "modelo_id": 9213,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "LT8501",
+      "modelo_id": 9214,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "L9501",
+      "modelo_id": 9215,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "LT9501",
+      "modelo_id": 9216,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "L8511",
+      "modelo_id": 9217,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "LT8511",
+      "modelo_id": 9218,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "L9511",
+      "modelo_id": 9219,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "LT9511",
+      "modelo_id": 9220,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "L8513",
+      "modelo_id": 9221,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "LT8513",
+      "modelo_id": 9222,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "L9513",
+      "modelo_id": 9223,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "LT9513",
+      "modelo_id": 9224,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "L9522",
+      "modelo_id": 9225,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "LT9522",
+      "modelo_id": 9226,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "A8513",
+      "modelo_id": 9227,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "AT8513",
+      "modelo_id": 9228,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "A9513",
+      "modelo_id": 9229,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "AT9513",
+      "modelo_id": 9230,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "A9522",
+      "modelo_id": 9231,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "AT9522",
+      "modelo_id": 9232,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "B800",
+      "modelo_id": 9268,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "F-Super Duty",
+      "modelo_id": 9270,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "F-700",
+      "modelo_id": 9272,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "P700",
+      "modelo_id": 9282,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "P800",
+      "modelo_id": 9283,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "FT900",
+      "modelo_id": 9284,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "L8000",
+      "modelo_id": 9285,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "L9000",
+      "modelo_id": 9286,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "LL9000",
+      "modelo_id": 9287,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "LLA9000",
+      "modelo_id": 9288,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "LLS9000",
+      "modelo_id": 9289,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "LS8000",
+      "modelo_id": 9290,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "LS9000",
+      "modelo_id": 9291,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "LT8000",
+      "modelo_id": 9292,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "LT9000",
+      "modelo_id": 9293,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "LTS8000",
+      "modelo_id": 9294,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "LTS9000",
+      "modelo_id": 9295,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "LTL9000",
+      "modelo_id": 9296,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "LTLA9000",
+      "modelo_id": 9297,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "LTLS9000",
+      "modelo_id": 9298,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "LA8000",
+      "modelo_id": 9299,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "LA9000",
+      "modelo_id": 9300,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "LTA9000",
+      "modelo_id": 9301,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "LN7000",
+      "modelo_id": 9302,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "LN8000",
+      "modelo_id": 9303,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "LN9000",
+      "modelo_id": 9304,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "LNT8000",
+      "modelo_id": 9305,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "LNT9000",
+      "modelo_id": 9306,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "CF8000",
+      "modelo_id": 9307,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "CFT8000",
+      "modelo_id": 9308,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "CF7000",
+      "modelo_id": 9312,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "Fords Trailer Sales",
+      "modelo_id": 9637,
+      "marca": "Fords Trailer Sales"
+    },
+    {
+      "modelo": "Festiva",
+      "modelo_id": 10378,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "Low Cab Forward",
+      "modelo_id": 11942,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "Tempo",
+      "modelo_id": 13958,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "B600",
+      "modelo_id": 13977,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "B700",
+      "modelo_id": 13978,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "F-600",
+      "modelo_id": 13979,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "Recreational Vehicle",
+      "modelo_id": 13980,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "F-590",
+      "modelo_id": 13981,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "P600",
+      "modelo_id": 13983,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "CL9000",
+      "modelo_id": 14148,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "CLT9000",
+      "modelo_id": 14149,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "Bronco II",
+      "modelo_id": 14150,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "FT800",
+      "modelo_id": 14152,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "CT8000",
+      "modelo_id": 14153,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "C800",
+      "modelo_id": 14154,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "C8000",
+      "modelo_id": 14155,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "Laser",
+      "modelo_id": 14196,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "LTD",
+      "modelo_id": 14199,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "Fairmont",
+      "modelo_id": 14614,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "Granada",
+      "modelo_id": 14618,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "Travel Park",
+      "modelo_id": 14916,
+      "marca": "ASHFORD MFG"
+    },
+    {
+      "modelo": "'34",
+      "modelo_id": 14930,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "CF6000",
+      "modelo_id": 15160,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "1500 Foldaway",
+      "modelo_id": 15193,
+      "marca": "Ford Motor Company of New Zealand"
+    },
+    {
+      "modelo": "B7000",
+      "modelo_id": 15194,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "C7000",
+      "modelo_id": 15195,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "F7000",
+      "modelo_id": 15197,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "F8000",
+      "modelo_id": 15198,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "FT8000",
+      "modelo_id": 15203,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "Courier",
+      "modelo_id": 15204,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "B6000",
+      "modelo_id": 15205,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "C600",
+      "modelo_id": 15206,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "C700",
+      "modelo_id": 15208,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "F6000",
+      "modelo_id": 15209,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "LN600",
+      "modelo_id": 15223,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "LN700",
+      "modelo_id": 15225,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "L800",
+      "modelo_id": 15251,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "LT800",
+      "modelo_id": 15252,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "LN800",
+      "modelo_id": 15254,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "LNT800",
+      "modelo_id": 15255,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "E-100",
+      "modelo_id": 15273,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "F-100",
+      "modelo_id": 15280,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "CT800",
+      "modelo_id": 15291,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "Swinford Mfg",
+      "modelo_id": 16298,
+      "marca": "Swinford Mfg"
+    },
+    {
+      "modelo": "Ecosport",
+      "modelo_id": 17774,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "CRANFORD RADIATOR INC.",
+      "modelo_id": 17910,
+      "marca": "CRANFORD RADIATOR INC."
+    },
+    {
+      "modelo": "Bradford Built",
+      "modelo_id": 18064,
+      "marca": "Bradford Built"
+    },
+    {
+      "modelo": "Malibu Sedan",
+      "modelo_id": 18235,
+      "marca": "Stanford Customs"
+    },
+    {
+      "modelo": "Cordova Sedan",
+      "modelo_id": 18236,
+      "marca": "Stanford Customs"
+    },
+    {
+      "modelo": "Classic Sedan",
+      "modelo_id": 18237,
+      "marca": "Stanford Customs"
+    },
+    {
+      "modelo": "Bradford #1",
+      "modelo_id": 22551,
+      "marca": "Bradford #1"
+    },
+    {
+      "modelo": "Stafford's Trailers",
+      "modelo_id": 23075,
+      "marca": "Stafford's Trailers"
+    },
+    {
+      "modelo": "Medford Steel",
+      "modelo_id": 23878,
+      "marca": "Medford Steel"
+    },
+    {
+      "modelo": "Expedition EL",
+      "modelo_id": 25742,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "Affordable Trailers",
+      "modelo_id": 26910,
+      "marca": "Affordable Trailers"
+    },
+    {
+      "modelo": "Bronco Sport",
+      "modelo_id": 27411,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "Mustang Mach-E",
+      "modelo_id": 27440,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "Maverick",
+      "modelo_id": 28967,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "GT MKII",
+      "modelo_id": 31551,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "Mustang GTD",
+      "modelo_id": 35300,
+      "marca": "Ford"
+    },
+    {
+      "modelo": "Lyford Overland",
+      "modelo_id": 36061,
+      "marca": "Lyford Overland"
+    }
+  ],
+  "BMW": [
+    {
+      "modelo": "128i",
+      "modelo_id": 1707,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "135i",
+      "modelo_id": 1708,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "328i",
+      "modelo_id": 1709,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "M3",
+      "modelo_id": 1710,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "335i",
+      "modelo_id": 1711,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "335is",
+      "modelo_id": 1712,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "335d",
+      "modelo_id": 1713,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "X6",
+      "modelo_id": 1714,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "528i",
+      "modelo_id": 1715,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "535i",
+      "modelo_id": 1716,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "X5",
+      "modelo_id": 1717,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "550i",
+      "modelo_id": 1718,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "X3",
+      "modelo_id": 1719,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "740i",
+      "modelo_id": 1720,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "740Li",
+      "modelo_id": 1721,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "750i",
+      "modelo_id": 1722,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "750Li",
+      "modelo_id": 1723,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "760Li",
+      "modelo_id": 1724,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "Z4",
+      "modelo_id": 1725,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "750xi",
+      "modelo_id": 1727,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "750Lxi",
+      "modelo_id": 1728,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "M6",
+      "modelo_id": 1729,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "528xi",
+      "modelo_id": 1730,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "640i",
+      "modelo_id": 1731,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "650i",
+      "modelo_id": 1732,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "650xi",
+      "modelo_id": 1733,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "G 450 X",
+      "modelo_id": 1736,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "F 800 S",
+      "modelo_id": 1737,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "F 800 ST",
+      "modelo_id": 1738,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "F 800 GS",
+      "modelo_id": 1739,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "F 800 R",
+      "modelo_id": 1740,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "HP2",
+      "modelo_id": 1741,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "S 1000 RR",
+      "modelo_id": 1742,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "R 1200 GS",
+      "modelo_id": 1743,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "R 1200 R",
+      "modelo_id": 1744,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "R 1200 RT",
+      "modelo_id": 1745,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "K 1300 S",
+      "modelo_id": 1746,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "K 1300 GT",
+      "modelo_id": 1747,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "K 1300 R",
+      "modelo_id": 1748,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "F 650 GS",
+      "modelo_id": 1749,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "G 650 GS",
+      "modelo_id": 1750,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "R 900 RT",
+      "modelo_id": 1751,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "K 1600 GT",
+      "modelo_id": 1752,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "K 1600 GTL",
+      "modelo_id": 1753,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "F 700 GS",
+      "modelo_id": 1754,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "F 800 GT",
+      "modelo_id": 1755,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "C 600",
+      "modelo_id": 1756,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "C 650 GT",
+      "modelo_id": 1757,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "HP4",
+      "modelo_id": 1758,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "S 1000 R",
+      "modelo_id": 1759,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "R nineT",
+      "modelo_id": 1760,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "1M",
+      "modelo_id": 1970,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "ActiveE",
+      "modelo_id": 1971,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "M5",
+      "modelo_id": 2024,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "228i",
+      "modelo_id": 2170,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "M235i",
+      "modelo_id": 2171,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "320i",
+      "modelo_id": 2172,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "328d",
+      "modelo_id": 2173,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "i3",
+      "modelo_id": 2178,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "i8",
+      "modelo_id": 2179,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "ActiveHybrid 3",
+      "modelo_id": 2219,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "428i",
+      "modelo_id": 2220,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "435i",
+      "modelo_id": 2230,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "535d",
+      "modelo_id": 2231,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "ActiveHybrid 5",
+      "modelo_id": 2240,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "X1",
+      "modelo_id": 2300,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "R 1150 GS",
+      "modelo_id": 2350,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "R 1200 S",
+      "modelo_id": 2351,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "R 1200 ST",
+      "modelo_id": 2352,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "K 1200 R",
+      "modelo_id": 2353,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "K 1200 S",
+      "modelo_id": 2354,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "K 1200 LT",
+      "modelo_id": 2355,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "K 1200 GT",
+      "modelo_id": 2359,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "R 1150 R",
+      "modelo_id": 2360,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "R 850 R",
+      "modelo_id": 2361,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "535xi",
+      "modelo_id": 2376,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "328xi",
+      "modelo_id": 2377,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "335xi",
+      "modelo_id": 2378,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "525i",
+      "modelo_id": 2584,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "530i",
+      "modelo_id": 2585,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "530xi",
+      "modelo_id": 2586,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "525xi",
+      "modelo_id": 2587,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "325Ci",
+      "modelo_id": 2762,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "330Ci",
+      "modelo_id": 2763,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "325i",
+      "modelo_id": 2764,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "325xi",
+      "modelo_id": 2765,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "330i",
+      "modelo_id": 2777,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "330xi",
+      "modelo_id": 2778,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "760i",
+      "modelo_id": 2804,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "545i",
+      "modelo_id": 3051,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "645Ci",
+      "modelo_id": 3052,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "745i",
+      "modelo_id": 3054,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "745Li",
+      "modelo_id": 3055,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "K 1100 RS",
+      "modelo_id": 5094,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "K75",
+      "modelo_id": 5095,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "K75S",
+      "modelo_id": 5096,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "K75RT",
+      "modelo_id": 5097,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "K 1100 LT",
+      "modelo_id": 5098,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "R 100",
+      "modelo_id": 5099,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "R 100 R",
+      "modelo_id": 5100,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "R 100 RT",
+      "modelo_id": 5101,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "R 100 GS",
+      "modelo_id": 5102,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "R 1100 R",
+      "modelo_id": 5104,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "R 1100 RS",
+      "modelo_id": 5105,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "R 1100 GS",
+      "modelo_id": 5106,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "F 650",
+      "modelo_id": 5108,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "F 650 S",
+      "modelo_id": 5109,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "R 1100 RT",
+      "modelo_id": 5110,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "K 1200 RS",
+      "modelo_id": 5111,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "R 1200 C",
+      "modelo_id": 5112,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "F 650 CS",
+      "modelo_id": 5132,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "R 1100 S",
+      "modelo_id": 5136,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "R 1150 RS",
+      "modelo_id": 5137,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "R 1150 RT",
+      "modelo_id": 5138,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "R 1200 CL",
+      "modelo_id": 5139,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "318i",
+      "modelo_id": 5178,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "318iS",
+      "modelo_id": 5185,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "318iC",
+      "modelo_id": 5186,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "325iS",
+      "modelo_id": 5187,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "325iC",
+      "modelo_id": 5190,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "540i",
+      "modelo_id": 5195,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "840Ci",
+      "modelo_id": 5198,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "850Ci",
+      "modelo_id": 5199,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "850CSi",
+      "modelo_id": 5200,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "318ti",
+      "modelo_id": 5217,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "328iC",
+      "modelo_id": 5237,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "328iS",
+      "modelo_id": 5238,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "Z3",
+      "modelo_id": 5239,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "323i",
+      "modelo_id": 5253,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "323is",
+      "modelo_id": 5254,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "323iC",
+      "modelo_id": 5255,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "Z8",
+      "modelo_id": 5324,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "525iA",
+      "modelo_id": 5343,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "530iA",
+      "modelo_id": 5347,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "540iA",
+      "modelo_id": 5348,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "Alpina",
+      "modelo_id": 5355,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "645i",
+      "modelo_id": 5384,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "X4",
+      "modelo_id": 5992,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "335",
+      "modelo_id": 9253,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "740iL",
+      "modelo_id": 9452,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "750iL",
+      "modelo_id": 9453,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "M3Ci",
+      "modelo_id": 9459,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "M2",
+      "modelo_id": 9567,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "340i",
+      "modelo_id": 9568,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "330e",
+      "modelo_id": 9569,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "M4",
+      "modelo_id": 9570,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "S 1000 XR",
+      "modelo_id": 10045,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "R 1200 RS",
+      "modelo_id": 10046,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "C 650",
+      "modelo_id": 10047,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "328Ci",
+      "modelo_id": 10587,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "R 100 GSPD",
+      "modelo_id": 13375,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "735i",
+      "modelo_id": 13425,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "735iL",
+      "modelo_id": 13426,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "850i",
+      "modelo_id": 13427,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "325ix",
+      "modelo_id": 13429,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "325/325e",
+      "modelo_id": 13431,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "635CSi",
+      "modelo_id": 13437,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "535i/535is",
+      "modelo_id": 13438,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "L7",
+      "modelo_id": 13439,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "524td",
+      "modelo_id": 13442,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "528e",
+      "modelo_id": 13448,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "325i/325is",
+      "modelo_id": 13459,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "230i",
+      "modelo_id": 13825,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "M240i",
+      "modelo_id": 13826,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "430i",
+      "modelo_id": 13827,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "440i",
+      "modelo_id": 13828,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "B7",
+      "modelo_id": 13834,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "740e",
+      "modelo_id": 13835,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "750i, Alpina B7",
+      "modelo_id": 13868,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "533i",
+      "modelo_id": 14503,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "633 csi",
+      "modelo_id": 14504,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "733i",
+      "modelo_id": 14505,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "R 100 RS",
+      "modelo_id": 14578,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "K 100 LT",
+      "modelo_id": 14579,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "K 100 RS",
+      "modelo_id": 14580,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "K1",
+      "modelo_id": 14581,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "K100",
+      "modelo_id": 14583,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "K 100 RT",
+      "modelo_id": 14584,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "R 65",
+      "modelo_id": 14585,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "R 80",
+      "modelo_id": 14586,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "R 80 RT",
+      "modelo_id": 14587,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "R 80 GS",
+      "modelo_id": 14588,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "R 65 LS",
+      "modelo_id": 14589,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "R 80 ST",
+      "modelo_id": 14590,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "R 100 CS",
+      "modelo_id": 14829,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "730i",
+      "modelo_id": 19172,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "540d",
+      "modelo_id": 20811,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "530e",
+      "modelo_id": 20813,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "M550i",
+      "modelo_id": 20814,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "M760i",
+      "modelo_id": 20815,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "650i, Alpina B6",
+      "modelo_id": 21787,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "750Li, Alpina B7",
+      "modelo_id": 21788,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "750Lxi, Alpina B7",
+      "modelo_id": 21790,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "750xi, Alpina B7",
+      "modelo_id": 21791,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "750i, B7",
+      "modelo_id": 21792,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "650i, B6",
+      "modelo_id": 21793,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "X2",
+      "modelo_id": 24940,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "640xi",
+      "modelo_id": 24944,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "X7",
+      "modelo_id": 25884,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "M340i",
+      "modelo_id": 26481,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "745e",
+      "modelo_id": 26482,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "840i",
+      "modelo_id": 26483,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "M850i",
+      "modelo_id": 26484,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "M8",
+      "modelo_id": 26485,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "G 310 R",
+      "modelo_id": 26611,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "G 310 GS",
+      "modelo_id": 26612,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "C 400 GT",
+      "modelo_id": 26613,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "C 400 X",
+      "modelo_id": 26614,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "F 750 GS",
+      "modelo_id": 26617,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "F 850 GS",
+      "modelo_id": 26618,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "R 1250 GS",
+      "modelo_id": 26625,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "R 1250 RT",
+      "modelo_id": 26626,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "R 1250 R",
+      "modelo_id": 26628,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "R 1250 RS",
+      "modelo_id": 26629,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "K 1600 B",
+      "modelo_id": 26636,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "C Evolution",
+      "modelo_id": 26637,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "G 650",
+      "modelo_id": 26851,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "F 900",
+      "modelo_id": 27296,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "R 18 Classic",
+      "modelo_id": 28092,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "R 18",
+      "modelo_id": 28093,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "M440i",
+      "modelo_id": 28100,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "M760Li",
+      "modelo_id": 29050,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "745Le",
+      "modelo_id": 29051,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "CE 04",
+      "modelo_id": 29435,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "M 1000",
+      "modelo_id": 29436,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "iX",
+      "modelo_id": 29578,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "i4",
+      "modelo_id": 29579,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "i7",
+      "modelo_id": 30512,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "XM",
+      "modelo_id": 30516,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "ActiveHybrid 7",
+      "modelo_id": 31534,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "Alpina B8",
+      "modelo_id": 31653,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "750e",
+      "modelo_id": 32327,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "i5",
+      "modelo_id": 32328,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "CE 02",
+      "modelo_id": 33564,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "R 18 Roctane",
+      "modelo_id": 33565,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "R 18 B",
+      "modelo_id": 33566,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "R 18 Transcontinental",
+      "modelo_id": 33567,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "F 900 GS",
+      "modelo_id": 33568,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "F 900 GS Adventure",
+      "modelo_id": 33569,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "F 900 R",
+      "modelo_id": 33570,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "F 900 XR",
+      "modelo_id": 33571,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "M 1000 XR",
+      "modelo_id": 33572,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "M 1000 R",
+      "modelo_id": 33573,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "M 1000 RR",
+      "modelo_id": 33574,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "R 1250 GS Adventure",
+      "modelo_id": 33575,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "R 1300 GS",
+      "modelo_id": 33576,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "R 12",
+      "modelo_id": 33577,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "R 12 nineT",
+      "modelo_id": 33578,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "325/325eS",
+      "modelo_id": 33706,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "550e",
+      "modelo_id": 34628,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "F 900 GS-P",
+      "modelo_id": 35419,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "R 1300 GS Adventure",
+      "modelo_id": 35420,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "228",
+      "modelo_id": 35528,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "M235",
+      "modelo_id": 36379,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "R 1300 RT",
+      "modelo_id": 36591,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "R 1300 R",
+      "modelo_id": 36592,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "R 1300 RS",
+      "modelo_id": 36593,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "R 12 G/S",
+      "modelo_id": 36594,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "F 450 GS",
+      "modelo_id": 38515,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "M 1000 RS",
+      "modelo_id": 38516,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "740",
+      "modelo_id": 38647,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "iX3",
+      "modelo_id": 38648,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "iX4",
+      "modelo_id": 38649,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "iX5",
+      "modelo_id": 38650,
+      "marca": "BMW"
+    },
+    {
+      "modelo": "M350",
+      "modelo_id": 38651,
+      "marca": "BMW"
+    }
+  ],
+  "Mercedes-Benz": [
+    {
+      "modelo": "Sprinter",
+      "modelo_id": 1703,
+      "marca": "Mercedes-Benz"
+    },
+    {
+      "modelo": "SL-Class",
+      "modelo_id": 2079,
+      "marca": "Mercedes-Benz"
+    },
+    {
+      "modelo": "SLK-Class",
+      "modelo_id": 2080,
+      "marca": "Mercedes-Benz"
+    },
+    {
+      "modelo": "E-Class",
+      "modelo_id": 2081,
+      "marca": "Mercedes-Benz"
+    },
+    {
+      "modelo": "CLS-Class",
+      "modelo_id": 2082,
+      "marca": "Mercedes-Benz"
+    },
+    {
+      "modelo": "CLA-Class",
+      "modelo_id": 2083,
+      "marca": "Mercedes-Benz"
+    },
+    {
+      "modelo": "GLA-Class",
+      "modelo_id": 2084,
+      "marca": "Mercedes-Benz"
+    },
+    {
+      "modelo": "C-Class",
+      "modelo_id": 2085,
+      "marca": "Mercedes-Benz"
+    },
+    {
+      "modelo": "S-Class",
+      "modelo_id": 2086,
+      "marca": "Mercedes-Benz"
+    },
+    {
+      "modelo": "SLS-Class",
+      "modelo_id": 2087,
+      "marca": "Mercedes-Benz"
+    },
+    {
+      "modelo": "B-Class",
+      "modelo_id": 2113,
+      "marca": "Mercedes-Benz"
+    },
+    {
+      "modelo": "M-Class",
+      "modelo_id": 2129,
+      "marca": "Mercedes-Benz"
+    },
+    {
+      "modelo": "GL-Class",
+      "modelo_id": 2130,
+      "marca": "Mercedes-Benz"
+    },
+    {
+      "modelo": "G-Class",
+      "modelo_id": 2131,
+      "marca": "Mercedes-Benz"
+    },
+    {
+      "modelo": "GLK-Class",
+      "modelo_id": 2132,
+      "marca": "Mercedes-Benz"
+    },
+    {
+      "modelo": "CL-Class",
+      "modelo_id": 2678,
+      "marca": "Mercedes-Benz"
+    },
+    {
+      "modelo": "CLK-Class",
+      "modelo_id": 2822,
+      "marca": "Mercedes-Benz"
+    },
+    {
+      "modelo": "SLR McLaren",
+      "modelo_id": 2936,
+      "marca": "Mercedes-Benz"
+    },
+    {
+      "modelo": "R-Class",
+      "modelo_id": 2939,
+      "marca": "Mercedes-Benz"
+    },
+    {
+      "modelo": "AMG GT",
+      "modelo_id": 5881,
+      "marca": "Mercedes-Benz"
+    },
+    {
+      "modelo": "GLC-Class",
+      "modelo_id": 5885,
+      "marca": "Mercedes-Benz"
+    },
+    {
+      "modelo": "GLE-Class",
+      "modelo_id": 5886,
+      "marca": "Mercedes-Benz"
+    },
+    {
+      "modelo": "Metris",
+      "modelo_id": 11451,
+      "marca": "Mercedes-Benz"
+    },
+    {
+      "modelo": "SLC-Class",
+      "modelo_id": 11452,
+      "marca": "Mercedes-Benz"
+    },
+    {
+      "modelo": "ML-Class",
+      "modelo_id": 13819,
+      "marca": "Mercedes-Benz"
+    },
+    {
+      "modelo": "GLS-Class",
+      "modelo_id": 14005,
+      "marca": "Mercedes-Benz"
+    },
+    {
+      "modelo": "190",
+      "modelo_id": 14013,
+      "marca": "Mercedes-Benz"
+    },
+    {
+      "modelo": "300",
+      "modelo_id": 14014,
+      "marca": "Mercedes-Benz"
+    },
+    {
+      "modelo": "500",
+      "modelo_id": 14015,
+      "marca": "Mercedes-Benz"
+    },
+    {
+      "modelo": "L1013",
+      "modelo_id": 14081,
+      "marca": "Mercedes-Benz"
+    },
+    {
+      "modelo": "L1113",
+      "modelo_id": 14082,
+      "marca": "Mercedes-Benz"
+    },
+    {
+      "modelo": "L1116",
+      "modelo_id": 14083,
+      "marca": "Mercedes-Benz"
+    },
+    {
+      "modelo": "L1316",
+      "modelo_id": 14084,
+      "marca": "Mercedes-Benz"
+    },
+    {
+      "modelo": "L1418",
+      "modelo_id": 14085,
+      "marca": "Mercedes-Benz"
+    },
+    {
+      "modelo": "L1117",
+      "modelo_id": 14087,
+      "marca": "Mercedes-Benz"
+    },
+    {
+      "modelo": "L1317",
+      "modelo_id": 14088,
+      "marca": "Mercedes-Benz"
+    },
+    {
+      "modelo": "L1419",
+      "modelo_id": 14089,
+      "marca": "Mercedes-Benz"
+    },
+    {
+      "modelo": "LP1419",
+      "modelo_id": 14090,
+      "marca": "Mercedes-Benz"
+    },
+    {
+      "modelo": "LPS1525",
+      "modelo_id": 14091,
+      "marca": "Mercedes-Benz"
+    },
+    {
+      "modelo": "LP1219",
+      "modelo_id": 14092,
+      "marca": "Mercedes-Benz"
+    },
+    {
+      "modelo": "L1319",
+      "modelo_id": 14093,
+      "marca": "Mercedes-Benz"
+    },
+    {
+      "modelo": "280",
+      "modelo_id": 14773,
+      "marca": "Mercedes-Benz"
+    },
+    {
+      "modelo": "240",
+      "modelo_id": 14774,
+      "marca": "Mercedes-Benz"
+    },
+    {
+      "modelo": "380",
+      "modelo_id": 14775,
+      "marca": "Mercedes-Benz"
+    },
+    {
+      "modelo": "400",
+      "modelo_id": 17597,
+      "marca": "Mercedes-Benz"
+    },
+    {
+      "modelo": "600",
+      "modelo_id": 17598,
+      "marca": "Mercedes-Benz"
+    },
+    {
+      "modelo": "350",
+      "modelo_id": 17599,
+      "marca": "Mercedes-Benz"
+    },
+    {
+      "modelo": "420",
+      "modelo_id": 17600,
+      "marca": "Mercedes-Benz"
+    },
+    {
+      "modelo": "560",
+      "modelo_id": 17601,
+      "marca": "Mercedes-Benz"
+    },
+    {
+      "modelo": "260",
+      "modelo_id": 17602,
+      "marca": "Mercedes-Benz"
+    },
+    {
+      "modelo": "A-Class",
+      "modelo_id": 24879,
+      "marca": "Mercedes-Benz"
+    },
+    {
+      "modelo": "GLB-Class",
+      "modelo_id": 26498,
+      "marca": "Mercedes-Benz"
+    },
+    {
+      "modelo": "EQC-Class",
+      "modelo_id": 26499,
+      "marca": "Mercedes-Benz"
+    },
+    {
+      "modelo": "EQS-Class Sedan",
+      "modelo_id": 29045,
+      "marca": "Mercedes-Benz"
+    },
+    {
+      "modelo": "EQE-Class Sedan",
+      "modelo_id": 30229,
+      "marca": "Mercedes-Benz"
+    },
+    {
+      "modelo": "EQB-Class",
+      "modelo_id": 30230,
+      "marca": "Mercedes-Benz"
+    },
+    {
+      "modelo": "EQS-Class SUV",
+      "modelo_id": 30265,
+      "marca": "Mercedes-Benz"
+    },
+    {
+      "modelo": "EQE-Class SUV",
+      "modelo_id": 31097,
+      "marca": "Mercedes-Benz"
+    },
+    {
+      "modelo": "eSprinter",
+      "modelo_id": 33099,
+      "marca": "Mercedes-Benz"
+    },
+    {
+      "modelo": "CLE",
+      "modelo_id": 33769,
+      "marca": "Mercedes-Benz"
+    },
+    {
+      "modelo": "Tourrider Business",
+      "modelo_id": 38440,
+      "marca": "Mercedes-Benz"
+    },
+    {
+      "modelo": "Tourrider Premium",
+      "modelo_id": 38441,
+      "marca": "Mercedes-Benz"
+    }
+  ],
+  "Jeep": [
+    {
+      "modelo": "Wrangler",
+      "modelo_id": 1943,
+      "marca": "Jeep"
+    },
+    {
+      "modelo": "Liberty",
+      "modelo_id": 1944,
+      "marca": "Jeep"
+    },
+    {
+      "modelo": "Cherokee",
+      "modelo_id": 1945,
+      "marca": "Jeep"
+    },
+    {
+      "modelo": "Compass",
+      "modelo_id": 1946,
+      "marca": "Jeep"
+    },
+    {
+      "modelo": "Patriot",
+      "modelo_id": 1947,
+      "marca": "Jeep"
+    },
+    {
+      "modelo": "Commander",
+      "modelo_id": 1948,
+      "marca": "Jeep"
+    },
+    {
+      "modelo": "Grand Cherokee",
+      "modelo_id": 1949,
+      "marca": "Jeep"
+    },
+    {
+      "modelo": "Renegade",
+      "modelo_id": 6160,
+      "marca": "Jeep"
+    },
+    {
+      "modelo": "Grand Wagoneer",
+      "modelo_id": 14871,
+      "marca": "Jeep"
+    },
+    {
+      "modelo": "Comanche",
+      "modelo_id": 14905,
+      "marca": "Jeep"
+    },
+    {
+      "modelo": "Wagoneer",
+      "modelo_id": 14927,
+      "marca": "Jeep"
+    },
+    {
+      "modelo": "J-10",
+      "modelo_id": 14978,
+      "marca": "Jeep"
+    },
+    {
+      "modelo": "J-20",
+      "modelo_id": 14979,
+      "marca": "Jeep"
+    },
+    {
+      "modelo": "CJ-7",
+      "modelo_id": 15073,
+      "marca": "Jeep"
+    },
+    {
+      "modelo": "CJ-8 Scrambler",
+      "modelo_id": 15074,
+      "marca": "Jeep"
+    },
+    {
+      "modelo": "CJ-5",
+      "modelo_id": 15086,
+      "marca": "Jeep"
+    },
+    {
+      "modelo": "CJ-6",
+      "modelo_id": 15090,
+      "marca": "Jeep"
+    },
+    {
+      "modelo": "Wrangler JK",
+      "modelo_id": 25197,
+      "marca": "Jeep"
+    },
+    {
+      "modelo": "Gladiator",
+      "modelo_id": 25919,
+      "marca": "Jeep"
+    },
+    {
+      "modelo": "Grand Cherokee L",
+      "modelo_id": 32375,
+      "marca": "Jeep"
+    },
+    {
+      "modelo": "Wagoneer L",
+      "modelo_id": 32377,
+      "marca": "Jeep"
+    },
+    {
+      "modelo": "Grand Wagoneer L",
+      "modelo_id": 32378,
+      "marca": "Jeep"
+    },
+    {
+      "modelo": "Wagoneer S",
+      "modelo_id": 34270,
+      "marca": "Jeep"
+    },
+    {
+      "modelo": "Recon",
+      "modelo_id": 37249,
+      "marca": "Jeep"
+    }
+  ],
+  "Mitsubishi": [
+    {
+      "modelo": "Raider",
+      "modelo_id": 1950,
+      "marca": "Mitsubishi"
+    },
+    {
+      "modelo": "Outlander",
+      "modelo_id": 2163,
+      "marca": "Mitsubishi"
+    },
+    {
+      "modelo": "Lancer",
+      "modelo_id": 2164,
+      "marca": "Mitsubishi"
+    },
+    {
+      "modelo": "Galant",
+      "modelo_id": 2165,
+      "marca": "Mitsubishi"
+    },
+    {
+      "modelo": "Eclipse",
+      "modelo_id": 2166,
+      "marca": "Mitsubishi"
+    },
+    {
+      "modelo": "Endeavor",
+      "modelo_id": 2167,
+      "marca": "Mitsubishi"
+    },
+    {
+      "modelo": "FE83D",
+      "modelo_id": 2287,
+      "marca": "Mitsubishi Fuso"
+    },
+    {
+      "modelo": "FE84D",
+      "modelo_id": 2288,
+      "marca": "Mitsubishi Fuso"
+    },
+    {
+      "modelo": "FE85D",
+      "modelo_id": 2289,
+      "marca": "Mitsubishi Fuso"
+    },
+    {
+      "modelo": "FE84DW",
+      "modelo_id": 2290,
+      "marca": "Mitsubishi Fuso"
+    },
+    {
+      "modelo": "FG84D",
+      "modelo_id": 2291,
+      "marca": "Mitsubishi Fuso"
+    },
+    {
+      "modelo": "FK61F",
+      "modelo_id": 2292,
+      "marca": "Mitsubishi Fuso"
+    },
+    {
+      "modelo": "FM61F",
+      "modelo_id": 2293,
+      "marca": "Mitsubishi Fuso"
+    },
+    {
+      "modelo": "FM64F",
+      "modelo_id": 2294,
+      "marca": "Mitsubishi Fuso"
+    },
+    {
+      "modelo": "FM65F",
+      "modelo_id": 2295,
+      "marca": "Mitsubishi Fuso"
+    },
+    {
+      "modelo": "FK62F",
+      "modelo_id": 2296,
+      "marca": "Mitsubishi Fuso"
+    },
+    {
+      "modelo": "FK65F",
+      "modelo_id": 2297,
+      "marca": "Mitsubishi Fuso"
+    },
+    {
+      "modelo": "FEC52S",
+      "modelo_id": 2308,
+      "marca": "Mitsubishi Fuso"
+    },
+    {
+      "modelo": "FEC72S",
+      "modelo_id": 2309,
+      "marca": "Mitsubishi Fuso"
+    },
+    {
+      "modelo": "FEC72W",
+      "modelo_id": 2310,
+      "marca": "Mitsubishi Fuso"
+    },
+    {
+      "modelo": "FEC92S",
+      "modelo_id": 2311,
+      "marca": "Mitsubishi Fuso"
+    },
+    {
+      "modelo": "FGB72S",
+      "modelo_id": 2312,
+      "marca": "Mitsubishi Fuso"
+    },
+    {
+      "modelo": "FECX2S",
+      "modelo_id": 2317,
+      "marca": "Mitsubishi Fuso"
+    },
+    {
+      "modelo": "Montero",
+      "modelo_id": 2318,
+      "marca": "Mitsubishi"
+    },
+    {
+      "modelo": "RVR",
+      "modelo_id": 2336,
+      "marca": "Mitsubishi"
+    },
+    {
+      "modelo": "i-MiEV",
+      "modelo_id": 2339,
+      "marca": "Mitsubishi"
+    },
+    {
+      "modelo": "Mirage",
+      "modelo_id": 2342,
+      "marca": "Mitsubishi"
+    },
+    {
+      "modelo": "FH100",
+      "modelo_id": 5378,
+      "marca": "Mitsubishi Fuso"
+    },
+    {
+      "modelo": "FM557",
+      "modelo_id": 5379,
+      "marca": "Mitsubishi Fuso"
+    },
+    {
+      "modelo": "FE439",
+      "modelo_id": 5380,
+      "marca": "Mitsubishi Fuso"
+    },
+    {
+      "modelo": "FE449",
+      "modelo_id": 5381,
+      "marca": "Mitsubishi Fuso"
+    },
+    {
+      "modelo": "FK417",
+      "modelo_id": 5382,
+      "marca": "Mitsubishi Fuso"
+    },
+    {
+      "modelo": "FK457",
+      "modelo_id": 5383,
+      "marca": "Mitsubishi Fuso"
+    },
+    {
+      "modelo": "FE639",
+      "modelo_id": 5415,
+      "marca": "Mitsubishi Fuso"
+    },
+    {
+      "modelo": "FE649",
+      "modelo_id": 5416,
+      "marca": "Mitsubishi Fuso"
+    },
+    {
+      "modelo": "FH211",
+      "modelo_id": 5417,
+      "marca": "Mitsubishi Fuso"
+    },
+    {
+      "modelo": "FK617",
+      "modelo_id": 5418,
+      "marca": "Mitsubishi Fuso"
+    },
+    {
+      "modelo": "FM617",
+      "modelo_id": 5419,
+      "marca": "Mitsubishi Fuso"
+    },
+    {
+      "modelo": "FM657",
+      "modelo_id": 5420,
+      "marca": "Mitsubishi Fuso"
+    },
+    {
+      "modelo": "Expo",
+      "modelo_id": 5422,
+      "marca": "Mitsubishi"
+    },
+    {
+      "modelo": "3000GT",
+      "modelo_id": 5423,
+      "marca": "Mitsubishi"
+    },
+    {
+      "modelo": "Diamante",
+      "modelo_id": 5425,
+      "marca": "Mitsubishi"
+    },
+    {
+      "modelo": "Truck",
+      "modelo_id": 5426,
+      "marca": "Mitsubishi"
+    },
+    {
+      "modelo": "FG639",
+      "modelo_id": 5752,
+      "marca": "Mitsubishi Fuso"
+    },
+    {
+      "modelo": "FE640",
+      "modelo_id": 5753,
+      "marca": "Mitsubishi Fuso"
+    },
+    {
+      "modelo": "Montero Sport",
+      "modelo_id": 5755,
+      "marca": "Mitsubishi"
+    },
+    {
+      "modelo": "FG649",
+      "modelo_id": 5757,
+      "marca": "Mitsubishi Fuso"
+    },
+    {
+      "modelo": "FH210",
+      "modelo_id": 5758,
+      "marca": "Mitsubishi Fuso"
+    },
+    {
+      "modelo": "Lancer SportBack",
+      "modelo_id": 5808,
+      "marca": "Mitsubishi"
+    },
+    {
+      "modelo": "Lancer Evolution",
+      "modelo_id": 5809,
+      "marca": "Mitsubishi"
+    },
+    {
+      "modelo": "Sterling 360",
+      "modelo_id": 5842,
+      "marca": "Mitsubishi Fuso"
+    },
+    {
+      "modelo": "FE640DW",
+      "modelo_id": 5845,
+      "marca": "Mitsubishi Fuso"
+    },
+    {
+      "modelo": "Mirage G4",
+      "modelo_id": 13842,
+      "marca": "Mitsubishi"
+    },
+    {
+      "modelo": "Outlander Sport",
+      "modelo_id": 13867,
+      "marca": "Mitsubishi"
+    },
+    {
+      "modelo": "FG439",
+      "modelo_id": 14420,
+      "marca": "Mitsubishi Fuso"
+    },
+    {
+      "modelo": "Precis",
+      "modelo_id": 14423,
+      "marca": "Mitsubishi"
+    },
+    {
+      "modelo": "FK415",
+      "modelo_id": 14431,
+      "marca": "Mitsubishi Fuso"
+    },
+    {
+      "modelo": "FK455",
+      "modelo_id": 14432,
+      "marca": "Mitsubishi Fuso"
+    },
+    {
+      "modelo": "FM555",
+      "modelo_id": 14433,
+      "marca": "Mitsubishi Fuso"
+    },
+    {
+      "modelo": "FE434",
+      "modelo_id": 14434,
+      "marca": "Mitsubishi Fuso"
+    },
+    {
+      "modelo": "FE444",
+      "modelo_id": 14435,
+      "marca": "Mitsubishi Fuso"
+    },
+    {
+      "modelo": "FG434",
+      "modelo_id": 14436,
+      "marca": "Mitsubishi Fuso"
+    },
+    {
+      "modelo": "Space Wagon",
+      "modelo_id": 14442,
+      "marca": "Mitsubishi"
+    },
+    {
+      "modelo": "Wagon",
+      "modelo_id": 14443,
+      "marca": "Mitsubishi"
+    },
+    {
+      "modelo": "Sigma",
+      "modelo_id": 14445,
+      "marca": "Mitsubishi"
+    },
+    {
+      "modelo": "Starion",
+      "modelo_id": 14446,
+      "marca": "Mitsubishi"
+    },
+    {
+      "modelo": "Van",
+      "modelo_id": 14449,
+      "marca": "Mitsubishi"
+    },
+    {
+      "modelo": "Tredia",
+      "modelo_id": 14454,
+      "marca": "Mitsubishi"
+    },
+    {
+      "modelo": "Cordia",
+      "modelo_id": 14455,
+      "marca": "Mitsubishi"
+    },
+    {
+      "modelo": "Mighty Max",
+      "modelo_id": 14572,
+      "marca": "Mitsubishi"
+    },
+    {
+      "modelo": "SPX",
+      "modelo_id": 14573,
+      "marca": "Mitsubishi"
+    },
+    {
+      "modelo": "SP",
+      "modelo_id": 14577,
+      "marca": "Mitsubishi"
+    },
+    {
+      "modelo": "Eclipse Cross",
+      "modelo_id": 17617,
+      "marca": "Mitsubishi"
+    },
+    {
+      "modelo": "FEC7US / eCanter",
+      "modelo_id": 22426,
+      "marca": "Mitsubishi Fuso"
+    },
+    {
+      "modelo": "FE140 (FECZTS)",
+      "modelo_id": 22798,
+      "marca": "Mitsubishi Fuso"
+    },
+    {
+      "modelo": "FE160 (FEC7TS)",
+      "modelo_id": 22799,
+      "marca": "Mitsubishi Fuso"
+    },
+    {
+      "modelo": "FE180 (FEC9TS)",
+      "modelo_id": 22800,
+      "marca": "Mitsubishi Fuso"
+    },
+    {
+      "modelo": "FE160 (FEC7TW)",
+      "modelo_id": 25778,
+      "marca": "Mitsubishi Fuso"
+    },
+    {
+      "modelo": "Low Speed Vehicle",
+      "modelo_id": 27241,
+      "marca": "Mitsubishi"
+    }
+  ],
+  "Volvo": [
+    {
+      "modelo": "S60",
+      "modelo_id": 1959,
+      "marca": "Volvo"
+    },
+    {
+      "modelo": "S80",
+      "modelo_id": 1960,
+      "marca": "Volvo"
+    },
+    {
+      "modelo": "V60",
+      "modelo_id": 1961,
+      "marca": "Volvo"
+    },
+    {
+      "modelo": "XC60",
+      "modelo_id": 1962,
+      "marca": "Volvo"
+    },
+    {
+      "modelo": "XC70",
+      "modelo_id": 1963,
+      "marca": "Volvo"
+    },
+    {
+      "modelo": "VHD",
+      "modelo_id": 1965,
+      "marca": "Volvo Truck"
+    },
+    {
+      "modelo": "VNM",
+      "modelo_id": 1966,
+      "marca": "Volvo Truck"
+    },
+    {
+      "modelo": "VNL",
+      "modelo_id": 1967,
+      "marca": "Volvo Truck"
+    },
+    {
+      "modelo": "VAH",
+      "modelo_id": 1968,
+      "marca": "Volvo Truck"
+    },
+    {
+      "modelo": "VNX",
+      "modelo_id": 1969,
+      "marca": "Volvo Truck"
+    },
+    {
+      "modelo": "VT",
+      "modelo_id": 3108,
+      "marca": "Volvo Truck"
+    },
+    {
+      "modelo": "FM10",
+      "modelo_id": 3110,
+      "marca": "Volvo Truck"
+    },
+    {
+      "modelo": "S40",
+      "modelo_id": 3127,
+      "marca": "Volvo"
+    },
+    {
+      "modelo": "V50",
+      "modelo_id": 3128,
+      "marca": "Volvo"
+    },
+    {
+      "modelo": "C70",
+      "modelo_id": 3129,
+      "marca": "Volvo"
+    },
+    {
+      "modelo": "V70",
+      "modelo_id": 3130,
+      "marca": "Volvo"
+    },
+    {
+      "modelo": "XC90",
+      "modelo_id": 3132,
+      "marca": "Volvo"
+    },
+    {
+      "modelo": "C30",
+      "modelo_id": 3144,
+      "marca": "Volvo"
+    },
+    {
+      "modelo": "9700",
+      "modelo_id": 3511,
+      "marca": "Volvo"
+    },
+    {
+      "modelo": "940 Series",
+      "modelo_id": 9341,
+      "marca": "Volvo"
+    },
+    {
+      "modelo": "960 Series",
+      "modelo_id": 9342,
+      "marca": "Volvo"
+    },
+    {
+      "modelo": "850 Series",
+      "modelo_id": 9343,
+      "marca": "Volvo"
+    },
+    {
+      "modelo": "WX",
+      "modelo_id": 9353,
+      "marca": "Volvo Truck"
+    },
+    {
+      "modelo": "WHL",
+      "modelo_id": 9354,
+      "marca": "Volvo Truck"
+    },
+    {
+      "modelo": "WXLL",
+      "modelo_id": 9355,
+      "marca": "Volvo Truck"
+    },
+    {
+      "modelo": "WG",
+      "modelo_id": 9356,
+      "marca": "Volvo Truck"
+    },
+    {
+      "modelo": "WHR",
+      "modelo_id": 9357,
+      "marca": "Volvo Truck"
+    },
+    {
+      "modelo": "WHLB",
+      "modelo_id": 9358,
+      "marca": "Volvo Truck"
+    },
+    {
+      "modelo": "WHEB",
+      "modelo_id": 9359,
+      "marca": "Volvo Truck"
+    },
+    {
+      "modelo": "WAH",
+      "modelo_id": 9360,
+      "marca": "Volvo Truck"
+    },
+    {
+      "modelo": "ACL",
+      "modelo_id": 9361,
+      "marca": "Volvo Truck"
+    },
+    {
+      "modelo": "WXLM",
+      "modelo_id": 9362,
+      "marca": "Volvo Truck"
+    },
+    {
+      "modelo": "WCA",
+      "modelo_id": 9363,
+      "marca": "Volvo Truck"
+    },
+    {
+      "modelo": "WIA",
+      "modelo_id": 9364,
+      "marca": "Volvo Truck"
+    },
+    {
+      "modelo": "CACL",
+      "modelo_id": 9365,
+      "marca": "Volvo Truck"
+    },
+    {
+      "modelo": "FE",
+      "modelo_id": 9366,
+      "marca": "Volvo Truck"
+    },
+    {
+      "modelo": "CWG",
+      "modelo_id": 9367,
+      "marca": "Volvo Truck"
+    },
+    {
+      "modelo": "NE64",
+      "modelo_id": 9368,
+      "marca": "Volvo Truck"
+    },
+    {
+      "modelo": "NR64",
+      "modelo_id": 9369,
+      "marca": "Volvo Truck"
+    },
+    {
+      "modelo": "VN",
+      "modelo_id": 9370,
+      "marca": "Volvo Truck"
+    },
+    {
+      "modelo": "NE42",
+      "modelo_id": 9371,
+      "marca": "Volvo Truck"
+    },
+    {
+      "modelo": "VNC",
+      "modelo_id": 9375,
+      "marca": "Volvo Truck"
+    },
+    {
+      "modelo": "FML",
+      "modelo_id": 9376,
+      "marca": "Volvo Truck"
+    },
+    {
+      "modelo": "WXR",
+      "modelo_id": 9377,
+      "marca": "Volvo Truck"
+    },
+    {
+      "modelo": "V60CC",
+      "modelo_id": 10206,
+      "marca": "Volvo"
+    },
+    {
+      "modelo": "S60CC",
+      "modelo_id": 10208,
+      "marca": "Volvo"
+    },
+    {
+      "modelo": "S90",
+      "modelo_id": 13798,
+      "marca": "Volvo"
+    },
+    {
+      "modelo": "V90",
+      "modelo_id": 13799,
+      "marca": "Volvo"
+    },
+    {
+      "modelo": "V90CC",
+      "modelo_id": 13800,
+      "marca": "Volvo"
+    },
+    {
+      "modelo": "CNE",
+      "modelo_id": 14104,
+      "marca": "Volvo Truck"
+    },
+    {
+      "modelo": "NE",
+      "modelo_id": 14105,
+      "marca": "Volvo Truck"
+    },
+    {
+      "modelo": "NR",
+      "modelo_id": 14106,
+      "marca": "Volvo Truck"
+    },
+    {
+      "modelo": "CNR",
+      "modelo_id": 14107,
+      "marca": "Volvo Truck"
+    },
+    {
+      "modelo": "240 Series",
+      "modelo_id": 14118,
+      "marca": "Volvo"
+    },
+    {
+      "modelo": "740 Series",
+      "modelo_id": 14119,
+      "marca": "Volvo"
+    },
+    {
+      "modelo": "780 Series",
+      "modelo_id": 14120,
+      "marca": "Volvo"
+    },
+    {
+      "modelo": "760 Series",
+      "modelo_id": 14121,
+      "marca": "Volvo"
+    },
+    {
+      "modelo": "B10M",
+      "modelo_id": 14122,
+      "marca": "Volvo"
+    },
+    {
+      "modelo": "V40",
+      "modelo_id": 14124,
+      "marca": "Volvo"
+    },
+    {
+      "modelo": "S70",
+      "modelo_id": 14125,
+      "marca": "Volvo"
+    },
+    {
+      "modelo": "Cab Over Engine HT",
+      "modelo_id": 14126,
+      "marca": "Volvo"
+    },
+    {
+      "modelo": "Cab Over Engine LT",
+      "modelo_id": 14127,
+      "marca": "Volvo"
+    },
+    {
+      "modelo": "F12 w/F7 Cab",
+      "modelo_id": 14130,
+      "marca": "Volvo"
+    },
+    {
+      "modelo": "F6 w/F7 Cab",
+      "modelo_id": 14131,
+      "marca": "Volvo"
+    },
+    {
+      "modelo": "Cab Behind Engine",
+      "modelo_id": 14135,
+      "marca": "Volvo"
+    },
+    {
+      "modelo": "Volvo Trailers",
+      "modelo_id": 14140,
+      "marca": "Volvo"
+    },
+    {
+      "modelo": "260 Series",
+      "modelo_id": 14659,
+      "marca": "Volvo"
+    },
+    {
+      "modelo": "VNR",
+      "modelo_id": 15808,
+      "marca": "Volvo Truck"
+    },
+    {
+      "modelo": "XC40",
+      "modelo_id": 23714,
+      "marca": "Volvo"
+    },
+    {
+      "modelo": "VT",
+      "modelo_id": 27151,
+      "marca": "Volvo"
+    },
+    {
+      "modelo": "VS",
+      "modelo_id": 27152,
+      "marca": "Volvo"
+    },
+    {
+      "modelo": "C70 / C30",
+      "modelo_id": 28490,
+      "marca": "Volvo"
+    },
+    {
+      "modelo": "C40",
+      "modelo_id": 28818,
+      "marca": "Volvo"
+    },
+    {
+      "modelo": "B12R",
+      "modelo_id": 31451,
+      "marca": "Volvo"
+    },
+    {
+      "modelo": "B7R",
+      "modelo_id": 31452,
+      "marca": "Volvo"
+    },
+    {
+      "modelo": "B12B",
+      "modelo_id": 31453,
+      "marca": "Volvo"
+    },
+    {
+      "modelo": "B12M",
+      "modelo_id": 31454,
+      "marca": "Volvo"
+    },
+    {
+      "modelo": "B9TL",
+      "modelo_id": 31455,
+      "marca": "Volvo"
+    },
+    {
+      "modelo": "B9R",
+      "modelo_id": 31456,
+      "marca": "Volvo"
+    },
+    {
+      "modelo": "B9S",
+      "modelo_id": 31457,
+      "marca": "Volvo"
+    },
+    {
+      "modelo": "B9L",
+      "modelo_id": 31458,
+      "marca": "Volvo"
+    },
+    {
+      "modelo": "BXR",
+      "modelo_id": 31459,
+      "marca": "Volvo"
+    },
+    {
+      "modelo": "B5R",
+      "modelo_id": 31460,
+      "marca": "Volvo"
+    },
+    {
+      "modelo": "BRLH",
+      "modelo_id": 31461,
+      "marca": "Volvo"
+    },
+    {
+      "modelo": "BXXR",
+      "modelo_id": 31462,
+      "marca": "Volvo"
+    },
+    {
+      "modelo": "BFE",
+      "modelo_id": 31463,
+      "marca": "Volvo"
+    },
+    {
+      "modelo": "BXRB",
+      "modelo_id": 31464,
+      "marca": "Volvo"
+    },
+    {
+      "modelo": "B8R",
+      "modelo_id": 31465,
+      "marca": "Volvo"
+    },
+    {
+      "modelo": "BRH",
+      "modelo_id": 31466,
+      "marca": "Volvo"
+    },
+    {
+      "modelo": "B5TL",
+      "modelo_id": 31467,
+      "marca": "Volvo"
+    },
+    {
+      "modelo": "BE",
+      "modelo_id": 31468,
+      "marca": "Volvo"
+    },
+    {
+      "modelo": "B8L",
+      "modelo_id": 31469,
+      "marca": "Volvo"
+    },
+    {
+      "modelo": "B13R",
+      "modelo_id": 31470,
+      "marca": "Volvo"
+    },
+    {
+      "modelo": "VNL (4)",
+      "modelo_id": 33584,
+      "marca": "Volvo Truck"
+    },
+    {
+      "modelo": "EX30",
+      "modelo_id": 34308,
+      "marca": "Volvo"
+    },
+    {
+      "modelo": "EX90",
+      "modelo_id": 34309,
+      "marca": "Volvo"
+    },
+    {
+      "modelo": "EC40",
+      "modelo_id": 34313,
+      "marca": "Volvo"
+    },
+    {
+      "modelo": "EX40",
+      "modelo_id": 34314,
+      "marca": "Volvo"
+    },
+    {
+      "modelo": "VNR (4)",
+      "modelo_id": 35479,
+      "marca": "Volvo Truck"
+    },
+    {
+      "modelo": "EX30 CC",
+      "modelo_id": 36146,
+      "marca": "Volvo"
+    },
+    {
+      "modelo": "EX60",
+      "modelo_id": 37967,
+      "marca": "Volvo"
+    },
+    {
+      "modelo": "VNX (4)",
+      "modelo_id": 38413,
+      "marca": "Volvo Truck"
+    }
+  ],
+  "Audi": [
+    {
+      "modelo": "TT",
+      "modelo_id": 3145,
+      "marca": "Audi"
+    },
+    {
+      "modelo": "A4",
+      "modelo_id": 3146,
+      "marca": "Audi"
+    },
+    {
+      "modelo": "S4",
+      "modelo_id": 3147,
+      "marca": "Audi"
+    },
+    {
+      "modelo": "A6",
+      "modelo_id": 3148,
+      "marca": "Audi"
+    },
+    {
+      "modelo": "RS 6",
+      "modelo_id": 3149,
+      "marca": "Audi"
+    },
+    {
+      "modelo": "allroad",
+      "modelo_id": 3150,
+      "marca": "Audi"
+    },
+    {
+      "modelo": "A8",
+      "modelo_id": 3151,
+      "marca": "Audi"
+    },
+    {
+      "modelo": "RS 4",
+      "modelo_id": 3675,
+      "marca": "Audi"
+    },
+    {
+      "modelo": "A3",
+      "modelo_id": 3676,
+      "marca": "Audi"
+    },
+    {
+      "modelo": "S6",
+      "modelo_id": 3677,
+      "marca": "Audi"
+    },
+    {
+      "modelo": "S8",
+      "modelo_id": 3678,
+      "marca": "Audi"
+    },
+    {
+      "modelo": "Q7",
+      "modelo_id": 3679,
+      "marca": "Audi"
+    },
+    {
+      "modelo": "A5",
+      "modelo_id": 3787,
+      "marca": "Audi"
+    },
+    {
+      "modelo": "S5",
+      "modelo_id": 3788,
+      "marca": "Audi"
+    },
+    {
+      "modelo": "R8",
+      "modelo_id": 3789,
+      "marca": "Audi"
+    },
+    {
+      "modelo": "TTS",
+      "modelo_id": 3861,
+      "marca": "Audi"
+    },
+    {
+      "modelo": "Q5",
+      "modelo_id": 3862,
+      "marca": "Audi"
+    },
+    {
+      "modelo": "RS 5",
+      "modelo_id": 4014,
+      "marca": "Audi"
+    },
+    {
+      "modelo": "A7",
+      "modelo_id": 4015,
+      "marca": "Audi"
+    },
+    {
+      "modelo": "TT RS",
+      "modelo_id": 4016,
+      "marca": "Audi"
+    },
+    {
+      "modelo": "Q3",
+      "modelo_id": 4051,
+      "marca": "Audi"
+    },
+    {
+      "modelo": "SQ5",
+      "modelo_id": 4052,
+      "marca": "Audi"
+    },
+    {
+      "modelo": "90",
+      "modelo_id": 8056,
+      "marca": "Audi"
+    },
+    {
+      "modelo": "100",
+      "modelo_id": 8057,
+      "marca": "Audi"
+    },
+    {
+      "modelo": "V8",
+      "modelo_id": 8058,
+      "marca": "Audi"
+    },
+    {
+      "modelo": "Cabriolet",
+      "modelo_id": 8059,
+      "marca": "Audi"
+    },
+    {
+      "modelo": "S3",
+      "modelo_id": 8173,
+      "marca": "Audi"
+    },
+    {
+      "modelo": "S7",
+      "modelo_id": 8258,
+      "marca": "Audi"
+    },
+    {
+      "modelo": "RS 7",
+      "modelo_id": 8685,
+      "marca": "Audi"
+    },
+    {
+      "modelo": "A4 allroad",
+      "modelo_id": 13759,
+      "marca": "Audi"
+    },
+    {
+      "modelo": "5000",
+      "modelo_id": 14336,
+      "marca": "Audi"
+    },
+    {
+      "modelo": "4000",
+      "modelo_id": 14337,
+      "marca": "Audi"
+    },
+    {
+      "modelo": "80",
+      "modelo_id": 14342,
+      "marca": "Audi"
+    },
+    {
+      "modelo": "200",
+      "modelo_id": 14343,
+      "marca": "Audi"
+    },
+    {
+      "modelo": "Coupe",
+      "modelo_id": 14348,
+      "marca": "Audi"
+    },
+    {
+      "modelo": "RS 3",
+      "modelo_id": 16783,
+      "marca": "Audi"
+    },
+    {
+      "modelo": "Q8",
+      "modelo_id": 25317,
+      "marca": "Audi"
+    },
+    {
+      "modelo": "e-tron",
+      "modelo_id": 25874,
+      "marca": "Audi"
+    },
+    {
+      "modelo": "A6 allroad",
+      "modelo_id": 27028,
+      "marca": "Audi"
+    },
+    {
+      "modelo": "Q5 e",
+      "modelo_id": 27029,
+      "marca": "Audi"
+    },
+    {
+      "modelo": "A8 e",
+      "modelo_id": 27122,
+      "marca": "Audi"
+    },
+    {
+      "modelo": "SQ7",
+      "modelo_id": 27401,
+      "marca": "Audi"
+    },
+    {
+      "modelo": "SQ8",
+      "modelo_id": 27402,
+      "marca": "Audi"
+    },
+    {
+      "modelo": "RS Q8",
+      "modelo_id": 27403,
+      "marca": "Audi"
+    },
+    {
+      "modelo": "e-tron Sportback",
+      "modelo_id": 27819,
+      "marca": "Audi"
+    },
+    {
+      "modelo": "RS e-tron GT",
+      "modelo_id": 28998,
+      "marca": "Audi"
+    },
+    {
+      "modelo": "Q4",
+      "modelo_id": 29351,
+      "marca": "Audi"
+    },
+    {
+      "modelo": "A8 L",
+      "modelo_id": 29708,
+      "marca": "Audi"
+    },
+    {
+      "modelo": "e-tron GT",
+      "modelo_id": 29994,
+      "marca": "Audi"
+    },
+    {
+      "modelo": "A7 e",
+      "modelo_id": 34061,
+      "marca": "Audi"
+    },
+    {
+      "modelo": "A8 L e",
+      "modelo_id": 34062,
+      "marca": "Audi"
+    },
+    {
+      "modelo": "Q6",
+      "modelo_id": 34850,
+      "marca": "Audi"
+    },
+    {
+      "modelo": "SQ6",
+      "modelo_id": 34851,
+      "marca": "Audi"
+    },
+    {
+      "modelo": "RS 6 Avant",
+      "modelo_id": 35165,
+      "marca": "Audi"
+    },
+    {
+      "modelo": "S e-tron GT",
+      "modelo_id": 35659,
+      "marca": "Audi"
+    },
+    {
+      "modelo": "SQ9",
+      "modelo_id": 38403,
+      "marca": "Audi"
+    },
+    {
+      "modelo": "Q9",
+      "modelo_id": 38523,
+      "marca": "Audi"
+    }
+  ],
+  "Subaru": [
+    {
+      "modelo": "Legacy",
+      "modelo_id": 2232,
+      "marca": "Subaru"
+    },
+    {
+      "modelo": "Outback",
+      "modelo_id": 2233,
+      "marca": "Subaru"
+    },
+    {
+      "modelo": "Forester",
+      "modelo_id": 2234,
+      "marca": "Subaru"
+    },
+    {
+      "modelo": "Impreza",
+      "modelo_id": 2235,
+      "marca": "Subaru"
+    },
+    {
+      "modelo": "XV CrossTrek",
+      "modelo_id": 2236,
+      "marca": "Subaru"
+    },
+    {
+      "modelo": "WRX",
+      "modelo_id": 2237,
+      "marca": "Subaru"
+    },
+    {
+      "modelo": "BRZ",
+      "modelo_id": 2238,
+      "marca": "Subaru"
+    },
+    {
+      "modelo": "Baja",
+      "modelo_id": 2319,
+      "marca": "Subaru"
+    },
+    {
+      "modelo": "B9 Tribeca",
+      "modelo_id": 2320,
+      "marca": "Subaru"
+    },
+    {
+      "modelo": "SVX",
+      "modelo_id": 6093,
+      "marca": "Subaru"
+    },
+    {
+      "modelo": "Crosstrek",
+      "modelo_id": 13580,
+      "marca": "Subaru"
+    },
+    {
+      "modelo": "Justy",
+      "modelo_id": 14213,
+      "marca": "Subaru"
+    },
+    {
+      "modelo": "Loyale",
+      "modelo_id": 14226,
+      "marca": "Subaru"
+    },
+    {
+      "modelo": "Brat",
+      "modelo_id": 14245,
+      "marca": "Subaru"
+    },
+    {
+      "modelo": "XT",
+      "modelo_id": 17873,
+      "marca": "Subaru"
+    },
+    {
+      "modelo": "XT6",
+      "modelo_id": 17874,
+      "marca": "Subaru"
+    },
+    {
+      "modelo": "DL",
+      "modelo_id": 18054,
+      "marca": "Subaru"
+    },
+    {
+      "modelo": "GL",
+      "modelo_id": 18055,
+      "marca": "Subaru"
+    },
+    {
+      "modelo": "GL-10",
+      "modelo_id": 18056,
+      "marca": "Subaru"
+    },
+    {
+      "modelo": "RX",
+      "modelo_id": 18059,
+      "marca": "Subaru"
+    },
+    {
+      "modelo": "Standard",
+      "modelo_id": 18081,
+      "marca": "Subaru"
+    },
+    {
+      "modelo": "GLF",
+      "modelo_id": 18099,
+      "marca": "Subaru"
+    },
+    {
+      "modelo": "Ascent",
+      "modelo_id": 24836,
+      "marca": "Subaru"
+    },
+    {
+      "modelo": "Solterra",
+      "modelo_id": 30191,
+      "marca": "Subaru"
+    },
+    {
+      "modelo": "Trailseeker",
+      "modelo_id": 37354,
+      "marca": "Subaru"
+    },
+    {
+      "modelo": "Uncharted",
+      "modelo_id": 37418,
+      "marca": "Subaru"
+    }
+  ],
+  "Peugeot": [
+    {
+      "modelo": "505",
+      "modelo_id": 14339,
+      "marca": "Peugeot"
+    },
+    {
+      "modelo": "405",
+      "modelo_id": 14340,
+      "marca": "Peugeot"
+    },
+    {
+      "modelo": "604",
+      "modelo_id": 14624,
+      "marca": "Peugeot"
+    },
+    {
+      "modelo": "504",
+      "modelo_id": 14625,
+      "marca": "Peugeot"
+    },
+    {
+      "modelo": "Speedfight2",
+      "modelo_id": 22458,
+      "marca": "Peugeot Motorcycles"
+    },
+    {
+      "modelo": "Vivacity",
+      "modelo_id": 22459,
+      "marca": "Peugeot Motorcycles"
+    },
+    {
+      "modelo": "Looxor",
+      "modelo_id": 22460,
+      "marca": "Peugeot Motorcycles"
+    },
+    {
+      "modelo": "Trekker",
+      "modelo_id": 22461,
+      "marca": "Peugeot Motorcycles"
+    }
+  ],
+  "Citroen": [
+    {
+      "modelo": "Citroen",
+      "modelo_id": 32437,
+      "marca": "Citroen"
+    }
+  ]
+}

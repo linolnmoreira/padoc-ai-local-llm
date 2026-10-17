@@ -44,8 +44,9 @@ def inicializar_firebase():
             cred = credentials.Certificate(firebase_cred_path)
             logger.info("✓ Firebase inicializado via arquivo local.")
 
+        db_url = os.getenv("FIREBASE_DATABASE_URL") or "https://padoc-ai-default-rtdb.firebaseio.com"
         firebase_admin.initialize_app(cred, {
-            "databaseURL": os.getenv("FIREBASE_DATABASE_URL", "")
+            "databaseURL": db_url
         })
 
         logger.info("✓ Conexão com Firebase estabelecida.")

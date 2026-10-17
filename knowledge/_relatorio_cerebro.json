@@ -1,0 +1,132 @@
+{
+  "versao": "3.0",
+  "data_atualizacao": "2026-10-17T10:46:05.258828",
+  "arquivos_knowledge": {
+    "_relatorio_cerebro.json": {
+      "tamanho_bytes": 3450,
+      "tamanho_legivel": "3.4 KB"
+    },
+    "banco_automotivo.json": {
+      "tamanho_bytes": 24354,
+      "tamanho_legivel": "23.8 KB"
+    },
+    "catalogo_ruidos_e_visao.json": {
+      "tamanho_bytes": 6811,
+      "tamanho_legivel": "6.7 KB"
+    },
+    "dados_desempenho_veiculos.json": {
+      "tamanho_bytes": 47254,
+      "tamanho_legivel": "46.1 KB"
+    },
+    "defeitos_mecanicos_e_manutencao.json": {
+      "tamanho_bytes": 25958,
+      "tamanho_legivel": "25.3 KB"
+    },
+    "defeitos_por_montadora.json": {
+      "tamanho_bytes": 2326,
+      "tamanho_legivel": "2.3 KB"
+    },
+    "dtc_bmw_real.json": {
+      "tamanho_bytes": 300623,
+      "tamanho_legivel": "293.6 KB"
+    },
+    "dtc_chrysler_real.json": {
+      "tamanho_bytes": 52401,
+      "tamanho_legivel": "51.2 KB"
+    },
+    "dtc_fiat_real.json": {
+      "tamanho_bytes": 13885,
+      "tamanho_legivel": "13.6 KB"
+    },
+    "dtc_ford_real.json": {
+      "tamanho_bytes": 209198,
+      "tamanho_legivel": "204.3 KB"
+    },
+    "dtc_honda_real.json": {
+      "tamanho_bytes": 31198,
+      "tamanho_legivel": "30.5 KB"
+    },
+    "dtc_mitsubishi_real.json": {
+      "tamanho_bytes": 252684,
+      "tamanho_legivel": "246.8 KB"
+    },
+    "dtc_nissan_real.json": {
+      "tamanho_bytes": 207494,
+      "tamanho_legivel": "202.6 KB"
+    },
+    "dtc_volkswagen_real.json": {
+      "tamanho_bytes": 838938,
+      "tamanho_legivel": "819.3 KB"
+    },
+    "historico_oficina.json": {
+      "tamanho_bytes": 108722,
+      "tamanho_legivel": "106.2 KB"
+    },
+    "historico_ordens_servico.json": {
+      "tamanho_bytes": 23596,
+      "tamanho_legivel": "23.0 KB"
+    },
+    "nhtsa_fabricantes_mundiais.json": {
+      "tamanho_bytes": 35948,
+      "tamanho_legivel": "35.1 KB"
+    },
+    "nhtsa_modelos_por_fabricante.json": {
+      "tamanho_bytes": 143674,
+      "tamanho_legivel": "140.3 KB"
+    },
+    "nhtsa_recalls_veiculos.json": {
+      "tamanho_bytes": 26811,
+      "tamanho_legivel": "26.2 KB"
+    },
+    "nhtsa_reclamacoes_donos.json": {
+      "tamanho_bytes": 126045,
+      "tamanho_legivel": "123.1 KB"
+    },
+    "obdii_codigos_genericos_en.json": {
+      "tamanho_bytes": 238156,
+      "tamanho_legivel": "232.6 KB"
+    },
+    "obdii_codigos_genericos_ptbr.json": {
+      "tamanho_bytes": 320891,
+      "tamanho_legivel": "313.4 KB"
+    },
+    "problemas_conhecidos_por_modelo.json": {
+      "tamanho_bytes": 17364,
+      "tamanho_legivel": "17.0 KB"
+    }
+  },
+  "arquivos_multimodal": {
+    "audios_ruidos/amostra_batida_biela.wav": {
+      "tamanho_bytes": 88244,
+      "tamanho_legivel": "86.2 KB"
+    },
+    "audios_ruidos/amostra_chiado_correia.wav": {
+      "tamanho_bytes": 88244,
+      "tamanho_legivel": "86.2 KB"
+    },
+    "audios_ruidos/amostra_motor_normal.wav": {
+      "tamanho_bytes": 88244,
+      "tamanho_legivel": "86.2 KB"
+    },
+    "audios_ruidos/amostra_tucho_teclando.wav": {
+      "tamanho_bytes": 88244,
+      "tamanho_legivel": "86.2 KB"
+    },
+    "fotos_defeitos/foto_bloco_motor_mecanica.jpg": {
+      "tamanho_bytes": 500142,
+      "tamanho_legivel": "488.4 KB"
+    },
+    "fotos_defeitos/foto_motor_combustao_real.jpg": {
+      "tamanho_bytes": 77262,
+      "tamanho_legivel": "75.5 KB"
+    },
+    "videos_diagnostico/catalogo_videos_diagnostico.json": {
+      "tamanho_bytes": 825,
+      "tamanho_legivel": "0.8 KB"
+    }
+  },
+  "total_bytes_knowledge": 3057781,
+  "total_bytes_multimodal": 931205,
+  "total_legivel_knowledge": "2986.1 KB",
+  "total_legivel_multimodal": "909.4 KB"
+}

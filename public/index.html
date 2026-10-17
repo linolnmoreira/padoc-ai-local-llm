@@ -1,441 +1,601 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Padoc AI - Diagnóstico Automotivo Inteligente</title>
-  <meta name="description" content="Padoc AI é um assistente de diagnóstico automotivo com inteligência artificial. Descreva os sintomas do seu veículo e receba uma análise especializada.">
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-
-  <style>
-    :root {
-      --bg-primary: #080c14;
-      --bg-secondary: #0f172a;
-      --bg-card: rgba(15, 23, 42, 0.9);
-      --bg-input: rgba(8, 12, 20, 0.8);
-      --border-glass: rgba(255, 255, 255, 0.07);
-      --border-active: rgba(56, 189, 248, 0.5);
-      --accent-cyan: #38bdf8;
-      --accent-blue: #4facfe;
-      --accent-glow: rgba(56, 189, 248, 0.2);
-      --text-main: #f1f5f9;
-      --text-muted: #64748b;
-      --text-secondary: #94a3b8;
-      --user-bubble: #1d4ed8;
-      --bot-bubble: #1e293b;
-      --success: #22c55e;
-      --error: #ef4444;
-    }
-
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    html, body { height: 100%; }
-
-    body {
-      font-family: 'Outfit', sans-serif;
-      background: var(--bg-primary);
-      background-image:
-        radial-gradient(ellipse at 20% 0%, rgba(56, 189, 248, 0.06) 0%, transparent 50%),
-        radial-gradient(ellipse at 80% 100%, rgba(79, 172, 254, 0.04) 0%, transparent 50%);
-      color: var(--text-main);
-      display: flex;
-      flex-direction: column;
-      height: 100vh;
-      overflow: hidden;
-    }
-
-    /* HEADER */
-    header {
-      flex-shrink: 0;
-      background: rgba(15, 23, 42, 0.95);
-      backdrop-filter: blur(20px);
-      border-bottom: 1px solid var(--border-glass);
-      padding: 0.85rem 1.5rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 1rem;
-    }
-
-    .brand { display: flex; align-items: center; gap: 0.75rem; }
-
-    .brand-logo {
-      width: 38px; height: 38px;
-      background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
-      border-radius: 10px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1.2rem;
-      box-shadow: 0 0 18px var(--accent-glow);
-      flex-shrink: 0;
-    }
-
-    .brand-info h1 {
-      font-size: 1.15rem; font-weight: 800; letter-spacing: -0.3px;
-      background: linear-gradient(90deg, #fff 60%, #94a3b8);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-    }
-
-    .brand-info p {
-      font-size: 0.72rem; color: var(--accent-cyan);
-      font-weight: 600; text-transform: uppercase; letter-spacing: 0.8px;
-    }
-
-    .header-right { display: flex; align-items: center; gap: 0.75rem; }
-
-    .model-selector {
-      background: var(--bg-input); color: var(--text-main);
-      border: 1px solid var(--border-glass);
-      padding: 0.45rem 0.85rem; border-radius: 8px;
-      outline: none; font-size: 0.85rem; font-family: inherit; cursor: pointer;
-      transition: border-color 0.2s;
-    }
-    .model-selector:hover, .model-selector:focus { border-color: var(--border-active); }
-
-    .status-pill {
-      display: flex; align-items: center; gap: 6px;
-      padding: 5px 12px;
-      background: rgba(34, 197, 94, 0.08);
-      border: 1px solid rgba(34, 197, 94, 0.25);
-      border-radius: 20px; font-size: 0.78rem; color: var(--success); font-weight: 600; white-space: nowrap;
-    }
-
-    .status-dot {
-      width: 7px; height: 7px; background: var(--success); border-radius: 50%;
-      box-shadow: 0 0 8px var(--success); animation: blink 2.5s infinite;
-    }
-
-    @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
-
-    /* CHAT */
-    main#chat-container {
-      flex: 1; overflow-y: auto; padding: 1.5rem;
-      display: flex; flex-direction: column; gap: 1rem;
-      max-width: 860px; width: 100%; margin: 0 auto;
-      scrollbar-width: thin; scrollbar-color: #1e293b transparent;
-    }
-    main#chat-container::-webkit-scrollbar { width: 5px; }
-    main#chat-container::-webkit-scrollbar-track { background: transparent; }
-    main#chat-container::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 10px; }
-
-    .welcome-banner {
-      background: linear-gradient(135deg, rgba(56,189,248,0.08), rgba(79,172,254,0.05));
-      border: 1px solid rgba(56,189,248,0.15);
-      border-radius: 16px; padding: 1.25rem 1.5rem; margin-bottom: 0.5rem;
-    }
-    .welcome-banner h2 { font-size: 1rem; font-weight: 700; color: var(--accent-cyan); margin-bottom: 0.35rem; }
-    .welcome-banner p { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5; }
-
-    .quick-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 1rem; }
-
-    .chip {
-      padding: 5px 12px;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid var(--border-glass);
-      border-radius: 20px; font-size: 0.78rem; cursor: pointer;
-      color: var(--text-secondary); transition: all 0.2s ease; white-space: nowrap;
-    }
-    .chip:hover {
-      background: rgba(56,189,248,0.12); border-color: var(--border-active);
-      color: var(--accent-cyan); transform: translateY(-1px);
-    }
-
-    .message { display: flex; flex-direction: column; max-width: 78%; animation: slideIn 0.25s ease; }
-    @keyframes slideIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
-
-    .message.user { align-self: flex-end; }
-    .message.bot  { align-self: flex-start; }
-
-    .sender-tag {
-      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.5px;
-      text-transform: uppercase; margin-bottom: 4px; padding: 0 4px;
-    }
-    .message.user .sender-tag { color: #93c5fd; text-align: right; }
-    .message.bot  .sender-tag { color: var(--accent-cyan); }
-
-    .bubble {
-      padding: 0.8rem 1.1rem; border-radius: 14px;
-      line-height: 1.6; font-size: 0.92rem; word-break: break-word;
-    }
-    .message.user .bubble {
-      background: var(--user-bubble); color: #fff;
-      border-bottom-right-radius: 4px; box-shadow: 0 4px 15px rgba(29,78,216,0.3);
-    }
-    .message.bot .bubble {
-      background: var(--bot-bubble); color: var(--text-main);
-      border: 1px solid var(--border-glass); border-bottom-left-radius: 4px;
-    }
-
-    .typing-indicator {
-      display: flex; align-items: center; gap: 5px;
-      padding: 0.8rem 1.1rem;
-      background: var(--bot-bubble); border: 1px solid var(--border-glass);
-      border-radius: 14px; border-bottom-left-radius: 4px; width: fit-content;
-    }
-    .typing-dot {
-      width: 7px; height: 7px; background: var(--text-muted);
-      border-radius: 50%; animation: typingBounce 1.2s infinite;
-    }
-    .typing-dot:nth-child(2) { animation-delay: 0.2s; }
-    .typing-dot:nth-child(3) { animation-delay: 0.4s; }
-    @keyframes typingBounce { 0%,60%,100% { transform: translateY(0); } 30% { transform: translateY(-6px); } }
-
-    /* INPUT */
-    .input-area {
-      flex-shrink: 0;
-      background: rgba(8,12,20,0.95); backdrop-filter: blur(20px);
-      border-top: 1px solid var(--border-glass);
-      padding: 1rem 1.5rem 1.25rem;
-    }
-    .input-wrapper {
-      max-width: 860px; margin: 0 auto;
-      display: flex; gap: 0.6rem;
-      background: var(--bot-bubble); padding: 0.5rem 0.5rem 0.5rem 1rem;
-      border-radius: 14px; border: 1px solid var(--border-glass);
-      transition: border-color 0.2s, box-shadow 0.2s;
-    }
-    .input-wrapper:focus-within { border-color: var(--border-active); box-shadow: 0 0 20px var(--accent-glow); }
-
-    textarea#user-input {
-      flex: 1; background: transparent; border: none; outline: none;
-      color: var(--text-main); font-size: 0.92rem; font-family: inherit;
-      padding: 0.4rem 0; resize: none; min-height: 36px; max-height: 140px;
-      overflow-y: auto; line-height: 1.5;
-    }
-    textarea#user-input::placeholder { color: var(--text-muted); }
-
-    button#send-btn {
-      background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
-      color: #060d1a; border: none; padding: 0.45rem 1.1rem;
-      border-radius: 10px; font-weight: 700; font-size: 0.88rem;
-      font-family: inherit; cursor: pointer; transition: all 0.2s ease;
-      display: flex; align-items: center; gap: 5px;
-      align-self: flex-end; margin-bottom: 2px; white-space: nowrap;
-    }
-    button#send-btn:hover:not(:disabled) { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(56,189,248,0.35); }
-    button#send-btn:disabled { opacity: 0.5; cursor: not-allowed; }
-
-    .input-footer {
-      max-width: 860px; margin: 0.5rem auto 0;
-      font-size: 0.72rem; color: var(--text-muted); text-align: center;
-    }
-
-    @media (max-width: 600px) {
-      .message { max-width: 90%; }
-      .status-pill { display: none; }
-      .brand-info p { display: none; }
-    }
-  </style>
-</head>
-<body>
-
-  <header>
-    <div class="brand">
-      <div class="brand-logo">&#9881;&#65039;</div>
-      <div class="brand-info">
-        <h1>PADOC AI</h1>
-        <p>Diagnostico Automotivo</p>
-      </div>
-    </div>
-    <div class="header-right">
-      <select id="ai-model" class="model-selector" aria-label="Seletor de modelo de IA">
-        <option value="padoc-v1">PADOC AI (Padrao)</option>
-        <option value="openai-gpt4">OpenAI GPT-4</option>
-        <option value="claude-3">Anthropic Claude 3</option>
-        <option value="gemini-pro">Google Gemini Pro</option>
-      </select>
-      <div class="status-pill">
-        <div class="status-dot"></div>
-        <span>Online</span>
-      </div>
-    </div>
-  </header>
-
-  <main id="chat-container">
-    <div class="welcome-banner">
-      <h2>Bem-vindo a PADOC AI</h2>
-      <p>Descreva os sintomas do seu veiculo, informe um codigo DTC (P0300, P0171...) ou faca uma pergunta automotiva. Nossa IA especializada ira analisar e fornecer um diagnostico detalhado.</p>
-      <div class="quick-chips">
-        <div class="chip" onclick="setPrompt('Carro falhando na aceleracao com codigo P0300')">Falha P0300</div>
-        <div class="chip" onclick="setPrompt('Luz da injecao acesa com codigo P0171 mistura pobre')">P0171 Mistura Pobre</div>
-        <div class="chip" onclick="setPrompt('Motor superaquecendo rapido e perda de refrigerante')">Superaquecimento</div>
-        <div class="chip" onclick="setPrompt('Freio com barulho e pedal mole ao frear')">Problema de Freio</div>
-        <div class="chip" onclick="setPrompt('Bateria fraca e alternador nao carregando')">Bateria / Alternador</div>
-      </div>
-    </div>
-
-    <div class="message bot" id="initial-bot-msg">
-      <span class="sender-tag">PADOC AI</span>
-      <div class="bubble">Ola! Eu sou a PADOC AI, sua assistente de diagnostico automotivo. Como posso te ajudar hoje?</div>
-    </div>
-  </main>
-
-  <div class="input-area">
-    <div class="input-wrapper">
-      <textarea id="user-input" placeholder="Descreva os sintomas do veiculo ou informe um codigo DTC..." rows="1"></textarea>
-      <button id="send-btn">Enviar</button>
-    </div>
-    <p class="input-footer">PADOC AI pode cometer erros. Sempre consulte um mecanico profissional para diagnosticos criticos.</p>
-  </div>
-
-  <!-- Firebase Web SDK v13 (Modular ESM CDN) -->
-  <script type="module">
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/13.0.0/firebase-app.js";
-    import { getAnalytics, logEvent } from "https://www.gstatic.com/firebasejs/13.0.0/firebase-analytics.js";
-
-    // ── Firebase Configuration ──
-    const firebaseConfig = {
-      apiKey: "AIzaSyBkUiqTlo_lunHMwiu54vUjSPLjS2FJqA8",
-      authDomain: "padoc-ai.firebaseapp.com",
-      databaseURL: "https://padoc-ai-default-rtdb.firebaseio.com",
-      projectId: "padoc-ai",
-      storageBucket: "padoc-ai.firebasestorage.app",
-      messagingSenderId: "1080051254358",
-      appId: "1:1080051254358:web:f5cf761089ed42be0ca7f7",
-      measurementId: "G-ZCLZZ9ZFQ2"
-    };
-
-    // ── Initialize Firebase ──
-    const app = initializeApp(firebaseConfig);
-    const analytics = getAnalytics(app);
-
-    // ── API URL: Railway backend (produção) ou localhost (dev local) ──
-    const API_BASE = window.location.hostname === "localhost" || window.location.protocol === "file:"
-      ? "http://localhost:5000"
-      : "https://padoc-ai-site-production.up.railway.app";
-
-    // ── DOM refs ──
-    const chatContainer = document.getElementById('chat-container');
-    const userInput     = document.getElementById('user-input');
-    const sendBtn       = document.getElementById('send-btn');
-    const modelSelect   = document.getElementById('ai-model');
-
-    // ── Helpers ──
-    function autoGrow(el) {
-      el.style.height = "5px";
-      el.style.height = Math.min(el.scrollHeight, 140) + "px";
-    }
-
-    function scrollToBottom() {
-      chatContainer.scrollTop = chatContainer.scrollHeight;
-    }
-
-    function addMessage(text, sender, modelName) {
-      const wrap = document.createElement('div');
-      wrap.classList.add('message', sender);
-
-      const tag = document.createElement('span');
-      tag.classList.add('sender-tag');
-      tag.textContent = sender === 'user' ? 'Voce' : (modelName || 'PADOC AI');
-
-      const bubble = document.createElement('div');
-      bubble.classList.add('bubble');
-      bubble.textContent = text;
-
-      wrap.appendChild(tag);
-      wrap.appendChild(bubble);
-      chatContainer.appendChild(wrap);
-      scrollToBottom();
-      return wrap;
-    }
-
-    function addTypingIndicator() {
-      const wrap = document.createElement('div');
-      wrap.classList.add('message', 'bot');
-      wrap.id = 'typing-msg';
-
-      const tag = document.createElement('span');
-      tag.classList.add('sender-tag');
-      tag.textContent = 'PADOC AI';
-
-      const indicator = document.createElement('div');
-      indicator.classList.add('typing-indicator');
-      for (let i = 0; i < 3; i++) {
-        const dot = document.createElement('div');
-        dot.classList.add('typing-dot');
-        indicator.appendChild(dot);
-      }
-
-      wrap.appendChild(tag);
-      wrap.appendChild(indicator);
-      chatContainer.appendChild(wrap);
-      scrollToBottom();
-    }
-
-    function removeTypingIndicator() {
-      const el = document.getElementById('typing-msg');
-      if (el) el.remove();
-    }
-
-    // ── Expose setPrompt for quick chips (onclick attributes) ──
-    window.setPrompt = function(text) {
-      userInput.value = text;
-      userInput.focus();
-      autoGrow(userInput);
-    };
-
-    // ── Send message ──
-    async function handleSend() {
-      const text = userInput.value.trim();
-      if (!text || sendBtn.disabled) return;
-
-      const selectedModelText = modelSelect.options[modelSelect.selectedIndex].text;
-      const usuario_id = 'web-' + Date.now();
-
-      addMessage(text, 'user');
-      userInput.value = '';
-      autoGrow(userInput);
-
-      sendBtn.disabled = true;
-      addTypingIndicator();
-
-      logEvent(analytics, 'diagnostico_enviado', {
-        model: modelSelect.value,
-        prompt_length: text.length
-      });
-
-      try {
-        const response = await fetch(API_BASE + '/api/diagnostico', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ pergunta: text, usuario_id: usuario_id, model: modelSelect.value })
-        });
-
-        removeTypingIndicator();
-
-        if (!response.ok) {
-          const errData = await response.json().catch(() => ({}));
-          throw new Error(errData.erro || 'Erro HTTP ' + response.status);
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PADOC AI - DiagnÃ³stico Automotivo Especialista & Telemetria Preditiva</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0a0e17;
+            --bg-card: rgba(18, 26, 43, 0.85);
+            --border-glass: rgba(255, 255, 255, 0.08);
+            --accent-cyan: #00f2fe;
+            --accent-blue: #4facfe;
+            --accent-orange: #ff7a18;
+            --accent-red: #ff3838;
+            --accent-green: #00e676;
+            --text-main: #f0f4f8;
+            --text-muted: #94a3b8;
         }
 
-        const data = await response.json();
-        addMessage(data.resposta || JSON.stringify(data, null, 2), 'bot', selectedModelText);
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-        logEvent(analytics, 'diagnostico_recebido', { success: true });
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: radial-gradient(circle at 10% 20%, #0d1527 0%, #060911 90%);
+            color: var(--text-main);
+            min-height: 100vh;
+            padding: 24px 16px;
+        }
 
-      } catch (err) {
-        removeTypingIndicator();
-        addMessage('Erro ao conectar a API PADOC: ' + err.message, 'bot');
-        console.error('[PADOC] API error:', err);
-        logEvent(analytics, 'diagnostico_recebido', { success: false });
-      } finally {
-        sendBtn.disabled = false;
-        userInput.focus();
-      }
-    }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
 
-    // ── Events ──
-    sendBtn.addEventListener('click', handleSend);
+        /* HEADER */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 24px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-glass);
+            border-radius: 16px;
+            backdrop-filter: blur(16px);
+            margin-bottom: 24px;
+        }
 
-    userInput.addEventListener('keydown', function(e) {
-      if (e.key === 'Enter' && !e.shiftKey) {
-        e.preventDefault();
-        handleSend();
-      }
-    });
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
 
-    userInput.addEventListener('input', function() { autoGrow(userInput); });
+        .brand-logo {
+            width: 44px;
+            height: 44px;
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #050b14;
+            box-shadow: 0 0 20px rgba(0, 242, 254, 0.35);
+        }
 
-    autoGrow(userInput);
-  </script>
+        .brand-text h1 {
+            font-size: 1.4rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            background: linear-gradient(90deg, #fff, #94a3b8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
 
+        .brand-text p {
+            font-size: 0.8rem;
+            color: var(--accent-cyan);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .status-badge {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 14px;
+            background: rgba(0, 230, 118, 0.1);
+            border: 1px solid rgba(0, 230, 118, 0.3);
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: var(--accent-green);
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--accent-green);
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--accent-green);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.4;
+            }
+        }
+
+        /* TABS */
+        .tabs {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .tab-btn {
+            flex: 1;
+            padding: 14px 20px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-glass);
+            border-radius: 12px;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .tab-btn:hover {
+            color: #fff;
+            border-color: rgba(0, 242, 254, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .tab-btn.active {
+            background: linear-gradient(135deg, rgba(79, 172, 254, 0.15), rgba(0, 242, 254, 0.15));
+            border-color: var(--accent-cyan);
+            color: var(--accent-cyan);
+            box-shadow: 0 4px 20px rgba(0, 242, 254, 0.15);
+        }
+
+        /* PANELS */
+        .tab-panel {
+            display: none;
+        }
+
+        .tab-panel.active {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(6px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-glass);
+            border-radius: 16px;
+            padding: 24px;
+            backdrop-filter: blur(16px);
+            margin-bottom: 20px;
+        }
+
+        /* DIAGNOSTICO FORM */
+        .quick-chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+
+        .chip {
+            padding: 6px 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-glass);
+            border-radius: 20px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            color: #cbd5e1;
+            transition: all 0.2s;
+        }
+
+        .chip:hover {
+            background: rgba(0, 242, 254, 0.15);
+            border-color: var(--accent-cyan);
+            color: var(--accent-cyan);
+        }
+
+        textarea {
+            width: 100%;
+            height: 110px;
+            background: rgba(10, 14, 23, 0.7);
+            border: 1px solid var(--border-glass);
+            border-radius: 12px;
+            padding: 14px;
+            color: var(--text-main);
+            font-family: inherit;
+            font-size: 0.95rem;
+            resize: none;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        textarea:focus {
+            border-color: var(--accent-cyan);
+            box-shadow: 0 0 15px rgba(0, 242, 254, 0.2);
+        }
+
+        .btn-primary {
+            width: 100%;
+            padding: 14px;
+            margin-top: 14px;
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
+            border: none;
+            border-radius: 12px;
+            color: #050b14;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .btn-primary:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 242, 254, 0.4);
+        }
+
+        .btn-primary:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        /* RESPONSE AREA */
+        .response-box {
+            display: none;
+            margin-top: 24px;
+            background: rgba(10, 14, 23, 0.9);
+            border: 1px solid rgba(0, 242, 254, 0.3);
+            border-radius: 14px;
+            padding: 20px;
+        }
+
+        .response-box.active {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .response-box pre {
+            white-space: pre-wrap;
+            font-family: inherit;
+            line-height: 1.6;
+            color: #e2e8f0;
+        }
+
+        /* TELEMETRIA SLIDERS */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+        .control-group label {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 6px;
+        }
+
+        .control-group span {
+            color: var(--accent-cyan);
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 600;
+        }
+
+        input[type="range"] {
+            width: 100%;
+            accent-color: var(--accent-cyan);
+        }
+
+        .health-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .health-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-glass);
+            border-radius: 12px;
+            padding: 14px;
+            text-align: center;
+        }
+
+        .health-score {
+            font-size: 1.8rem;
+            font-weight: 800;
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--accent-green);
+            margin: 6px 0;
+        }
+
+        /* APRENDIZADO FORM */
+        .input-text {
+            width: 100%;
+            background: rgba(10, 14, 23, 0.7);
+            border: 1px solid var(--border-glass);
+            border-radius: 10px;
+            padding: 12px;
+            color: var(--text-main);
+            margin-bottom: 12px;
+            outline: none;
+        }
+
+        .input-text:focus {
+            border-color: var(--accent-orange);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <div class="brand">
+                <div class="brand-logo">âš™ï¸</div>
+                <div class="brand-text">
+                    <h1>PADOC AI</h1>
+                    <p>Cerebro Automotivo & Telemetria Preditiva</p>
+                </div>
+            </div>
+            <div class="status-badge" id="apiStatus">
+                <div class="status-dot"></div>
+                <span>Cerebro Conectado (v2.5)</span>
+            </div>
+        </header>
+
+        <div class="tabs">
+            <button class="tab-btn active" onclick="switchTab('diagnostico')">ðŸ” DiagnÃ³stico Especialista</button>
+            <button class="tab-btn" onclick="switchTab('telemetria')">ðŸ“Š Telemetria Preditiva (7/30/90d)</button>
+            <button class="tab-btn" onclick="switchTab('aprendizado')">ðŸ§  Auto-Aprendizado da IA</button>
+        </div>
+
+        <!-- TAB 1: DIAGNOSTICO -->
+        <div id="tab-diagnostico" class="tab-panel active">
+            <div class="card">
+                <h3 style="margin-bottom: 12px;">Descreva os Sintomas ou CÃ³digo DTC do VeÃ­culo</h3>
+                <div class="quick-chips">
+                    <div class="chip"
+                        onclick="setPrompt('Carro falhando em aceleraÃ§Ã£o e cÃ³digo P0300 gravado na injeÃ§Ã£o')">âš¡
+                        CÃ³digo P0300 (Falha de IgniÃ§Ã£o)</div>
+                    <div class="chip" onclick="setPrompt('Luz da injeÃ§Ã£o acesa e cÃ³digo P0171 mistura pobre')">â›½
+                        CÃ³digo P0171 (Mistura Pobre)</div>
+                    <div class="chip"
+                        onclick="setPrompt('Temperatura do motor subindo rÃ¡pido e reservatÃ³rio de Ã¡gua fervendo')">
+                        ðŸŒ¡ï¸ Superaquecimento do Motor</div>
+                    <div class="chip" onclick="setPrompt('Cheiro forte de fumaÃ§a e freio nÃ£o estÃ¡ respondendo')">ðŸš¨
+                        EmergÃªncia (Freio/FumaÃ§a)</div>
+                </div>
+
+                <textarea id="perguntaInput"
+                    placeholder="Ex: Meu Corolla 2018 estÃ¡ falhando ao acelerar e acusou cÃ³digo P0300 com luz de injeÃ§Ã£o piscando..."></textarea>
+                <button class="btn-primary" id="btnDiagnosticar" onclick="enviarDiagnostico()">
+                    <span>âš¡ Diagnosticar com InteligÃªncia PADOC</span>
+                </button>
+
+                <div class="response-box" id="respostaBox">
+                    <pre id="respostaTexto"></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB 2: TELEMETRIA PREDITIVA -->
+        <div id="tab-telemetria" class="tab-panel">
+            <div class="card">
+                <h3 style="margin-bottom: 16px;">Simulador de Telemetria e DegradaÃ§Ã£o de Componentes</h3>
+                <div class="grid-2">
+                    <div class="control-group">
+                        <label>Rotação do Motor (RPM): <span id="valRpm">850 RPM</span></label>
+                        <input type="range" id="sliderRpm" min="600" max="6500" value="850" oninput="updateTel()">
+                    </div>
+                    <div class="control-group">
+                        <label>Temperatura Arrefecimento: <span id="valTemp">90 Â°C</span></label>
+                        <input type="range" id="sliderTemp" min="40" max="130" value="90" oninput="updateTel()">
+                    </div>
+                    <div class="control-group">
+                        <label>Voltagem da Bateria: <span id="valVolt">13.8 V</span></label>
+                        <input type="range" id="sliderVolt" min="9.0" max="15.0" step="0.1" value="13.8"
+                            oninput="updateTel()">
+                    </div>
+                    <div class="control-group">
+                        <label>Trim de Combustive (LTFT): <span id="valLtft">+2.0 %</span></label>
+                        <input type="range" id="sliderLtft" min="-25" max="25" value="2" oninput="updateTel()">
+                    </div>
+                </div>
+
+                <button class="btn-primary" onclick="calcularTelemetria()">
+                    <span>ðŸ“Š Calcular SaÃºde e Prever Falhas</span>
+                </button>
+
+                <div class="health-grid" id="healthResults" style="display: none;">
+                    <div class="health-card">
+                        <h4>SaÃºde Global</h4>
+                        <div class="health-score" id="scoreGlobal">100%</div>
+                        <p style="font-size: 0.8rem; color: var(--text-muted);">Status Geral</p>
+                    </div>
+                    <div class="health-card">
+                        <h4>Bateria</h4>
+                        <div class="health-score" id="scoreBateria">100%</div>
+                        <p style="font-size: 0.8rem;" id="riscoBateria">Risco 30d: 0%</p>
+                    </div>
+                    <div class="health-card">
+                        <h4>Arrefecimento</h4>
+                        <div class="health-score" id="scoreCooling">100%</div>
+                        <p style="font-size: 0.8rem;" id="riscoCooling">Risco 30d: 0%</p>
+                    </div>
+                    <div class="health-card">
+                        <h4>InjeÃ§Ã£o / Mistura</h4>
+                        <div class="health-score" id="scoreFuel">100%</div>
+                        <p style="font-size: 0.8rem;" id="riscoFuel">Risco 30d: 0%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB 3: AUTO-APRENDIZADO -->
+        <div id="tab-aprendizado" class="tab-panel">
+            <div class="card">
+                <h3 style="margin-bottom: 12px;">Ensinar Nova SoluÃ§Ã£o Ã  PADOC AI (Feedback de Oficina)</h3>
+                <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 16px;">
+                    Quando uma oficina confirma e resolve um defeito real, este conhecimento Ã© incorporado Ã  memÃ³ria
+                    da PADOC AI para refinar diagnÃ³sticos futuros.
+                </p>
+
+                <input type="text" class="input-text" id="learnVeiculo"
+                    placeholder="Modelo do VeÃ­culo (Ex: Toyota Corolla 2018)">
+                <input type="text" class="input-text" id="learnProblema"
+                    placeholder="Problema/Sintoma Observado (Ex: Barulho de estalo na coluna de direÃ§Ã£o)">
+                <input type="text" class="input-text" id="learnSolucao"
+                    placeholder="SoluÃ§Ã£o Comprovada (Ex: SubstituiÃ§Ã£o da bucha de acoplamento da coluna elÃ©trica)">
+
+                <button class="btn-primary" style="background: linear-gradient(135deg, var(--accent-orange), #ff416c);"
+                    onclick="enviarAprendizado()">
+                    <span>ðŸ§  Gravar Aprendizado na MemÃ³ria da IA</span>
+                </button>
+                <div id="learnFeedback" style="margin-top: 14px; font-size: 0.9rem; display: none;"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const API_URL = window.location.protocol === "file:" ? "http://localhost:5000" : window.location.origin;
+
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.tab-panel').forEach(panel => panel.classList.remove('active'));
+            event.target.classList.add('active');
+            document.getElementById('tab-' + tabId).classList.add('active');
+        }
+
+        function setPrompt(text) {
+            document.getElementById('perguntaInput').value = text;
+        }
+
+        async function enviarDiagnostico() {
+            const pergunta = document.getElementById('perguntaInput').value.trim();
+            if (!pergunta) return alert("Por favor, digite os sintomas ou cÃ³digo.");
+
+            const btn = document.getElementById('btnDiagnosticar');
+            const box = document.getElementById('respostaBox');
+            const txt = document.getElementById('respostaTexto');
+
+            btn.disabled = true;
+            btn.innerHTML = "<span>â³ Processando RaciocÃ­nio MecÃ¢nico...</span>";
+            box.classList.remove('active');
+
+            try {
+                const res = await fetch(`${API_URL}/api/diagnostico`, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ pergunta: pergunta, usuario_id: "web_dashboard" })
+                });
+                const data = await res.json();
+                txt.textContent = data.resposta || JSON.stringify(data, null, 2);
+                box.classList.add('active');
+            } catch (e) {
+                txt.textContent = "Erro ao conectar com a API PADOC AI: " + e.message;
+                box.classList.add('active');
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = "<span>âš¡ Diagnosticar com InteligÃªncia PADOC</span>";
+            }
+        }
+
+        function updateTel() {
+            document.getElementById('valRpm').innerText = document.getElementById('sliderRpm').value + " RPM";
+            document.getElementById('valTemp').innerText = document.getElementById('sliderTemp').value + " Â°C";
+            document.getElementById('valVolt').innerText = document.getElementById('sliderVolt').value + " V";
+            document.getElementById('valLtft').innerText = (document.getElementById('sliderLtft').value > 0 ? "+" : "") + document.getElementById('sliderLtft').value + " %";
+        }
+
+        async function calcularTelemetria() {
+            const rpm = parseFloat(document.getElementById('sliderRpm').value);
+            const temp = parseFloat(document.getElementById('sliderTemp').value);
+            const volt = parseFloat(document.getElementById('sliderVolt').value);
+            const ltft = parseFloat(document.getElementById('sliderLtft').value);
+
+            try {
+                const res = await fetch(`${API_URL}/api/evento`, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({
+                        placa: "DEMO-VEHICLE",
+                        telemetria: { rpm, coolant_temp: temp, battery_voltage: volt, fuel_trim_long: ltft }
+                    })
+                });
+                const data = await res.json();
+                const pred = data.analise_preditiva;
+
+                document.getElementById('healthResults').style.display = "grid";
+                document.getElementById('scoreGlobal').innerText = Math.round(pred.global_health) + "%";
+                document.getElementById('scoreBateria').innerText = Math.round(pred.components.BATTERY.health_score) + "%";
+                document.getElementById('riscoBateria').innerText = `Risco 30d: ${Math.round(pred.components.BATTERY.failure_probability_30d)}%`;
+
+                document.getElementById('scoreCooling').innerText = Math.round(pred.components.COOLING.health_score) + "%";
+                document.getElementById('riscoCooling').innerText = `Risco 30d: ${Math.round(pred.components.COOLING.failure_probability_30d)}%`;
+
+                document.getElementById('scoreFuel').innerText = Math.round(pred.components.FUEL_SYSTEM.health_score) + "%";
+                document.getElementById('riscoFuel').innerText = `Risco 30d: ${Math.round(pred.components.FUEL_SYSTEM.failure_probability_30d)}%`;
+            } catch (e) {
+                alert("Falha ao comunicar com motor de telemetria: " + e.message);
+            }
+        }
+
+        async function enviarAprendizado() {
+            const veiculo = document.getElementById('learnVeiculo').value.trim();
+            const problema = document.getElementById('learnProblema').value.trim();
+            const solucao = document.getElementById('learnSolucao').value.trim();
+
+            if (!problema || !solucao) return alert("Preencha o problema e a soluÃ§Ã£o.");
+
+            const fb = document.getElementById('learnFeedback');
+            try {
+                const res = await fetch(`${API_URL}/api/aprender`, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ veiculo, problema, solucao })
+                });
+                const data = await res.json();
+                fb.style.display = "block";
+                fb.style.color = "var(--accent-green)";
+                fb.innerText = "âœ… " + data.mensagem + " Total de padrÃµes aprendidos: " + data.total_aprendidos;
+                document.getElementById('learnProblema').value = "";
+                document.getElementById('learnSolucao').value = "";
+            } catch (e) {
+                fb.style.display = "block";
+                fb.style.color = "var(--accent-red)";
+                fb.innerText = "âŒ Erro ao registrar aprendizado: " + e.message;
+            }
+        }
+    </script>
 </body>
+
 </html>

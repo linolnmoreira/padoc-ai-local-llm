@@ -408,10 +408,6 @@
     "Make_Name": "A1 CYCLES"
   },
   {
-    "Make_ID": 11314,
-    "Make_Name": "A1 FOOD TRUCK DEPOT LLC"
-  },
-  {
     "Make_ID": 11534,
     "Make_Name": "A2M2 TRAILERS"
   },
@@ -1080,6 +1076,10 @@
     "Make_Name": "AFTER-MARKET SPECIALTIES"
   },
   {
+    "Make_ID": 11314,
+    "Make_Name": "AFTK"
+  },
+  {
     "Make_ID": 4855,
     "Make_Name": "AG DRYER SERVICES INC."
   },
@@ -1390,6 +1390,10 @@
   {
     "Make_ID": 8304,
     "Make_Name": "ALKOTA CLEANING SYSTEMS, INC."
+  },
+  {
+    "Make_ID": 14258,
+    "Make_Name": "ALKOTA WEST"
   },
   {
     "Make_ID": 1308,
@@ -1994,9 +1998,5 @@
   {
     "Make_ID": 8012,
     "Make_Name": "AMERICAN EAGLE TRAILERS INC."
-  },
-  {
-    "Make_ID": 1638,
-    "Make_Name": "AMERICAN EAGLE TRAILERS, INC."
   }
 ]
